@@ -1,0 +1,150 @@
+
+//
+// Stylus mixin pack
+// https://github.com/AntonTrollback/Stylus-mixin-pack
+//
+
+
+
+//
+// CSS3 props. Vendor prefixes from css3please.com
+//
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+  -webkit-background-clip padding-box
+  -moz-background-clip padding
+  background-clip padding-box
+
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  box-shadow arguments
+
+transform()
+  -webkit-transform arguments
+  -moz-transform arguments
+  -ms-transform arguments
+  -o-transform arguments
+  transform arguments
+
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+  -ms-transition arguments
+  -o-transition arguments
+  transition arguments
+
+transition-property()
+  -webkit-transition-property arguments
+  -moz-transition-property arguments
+  -ms-transition-property arguments
+  -o-transition-property arguments
+  transition-property arguments
+
+box-sizing()
+  -webkit-box-sizing arguments
+  -moz-box-sizing arguments
+  box-sizing arguments
+
+animation()
+  -webkit-animation arguments
+  -moz-animation arguments
+  -ms-animation arguments
+
+user-select()
+  -webkit-touch-callout arguments
+  touch-callout arguments
+  -webkit-user-select arguments
+  -moz-user-select arguments
+  -ms-user-select arguments
+  -o-user-select arguments
+  user-select arguments
+
+background-size()
+  -webkit-background-size arguments
+  background-size arguments
+
+tab-size()
+  -moz-tab-size arguments
+  -o-tab-size arguments
+  tab-size arguments
+
+
+//
+// Font families. Stacks from cssfontstack.com
+//
+
+helvetica()
+  font-family 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+helveticalight()
+  font-family 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight 300
+
+courier()
+  font-family 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace
+
+verdana()
+  font-family Verdana, Geneva, sans-serif
+
+futura()
+  font-family Futura, 'Trebuchet MS', Arial, sans-serif
+
+consolas()
+  font-family Consolas, monaco, monospace
+
+arialblack()
+  font-family 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+
+
+
+//
+// Custom border property (not ready yet)
+//
+// usage:
+// border-short 1px 0 1px 0 solid red
+//
+// yielding:
+// border: solid #f00;
+// border-width: 1px 0;
+//
+
+border-short(top, right, bottom, left, args...)
+  if (top == bottom == right == left) {
+      border top args
+  } else {
+    border args
+
+    if (top == bottom && right == left) {
+      border-width top right
+    } else if (top != bottom && right == left) {
+      border-width top right bottom
+    } else {
+      border-width top right left bottom
+    }
+  }
+
+
+
+//
+// Custom postion property from nib
+//
+
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+fixed()
+  -pos('fixed', arguments)
+
+absolute()
+  -pos('absolute', arguments)
+
+relative()
+  -pos('relative', arguments)
+
