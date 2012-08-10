@@ -2,30 +2,36 @@
 // CSS setup
 // ============================
 
+// Font imports
 @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700')
 
 // Stylus mixins
 @import 'mixins/mixins'
 
 // HTML5 Boilerplate
-@import 'h5bp'
-
-// Variables
-orange = #ff8400
-green  = #a7f0ac
-blue   = #0d9fd8
+@import 'mixins/h5bp'
 
 * // Universal properties
   position relative
   background-repeat no-repeat
   box-sizing border-box
 
-// Shared styles
-@import 'shared'
 
-// Primary styles
-@import 'primary'
+
+// Shared styles
+@import 'mixins/shared'
+
+// Mobile first
+@import 'mobile-first'
+
+// Tablet
+@import 'tablet'
+
+// Desktop
+@import 'desktop'
+
+
 
 // Helper classes
-@import 'h5bp-helpers'
+@import 'mixins/h5bp-helpers'
 
