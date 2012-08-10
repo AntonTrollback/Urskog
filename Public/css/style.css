@@ -346,6 +346,21 @@ nav li:first-child a {
 .nav-item:visited:active {
   color: #888;
 }
+.nav-item.active:before,
+.nav-item.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+.nav-item.active:before {
+  top: -1px;
+}
+.nav-item.active:after {
+  bottom: -1px;
+}
 @media only screen and (min-width:768px) {
   nav li {
     width: auto;

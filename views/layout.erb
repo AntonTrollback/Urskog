@@ -18,14 +18,13 @@
 
     <nav>
       <ul>
-        <li><a href="#" class="nav-item">About</a>
-        <li><a href="#" class="nav-item">Products</a>
-        <li><a href="#" class="nav-item">Retailers</a>
-        <li><a href="#" class="nav-item">Contact</a>
+        <li><a href="/about"     class="nav-item<% if @about %> active<% end %>">About</a>
+        <li><a href="/products"  class="nav-item<% if @products %> active<% end %>">Products</a>
+        <li><a href="/retailers" class="nav-item<% if @retailers %> active<% end %>">Retailers</a>
+        <li><a href="/contact"   class="nav-item<% if @contact %> active<% end %>">Contact</a>
       </ul>
     </nav>
   </header>
-
 
   <%= yield %>
 
