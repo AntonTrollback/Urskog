@@ -275,6 +275,7 @@ body {
   color: #333;
 }
 header {
+  margin-bottom: 36px;
   text-align: center;
 }
 header strong {
@@ -304,7 +305,8 @@ header strong {
 .no-svg .logo {
   background-image: url("../img/logo.png");
 }
-nav {
+nav,
+.subnav {
   width: 100%;
   background: #f2f2f2;
   margin-top: 4px;
@@ -315,17 +317,19 @@ nav {
   font-size: 12px;
   text-transform: uppercase;
 }
-nav li {
+nav li,
+.subnav li {
   display: inline-block;
   width: 25%;
 }
-nav li:first-child a {
-  border-left: 1px solid #ddd;
+nav li:last-child .nav-item,
+.subnav li:last-child .nav-item {
+  border-right: 0;
 }
 .nav-item,
 .nav-item:visited {
   display: block;
-  padding: 8px 12px 6px;
+  padding: 8px 0 6px;
   color: #555;
   text-decoration: none;
   border-right: 1px solid #ddd;
@@ -340,6 +344,7 @@ nav li:first-child a {
 .nav-item:visited:hover,
 .nav-item.active,
 .nav-item:visited.active {
+  color: #555;
   background: #fff;
 }
 .nav-item:active,
@@ -361,9 +366,27 @@ nav li:first-child a {
 .nav-item.active:after {
   bottom: -1px;
 }
+.subnav {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 132px;
+}
+.subnav li {
+  width: 14.2857142857%;
+}
 @media only screen and (min-width:768px) {
-  nav li {
+  nav li,
+  .subnav li {
     width: auto;
+  }
+  nav li:first-child .nav-item,
+  .subnav li:first-child .nav-item {
+    border-left: 1px solid #ddd;
+  }
+  nav li:last-child .nav-item,
+  .subnav li:last-child .nav-item {
+    border-right: 1px solid #ddd;
   }
   .nav-item,
   .nav-item:visited {

@@ -20,6 +20,18 @@
       <ul>
         <li><a href="/about"     class="nav-item <%= "active" if @about %>">About</a>
         <li><a href="/products"  class="nav-item <%= "active" if @products %>">Products</a>
+<!-- Bad indention to prevent inline-block whitespace -->
+<div class="subnav">
+  <ul>
+    <li><a class="nav-item" href="/products/stubbe">Stubbe</a>
+    <li><a class="nav-item" href="/products/kvist">Kvist</a>
+    <li><a class="nav-item" href="/products/kil">Kil</a>
+    <li><a class="nav-item" href="/products/lov">Löv</a>
+    <li><a class="nav-item" href="/products/pinne">Pinne</a>
+    <li><a class="nav-item" href="/products/sticka">Sticka</a>
+    <li><a class="nav-item" href="/products/fro">Frö</a>
+  </ul>
+</div>
         <li><a href="/retailers" class="nav-item <%= "active" if @retailers %>">Retailers</a>
         <li><a href="/contact"   class="nav-item <%= "active" if @contact %>">Contact</a>
       </ul>

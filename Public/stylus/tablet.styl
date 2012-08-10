@@ -5,7 +5,12 @@
   // Navigation
   // ========================
 
-  nav li
-    width auto
+  nav, .subnav
+    li
+      width auto
+      &:first-child .nav-item
+        border-left 1px solid #ddd
+      &:last-child .nav-item
+        border-right 1px solid #ddd
   .nav-item, .nav-item:visited
     min-width 98px
