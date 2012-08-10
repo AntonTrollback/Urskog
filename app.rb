@@ -1,8 +1,10 @@
 require 'sinatra/base'
 
 class MyApp < Sinatra::Base
+  @home = false
 
   get '/' do
+    @home = true
     erb :index
   end
 
