@@ -300,7 +300,15 @@ header strong {
   transition: opacity 0.2s ease;
 }
 .logo:hover {
-  opacity: 0.9;
+  opacity: 0.85;
+}
+.logo:active {
+  opacity: 0.6;
+  -webkit-transition: opacity 0;
+  -moz-transition: opacity 0;
+  -ms-transition: opacity 0;
+  -o-transition: opacity 0;
+  transition: opacity 0;
 }
 .no-svg .logo {
   background-image: url("../img/logo.png");
