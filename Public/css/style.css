@@ -346,7 +346,7 @@ nav li:first-child a {
 .nav-item:visited:active {
   color: #888;
 }
-@media only screen and (min-width:768px) and (max-width:1099px) {
+@media only screen and (min-width:768px) {
   nav li {
     width: auto;
   }
