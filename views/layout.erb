@@ -18,10 +18,10 @@
 
     <nav>
       <ul>
-        <li><a href="/about"     class="nav-item<% if @about %> active<% end %>">About</a>
-        <li><a href="/products"  class="nav-item<% if @products %> active<% end %>">Products</a>
-        <li><a href="/retailers" class="nav-item<% if @retailers %> active<% end %>">Retailers</a>
-        <li><a href="/contact"   class="nav-item<% if @contact %> active<% end %>">Contact</a>
+        <li><a href="/about"     class="nav-item <%= "active" if @about %>">About</a>
+        <li><a href="/products"  class="nav-item <%= "active" if @products %>">Products</a>
+        <li><a href="/retailers" class="nav-item <%= "active" if @retailers %>">Retailers</a>
+        <li><a href="/contact"   class="nav-item <%= "active" if @contact %>">Contact</a>
       </ul>
     </nav>
   </header>

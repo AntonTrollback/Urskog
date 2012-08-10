@@ -2,10 +2,10 @@ require 'sinatra/base'
 
 class MyApp < Sinatra::Base
   @home      = false
-  @about     = true
-  @products  = true
-  @retailers = true
-  @contact   = true
+  @about     = false
+  @products  = false
+  @retailers = false
+  @contact   = false
 
   get '/' do
     @home = true
