@@ -31,6 +31,7 @@ header
     padding 22px
     overflow hidden
     border-bottom 1px solid #ddd
+
 .logo
   display inline-block
   text-indent -999em
@@ -41,12 +42,13 @@ header
   transition opacity .2s ease
   &:hover
     opacity 0.9
+
 // Fallback png logo if no svg support
 .no-svg .logo
   background-image url('../img/logo.png')
 
 
-// Navigation
+// Navigation setup
 // ========================
 
 nav, .subnav
@@ -62,8 +64,19 @@ nav, .subnav
   li
     display inline-block
     width 25%
+    position static
     &:last-child .nav-item
       border-right 0
+
+.subnav
+  display block
+  absolute top 30px left
+  li
+    width 14.2857142857% 
+
+
+// Navigation buttons
+// ========================
 
 .nav-item, .nav-item:visited
   display block
@@ -81,6 +94,8 @@ nav, .subnav
   &:active
     color #888
 
+// Navigation buttons active state
+
 .nav-item.active
   &:before,
   &:after
@@ -94,9 +109,3 @@ nav, .subnav
     top -1px
   &:after
     bottom -1px
-
-.subnav
-  display block
-  fixed left top 131px
-  li
-    width 14.2857142857% 

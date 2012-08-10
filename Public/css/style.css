@@ -321,10 +321,20 @@ nav li,
 .subnav li {
   display: inline-block;
   width: 25%;
+  position: static;
 }
 nav li:last-child .nav-item,
 .subnav li:last-child .nav-item {
   border-right: 0;
+}
+.subnav {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.subnav li {
+  width: 14.2857142857%;
 }
 .nav-item,
 .nav-item:visited {
@@ -366,15 +376,6 @@ nav li:last-child .nav-item,
 }
 .nav-item.active:after {
   bottom: -1px;
-}
-.subnav {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 131px;
-}
-.subnav li {
-  width: 14.2857142857%;
 }
 @media only screen and (min-width:768px) {
   nav li,
