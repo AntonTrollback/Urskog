@@ -336,8 +336,8 @@ nav li:last-child .nav-item,
   border-right: 0;
 }
 .subnav {
+  display: none;
   background: #eaeaea;
-  display: block;
   position: absolute;
   top: 30px;
   left: 0;
@@ -389,6 +389,9 @@ nav li:last-child .nav-item,
 }
 .nav-item.active:after {
   bottom: -1px;
+}
+.products-page .subnav {
+  display: block;
 }
 @media only screen and (min-width:768px) {
   nav li,

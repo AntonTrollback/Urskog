@@ -1,37 +1,32 @@
 require 'sinatra/base'
 
 class MyApp < Sinatra::Base
-  @home      = false
-  @about     = false
-  @products  = false
-  @retailers = false
-  @contact   = false
+  @active_page = "home"
 
   get '/' do
-    @home = true
     erb :index
   end
 
   get '/about/?' do
-    @about = true
+    @active_page = "about"
     @title = "About -"
     erb :about
   end
 
   get '/products/?' do
-    @products = true
+    @active_page = "products"
     @title = "Products -"
     erb :products
   end
 
   get '/retailers/?' do
-    @retailers = true
+    @active_page = "retailers"
     @title = "Retailers -"
     erb :retailers
   end
 
   get '/contact/?' do
-    @contact = true
+    @active_page = "contact"
     @title = "Contact -"
     erb :contact
   end

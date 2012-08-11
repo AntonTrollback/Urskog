@@ -11,15 +11,15 @@
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/libs/modernizr-2.5.3.min.js"></script>
 </head>
-<body class="container">
+<body class="container <%= @active_page %>-page">
 
   <header>
     <strong><a href=/ class="logo">Urskog Longboard</a></strong>
 
     <nav>
       <ul>
-        <li><a href="/about"     class="nav-item <%= "active" if @about %>">About</a>
-        <li><a href="/products"  class="nav-item <%= "active" if @products %>">Products</a>
+        <li><a href="/about" class="nav-item <%= "active" if @active_page == "about" %>">About</a>
+        <li class="subnav-parent"><a href="/products"  class="nav-item <%= "active" if @active_page == "products" %>">Products</a>
 <!-- Bad indention to prevent inline-block whitespace -->
 <div class="subnav">
   <ul>
@@ -32,8 +32,8 @@
     <li><a class="nav-item" href="/products/fro">Frö</a>
   </ul>
 </div>
-        <li><a href="/retailers" class="nav-item <%= "active" if @retailers %>">Retailers</a>
-        <li><a href="/contact"   class="nav-item <%= "active" if @contact %>">Contact</a>
+        <li><a href="/retailers" class="nav-item <%= "active" if @active_page == "retailers" %>">Retailers</a>
+        <li><a href="/contact" class="nav-item <%= "active" if @active_page == "contact" %>">Contact</a>
       </ul>
     </nav>
   </header>
