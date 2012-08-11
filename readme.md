@@ -10,3 +10,8 @@ The official website. Have a look, we have nothing to hide.
 - [Modernizr](https://github.com/Modernizr/Modernizr)
 - [Stylus](https://github.com/LearnBoost/stylus)
 - [CoffeeScript](https://github.com/jashkenas/coffee-script) 
+
+
+
+## License
+[Attribution-NonCommercial 3.0 Unported](http://creativecommons.org/licenses/by-nc/3.0)
