@@ -12,7 +12,6 @@
   <script src="/js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body class="container <%= @active_page %>-page">
-
   <header>
     <strong><a href=/ class="logo">Urskog Longboard</a></strong>
 
@@ -23,13 +22,13 @@
 <!-- Bad indention to prevent inline-block whitespace -->
 <div class="subnav">
   <ul>
-    <li><a class="nav-item" href="/products/stubbe">Stubbe</a>
-    <li><a class="nav-item" href="/products/kvist">Kvist</a>
-    <li><a class="nav-item" href="/products/kil">Kil</a>
-    <li><a class="nav-item" href="/products/lov">Löv</a>
-    <li><a class="nav-item" href="/products/pinne">Pinne</a>
-    <li><a class="nav-item" href="/products/sticka">Sticka</a>
-    <li><a class="nav-item" href="/products/fro">Frö</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "stubbe" %>" href="/products/stubbe">Stubbe</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "kvist" %>" href="/products/kvist">Kvist</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "kil" %>" href="/products/kil">Kil</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "lov" %>" href="/products/lov">Löv</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "pinne" %>" href="/products/pinne">Pinne</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "sticka" %>" href="/products/sticka">Sticka</a>
+    <li><a class="nav-item <%= "active" if @active_subpage == "fro" %>" href="/products/fro">Frö</a>
   </ul>
 </div>
         <li><a href="/retailers" class="nav-item <%= "active" if @active_page == "retailers" %>">Retailers</a>
