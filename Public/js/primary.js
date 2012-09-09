@@ -4,6 +4,10 @@
 
   window.app = {};
 
+  MBP.hideUrlBarOnLoad();
+
+  MBP.scaleFix();
+
   showSubnav = function() {
     return $('.subnav').addClass('is-visible');
   };

@@ -1,7 +1,8 @@
 
 window.app = {}
 
-
+MBP.hideUrlBarOnLoad()
+MBP.scaleFix()
 
 # Navigation
 # ==============================

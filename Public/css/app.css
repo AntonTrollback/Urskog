@@ -347,12 +347,13 @@ header strong {
   width: 150px;
   height: 51px;
   background-image: url("../img/logo.svg");
-  opacity: 0.7;
+  opacity: 0.75;
   -webkit-transition: opacity 0.2s ease;
   -moz-transition: opacity 0.2s ease;
   -o-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .logo:hover {
   opacity: 0.85;
@@ -424,8 +425,7 @@ nav li:last-child .nav-item,
   visibility: visible;
   opacity: 1;
 }
-.nav-item,
-.nav-item:visited {
+.nav-item {
   display: block;
   padding: 7px 0;
   line-height: 1.3;
@@ -438,16 +438,15 @@ nav li:last-child .nav-item,
   -o-transition: background 0.1s ease;
   -ms-transition: background 0.1s ease;
   transition: background 0.1s ease;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .nav-item:hover,
-.nav-item:visited:hover,
 .nav-item.active,
-.nav-item:visited.active {
+.nav-item:visited {
   color: #555;
   background: #fff;
 }
-.nav-item:active,
-.nav-item:visited:active {
+.nav-item:active {
   color: #888;
 }
 .nav-item.active:before,
