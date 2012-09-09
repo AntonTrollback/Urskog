@@ -8,10 +8,12 @@ MBP.scaleFix()
 # ==============================
 
 showSubnav = ->
-  $('.subnav').addClass('is-visible')
+  if !Modernizr.touch
+    $('.subnav').addClass('is-visible')
 
 hideSubnav = ->
-  $('.subnav').removeClass('is-visible')
+  if !Modernizr.touch
+    $('.subnav').removeClass('is-visible')
 
 $ ->
   $(".subnav-parent").hoverIntent showSubnav, hideSubnav

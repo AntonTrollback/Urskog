@@ -9,11 +9,15 @@
   MBP.scaleFix();
 
   showSubnav = function() {
-    return $('.subnav').addClass('is-visible');
+    if (!Modernizr.touch) {
+      return $('.subnav').addClass('is-visible');
+    }
   };
 
   hideSubnav = function() {
-    return $('.subnav').removeClass('is-visible');
+    if (!Modernizr.touch) {
+      return $('.subnav').removeClass('is-visible');
+    }
   };
 
   $(function() {
