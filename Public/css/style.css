@@ -288,6 +288,7 @@ h6 {
 header {
   margin-bottom: 36px;
   text-align: center;
+  z-index: 2;
 }
 header strong {
   display: block;
@@ -347,18 +348,30 @@ nav li:last-child .nav-item,
   border-right: 0;
 }
 .subnav {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   background: #eaeaea;
   position: absolute;
   top: 30px;
   left: 0;
   border-color: #d5d5d5;
+  z-index: -1;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  transiton-property: opacity, top;
 }
 .subnav li {
   width: 14.2857142857%;
 }
 .subnav li .nav-item {
   border-color: #d5d5d5;
+}
+.subnav.is-visible {
+  visibility: visible;
+  opacity: 1;
 }
 .nav-item,
 .nav-item:visited {

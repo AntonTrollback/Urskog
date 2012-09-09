@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6
 header
   margin-bottom 36px
   text-align center
+  z-index 2
   strong
     display block
     width 100%
@@ -77,14 +78,21 @@ nav, .subnav
       border-right 0
 
 .subnav
-  display none
+  visibility hidden
+  opacity 0
   background rgb(234, 234, 234)
   absolute top 30px left
   border-color rgb(213, 213, 213)
+  z-index -1
+  transition .2s ease-out
+  transiton-property opacity, top
   li
     width 14.2857142857% 
     .nav-item
       border-color rgb(213, 213, 213)
+  &.is-visible
+    visibility visible
+    opacity 1
 
 
 // Navigation buttons
@@ -121,6 +129,7 @@ nav, .subnav
     top -1px
   &:after
     bottom -1px
+
 
 
 .products-page
