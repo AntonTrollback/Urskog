@@ -21,10 +21,6 @@
   };
 
   $(function() {
-    return $(".subnav-parent").hoverIntent(showSubnav, hideSubnav);
-  });
-
-  $(function() {
     return $('.product-image img').okzoom(function() {
       return {
         width: 200,

@@ -15,11 +15,6 @@ hideSubnav = ->
   if !Modernizr.touch
     $('.subnav').removeClass('is-visible')
 
-$ ->
-  $(".subnav-parent").hoverIntent showSubnav, hideSubnav
-
-
-
 # Product pages
 # ==============================
 

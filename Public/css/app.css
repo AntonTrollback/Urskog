@@ -407,12 +407,16 @@ nav .nav-item,
   top: 30px;
   left: 0;
   border-color: #cecece;
-  z-index: -1;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
   -ms-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 .subnav li {
   width: 14.2857142857%;
@@ -420,7 +424,15 @@ nav .nav-item,
 .subnav .nav-item {
   border-color: #cecece !important;
 }
-.subnav.is-visible {
+.subnav-parent > a:after {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.subnav-parent:hover .subnav {
   visibility: visible;
   opacity: 1;
 }

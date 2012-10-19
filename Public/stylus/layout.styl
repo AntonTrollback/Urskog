@@ -90,6 +90,7 @@ nav,
   .nav-item
     border-color: darken(#f2f2f2, 13%) !important
 
+
 // Sub Navigation
 // ==============================
 
@@ -99,22 +100,32 @@ nav,
   background: darken(#f2f2f2, 5%)
   absolute: top 30px left
   border-color: darken(#f2f2f2, 15%)
-  z-index: -1
   transition: opacity .2s ease-out
+  transition-delay: .15s
   li
     width: 14.2857142857% 
   .nav-item
     border-color: darken(#f2f2f2, 15%) !important
 
-.subnav.is-visible
-  visibility: visible
-  opacity: 1
+.subnav-parent
+  // Bridge element for nav - subnav gap 
+  > a:after
+    content: ""
+    height: 7px
+    width: 100%
+    absolute: bottom -6px left 0
+
+  &:hover
+    .subnav
+      visibility: visible
+      opacity: 1
 
 // Always show subnav on products page
 .products-page
   .subnav
     visibility: visible
     opacity: 1
+
 
 // Navigation Items
 // ==============================
