@@ -566,6 +566,10 @@ footer a {
   width: 100%;
   height: auto;
 }
+.specs ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 [class|="btn"] {
   display: inline-block;
   -webkit-user-select: none;
@@ -581,6 +585,16 @@ footer a {
 }
 .constrained-nopad {
   padding: 0;
+}
+.split {
+  text-align: right;
+  list-style: none;
+  margin-left: 0;
+}
+.split-title {
+  text-align: left;
+  float: left;
+  clear: left;
 }
 .is-hidden {
   display: none;
