@@ -548,6 +548,11 @@ footer a:hover {
   -ms-user-select: none;
   user-select: none;
 }
+.constrained {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
 .is-hidden {
   display: none;
   visibility: hidden;
