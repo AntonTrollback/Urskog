@@ -297,16 +297,11 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-::-moz-selection {
-  background: #b3d4fc;
-}
-::selection {
-  background: #b3d4fc;
-}
 html {
   height: 100%;
 }
 body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   font-weight: 300;
 }
@@ -551,6 +546,13 @@ footer a:hover {
 .product-image img {
   width: 100%;
   height: auto;
+}
+[class|="btn"] {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .is-hidden {
   display: none;

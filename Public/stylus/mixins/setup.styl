@@ -1,27 +1,25 @@
 
-// ==============================
-// == Mixins config
-// ==============================
+// ========================================
+// Stylus mixins
+// ========================================
 
-
-// Mixins config
-// ==============================
 
 // Support for ie defaulting to true.
 support-for-ie = false
+
 
 // Default vendor prefixes.
 vendor-prefixes ?= webkit moz o ms official
 
 
 // Include mixins
-// ==============================
-
+@import 'vendor'
 @import 'border'
 @import 'clearfix'
 @import 'flex'
+@import 'font-family'
 @import 'gradients'
+@import 'image-replace'
 @import 'image'
 @import 'overflow'
 @import 'positions'
-@import 'vendor'
