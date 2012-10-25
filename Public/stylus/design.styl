@@ -1,4 +1,6 @@
 
+href = #4050F1
+
 // ========================================
 // Base Rules
 // ========================================
@@ -38,11 +40,15 @@ p
 
 
 a
-  color: inherit
-  text-decoration: underline
+  color: href
+  text-decoration: none
+  &:hover
+    color: href
+    text-decoration: underline
   &:active
     outline: 0
-
+    text-decoration: underline
+    color: lighten(href, 20%)
 
 
 
@@ -170,6 +176,7 @@ nav,
   &.active
     color: #555
     background: white
+    text-decoration: none
   &:visited
     color: #555
   &:active
@@ -236,9 +243,7 @@ footer
     display: inline-block
     margin: 0 12px 10px
   a
-    text-decoration: none
-    &:hover
-      text-decoration: underline
+    color: inherit
 
 
 // Footer @ landscape mobile

@@ -331,11 +331,17 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: inherit;
+  color: #4050f1;
+  text-decoration: none;
+}
+a:hover {
+  color: #4050f1;
   text-decoration: underline;
 }
 a:active {
   outline: 0;
+  text-decoration: underline;
+  color: #6673f4;
 }
 header {
   margin-bottom: 36px;
@@ -470,6 +476,7 @@ nav .nav-item,
 .nav-item.active {
   color: #555;
   background: #fff;
+  text-decoration: none;
 }
 .nav-item:visited {
   color: #555;
@@ -532,10 +539,7 @@ footer li {
   margin: 0 12px 10px;
 }
 footer a {
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 @media only screen and (min-width:470px) {
   footer {
