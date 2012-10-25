@@ -567,8 +567,11 @@ footer a {
   height: auto;
 }
 .specs ul {
-  margin-left: 0;
   padding-left: 0;
+  margin-left: 0;
+}
+.specs li {
+  margin: 0 0 1px 0;
 }
 [class|="btn"] {
   display: inline-block;
