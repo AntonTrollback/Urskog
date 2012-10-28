@@ -1,5 +1,6 @@
 
 href = #4050F1
+hr   = #ccc
 
 // ========================================
 // Base Rules
@@ -16,18 +17,21 @@ body
   line-height: 1.5
 
 
-h1, h2, h3, h4
+h1, h2, h3, h4, .heading
   font-weight: 500
   font-style: italic
   text-transform: uppercase
   margin: 0 0 10px
 
 h1
-  font-size: 38px
+  font-size: 34px
 h2
   font-size: 24px
-h3
+  font-weight: 400
+h3, .heading-3
   font-size: 18px
+  font-weight: 300
+  letter-spacing: 1px
 h4
   font-size: 16px
 
@@ -277,18 +281,6 @@ footer
 // Products Main Page
 // ========================================
 
-// Product image with label
-// ==============================
-
-.product-image
-  width: 95%
-  margin: 0 auto
-  max-width: 1200px;
-  img
-    width: 100%
-    height: auto
-
-
 // Specs list
 // ==============================
 
@@ -296,6 +288,9 @@ footer
   ul
     padding-left: 0
     margin-left: 0
+    list-style: none
+  strong
+    margin-right: 5px
   li
     margin: 0 0 1px 0
 
@@ -323,7 +318,7 @@ footer
   max-width: 1100px
   width: 100%
   margin: 0 auto
-  padding: 25px
+  padding: 15px
 
 .constrained-nopad
   padding: 0
@@ -342,6 +337,37 @@ footer
   text-align: left
   float: left
   clear: left
+
+
+// Product image with label
+// ==============================
+
+.product-image
+  width: 100%
+  margin: 50px 0 0
+  position: relative
+  text-align: center
+  img
+    width: 100%
+    height: auto
+  figcaption
+    margin-bottom: 15px
+
+// Footer @ landscape mobile
+
+@media only screen and (min-width:768px)
+
+  .product-image
+    margin: 80px 0 0
+    figcaption
+      // Mimic h4..
+      font-weight: 400
+      font-size: 24px
+      letter-spacing: 0
+
+
+
+
 
 
 
