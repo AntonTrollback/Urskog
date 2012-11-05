@@ -563,40 +563,77 @@ footer a {
   }
 }
 .product-info {
-  overflow: hidden;
   margin-bottom: 40px;
+  position: relative;
 }
-.description {
-  float: left;
-  max-width: 600px;
+.product-info:before,
+.product-info:after {
+  content: "";
+  display: table;
 }
-.description ul {
-  width: 46%;
-  float: right;
-  margin: 0;
-}
-.description .rating {
-  float: left;
+.product-info:after {
+  clear: both;
 }
 .shop {
-  float: right;
-  margin-top: 9px;
+  display: none;
+}
+.shop h2 {
+  cursor: default;
+  margin-bottom: 4px;
 }
 .shop-item {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 .shop-item p {
   margin: -8px 0 10px;
+  cursor: default;
 }
 .shop-item .btn {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .price {
   font-size: 48px;
 }
 .price small {
   font-size: 60%;
-  color: #777;
+  color: #666;
+  font-weight: 400;
+}
+.tabs {
+  display: block;
+}
+@media only screen and (min-width:470px) {
+}
+@media only screen and (min-width:768px) {
+  .product-meta {
+    float: left;
+    width: 58%;
+    max-width: 650px;
+  }
+  .product-specs {
+    display: block;
+  }
+  .product-specs ul {
+    width: 53%;
+    float: right;
+    margin: 10px 0;
+  }
+  .product-specs .rating {
+    width: 42%;
+    float: left;
+  }
+  .shop {
+    display: block;
+    float: right;
+    margin-top: 10px;
+    border: 1px solid #e7e7e7;
+    padding: 20px 28px 30px 30px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+  .tabs {
+    display: none;
+  }
 }
 [class|="btn"],
 .btn {
@@ -697,7 +734,9 @@ footer a {
 .check-radio input:not(:checked) + span {
   opacity: 0.8;
 }
-.constrained {
+.constrained,
+.constrained-nopad,
+.constrained-tighter {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
@@ -705,6 +744,11 @@ footer a {
 }
 .constrained-nopad {
   padding: 0;
+}
+.constrained-tighter {
+  max-width: 980px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .split,
 .list {
@@ -715,6 +759,11 @@ footer a {
 .split li,
 .list li {
   margin: 0 0 1px 0;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 .list-title {
   margin-right: 5px;

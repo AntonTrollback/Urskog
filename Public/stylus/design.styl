@@ -278,44 +278,82 @@ footer
 
 
 // ========================================
-// Products Main Page
+// Product View
 // ========================================
 
 .product-info
-  overflow: hidden
+  clearfix()
   margin-bottom: 40px
-
-.description
-  float: left
-  max-width: 600px
-
-  ul
-    width: 46%
-    float: right
-    margin: 0
-  .rating
-    float: left
-
-.shop
-  float: right
-  margin-top: 9px
+  position: relative
 
 
 // Shop unit
 // ==============================
 
+.shop
+  display: none
+  h2
+    cursor: default
+    margin-bottom: 4px
+
 .shop-item
-  margin-top: 10px
+  margin-top: 12px
   p
     margin: -8px 0 10px
+    cursor: default
   .btn
-    margin-top: 15px
+    margin-top: 10px
 
 .price
   font-size: 48px
   small
     font-size: 60%
-    color: #777
+    color: #666
+    font-weight: 400
+
+// Product info is tab navigated in mobiles
+.tabs
+  display: block
+
+
+// Product View @ landscape mobile
+// ==============================
+
+@media only screen and (min-width:470px)
+
+  // temp
+
+
+// Product View @ tablet
+// ==============================
+
+@media only screen and (min-width:768px)
+
+  .product-meta
+    float: left
+    width: 58%
+    max-width: 650px
+
+  .product-specs
+    display: block
+    ul
+      width: 53%
+      float: right
+      margin: 10px 0
+    .rating
+      width: 42%
+      float: left
+
+  .shop
+    display: block
+    float: right
+    margin-top: 10px
+    border: 1px solid rgb(231, 231, 231)
+    padding: 20px 28px 30px 30px
+    border-radius: 3px
+
+  .tabs
+    display: none
 
 
 
@@ -408,7 +446,15 @@ footer
   padding: 15px
 
 .constrained-nopad
+  @extend .constrained
   padding: 0
+
+.constrained-tighter
+  @extend .constrained
+  max-width: 980px
+  padding-right: 20px
+  padding-left: 20px
+
 
 
 // Split unit
@@ -421,6 +467,10 @@ footer
   padding-left: 0
   li
     margin: 0 0 1px 0
+    max-width: 100%
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
 
 .list-title
   margin-right: 5px
