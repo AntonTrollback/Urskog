@@ -295,21 +295,17 @@ footer
   h2
     cursor: default
     margin-bottom: 4px
+  .check-radio[for="complete"]
+    margin-right: 30px
 
 .shop-item
   margin-top: 12px
   p
-    margin: -8px 0 10px
     cursor: default
+    margin: 0
   .btn
-    margin-top: 10px
-
-.price
-  font-size: 48px
-  small
-    font-size: 60%
-    color: #666
-    font-weight: 400
+    margin: 15px 0 12px
+    min-width: 183px
 
 // Product info is tab navigated in mobiles
 .tabs
@@ -349,7 +345,7 @@ footer
     float: right
     margin-top: 10px
     border: 1px solid rgb(231, 231, 231)
-    padding: 20px 28px 30px 30px
+    padding: 20px 28px 28px 30px
     border-radius: 3px
 
   .tabs
@@ -388,12 +384,12 @@ footer
   span
     display: block
     position: relative
-    padding: 0 15px
-    height: 30px
-    line-height: 30px
+    padding: 0 18px
+    height: 45px
+    line-height: 45px
     background: #1275ff
     background-image: linear-gradient(#7dc5ee, #008cdd 85%, #30a2e4)
-    font-size: 14px
+    font-size: 22px
     color: #fff
     font-weight: bold
     text-shadow: 0 -1px 0 rgba(black, .25)
@@ -419,6 +415,16 @@ footer
     text-shadow: 0 1px 0 rgba(255,255,255,0.5)
 
 
+  .price
+    font-weight: 400
+    margin-left: 14px
+    padding-left: 14px
+    border-left: 1px solid #007CC4
+    small
+      font-size: 60%
+      font-weight: 500
+
+
 // Checkbox & radiobutton
 // ==============================
 
@@ -427,13 +433,18 @@ footer
   cursor: pointer
   span
     vertical-align: middle
-    padding: 0 20px 0 5px
+    padding-left: 5px
   input
     vertical-align: middle
     &:not(:checked)
       opacity: .8
-      + span
-        opacity: .8
+      ~ span
+        color: #888
+  .extra
+    margin: -3px 0 0 18px
+    display: block
+    font-size: 14px
+
 
 
 // Constrained wrapper unit 
@@ -524,3 +535,6 @@ footer
 .is-hidden
   display: none !important
   visibility: hidden
+
+.is-muted
+  color: #888
