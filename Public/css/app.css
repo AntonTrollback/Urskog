@@ -586,6 +586,7 @@ footer a {
 }
 .shop-item {
   margin-top: 12px;
+  display: none;
 }
 .shop-item p {
   cursor: default;
@@ -594,6 +595,12 @@ footer a {
 .shop-item .btn {
   margin: 15px 0 12px;
   min-width: 183px;
+}
+.is-complete .shop-item.complete {
+  display: block;
+}
+.is-deck-only .shop-item.deck-only {
+  display: block;
 }
 .tabs {
   display: block;
@@ -621,9 +628,10 @@ footer a {
   .shop {
     display: block;
     float: right;
+    min-width: 282px;
     margin-top: 10px;
     border: 1px solid #e7e7e7;
-    padding: 20px 28px 28px 30px;
+    padding: 20px 18px 28px 30px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }

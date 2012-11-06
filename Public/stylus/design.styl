@@ -300,12 +300,23 @@ footer
 
 .shop-item
   margin-top: 12px
+  display: none
   p
     cursor: default
     margin: 0
   .btn
     margin: 15px 0 12px
     min-width: 183px
+
+.is-complete
+  .shop-item
+    &.complete
+      display: block
+
+.is-deck-only
+  .shop-item
+    &.deck-only
+      display: block
 
 // Product info is tab navigated in mobiles
 .tabs
@@ -343,9 +354,10 @@ footer
   .shop
     display: block
     float: right
+    min-width: 282px
     margin-top: 10px
     border: 1px solid rgb(231, 231, 231)
-    padding: 20px 28px 28px 30px
+    padding: 20px 18px 28px 30px
     border-radius: 3px
 
   .tabs
