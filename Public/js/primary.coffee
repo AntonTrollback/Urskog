@@ -10,7 +10,10 @@ MBP.scaleFix()
 $ ->
 
   $('.shop').on 'change', 'input', (e) ->
-    $('.shop').alterClass("is-*", "is-" + $(this).attr('id'))
+    console.log($(this))
+    $parent = $(this).closest('.shop')
+    $parent.find('.shop__option').removeClass('is-active')
+    $parent.find(".js-#{$(this).attr('id')}").addClass('is-active')
 
 
 
@@ -18,7 +21,7 @@ $ ->
   $.fn.alterClass = (removals, additions) ->
     self = this
     if removals.indexOf("*") is -1
-      
+
       # Use native jQuery methods if there is no wildcard matching
       self.removeClass removals
       return (if not additions then self else self.addClass(additions))

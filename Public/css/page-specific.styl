@@ -1,0 +1,136 @@
+
+// ========================================
+// Page header
+// ========================================
+
+.page-header
+  margin-bottom: 36px
+  text-align: center
+  z-index: 2
+  strong
+    display: block
+    width: 100%
+    background: #f2f2f2
+    padding: 22px
+    overflow: hidden
+    border-bottom: 1px solid darken(#f2f2f2, 10%)
+
+
+
+// ========================================
+// Page Footer
+// ========================================
+
+.page-footer
+  text-align: center
+  font-family: 'Open Sans Condensed', sans-serif
+  font-weight: normal
+  font-size: 14px
+  text-transform: uppercase
+  padding: 0 15px 70px
+  max-width: 370px
+  margin: 50px auto 0
+  color: #5c5c5c
+  ul
+    margin: 0
+    padding: 16px 0 0
+    border-top: 1px solid #e6e6e6
+    list-style: none
+    list-style-image: none
+  li
+    display: inline-block
+    margin: 0 12px 10px
+  a
+    color: inherit
+
+
+
+// Footer @ landscape mobile
+// ----------------------------------------
+
+@media only screen and (min-width:470px)
+
+  .page-footer
+    max-width: 686px
+    li
+      margin: 0 8px 10px
+
+
+
+// Footer @ tablet
+// ----------------------------------------
+
+@media only screen and (min-width:768px)
+
+  .page-footer
+    ul
+      padding-top: 23px
+    li
+      margin: 0 16px 10px
+
+
+
+// ========================================
+// Product Pages
+// ========================================
+
+.products-page
+  .nav__sub
+    visibility: visible
+    opacity: 1
+
+  .shop
+    float: right
+    min-width: 282px
+    margin-top: 10px
+
+.product-info
+  clearfix()
+  margin-bottom: 40px
+  position: relative
+
+  table
+    width: 80%
+
+
+
+// Product Pages @ tablet
+// ----------------------------------------
+
+@media only screen and (min-width:768px)
+
+  .product-info
+    article
+      float: left
+      width: 58%
+      max-width: 650px
+
+
+
+
+
+
+// Product image with label
+// ==============================
+
+.product-image
+  width: 100%
+  margin: 50px 0 0
+  position: relative
+  text-align: center
+  clear: both
+  img
+    width: 100%
+    height: auto
+  figcaption
+    margin-bottom: 15px
+
+
+@media only screen and (min-width:768px)
+
+  .product-image
+    margin: 80px 0 0
+    figcaption
+      font-weight: 400
+      font-size: 24px
+      letter-spacing: 0

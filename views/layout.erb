@@ -15,26 +15,26 @@
 <body class="container <%= @active_page %>-page">
 
 
-  <header>
+  <header class="page-header">
     <strong><a href=/ class="logo">Urskog Longboard</a></strong>
-    <nav>
+    <nav class="nav">
       <ul>
-        <li><a href="/about" class="nav-item <%= "active" if @active_page == "about" %>">About</a>
-        <li class="subnav-parent"><a href="/products"  class="nav-item <%= "active" if @active_page == "products" %>">Products</a>
+        <li><a href="/about" class="nav__item <%= "is-active" if @active_page == "about" %>">About</a>
+        <li class="nav__sub-parent"><a href="/products"  class="nav__item <%= "is-active" if @active_page == "products" %>">Products</a>
 <!-- Bad indention to prevent inline-block whitespace -->
-<div class="subnav">
+<div class="nav__sub">
   <ul>
-    <li><a class="nav-item <%= "active" if @active_subpage == "stubbe" %>" href="/products/stubbe">Stubbe</a>
-    <li><a class="nav-item <%= "active" if @active_subpage == "kvist" %>" href="/products/kvist">Kvist</a>
-    <li><a class="nav-item <%= "active" if @active_subpage == "kil" %>" href="/products/kil">Kil</a>
-    <li><a class="nav-item <%= "active" if @active_subpage == "lov" %>" href="/products/lov">Löv</a>
-    <li><a class="nav-item <%= "active" if @active_subpage == "pinne" %>" href="/products/pinne">Pinne</a>
-    <li><a class="nav-item <%= "active" if @active_subpage == "sticka" %>" href="/products/sticka">Sticka</a>
-    <li><a class="nav-item <%= "active" if @active_subpage == "fro" %>" href="/products/fro">Frö</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "stubbe" %>" href="/products/stubbe">Stubbe</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "kvist" %>" href="/products/kvist">Kvist</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "kil" %>" href="/products/kil">Kil</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "lov" %>" href="/products/lov">Löv</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "pinne" %>" href="/products/pinne">Pinne</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "sticka" %>" href="/products/sticka">Sticka</a>
+    <li><a class="nav__item <%= "is-active" if @active_subpage == "fro" %>" href="/products/fro">Frö</a>
   </ul>
 </div>
-        <li><a href="/retailers" class="nav-item <%= "active" if @active_page == "retailers" %>">Retailers</a>
-        <li><a href="/contact" class="nav-item <%= "active" if @active_page == "contact" %>">Contact</a>
+        <li><a href="/retailers" class="nav__item <%= "is-active" if @active_page == "retailers" %>">Retailers</a>
+        <li><a href="/contact" class="nav__item <%= "is-active" if @active_page == "contact" %>">Contact</a>
       </ul>
     </nav>
   </header>
@@ -45,7 +45,7 @@
   </div>
 
 
-  <footer>
+  <footer class="page-footer">
     <ul>
       <li>Urskog Longboard
       <li><a href="mailto:info@urskog.com" title="Send a mail to info@urskog.com">info@urskog.com</a>
@@ -55,7 +55,7 @@
   </footer>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 <script src="/js/plugins.js"></script>
 <script src="/js/primary.js"></script>
