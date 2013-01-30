@@ -574,6 +574,9 @@ footer a {
 .product-info:after {
   clear: both;
 }
+.product-info table {
+  width: 80%;
+}
 .shop {
   display: none;
 }
@@ -608,22 +611,10 @@ footer a {
 @media only screen and (min-width:470px) {
 }
 @media only screen and (min-width:768px) {
-  .product-meta {
+  .product-info article {
     float: left;
     width: 58%;
     max-width: 650px;
-  }
-  .product-specs {
-    display: block;
-  }
-  .product-specs ul {
-    width: 53%;
-    float: right;
-    margin: 10px 0;
-  }
-  .product-specs .rating {
-    width: 42%;
-    float: left;
   }
   .shop {
     display: block;
@@ -771,31 +762,21 @@ footer a {
   padding-right: 20px;
   padding-left: 20px;
 }
-.split,
-.list {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+.unit-1-3 {
+  width: 33.333%;
 }
-.split li,
-.list li {
-  margin: 0 0 1px 0;
-  max-width: 100%;
-  white-space: nowrap;
+.unit-2-3 {
+  width: 66.666%;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+td {
+  padding: 0;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-}
-.list-title {
-  margin-right: 5px;
-}
-.split {
-  text-align: right;
-}
-.split-title {
-  text-align: left;
-  float: left;
-  clear: left;
+  display: inline-block;
+  white-space: nowrap;
 }
 .product-image {
   width: 100%;

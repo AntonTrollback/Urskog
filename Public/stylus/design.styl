@@ -36,7 +36,7 @@ h4
   font-size: 16px
 
 h5, h6
-  font-weight: 800  
+  font-weight: 800
   font-size: 16px
 
 p
@@ -138,12 +138,12 @@ nav,
   transition: opacity .2s ease-out
   transition-delay: .15s
   li
-    width: 14.2857142857% 
+    width: 14.2857142857%
   .nav-item
     border-color: darken(#f2f2f2, 15%) !important
 
 .subnav-parent
-  // Bridge element for nav - subnav gap 
+  // Bridge element for nav - subnav gap
   > a:after
     content: ""
     height: 7px
@@ -286,6 +286,9 @@ footer
   margin-bottom: 40px
   position: relative
 
+  table
+    width: 80%
+
 
 // Shop unit
 // ==============================
@@ -336,20 +339,11 @@ footer
 
 @media only screen and (min-width:768px)
 
-  .product-meta
-    float: left
-    width: 58%
-    max-width: 650px
-
-  .product-specs
-    display: block
-    ul
-      width: 53%
-      float: right
-      margin: 10px 0
-    .rating
-      width: 42%
+  .product-info
+    article
       float: left
+      width: 58%
+      max-width: 650px
 
   .shop
     display: block
@@ -416,11 +410,11 @@ footer
     background: #008cdd;
     background-image: linear-gradient(#008cdd, #008cdd 85%, #239adf);
     box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
-  
+
   &:disabled
     background: rgba(0,0,0,0.2)
     box-shadow: 0 1px 0 rgba(255,255,255,0.4)
-  
+
   &:disabled span
     color: #666
     background: #f8f9fa
@@ -459,7 +453,7 @@ footer
 
 
 
-// Constrained wrapper unit 
+// Constrained wrapper unit
 // ==============================
 
 .constrained
@@ -480,31 +474,28 @@ footer
 
 
 
-// Split unit
+
+// Simple grid system
 // ==============================
-// Two elements floated away from one another
 
-.split, .list
-  list-style: none
-  margin-left: 0
-  padding-left: 0
-  li
-    margin: 0 0 1px 0
-    max-width: 100%
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
+.unit-1-3
+  width: 33.333%
+.unit-2-3
+  width: 66.666%
 
-.list-title
-  margin-right: 5px
 
-.split
-  text-align: right
 
-.split-title
-  text-align: left
-  float: left
-  clear: left
+// Tables
+// ==============================
+
+table
+  width: 100%
+  table-layout: fixed
+td
+  padding: 0
+  overflow: hidden
+  display: inline-block
+  white-space: nowrap
 
 
 
@@ -523,7 +514,6 @@ footer
   figcaption
     margin-bottom: 15px
 
-// Footer @ landscape mobile
 
 @media only screen and (min-width:768px)
 
