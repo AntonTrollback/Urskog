@@ -43,25 +43,13 @@
   a
     color: inherit
 
-
-
-// Footer @ landscape mobile
-// ----------------------------------------
-
 @media only screen and (min-width:470px)
-
   .page-footer
     max-width: 686px
     li
       margin: 0 8px 10px
 
-
-
-// Footer @ tablet
-// ----------------------------------------
-
 @media only screen and (min-width:768px)
-
   .page-footer
     ul
       padding-top: 23px
@@ -88,17 +76,10 @@
   clearfix()
   margin-bottom: 40px
   position: relative
-
   table
     width: 80%
 
-
-
-// Product Pages @ tablet
-// ----------------------------------------
-
 @media only screen and (min-width:768px)
-
   .product-info
     article
       float: left
@@ -106,19 +87,16 @@
       max-width: 650px
 
 
-
-
-
-
 // Product image with label
-// ==============================
+// ----------------------------------------
 
 .product-image
   width: 100%
-  margin: 50px 0 0
+  margin: 40px 0
   position: relative
   text-align: center
   clear: both
+  @extend .reset-link
   img
     width: 100%
     height: auto
@@ -127,9 +105,8 @@
 
 
 @media only screen and (min-width:768px)
-
   .product-image
-    margin: 80px 0 0
+    margin: 60px 0
     figcaption
       font-weight: 400
       font-size: 24px
