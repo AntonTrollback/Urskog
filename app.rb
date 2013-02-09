@@ -13,7 +13,7 @@ class Board
 
   def self.find(slug)
     boards = self.all
-    boards.select {|b| b.slug == slug }.first
+    boards.select {|b| b.slug == slug }.first || NullBoard.new
   end
 
   def self.boards(yaml_file)
@@ -37,6 +37,16 @@ class Board
 
 end
 
+class NullBoard
+  def name
+    ""
+  end
+
+  def slug
+    ""
+  end
+end
+
 class MyApp < Sinatra::Base
 
   def title
@@ -53,6 +63,7 @@ class MyApp < Sinatra::Base
 
   before do
     @boards = Board.all
+    @board = NullBoard.new
   end
 
   get '/' do
@@ -89,7 +100,7 @@ class MyApp < Sinatra::Base
   get '/products/:slug' do
     @board = Board.find(params[:slug])
     @slug = "products"
-    @title = board.name
+    @title = @board.name
     erb :product
   end
 
