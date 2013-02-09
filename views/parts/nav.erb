@@ -1,11 +1,11 @@
-    <nav class="nav">
-      <ul>
-        <li><a href="/about" class="nav__item <%= "is-active" if @active_page == "about" %>">About</a>
-        <li class="nav__sub-parent"><a href="/products"  class="nav__item <%= "is-active" if @active_page == "products" %>">Products</a>
+<nav class="nav">
+  <ul>
+    <li><a href="/about" class="nav__item <%= "is-active" if @active_page == "about" %>">About</a>
+    <li class="nav__sub-parent"><a href="/products"  class="nav__item <%= "is-active" if @active_page == "products" %>">Products</a>
 
-        <%= erb :'parts/nav_sub', :layout => false %>
+    <%= erb :'parts/nav_sub', :layout => false %>
 
-        <li><a href="/retailers" class="nav__item <%= "is-active" if @active_page == "retailers" %>">Retailers</a>
-        <li><a href="/contact" class="nav__item <%= "is-active" if @active_page == "contact" %>">Contact</a>
-      </ul>
-    </nav>
+    <li><a href="/retailers" class="nav__item <%= "is-active" if @active_page == "retailers" %>">Retailers</a>
+    <li><a href="/contact" class="nav__item <%= "is-active" if @active_page == "contact" %>">Contact</a>
+  </ul>
+</nav>

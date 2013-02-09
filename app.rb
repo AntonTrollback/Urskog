@@ -7,13 +7,8 @@ require 'yaml'
 class Board
 
   def self.all
-    # Fetch product info from yml file
-    yaml_file = YAML.load_file("boards.yml")
-    boards = []
-    yaml_file.each do |item|
-      boards << Board.new(item)
-    end
-    boards
+    @yaml_file ||= YAML.load_file("boards.yml")
+    @boards    ||= boards(@yaml_file)
   end
 
   def self.find(slug)
@@ -21,14 +16,23 @@ class Board
     boards.select {|b| b.slug == slug }.first
   end
 
+  def self.boards(yaml_file)
+    boards = []
+    yaml_file.each do |item|
+      boards << Board.new(item)
+    end
+    boards
+  end
 
-  attr_reader :name, :length, :price, :slug
+  attr_accessor :name,
+                :length,
+                :price,
+                :slug
 
-  def initialize(params)
-    @name = params[:name]
-    @length = params[:length]
-    @price = params[:price]
-    @slug = params[:slug]
+  def initialize(attributes={})
+    attributes.each do |name, value|
+      self.public_send("#{name}=", value)
+    end
   end
 
 end
@@ -62,12 +66,6 @@ class MyApp < Sinatra::Base
     erb :about
   end
 
-  get '/products/?' do
-    @slug = "products"
-    @title = "Products"
-    erb :products
-  end
-
   get '/retailers/?' do
     @slug = "retailers"
     @title = "Retailers"
@@ -80,8 +78,14 @@ class MyApp < Sinatra::Base
     erb :contact
   end
 
+  # List of products
+  get '/products/?' do
+    @slug = "products"
+    @title = "Products"
+    erb :products
+  end
 
-  # Product
+  # Single product
   get '/products/:slug' do
     @board = Board.find(params[:slug])
     @slug = "products"
