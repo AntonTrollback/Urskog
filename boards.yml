@@ -1,0 +1,9 @@
+---
+- :name: Stubbe
+  :length: 5000
+  :price: 1800
+  :slug: stubbe
+- :name: Kil
+  :length: 100
+  :price: 1800
+  :slug: kil

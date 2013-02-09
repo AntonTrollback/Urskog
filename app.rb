@@ -1,6 +1,37 @@
 # encoding: utf-8
 
 require 'sinatra/base'
+require 'yaml'
+
+
+class Board
+
+  def self.all
+    # Fetch product info from yml file
+    yaml_file = YAML.load_file("boards.yml")
+    boards = []
+    yaml_file.each do |item|
+      boards << Board.new(item)
+    end
+    boards
+  end
+
+  def self.find(slug)
+    boards = self.all
+    boards.select {|b| b.slug == slug }.first
+  end
+
+
+  attr_reader :name, :length, :price, :slug
+
+  def initialize(params)
+    @name = params[:name]
+    @length = params[:length]
+    @price = params[:price]
+    @slug = params[:slug]
+  end
+
+end
 
 class MyApp < Sinatra::Base
 
@@ -14,6 +45,10 @@ class MyApp < Sinatra::Base
 
   def active(item)
     "is-active" if item == @slug
+  end
+
+  before do
+    @boards = Board.all
   end
 
   get '/' do
@@ -46,48 +81,12 @@ class MyApp < Sinatra::Base
   end
 
 
-  # Products
-
-  get '/products/stubbe?' do
+  # Product
+  get '/products/:slug' do
+    @board = Board.find(params[:slug])
     @slug = "products"
     @title = "Stubbe"
-    erb :stubbe
-  end
-
-  get '/products/kvist?' do
-    @slug = "products"
-    @title = "Kvist"
-    erb :kvist
-  end
-
-  get '/products/kil?' do
-    @slug = "products"
-    @title = "Kil"
-    erb :kil
-  end
-
-  get '/products/lov?' do
-    @slug = "products"
-    @title = "L%C3%B6v"
-    erb :lov
-  end
-
-  get '/products/pinne?' do
-    @slug = "products"
-    @title = "Pinne"
-    erb :pinne
-  end
-
-  get '/products/sticka?' do
-    @slug = "products"
-    @title = "Sticka"
-    erb :sticka
-  end
-
-  get '/products/fro?' do
-    @slug = "products"
-    @title = "Frö"
-    erb :@slug
+    erb :product
   end
 
   run! if app_file == $0
