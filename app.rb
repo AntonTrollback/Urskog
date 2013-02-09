@@ -89,7 +89,7 @@ class MyApp < Sinatra::Base
   get '/products/:slug' do
     @board = Board.find(params[:slug])
     @slug = "products"
-    @title = "Stubbe"
+    @title = board.name
     erb :product
   end
 
