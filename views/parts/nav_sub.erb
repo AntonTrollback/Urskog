@@ -1,7 +1,7 @@
 <div class="nav__sub">
   <ul>
     <% @boards.each do |board| %>
-      <li><a class="nav__item <%= "is-active" if @active_subpage == board.slug %>" href="/products/<%= board.slug %>"><%= board.name %></a>
+      <li><a class="nav__item <%= active(board.slug) %>" href="/products/<%= board.slug %>"><%= board.name %></a></li>
     <% end %>
   </ul>
 </div>
