@@ -25,7 +25,8 @@ class Board
   attr_accessor :name,
                 :length,
                 :price,
-                :slug
+                :slug,
+                :woods
 
   def initialize(attributes={})
     attributes.each do |name, value|
@@ -33,6 +34,9 @@ class Board
     end
   end
 
+  def wood_list
+    woods.map(&:capitalize).join(", ")
+  end
 end
 
 class NullBoard
