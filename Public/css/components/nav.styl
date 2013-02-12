@@ -6,101 +6,73 @@
 .nav
   width: 100%
   margin-top: 4px
-  border: darken(#f2f2f2, 13%)
-  border-width: 1px 0
   background: darken(#f2f2f2, 3%)
   font-family: 'Open Sans Condensed', sans-serif
   font-weight: bold
   font-size: 12px
   text-transform: uppercase
   position: relative
-  letter-spacing: -0.31em
-  word-spacing: -0.43em
-  text-rendering: optimizespeed
   ul
     margin: 0
     padding: 0
   li
     display: inline-block
     width: 25%
-    letter-spacing: normal
-    word-spacing: normal
-    text-rendering: auto
 
 
-// Subnav
+// Subnav navigation
 // ----------------------------------------
 
 .nav__sub
   @extend .nav
+  position: absolute
+  top: 32px
+  left: 0
+  background: darken(#f2f2f2, 6%)
   visibility: hidden
   opacity: 0
-  background: darken(#f2f2f2, 5%)
-  absolute: top 30px left
-  border-color: darken(#f2f2f2, 15%)
   transition: opacity .2s ease-out
   transition-delay: .15s
 
 .nav__sub-parent
-  // Show subnav on hover
   &:hover .nav__sub
     visibility: visible
     opacity: 1
-  // Bridge for the gap: nav - subnav
+
+  // Bridge for the gap between the nav and subnav
   > .nav__item:after
     content: ""
+    position: absolute
+    bottom: -6px;
+    left: 0
     height: 7px
     width: 100%
-    absolute: bottom -6px left 0
 
 
 // Navigation item
 // ----------------------------------------
 
 .nav__item
-  display: block
   position: relative
+  display: block
   padding: 7px 0
-  line-height: 1.3
-  color: #555
   text-decoration: none
-  border-right: 1px solid
+  line-height: 1.5
+  color: #555
   background: transparent
   transition: background .1s ease
   -webkit-tap-highlight-color: rgba(black, 0)
-  border-color: darken(#f2f2f2, 13%) !important
 
-  li:last-child > &
-    border-right: 0
-
-  .nav__sub &
-    // Slightly darker borders if part of subnav
-    border-color: darken(#f2f2f2, 15%) !important
-
-  &:hover,
+  &:hover
   &.is-active
     color: #555
-    background: white
     text-decoration: none
+    background: white
   &:visited
     color: #555
   &:active
     color: #888
 
-  &.is-active
-    // Overlay the active item horizontal borders
-    &:before,
-    &:after
-      content: ""
-      position: absolute
-      left: 0
-      width: 100%
-      height: 1px
-      background: white
-    &:before
-      top: -1px
-    &:after
-      bottom: -1px
 
 @media only screen and (min-width:768px)
   .nav,
@@ -110,8 +82,3 @@
 
   .nav__item
     min-width: 98px
-    li:first-child &
-        border-left: 1px solid
-    li:last-child &
-      border-right: 1px solid
-

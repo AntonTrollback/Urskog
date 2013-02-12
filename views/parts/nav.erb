@@ -1,13 +1,13 @@
 <nav class="nav">
   <ul>
-    <li><a class="nav__item <%= active("about") %>" href="/about">About</a></li>
+    <li><a class="nav__item <%= active("about") %>" href="/about">About</a>
 
     <li class="nav__sub-parent">
       <a class="nav__item <%= active("products") %>" href="/products">Products</a>
       <%= erb :'parts/nav_sub', :layout => false %>
-    </li>
+    </li><!--
 
-    <li><a class="nav__item <%= active("retailers") %>" href="/retailers">Retailers</a></li>
-    <li><a class="nav__item <%= active("contact") %>" href="/contact">Contact</a></li>
+    --><li><a class="nav__item <%= active("retailers") %>" href="/retailers">Retailers</a>
+    <li><a class="nav__item <%= active("contact") %>" href="/contact">Contact</a>
   </ul>
 </nav>
