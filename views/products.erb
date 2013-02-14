@@ -1,10 +1,12 @@
-<h1 class="is-vishidden">Products</h1>
+<h1 class="is-vishidden">List of products</h1>
 
-<% @boards.each do |board| %>
-  <a href="/products/<%= board.slug %>" class="product-image">
-    <figure class="product-image">
-      <figcaption class="heading heading-3"><%= board.name %></figcaption>
-      <img src="/img/boards/<%= board.slug %>/zebrano.jpg" alt="">
-    </figure>
-  </a>
-<% end %>
+<ul class="products products--divided">
+  <% @boards.each do |board| %>
+    <li>
+      <a class="product" href="/products/<%= board.slug %>">
+        <span class="product__title"><%= board.name %></span>
+        <img class="product__image" src="/img/boards/<%= board.slug %>/zebrano.jpg" alt="Image of <%= board.name %>">
+      </a>
+    </li>
+  <% end %>
+</ul>

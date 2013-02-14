@@ -49,10 +49,13 @@
 </div>
 
 
-
-<% @board.woods.each do |wood| %>
-<figure class="product-image">
-  <figcaption class="heading heading-3"><%= wood.capitalize %></figcaption>
-  <img src="/img/boards/<%= @board.slug %>/<%= wood %>.jpg" alt="">
-</figure>
-<% end %>
+<ul class="product-list">
+  <% @board.woods.each do |wood| %>
+    <li>
+      <div class="product">
+        <span class="product__title"><%= wood.capitalize %></span>
+        <img class="product__image" src="/img/boards/<%= @board.slug %>/<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+      </div>
+    </li>
+  <% end %>
+</ul>
