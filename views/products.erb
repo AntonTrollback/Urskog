@@ -1,57 +1,11 @@
 <h1 class="is-vishidden">Products</h1>
 
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Stubbe</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
-
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Kvist</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
-
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Kil</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
-
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Löv</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
-
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Pinne</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
-
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Sticka</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
-
-<a href="#" class="product-image">
-  <figure class="product-image">
-    <figcaption class="heading heading-3">Frö</figcaption>
-    <img src="/img/boards/stubbe-zebrano.jpg" alt="">
-  </figure>
-  <hr>
-</a>
+<% @boards.each do |board| %>
+  <a href="#" class="product-image">
+    <figure class="product-image">
+      <figcaption class="heading heading-3"><%= board.name %></figcaption>
+      <img src="/img/boards/<%= board.slug %>/zebrano.jpg" alt="">
+    </figure>
+    <hr>
+  </a>
+<% end %>
