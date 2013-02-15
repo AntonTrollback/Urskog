@@ -1,0 +1,47 @@
+// =============================================================================
+// Page specific styles
+// =============================================================================
+
+.page-header {
+  margin-bottom: 36px;
+  text-align: center;
+  z-index: 2;
+  strong {
+    display: block;
+    width: 100%;
+    background: #f2f0eb;
+    padding: 22px;
+    overflow: hidden;
+  }
+}
+
+// product pages
+// -----------------------------------------------------------------------------
+
+.products-page {
+  .nav__sub {
+    visibility: visible;
+    opacity: 1;
+  }
+  .shop {
+    float: right;
+    margin-top: 10px;
+  }
+}
+
+.product-info {
+  @include clearfix;
+  position: relative;
+
+  table {
+    width: 80%
+  }
+
+  @media only screen and (min-width:768px) {
+    article {
+      float: left;
+      width: 58%;
+      max-width: 650px;
+    }
+  }
+}

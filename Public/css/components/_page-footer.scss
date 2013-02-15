@@ -1,0 +1,42 @@
+// =============================================================================
+// Page footer
+// =============================================================================
+
+.page-footer {
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 15px 70px;
+  max-width: 370px;
+  margin: 50px auto 0;
+  color: #5c5c5c;
+
+  @media only screen and (min-width:470px) {
+    max-width: 686px;
+  }
+  &:before {
+    content: "";
+    @include hr();
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 12px 10px;
+    list-style: none;
+    @media only screen and (min-width:470px) {
+      margin: 0 8px 10px;
+    }
+    @media only screen and (min-width:768px) {
+      margin: 0 16px 10px;
+    }
+  }
+  a {
+    color: inherit;
+  }
+}

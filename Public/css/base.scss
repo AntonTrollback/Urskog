@@ -1,0 +1,103 @@
+// =============================================================================
+// Base styles
+// =============================================================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+// Typography
+// -----------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4 {
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// Tables
+// -----------------------------------------------------------------------------
+
+table {
+  width: 100%;
+  .table-fixed {
+    table-layout: fixed;
+
+    td {
+      padding: 0;
+      overflow: hidden;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+}
+
+
+
+// Links
+// -----------------------------------------------------------------------------
+
+a {
+  color: $href;
+  text-decoration: none;
+  &:hover {
+    color: $href;
+    text-decoration: underline;
+  }
+  &:active {
+    outline: 0;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: 1px solid dotted;
+  }
+}
+
+// Horizontal rule
+// -----------------------------------------------------------------------------
+
+@mixin hr {
+  display: block;
+  width: 70%;
+  height: 1px;
+  margin: 2em auto;
+  background: $hr;
+}
+
+hr {
+  @include hr();
+}
