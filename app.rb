@@ -55,6 +55,10 @@ class MyApp < Sinatra::Base
   # Single product
   get '/products/:slug' do
     @board = Board.find(params[:slug])
+    if @board.name == ""
+      redirect "/products"
+      return
+    end
     @slug = "products"
     @title = @board.name
     erb :product
