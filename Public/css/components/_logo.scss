@@ -6,16 +6,14 @@
   display: inline-block;
   width: 150px;
   height: 51px;
-  background-image: url('../img/logo.svg');
+  background: url('../img/logo.png') no-repeat;
+  background: none, url('../img/logo.svg') no-repeat;
   opacity: 0.75;
   text-indent: -200%;
   color: transparent;
   @include transition(opacity .2s ease);
   -webkit-tap-highlight-color: rgba(black, 0);
 
-  .no-svg & {
-    background-image: url('../img/logo.png');
-  }
   &:hover {
     opacity: 0.85;
   }

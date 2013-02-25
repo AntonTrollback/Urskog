@@ -1018,36 +1018,43 @@ h4 {
   font-size: 16px;
   font-weight: 400; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000360}}
+.heading-small {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000371}}
 table {
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000373}}
   table .table-fixed {
     table-layout: fixed; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000376}}
     table .table-fixed td {
       padding: 0;
       overflow: hidden;
       display: inline-block;
       white-space: nowrap; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000390}}
 a {
   color: #007ac7;
   text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000393}}
   a:hover {
     color: #007ac7;
     text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000397}}
   a:active {
     outline: 0;
     text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\00003101}}
   a:focus {
     outline: 1px solid dotted; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\00003117}}
 hr {
   display: block;
   width: 70%;
@@ -1064,11 +1071,9 @@ hr {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\0000312}}
 .constrained--tighter {
-  max-width: 980px;
-  padding-right: 20px;
-  padding-left: 20px; }
+  max-width: 600px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\0000316}}
 .constrained--nopad {
   padding: 0; }
 
@@ -1165,7 +1170,8 @@ hr {
   display: inline-block;
   width: 150px;
   height: 51px;
-  background-image: url("../img/logo.svg");
+  background: url("../img/logo.png") no-repeat;
+  background: none, url("../img/logo.svg") no-repeat;
   opacity: 0.75;
   text-indent: -200%;
   color: transparent;
@@ -1175,13 +1181,10 @@ hr {
   -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000316}}
-  .no-svg .logo {
-    background-image: url("../img/logo.png"); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000317}}
   .logo:hover {
     opacity: 0.85; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000320}}
   .logo:active {
     opacity: 0.6;
     -webkit-transition: opacity 0 ease;
@@ -1418,25 +1421,159 @@ hr {
   .page-footer a {
     color: inherit; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\000035}}
-.unit-1-2 {
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+/*
+ * Example uses:
+ *
+ * <div class="grid">
+ *     <div class="grid__cell unit-1-2"></div>
+ *     <div class="grid__cell unit-1-2"></div>
+ *     <div class="grid__cell unit-1-3"></div>
+ *     <div class="grid__cell unit-1-3"></div>
+ * </div>
+ *
+ * <div class="grid grid--center">
+ *     <div class="grid__cell unit-1-3"></div>
+ *     <div class="grid__cell unit-1-3"></div>
+ * </div>
+ */
+/* Grid core
+   ========================================================================== */
+/**
+ * Grid container
+ * Must only contain `.grid` or `.grid__cell` components as children.
+ *
+ * 1. Adjustment for child element margins.
+ * 2. Ensure consistent default alignment/
+ * 3. Remove inter-unit whitespace that appears between `inline-block` child
+ *    elements. Work for all non-monospace font-families.  If you're using a
+ *    monospace base font, you will need to set the `grid` font-family to
+ *   `sans-serif` and then redeclare the monospace font on the `grid__cell`
+ *    objects.
+ * 4. Protect against WebKit bug with optimizelegibility.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000344}}
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0 -10px;
+  /* 1 */
+  text-align: left;
+  /* 2 */
+  letter-spacing: -0.31em;
+  /* 3 */
+  word-spacing: -0.43em;
+  /* 3 */
+  text-rendering: optimizespeed;
+  /* 4 */ }
+
+/**
+ * Child `grid` object adjustments
+ * Used for more complex fixed-fluid hybrid grids.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000359}}
+.grid > .grid {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0; }
+
+/**
+ * Grid units
+ * No explicit width by default. Apply `.unit-x-y` classes.
+ *
+ * 1. Fundamentals of the non-float grid layout mechanism.
+ * 2. Apply grid gutter.
+ * 3. Controls vertical positioning of units.
+ * 4. Keeps content correctly aligned with the grid direction.
+ * 5. Reset text defaults.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000376}}
+.grid__cell {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  /* 1 */
+  margin: 0;
+  padding: 0 10px;
+  /* 2 */
+  vertical-align: top;
+  /* 3 */
+  text-align: left;
+  /* 4 */
+  letter-spacing: normal;
+  /* 5 */
+  word-spacing: normal;
+  /* 5 */
+  text-rendering: auto;
+  /* 5 */ }
+
+/**
+ * Modifier: horizontally center all grid units
+ * Allows for automatic unit centering irrespective of the number of
+ * units in the grid.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000396}}
+.grid--center {
+  text-align: center; }
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\00003106}}
+.grid__cell--center {
+  display: block;
+  margin: 0 auto; }
+
+/**
+ * Create 2, 3, and 4 column grids
+ */
+/* Proportional units
+   ========================================================================== */
+/*
+ * Specify the proportional width of an object.
+ * Primarily for, but not limited to, use with `.grid__cell` components.
+ * Intentional redundancy build into each set of unit classes.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-1-2, .unit-2-4 {
   width: 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-1-3 {
-  width: 33.333%; }
+  width: 33.33333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-2-3 {
+  width: 66.66667%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-1-4 {
-  width: 20%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000317}}
-.unit-1-5 {
   width: 25%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000321}}
-.unit-1-6 {
-  width: 66.666%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-3-4 {
+  width: 75%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-1-5 {
+  width: 20%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-2-5 {
+  width: 40%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-3-5 {
+  width: 60%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+.unit-4-5 {
+  width: 80%; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\000035}}
 .page-header {
@@ -1480,3 +1617,13 @@ hr {
       float: left;
       width: 58%;
       max-width: 650px; } }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000353}}
+.contact-page section {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000356}}
+  .contact-page section ul {
+    margin: -4px 0 40px;
+    padding: 0;
+    list-style: none;
+    width: 100%; }

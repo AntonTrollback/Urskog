@@ -15,7 +15,7 @@
   }
 }
 
-// product pages
+// Product pages
 // -----------------------------------------------------------------------------
 
 .products-page {
@@ -42,6 +42,22 @@
       float: left;
       width: 58%;
       max-width: 650px;
+    }
+  }
+}
+
+// Contact
+// -----------------------------------------------------------------------------
+
+.contact-page {
+  section {
+    text-align: center;
+
+    ul {
+      margin: -4px 0 40px;
+      padding: 0;
+      list-style: none;
+      width: 100%;
     }
   }
 }
