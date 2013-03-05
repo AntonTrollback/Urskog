@@ -1063,7 +1063,7 @@ hr {
   background: #e6e6e6; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\000035}}
-.constrained {
+.constrained, .primary-content {
   max-width: 1030px;
   width: 100%;
   margin: 0 auto;
@@ -1584,20 +1584,27 @@ hr {
   .page-header strong {
     display: block;
     width: 100%;
-    background: #f2f0eb;
+    background: #f6f5f2;
     padding: 26px;
     overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000321}}
+.primary-content {
+  width: 630px;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000333}}
 .products-page .nav__sub {
   visibility: visible;
   opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000337}}
 .products-page .shop {
   float: right;
   margin-top: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000343}}
 .product-info {
   zoom: 1;
   position: relative; }
@@ -1608,20 +1615,20 @@ hr {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
   .product-info:after {
     clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000347}}
   .product-info table {
     width: 85%; }
   @media only screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000352}}
     .product-info article {
       float: left;
       width: 58%;
       max-width: 650px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000364}}
 .contact-page section {
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000367}}
   .contact-page section ul {
     margin: -4px 0 40px;
     padding: 0;

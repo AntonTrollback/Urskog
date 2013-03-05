@@ -9,10 +9,21 @@
   strong {
     display: block;
     width: 100%;
-    background: #f2f0eb;
+    background: #f6f5f2;
     padding: 26px;
     overflow: hidden;
   }
+}
+
+// Start and about pages
+// -----------------------------------------------------------------------------
+
+.primary-content {
+  @extend .constrained;
+  width: 630px;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: center;
 }
 
 // Product pages
@@ -46,7 +57,7 @@
   }
 }
 
-// Contact
+// Contact page
 // -----------------------------------------------------------------------------
 
 .contact-page {
