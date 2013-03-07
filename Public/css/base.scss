@@ -12,7 +12,7 @@ html {
 
 body {
   font: 300 16px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: #4c4c4c;
 }
 
 // Typography
@@ -30,6 +30,7 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   text-transform: uppercase;
   margin: 0 0 10px;
@@ -42,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 400;
 }
 
@@ -58,8 +59,8 @@ h4 {
 }
 
 .heading-small {
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: bold;
   text-transform: none;
   letter-spacing: normal;
 }

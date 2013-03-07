@@ -1,19 +1,18 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
 /* ==========================================================================
    Display utilities
    ========================================================================== */
 /**
  * Display-type utilities
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\000039}}
 .inline {
   display: inline !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\0000313}}
 .inline-block {
   display: inline-block !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\0000317}}
 .block {
   display: block !important; }
 
@@ -21,7 +20,7 @@
 /**
  * Completely remove from the flow and screen readers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\0000327}}
 .is-hidden {
   display: none !important;
   visibility: hidden !important; }
@@ -29,7 +28,7 @@
 /**
  * Completely remove from the flow but leave available to screen readers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\0000336}}
 .is-vishidden {
   position: absolute !important;
   overflow: hidden;
@@ -42,11 +41,11 @@
 /**
  * Control visibility without affecting flow.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\0000350}}
 .is-visible {
   visibility: visible; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_display\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_display\.scss}line{font-family:\0000354}}
 .is-invisible {
   visibility: hidden; }
 
@@ -66,7 +65,7 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000320}}
 .cf:before,
 .cf:after {
   content: " ";
@@ -74,7 +73,7 @@
   display: table;
   /* 2 */ }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000325}}
 .cf:after {
   clear: both; }
 
@@ -87,7 +86,7 @@
  * N.B. This will clip overflow. Use the alternative method below if this is
  * problematic.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000339}}
 .nbfc {
   overflow: hidden; }
 
@@ -102,7 +101,7 @@
  * N.B. This breaks down in some browsers when elements within this element
  * exceed its width.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000355}}
 .nbfc-alt {
   display: table-cell;
   /* 1 */
@@ -113,11 +112,11 @@
 /**
  * Floats
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000366}}
 .pull-start {
   float: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000370}}
 .pull-end {
   float: right; }
 
@@ -128,12 +127,12 @@
  * Float an object left or right, and include some space between the object and
  * proceeding objects.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000383}}
 .obj-start {
   float: left;
   margin-right: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\0000388}}
 .obj-end {
   float: right;
   margin-left: 10px; }
@@ -143,7 +142,7 @@
  * 2. Guard against `img {max-width:100%}` hiding this utility's images in
  *    IE 8.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\00003100}}
 .obj-start img,
 .obj-end img {
   display: block;
@@ -156,19 +155,19 @@
  * Vertical alignment utilities
  * Depends on an appropriate `display` value.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\00003112}}
 .align-top {
   vertical-align: top; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\00003116}}
 .align-middle {
   vertical-align: middle; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\00003120}}
 .align-baseline {
   vertical-align: baseline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_layout\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_layout\.scss}line{font-family:\00003124}}
 .align-bottom {
   vertical-align: bottom; }
 
@@ -180,7 +179,7 @@
  *
  * A link without any text-decoration at all.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_link\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_link\.scss}line{font-family:\0000314}}
 .link-clean,
 .link-clean:hover,
 .link-clean:focus,
@@ -201,13 +200,13 @@
  *     <span class="link-complex__target">target</span>
  * </a>
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_link\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_link\.scss}line{font-family:\0000335}}
 .link-complex:hover,
 .link-complex:focus,
 .link-complex:active {
   text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_link\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_link\.scss}line{font-family:\0000341}}
 .link-complex:hover .link-complex__target,
 .link-complex:focus .link-complex__target,
 .link-complex:active .link-complex__target {
@@ -218,7 +217,7 @@
  *
  * Combination of traits commonly used in vertical navigation lists.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_link\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_link\.scss}line{font-family:\0000354}}
 .link-block,
 .link-block:hover,
 .link-block:focus,
@@ -238,7 +237,7 @@
  *     <a>Button content</a>
  * </button>
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_link\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_link\.scss}line{font-family:\0000372}}
 .link-pseudo {
   display: inline;
   padding: 0;
@@ -248,7 +247,7 @@
   color: inherit;
   text-decoration: inherit; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_link\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_link\.scss}line{font-family:\0000384}}
 .link-pseudo:hover,
 .link-pseudo:focus,
 .link-pseudo:active {
@@ -279,249 +278,249 @@
  * l = large
  */
 /* All */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000327}}
 .padding-an {
   padding: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000328}}
 .padding-as {
   padding: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000329}}
 .padding-am {
   padding: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000330}}
 .padding-al {
   padding: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000332}}
 .margin-an {
   margin: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000333}}
 .margin-as {
   margin: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000334}}
 .margin-am {
   margin: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000335}}
 .margin-al {
   margin: 20px !important; }
 
 /* Vertical */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000339}}
 .padding-vn {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000340}}
 .padding-vs {
   padding-top: 5px !important;
   padding-bottom: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000341}}
 .padding-vm {
   padding-top: 10px !important;
   padding-bottom: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000342}}
 .padding-vl {
   padding-top: 20px !important;
   padding-bottom: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000344}}
 .margin-vn {
   margin-top: 0 !important;
   margin-bottom: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000345}}
 .margin-vs {
   margin-top: 5px !important;
   margin-bottom: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000346}}
 .margin-vm {
   margin-top: 10px !important;
   margin-bottom: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000347}}
 .margin-vl {
   margin-top: 20px !important;
   margin-bottom: 20px !important; }
 
 /* Horizontal */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000351}}
 .padding-hn {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000352}}
 .padding-hs {
   padding-left: 5px !important;
   padding-right: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000353}}
 .padding-hm {
   padding-left: 10px !important;
   padding-right: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000354}}
 .padding-hl {
   padding-left: 20px !important;
   padding-right: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000356}}
 .margin-hn {
   margin-left: 0 !important;
   margin-right: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000357}}
 .margin-hs {
   margin-left: 5px !important;
   margin-right: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000358}}
 .margin-hm {
   margin-left: 10px !important;
   margin-right: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000359}}
 .margin-hl {
   margin-left: 20px !important;
   margin-right: 20px !important; }
 
 /* Top */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000363}}
 .padding-tn {
   padding-top: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000364}}
 .padding-ts {
   padding-top: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000365}}
 .padding-tm {
   padding-top: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000366}}
 .padding-tl {
   padding-top: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000368}}
 .margin-tn {
   margin-top: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000369}}
 .margin-ts {
   margin-top: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000370}}
 .margin-tm {
   margin-top: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000371}}
 .margin-tl {
   margin-top: 20px !important; }
 
 /* Bottom */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000375}}
 .padding-bn {
   padding-bottom: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000376}}
 .padding-bs {
   padding-bottom: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000377}}
 .padding-bm {
   padding-bottom: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000378}}
 .padding-bl {
   padding-bottom: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000380}}
 .margin-bn {
   margin-bottom: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000381}}
 .margin-bs {
   margin-bottom: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000382}}
 .margin-bm {
   margin-bottom: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000383}}
 .margin-bl {
   margin-bottom: 20px !important; }
 
 /* Left */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000387}}
 .padding-ln {
   padding-left: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000388}}
 .padding-ls {
   padding-left: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000389}}
 .padding-lm {
   padding-left: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000390}}
 .padding-ll {
   padding-left: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000392}}
 .margin-ln {
   margin-left: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000393}}
 .margin-ls {
   margin-left: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000394}}
 .margin-lm {
   margin-left: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000395}}
 .margin-ll {
   margin-left: 20px !important; }
 
 /* Right */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\0000399}}
 .padding-rn {
   padding-right: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003100}}
 .padding-rs {
   padding-right: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003101}}
 .padding-rm {
   padding-right: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003102}}
 .padding-rl {
   padding-right: 20px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003104}}
 .margin-rn {
   margin-right: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003105}}
 .margin-rs {
   margin-right: 5px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003106}}
 .margin-rm {
   margin-right: 10px !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_space\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_space\.scss}line{font-family:\00003107}}
 .margin-rl {
   margin-right: 20px !important; }
 
@@ -533,15 +532,15 @@
  *
  * Commonly toggled via JavaScript.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_state\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_state\.scss}line{font-family:\0000311}}
 .is-actionable {
   cursor: pointer; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_state\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_state\.scss}line{font-family:\0000315}}
 .is-draggable {
   cursor: move; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_state\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_state\.scss}line{font-family:\0000319}}
 .is-disabled {
   cursor: default; }
 
@@ -559,7 +558,7 @@
  * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
  *    nodes.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_text\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_text\.scss}line{font-family:\0000317}}
 .text-truncate {
   max-width: 100%;
   /* 1 */
@@ -574,7 +573,7 @@
  *
  * Break strings when their length exceeds the width of their container.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_text\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_text\.scss}line{font-family:\0000331}}
 .text-break {
   word-break: break-all;
   word-break: break-word;
@@ -584,17 +583,45 @@
 /**
  * Horizontal text alignment
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_text\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_text\.scss}line{font-family:\0000343}}
 .text-center {
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_text\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_text\.scss}line{font-family:\0000347}}
 .text-left {
   text-align: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/utilities\/_text\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/utilities\/_text\.scss}line{font-family:\0000351}}
 .text-right {
   text-align: right; }
+
+@font-face {
+  font-family: 'helvetica Neue Condensed';
+  src: url("../font/helvetica_neue_57_condensed.eot");
+  src: url("../font/helvetica_neue_57_condensed.eot?#iefix") format("embedded-opentype"), url("../font/helvetica_neue_57_condensed.woff") format("woff"), url("../font/helvetica_neue_57_condensed.ttf") format("truetype"), url("../font/helvetica_neue_57_condensed.svg#helvetica_neue_57_condensed") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'helvetica Neue Condensed';
+  src: url("../font/helvetica_neue_57_condensed_italic.eot");
+  src: url("../font/helvetica_neue_57_condensed_italic.eot?#iefix") format("embedded-opentype"), url("../font/helvetica_neue_57_condensed_italic.woff") format("woff"), url("../font/helvetica_neue_57_condensed_italic.ttf") format("truetype"), url("../font/helvetica_neue_57_condensed_italic.svg#helvetica_neue_57_condensed_italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'helvetica Neue Condensed';
+  src: url("../font/helvetica_neue_77_condensed.eot");
+  src: url("../font/helvetica_neue_77_condensed.eot?#iefix") format("embedded-opentype"), url("../font/helvetica_neue_77_condensed.woff") format("woff"), url("../font/helvetica_neue_77_condensed.ttf") format("truetype"), url("../font/helvetica_neue_77_condensed.svg#helvetica_neue_77_condensed") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'helvetica Neue Condensed';
+  src: url("../font/helvetica_neue_77_condensed_italic.eot");
+  src: url("../font/helvetica_neue_77_condensed_italic.eot?#iefix") format("embedded-opentype"), url("../font/helvetica_neue_77_condensed_italic.woff") format("woff"), url("../font/helvetica_neue_77_condensed_italic.ttf") format("truetype"), url("../font/helvetica_neue_77_condensed_italic.svg#helvetica_neue_77_condensed_italic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
 
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -603,7 +630,7 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000322}}
 article,
 aside,
 details,
@@ -621,7 +648,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000332}}
 audio,
 canvas,
 video {
@@ -631,7 +658,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000341}}
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -639,7 +666,7 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000350}}
 [hidden] {
   display: none; }
 
@@ -651,7 +678,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000364}}
 html {
   font-family: sans-serif;
   /* 1 */
@@ -663,7 +690,7 @@ html {
 /**
  * Remove default margin.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000374}}
 body {
   margin: 0; }
 
@@ -673,14 +700,14 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000386}}
 a:focus {
   outline: thin dotted; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\0000395}}
 a:active,
 a:hover {
   outline: 0; }
@@ -692,7 +719,7 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003108}}
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -700,14 +727,14 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003117}}
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003126}}
 b,
 strong {
   font-weight: bold; }
@@ -715,14 +742,14 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003134}}
 dfn {
   font-style: italic; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003142}}
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -731,7 +758,7 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003152}}
 mark {
   background: #ff0;
   color: #000; }
@@ -739,7 +766,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003164}}
 code,
 kbd,
 pre,
@@ -750,28 +777,28 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003173}}
 pre {
   white-space: pre-wrap; }
 
 /**
  * Set consistent quote types.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003181}}
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003189}}
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003198}}
 sub,
 sup {
   font-size: 75%;
@@ -779,11 +806,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003205}}
 sup {
   top: -0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003209}}
 sub {
   bottom: -0.25em; }
 
@@ -793,14 +820,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003221}}
 img {
   border: 0; }
 
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003229}}
 svg:not(:root) {
   overflow: hidden; }
 
@@ -810,7 +837,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003241}}
 figure {
   margin: 0; }
 
@@ -820,7 +847,7 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003253}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003253}}
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
@@ -830,7 +857,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003264}}
 legend {
   border: 0;
   /* 1 */
@@ -842,7 +869,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003278}}
 button,
 input,
 select,
@@ -858,7 +885,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003290}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003290}}
 button,
 input {
   line-height: normal; }
@@ -869,7 +896,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003302}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003302}}
 button,
 select {
   text-transform: none; }
@@ -881,7 +908,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003317}}
 button,
 html input[type="button"],
 input[type="reset"],
@@ -894,7 +921,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003327}}
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -903,7 +930,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003337}}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -916,7 +943,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003348}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -929,7 +956,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003361}}
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -937,7 +964,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003370}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -947,7 +974,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003380}}
 textarea {
   overflow: auto;
   /* 1 */
@@ -960,101 +987,102 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/normalize\.scss}line{font-family:\00003393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/normalize\.scss}line{font-family:\00003393}}
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\000035}}
 * {
   box-sizing: border-box; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\000039}}
 html {
   height: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000313}}
 body {
   font: 300 16px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333; }
+  color: #4c4c4c; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000321}}
 p {
   margin: 16px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000325}}
 strong {
   font-weight: 500; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000332}}
 h1,
 h2,
 .product__title,
 h3,
 h4 {
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   text-transform: uppercase;
   margin: 0 0 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000339}}
 h1 {
   font-size: 34px;
   font-weight: 400;
   margin: 0 0 -12px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000345}}
 h2, .product__title {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 400; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000350}}
 h3 {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000356}}
 h4 {
   font-size: 16px;
   font-weight: 400; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000361}}
 .heading-small {
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: bold;
   text-transform: none;
   letter-spacing: normal; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000372}}
 table {
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000374}}
   table .table-fixed {
     table-layout: fixed; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000377}}
     table .table-fixed td {
       padding: 0;
       overflow: hidden;
       display: inline-block;
       white-space: nowrap; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000391}}
 a {
   color: #007ac7;
   text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000394}}
   a:hover {
     color: #007ac7;
     text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\0000398}}
   a:active {
     outline: 0;
     text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\00003102}}
   a:focus {
     outline: 1px solid dotted; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/base\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/base\.scss}line{font-family:\00003118}}
 hr {
   display: block;
   width: 70%;
@@ -1062,22 +1090,22 @@ hr {
   margin: 2em auto;
   background: #e6e6e6; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_constrained\.scss}line{font-family:\000035}}
 .constrained, .primary-content {
   max-width: 1030px;
   width: 100%;
   margin: 0 auto;
   padding: 15px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_constrained\.scss}line{font-family:\0000312}}
 .constrained--tighter {
-  max-width: 600px; }
+  max-width: 700px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_constrained\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_constrained\.scss}line{font-family:\0000316}}
 .constrained--nopad {
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\000035}}
 .btn {
   display: inline-block;
   padding: 1px;
@@ -1098,11 +1126,11 @@ hr {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000318}}
   .btn::-moz-focus-inner {
     border: 0;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000323}}
   .btn span {
     position: relative;
     display: block;
@@ -1122,13 +1150,13 @@ hr {
     background-image: -ms-linear-gradient(top, #7dc5ee, #008cdd 85%, #30a2e4);
     background-image: -o-linear-gradient(top, #7dc5ee, #008cdd 85%, #30a2e4);
     background-image: linear-gradient(top, #7dc5ee, #008cdd 85%, #30a2e4); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000339}}
   .btn:hover {
     text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000343}}
   .btn:not(:disabled):active {
     background: #005d93; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000345}}
     .btn:not(:disabled):active span {
       color: #eee;
       background: #008cdd;
@@ -1139,33 +1167,33 @@ hr {
       background-image: linear-gradient(top, #008cdd, #008cdd 85%, #239adf);
       -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
       box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000353}}
   .btn:disabled {
     background: rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_button\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_button\.scss}line{font-family:\0000356}}
     .btn:disabled span {
       color: #666;
       background: #f8f9fa;
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_form-element\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_form-element\.scss}line{font-family:\000039}}
 .check-radio {
   display: inline-block;
   cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_form-element\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_form-element\.scss}line{font-family:\0000313}}
   .check-radio input {
     margin: -5px 3px 0 0;
     vertical-align: middle; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_form-element\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_form-element\.scss}line{font-family:\0000317}}
     .check-radio input:not(:checked) {
       opacity: .8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_form-element\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_form-element\.scss}line{font-family:\0000319}}
       .check-radio input:not(:checked) ~ span {
         color: #888888; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_logo\.scss}line{font-family:\000035}}
 .logo {
   display: inline-block;
   width: 150px;
@@ -1181,10 +1209,10 @@ hr {
   -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_logo\.scss}line{font-family:\0000317}}
   .logo:hover {
     opacity: 0.85; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_logo\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_logo\.scss}line{font-family:\0000320}}
   .logo:active {
     opacity: 0.6;
     -webkit-transition: opacity 0 ease;
@@ -1193,30 +1221,31 @@ hr {
     -o-transition: opacity 0 ease;
     transition: opacity 0 ease; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\000035}}
 .nav, .nav__sub {
   position: relative;
   width: 100%;
-  margin-top: 4px;
-  font-family: "Open Sans Condensed", sans-serif;
+  margin-top: 3px;
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
   background: #f1f0ed; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000315}}
   .nav ul, .nav__sub ul {
     margin: 0;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000319}}
   .nav li, .nav__sub li {
     display: inline-block;
     width: 25%; }
     @media only screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000319}}
       .nav li, .nav__sub li {
         width: auto; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000331}}
 .nav__item {
   position: relative;
   display: block;
@@ -1232,22 +1261,22 @@ hr {
   transition: background 0.1s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   @media only screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000331}}
     .nav__item {
       min-width: 98px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000347}}
   .nav__item:hover, .nav__item.is-active {
     color: #555;
     text-decoration: none;
     background: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000352}}
   .nav__item:visited {
     color: #555; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000355}}
   .nav__item:active {
     color: #888; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000363}}
 .nav__sub {
   position: absolute;
   top: 32px;
@@ -1266,11 +1295,11 @@ hr {
   -o-transition-delay: 0.15s;
   transition-delay: 0.15s; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000376}}
 .nav__sub-parent:hover .nav__sub {
   visibility: visible;
   opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_nav\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_nav\.scss}line{font-family:\0000382}}
 .nav__sub-parent > .nav__item:after {
   content: "";
   position: absolute;
@@ -1279,70 +1308,70 @@ hr {
   width: 100%;
   height: 7px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\000035}}
 .shop {
   display: block;
   width: 295px;
   padding: 25px 28px;
   border: 1px solid #e7e7e7;
   border-radius: 3px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000313}}
   .shop .check-radio:first-of-type {
     margin-right: 30px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000317}}
   .shop .extra {
     margin-left: 21px;
     display: block;
     font-size: 90%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000324}}
 .shop__heading {
   cursor: default; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000328}}
 .shop__option {
   margin-top: 12px;
   display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000331}}
   .shop__option.is-active {
     display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000334}}
   .shop__option p {
     cursor: default;
     margin: 0;
     font-size: 90%;
     white-space: nowrap; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000340}}
   .shop__option .btn {
     width: 100%;
     margin: 15px 0 10px;
     text-align: center;
     text-indent: 4px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000348}}
 .price {
   padding-left: 14px;
   border-left: 1px solid #007cc4;
   margin-left: 14px;
   font-weight: 400; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_shop\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_shop\.scss}line{font-family:\0000353}}
   .price small {
     font-size: 60%;
     font-weight: 500; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\000035}}
 .product-list {
   margin: 0;
   padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\000038}}
   .product-list li {
     list-style: none;
-    margin-top: 3em; }
+    margin-top: 20px; }
 
 /**
  * Modifier for a list divided with borders
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\0000319}}
 .product-list--divided li:before {
   content: "";
   display: block;
@@ -1350,49 +1379,48 @@ hr {
   height: 1px;
   margin: 2em auto;
   background: #e6e6e6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\0000323}}
 .product-list--divided li:first-child:before {
   display: none; }
 
 /**
  * The product, or list item, with title and product image
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\0000332}}
 .product {
   display: block;
   color: inherit;
   text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\0000336}}
   .product:hover {
     color: inherit;
     text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\0000342}}
 .product__title {
   display: block;
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_product-list\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_product-list\.scss}line{font-family:\0000348}}
 .product__image {
   width: 100%;
   height: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\000035}}
 .page-footer {
   text-align: center;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-weight: normal;
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0 15px 70px;
   max-width: 370px;
   margin: 50px auto 0;
-  color: #5c5c5c; }
+  color: #808080; }
   @media only screen and (min-width: 470px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\000035}}
     .page-footer {
       max-width: 686px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\0000318}}
   .page-footer:before {
     content: "";
     display: block;
@@ -1400,24 +1428,24 @@ hr {
     height: 1px;
     margin: 2em auto;
     background: #e6e6e6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\0000323}}
   .page-footer ul {
     margin: 0;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\0000327}}
   .page-footer li {
     display: inline-block;
     margin: 0 12px 10px;
     list-style: none; }
     @media only screen and (min-width: 470px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\0000327}}
       .page-footer li {
         margin: 0 8px 10px; } }
     @media only screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\0000327}}
       .page-footer li {
         margin: 0 16px 10px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_page-footer\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_page-footer\.scss}line{font-family:\0000338}}
   .page-footer a {
     color: inherit; }
 
@@ -1454,7 +1482,7 @@ hr {
  *    objects.
  * 4. Protect against WebKit bug with optimizelegibility.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid\.scss}line{font-family:\0000344}}
 .grid {
   display: block;
   padding: 0;
@@ -1473,7 +1501,7 @@ hr {
  * Child `grid` object adjustments
  * Used for more complex fixed-fluid hybrid grids.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid\.scss}line{font-family:\0000359}}
 .grid > .grid {
   overflow: hidden;
   margin-right: 0;
@@ -1489,7 +1517,7 @@ hr {
  * 4. Keeps content correctly aligned with the grid direction.
  * 5. Reset text defaults.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid\.scss}line{font-family:\0000376}}
 .grid__cell {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1515,7 +1543,7 @@ hr {
  * Allows for automatic unit centering irrespective of the number of
  * units in the grid.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid\.scss}line{font-family:\0000396}}
 .grid--center {
   text-align: center; }
 
@@ -1524,7 +1552,7 @@ hr {
  * Set a specific unit to be horizontally centered. Doesn't affect
  * any other units. Can still contain a child `grid` object.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid\.scss}line{font-family:\00003106}}
 .grid__cell--center {
   display: block;
   margin: 0 auto; }
@@ -1539,97 +1567,100 @@ hr {
  * Primarily for, but not limited to, use with `.grid__cell` components.
  * Intentional redundancy build into each set of unit classes.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-1-2, .unit-2-4 {
   width: 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-1-3 {
   width: 33.33333%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-2-3 {
   width: 66.66667%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-1-4 {
   width: 25%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-3-4 {
   width: 75%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-1-5 {
   width: 20%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-2-5 {
   width: 40%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-3-5 {
   width: 60%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/components\/_grid-build\.scss}line{font-family:\0000361}}
 .unit-4-5 {
   width: 80%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\000035}}
 .page-header {
   margin-bottom: 36px;
   text-align: center;
   z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000310}}
   .page-header strong {
     display: block;
     width: 100%;
     background: #f6f5f2;
-    padding: 26px;
+    padding: 24px;
     overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000322}}
 .primary-content {
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 630px;
+  font-style: italic;
   font-size: 16px;
   line-height: 1.45;
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000336}}
 .products-page .nav__sub {
   visibility: visible;
   opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000340}}
 .products-page .shop {
   float: right;
   margin-top: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000346}}
 .product-info {
   zoom: 1;
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
   .product-info:before, .product-info:after {
     content: "";
     display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
   .product-info:after {
     clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000350}}
   .product-info table {
     width: 85%; }
   @media only screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000355}}
     .product-info article {
       float: left;
       width: 58%;
       max-width: 650px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000367}}
 .contact-page section {
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/Public\/css\/page-specific\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/anton\/Projects\/Urskog\/public\/css\/page-specific\.scss}line{font-family:\0000370}}
   .contact-page section ul {
+    font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: -4px 0 40px;
     padding: 0;
     list-style: none;
