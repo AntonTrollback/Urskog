@@ -1,9 +1,12 @@
 # encoding: utf-8
 
 require 'sinatra/base'
+require 'rack/ssl'
 require_relative 'board'
 
 class MyApp < Sinatra::Base
+
+  use Rack::SSL
 
   def title
     if defined? @title
