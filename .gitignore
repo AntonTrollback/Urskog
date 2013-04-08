@@ -38,7 +38,6 @@ build/config/buildinfo.properties
 # Sinatra related
 /pkg
 /doc/api
-/Gemfile.lock
 
 # Stylus and CoffeeScript related
 node_modules
