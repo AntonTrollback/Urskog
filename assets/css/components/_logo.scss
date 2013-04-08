@@ -6,8 +6,8 @@
   display: inline-block;
   width: 150px;
   height: 51px;
-  background: url('../img/logo.png') no-repeat;
-  background: none, url('../img/logo.svg') no-repeat;
+  background: asset-url('logo.png') no-repeat;
+  background: none, asset-url('logo.svg') no-repeat;
   opacity: 0.75;
   text-indent: -200%;
   color: transparent;
