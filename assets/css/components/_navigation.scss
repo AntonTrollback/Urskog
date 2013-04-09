@@ -21,7 +21,7 @@
     display: inline-block;
     width: 25%;
 
-    @media only screen and (min-width:768px) {
+    @include min-width(768px) {
       width: auto;
     }
   }
@@ -41,7 +41,7 @@
   @include transition(background .1s ease);
   -webkit-tap-highlight-color: rgba(black, 0);
 
-  @media only screen and (min-width:768px) {
+  @include min-width(768px) {
     min-width: 98px;
   }
 
