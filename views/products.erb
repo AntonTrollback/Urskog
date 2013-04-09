@@ -1,11 +1,11 @@
 <h1 class="u-isHiddenVisually">List of Urskog longboards</h1>
 
-<ul class="product-list product-list--divided">
+<ul class="ProductList ProductList--divided">
   <% @boards.each do |board| %>
     <li>
-      <a class="product" href="/products/<%= board.slug %>">
-        <span class="product__title"><%= board.name %></span>
-        <img class="product__image" src="/boards/<%= board.slug %>/zebrano.jpg" alt="Image of <%= board.name %>">
+      <a class="ProductList-item" href="/products/<%= board.slug %>">
+        <h2 class="ProductList-itemHeading"><%= board.name %></h2>
+        <img class="ProductList-itemImage" src="/boards/<%= board.slug %>/zebrano.jpg" alt="Image of <%= board.name %>">
       </a>
     </li>
   <% end %>

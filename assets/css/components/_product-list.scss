@@ -2,50 +2,51 @@
 // Product list
 // =============================================================================
 
-.product-list {
+.ProductList {
   margin: 0;
   padding: 0;
+
   li {
     list-style: none;
     margin-top: 20px;
   }
 }
 
-/**
- * Modifier for a list divided with borders
- */
+// Modifier for a devided list
+// -----------------------------------------------------------------------------
 
-.product-list--divided {
+.ProductList--divided {
   li:before {
     content: "";
     @include hr();
   }
+
   li:first-child:before {
     display: none;
   }
 }
 
-/**
- * The product, or list item, with title and product image
- */
+// The product in the list
+// -----------------------------------------------------------------------------
 
-.product {
+.ProductList-item {
   display: block;
   color: inherit;
   text-decoration: none;
+
   &:hover {
     color: inherit;
     text-decoration: none;
   }
 }
 
-.product__title {
+.ProductList-itemHeading {
   @extend h2;
   display: block;
   text-align: center;
 }
 
-.product__image {
+.ProductList-itemImage {
   width: 100%;
   height: auto;
 }

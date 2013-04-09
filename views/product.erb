@@ -52,12 +52,12 @@
 </div>
 
 
-<ul class="product-list">
+<ul class="ProductList">
   <% @board.woods.each do |wood| %>
     <li>
-      <div class="product">
-        <span class="product__title"><%= wood.capitalize %></span>
-        <img class="product__image" src="/boards/<%= @board.slug %>/<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+      <div class="ProductList-item">
+        <h4 class="ProductList-itemHeading"><%= wood.capitalize %></h4>
+        <img class="ProductList-itemImage" src="/boards/<%= @board.slug %>/<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
       </div>
     </li>
   <% end %>
