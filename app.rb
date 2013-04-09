@@ -3,17 +3,12 @@
 require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require 'rack/ssl'
+require 'bourbon'
 require_relative 'board'
 
 class MyApp < Sinatra::Base
 
   use Rack::SSL
-
-  # Include these files when precompiling assets
-  set :assets_precompile, %w(*.js *.coffee *.css *.scss *.png *.jpg *.svg *.eot *.ttf *.woff)
-
-  # Logical path to your assets
-  set :assets_prefix, 'assets'
 
   # Serve assets using this protocol
   set :assets_protocol, :https
@@ -25,6 +20,7 @@ class MyApp < Sinatra::Base
   set :assets_js_compressor, :uglifier
 
   register Sinatra::AssetPipeline
+
 
   def title
     if defined? @title

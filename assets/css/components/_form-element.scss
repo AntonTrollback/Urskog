@@ -17,7 +17,7 @@
     &:not(:checked) {
       opacity: .8;
       ~ span {
-        color: $muted;
+        color: $color-muted;
       }
     }
   }
