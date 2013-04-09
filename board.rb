@@ -22,22 +22,26 @@ class Board
     boards
   end
 
-  attr_accessor :name,
-                :length,
-                :price,
-                :slug,
-                :woods
+  attr_reader :name,
+              :length,
+              :price_hash,
+              :slug,
+              :woods
 
   def initialize(attributes={})
     @name   = attributes[:name]
     @length = attributes[:length]
-    @price  = attributes[:price]
+    @price_hash  = attributes[:price]
     @slug   = attributes[:slug]
     @woods  = attributes[:woods]
   end
 
   def wood_list
     woods.map(&:capitalize).join(", ")
+  end
+
+  def price
+    @price ||= Price.new(self.price_hash)
   end
 end
 
@@ -48,5 +52,14 @@ class NullBoard
 
   def slug
     ""
+  end
+end
+
+class Price
+  attr_reader :complete, :deck
+
+  def initialize(price_hash)
+    @complete = price_hash[:complete]
+    @deck = price_hash[:deck]
   end
 end
