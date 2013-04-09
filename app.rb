@@ -86,10 +86,7 @@ class MyApp < Sinatra::Base
   # BUY
   get '/products/:slug/buy' do
     @board = Board.find(params[:slug])
-    if @board.name == ""
-      redirect "/products"
-      return
-    end
+    redirect "/products" if @board.name.empty?
     @slug = "products"
     @title = @board.name
     erb :buy
