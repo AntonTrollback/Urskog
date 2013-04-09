@@ -29,22 +29,26 @@
 
   <aside class="Shop js-displayOption u-marginTm u-pullEnd">
 
+  <form action="/products/<%= @board.slug %>/buy">
     <label class="Control u-marginRl u-paddingRm" for="complete">
-      <input type="radio" id="complete" name="buy-option" checked> <span>Complete</span> <span class="Control-sub">3400 <small>SEK</small></span>
+      <input type="radio" id="complete" name="buy_option" value="complete" checked> <span>Complete</span> <span class="Control-sub">3400 <small>SEK</small></span>
     </label>
 
     <label class="Control" for="deck-only">
-      <input type="radio" id="deck-only" name="buy-option"> <span>Deck only</span> <span class="Control-sub">1800 <small>SEK</small></span>
+      <input type="radio" id="deck-only" name="buy_option" value="deck"> <span>Deck only</span> <span class="Control-sub">1800 <small>SEK</small></span>
     </label>
 
     <div class="Shop-option js-option js-complete">
-      <a href="/products/<%= @board.slug %>/buy" class="Button Shop-buyButton"><span>Buy<strong class="Button-sub">3400 <small>SEK</small></strong></span></a>
+      <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub">3400 <small>SEK</small></strong></span></button>
       <p>Free shipping worldwide</p>
     </div>
     <div class="Shop-option js-option js-deck-only u-isHidden">
-      <a href="#" class="Button Shop-buyButton"><span>Buy<strong class="Button-sub">1800 <small>SEK</small></strong></span></a>
+      <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub">1800 <small>SEK</small></strong></span></button>
       <p>Free shipping worldwide</p>
     </div>
+  
+  </form>
+
   </aside>
 
 </div>
