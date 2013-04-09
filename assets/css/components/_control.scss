@@ -12,9 +12,17 @@ label.Control {
 
     &:not(:checked) {
       opacity: .8;
+
       ~ span {
         color: $color-muted;
       }
     }
+  }
+
+  // Extra info for check/radio on new line
+  .Control-sub {
+    margin-left: 22px;
+    display: block;
+    font-size: 90%;
   }
 }

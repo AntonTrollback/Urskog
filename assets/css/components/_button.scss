@@ -63,3 +63,18 @@
     }
   }
 }
+
+// Info inside button
+// -----------------------------------------------------------------------------
+
+.Button-sub {
+  padding-left: 14px;
+  border-left: 1px solid #007CC4;
+  margin-left: 14px;
+  font-weight: 400;
+
+  small {
+    font-size: 60%;
+    font-weight: 500;
+  }
+}

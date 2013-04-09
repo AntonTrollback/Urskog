@@ -2,52 +2,35 @@
 // Shop
 // =============================================================================
 
-.shop {
+.Shop {
   display: block;
   width: 295px;
   padding: 25px 28px;
   border: 1px solid rgb(231, 231, 231);
   border-radius: 3px;
-
-  // Price tag under buying options
-  .extra {
-    margin-left: 21px;
-    display: block;
-    font-size: 90%;
-  }
 }
 
-.shop__heading {
+.Shop-heading {
   cursor: default;
 }
 
-.shop__option {
+// Buy options
+// -----------------------------------------------------------------------------
+
+.Shop-option {
   margin-top: 20px;
-  display: none;
-  &.is-active {
-    display: block;
-  }
+
   p {
     cursor: default;
     margin: 0;
     font-size: 90%;
     white-space: nowrap;
   }
-  .btn {
-    width: 100%;
-    margin: 15px 0 10px;
-    text-align: center;
-    text-indent: 4px;
-  }
 }
 
-.price {
-  padding-left: 14px;
-  border-left: 1px solid #007CC4;
-  margin-left: 14px;
-  font-weight: 400;
-  small {
-    font-size: 60%;
-    font-weight: 500;
-  }
+.Shop-buyButton {
+  width: 100%;
+  margin: 6px 0 10px;
+  text-align: center;
+  text-indent: 4px;
 }

@@ -1,5 +1,5 @@
 
-<div class="product-info Constrained Constrained--tighter">
+<div class="product-info Constrained">
 
   <article>
     <h1><%= @board.name %></h1>
@@ -27,22 +27,25 @@
     </table>
   </article>
 
-  <aside class="shop">
-    <h2 class="shop__heading">Shop</h2>
+  <aside class="Shop js-displayOption">
+    <h2 class="Shop-heading">Shop</h2>
+
     <label class="Control u-marginRl u-paddingRm" for="complete">
-      <input type="radio" id="complete" name="buy-option" checked> <span>Complete</span> <span class="extra">3400 <small>SEK</small></span>
-    </label>
-    <label class="Control" for="deck-only">
-      <input type="radio" id="deck-only" name="buy-option"> <span>Deck only</span> <span class="extra">1800 <small>SEK</small></span>
+      <input type="radio" id="complete" name="buy-option" checked> <span>Complete</span> <span class="Control-sub">3400 <small>SEK</small></span>
     </label>
 
-    <div class="shop__option js-complete is-active">
-      <a class="Button buy"><span>Buy<strong class="price">3400 <small>SEK</small></strong></span></a>
-      <p class="u-marginTm">Free shipping. <a href="#" class="help" tite="Everything you need, mounted and ready. The board, trucks, wheels, bearing, griptape">What's included?</a></p>
+    <label class="Control" for="deck-only">
+      <input type="radio" id="deck-only" name="buy-option"> <span>Deck only</span> <span class="Control-sub">1800 <small>SEK</small></span>
+    </label>
+
+    <div class="Shop-option js-option js-complete">
+      <a class="Button Shop-buyButton"><span>Buy<strong class="Button-sub">3400 <small>SEK</small></strong></span></a>
+      <p>Free shipping. <a href="#" class="Help" title="Everything you need, mounted and ready. The board, trucks, wheels, bearing, griptape">What's included?</a></p>
     </div>
-    <div class="shop__option js-deck-only">
-      <a class="Button buy"><span>Buy<strong class="price">1800 <small>SEK</small></strong></span></a>
-      <p class="u-marginTm">Free shipping.</p>
+
+    <div class="Shop-option js-option js-deck-only u-isHidden">
+      <a class="Button Shop-buyButton"><span>Buy<strong class="Button-sub">1800 <small>SEK</small></strong></span></a>
+      <p>Free shipping.</p>
     </div>
   </aside>
 
