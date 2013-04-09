@@ -36,3 +36,46 @@
   line-height: 1.45;
   text-align: center;
 }
+
+// Modifiers for page specific styles
+// -----------------------------------------------------------------------------
+
+// TODO: refactor, this section should not be needed
+
+.Page--contact {
+  .Navigation--sub {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.product-info {
+  @include clearfix;
+  position: relative;
+
+  table {
+    width: 85%
+  }
+
+  @media only screen and (min-width:768px) {
+    article {
+      float: left;
+      width: 58%;
+      max-width: 650px;
+    }
+  }
+}
+
+.Page--contact {
+  section {
+    text-align: center;
+
+    ul {
+      font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: -4px 0 40px;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+    }
+  }
+}
