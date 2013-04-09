@@ -1,0 +1,14 @@
+<nav class="Navigation">
+  <h3 class="is-vishidden">Main navigation</h3>
+  <ul>
+    <li><a class="Navigation-item <%= active("about") %>" href="/about">About</a>
+
+    <li class="Navigation-subParent">
+      <a class="Navigation-item <%= active("products") %>" href="/products">Products</a>
+      <%= erb :'parts/navigation_sub', :layout => false %>
+    </li><!--
+
+    --><li><a class="Navigation-item <%= active("retailers") %>" href="/retailers">Retailers</a>
+    <li><a class="Navigation-item <%= active("contact") %>" href="/contact">Contact</a>
+  </ul>
+</nav>

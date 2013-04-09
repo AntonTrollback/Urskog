@@ -2,7 +2,7 @@
 // Main navigation
 // =============================================================================
 
-.nav {
+.Navigation {
   position: relative;
   width: 100%;
   margin-top: 3px;
@@ -12,23 +12,26 @@
   font-size: 12px;
   text-transform: uppercase;
   background: #f1f0ed;
+
   ul {
     margin: 0;
     padding: 0;
   }
+
   li {
     display: inline-block;
     width: 25%;
+
     @media only screen and (min-width:768px) {
       width: auto;
     }
   }
 }
 
-// Navigation item
+// Navigation items
 // -----------------------------------------------------------------------------
 
-.nav__item {
+.Navigation-item {
   position: relative;
   display: block;
   padding: 7px 0;
@@ -49,9 +52,11 @@
     text-decoration: none;
     background: white;
   }
+
   &:visited {
     color: #555;
   }
+
   &:active {
     color: #888;
   }
@@ -60,8 +65,7 @@
 // Subnav navigation
 // -----------------------------------------------------------------------------
 
-.nav__sub {
-  @extend .nav;
+.Navigation--sub {
   position: absolute;
   top: 32px;
   left: 0;
@@ -72,14 +76,15 @@
   @include transition-delay(.15s);
 }
 
-.nav__sub-parent {
-  &:hover .nav__sub {
+.Navigation-subParent {
+
+  &:hover .Navigation {
     visibility: visible;
     opacity: 1;
   }
 
   // Bridge for the gap between the nav and subnav
-  > .nav__item:after {
+  > .Navigation-item:after {
     content: "";
     position: absolute;
     bottom: -6px;
