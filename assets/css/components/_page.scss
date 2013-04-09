@@ -58,13 +58,10 @@
     width: 90%
   }
 
-  @include min-width(768px) {
     article {
+      max-width: 500px;
       float: left;
-      width: 58%;
-      max-width: 650px;
     }
-  }
 }
 
 .Page--contact {

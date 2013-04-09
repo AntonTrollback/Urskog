@@ -8,10 +8,10 @@
 
   li {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 20px;
 
-    &:first-child {
-      margin-top: 0;
+    @include min-width(470px) {
+      margin-top: 40px;
     }
   }
 }
