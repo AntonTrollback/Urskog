@@ -4,6 +4,8 @@ require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require 'rack/ssl'
 require 'bourbon'
+require 'coffee-script'
+
 require_relative 'board'
 
 class MyApp < Sinatra::Base
