@@ -1,14 +1,18 @@
 ---
 - :name: Stubbe
   :length: 5000
-  :price: 1800
+  :price:
+    :complete: 2850
+    :deck: 1975
   :slug: stubbe
   :woods:
   - jacaranda
   - zebrano
 - :name: Kil
   :length: 100
-  :price: 1800
+  :price:
+    :complete: 2850
+    :deck: 1975
   :slug: kil
   :woods:
   - jacaranda
