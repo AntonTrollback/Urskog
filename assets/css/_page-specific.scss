@@ -20,7 +20,7 @@
 // -----------------------------------------------------------------------------
 
 .primary-content {
-  @extend .constrained;
+  @extend .Constrained;
   font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 630px;
   font-style: italic;
