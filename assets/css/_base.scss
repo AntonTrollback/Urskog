@@ -107,9 +107,10 @@ a {
 
 @mixin hr {
   display: block;
-  width: 70%;
+  width: 100%;
+  max-width: 620px;
   height: 1px;
-  margin: 2em auto;
+  margin: 25px auto;
   background: $color-hr;
 }
 

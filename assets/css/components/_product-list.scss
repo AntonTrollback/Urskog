@@ -8,7 +8,11 @@
 
   li {
     list-style: none;
-    margin-top: 20px;
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
