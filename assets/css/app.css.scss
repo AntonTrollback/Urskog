@@ -7,12 +7,13 @@
 
 @import "bourbon";
 
-@import "utilities/display";
-@import "utilities/layout";
-@import "utilities/link";
-@import "utilities/space";
-@import "utilities/state";
-@import "utilities/text";
+@import "utilities/suit-dimension";
+@import "utilities/suit-display";
+@import "utilities/suit-layout";
+@import "utilities/suit-link";
+@import "utilities/suit-space";
+@import "utilities/suit-state";
+@import "utilities/suit-text";
 
 // Variables
 // -----------------------------------------------------------------------------

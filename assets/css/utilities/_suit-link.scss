@@ -8,10 +8,10 @@
  * A link without any text-decoration at all.
  */
 
-.link-clean,
-.link-clean:hover,
-.link-clean:focus,
-.link-clean:active {
+.u-linkClean,
+.u-linkClean:hover,
+.u-linkClean:focus,
+.u-linkClean:active {
     text-decoration: none;
 }
 
@@ -24,21 +24,22 @@
  *
  * Example HTML:
  *
- * <a class="link-complex" href="#">
+ * <a class="u-linkComplex" href="#">
  *     Link complex
- *     <span class="link-complex__target">target</span>
+ *     <span class="u-linkComplex-target">target</span>
  * </a>
  */
 
-.link-complex:hover,
-.link-complex:focus,
-.link-complex:active {
+.u-linkComplex,
+.u-linkComplex:hover,
+.u-linkComplex:focus,
+.u-linkComplex:active {
     text-decoration: none;
 }
 
-.link-complex:hover .link-complex__target,
-.link-complex:focus .link-complex__target,
-.link-complex:active .link-complex__target {
+.u-linkComplex:hover .u-linkComplex-target,
+.u-linkComplex:focus .u-linkComplex-target,
+.u-linkComplex:active .u-linkComplex-target {
     text-decoration: underline;
 }
 
@@ -48,10 +49,10 @@
  * Combination of traits commonly used in vertical navigation lists.
  */
 
-.link-block,
-.link-block:hover,
-.link-block:focus,
-.link-block:active {
+.u-linkBlock,
+.u-linkBlock:hover,
+.u-linkBlock:focus,
+.u-linkBlock:active {
     display: block;
     text-decoration: none;
 }
@@ -64,25 +65,25 @@
  *
  * Example HTML:
  *
- * <button class="link-pseudo">
+ * <button class="u-linkPseudo">
  *     <a>Button content</a>
  * </button>
  */
 
-.link-pseudo {
+.u-linkPseudo {
     display: inline;
     padding: 0;
     border: 0;
     margin: 0;
     background: transparent;
     color: inherit;
-    text-decoration: inherit;
+    cursor: pointer;
+    font: inherit;
 }
 
-.link-pseudo:hover,
-.link-pseudo:focus,
-.link-pseudo:active {
-    background: inherit;
+.u-linkPseudo:hover,
+.u-linkPseudo:focus,
+.u-linkPseudo:active {
+    background: transparent;
     color: inherit;
-    text-decoration: inherit;
 }

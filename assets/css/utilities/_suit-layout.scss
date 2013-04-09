@@ -16,13 +16,13 @@
  *    `:before` to contain the top-margins of child elements.
  */
 
-.cf:before,
-.cf:after {
+.u-cf:before,
+.u-cf:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.cf:after {
+.u-cf:after {
     clear: both;
 }
 
@@ -36,7 +36,7 @@
  * problematic.
  */
 
-.nbfc {
+.u-nbfc {
     overflow: hidden;
 }
 
@@ -52,7 +52,7 @@
  * exceed its width.
  */
 
-.nbfc-alt {
+.u-nbfcAlt {
     display: table-cell; /* 1 */
     width: 10000px; /* 2 */
 }
@@ -63,11 +63,11 @@
  * Floats
  */
 
-.pull-start {
+.u-pullStart {
     float: left;
 }
 
-.pull-end {
+.u-pullEnd {
     float: right;
 }
 
@@ -80,12 +80,12 @@
  * proceeding objects.
  */
 
-.obj-start {
+.u-objStart {
     float: left;
     margin-right: 10px;
 }
 
-.obj-end {
+.u-objEnd {
     float: right;
     margin-left: 10px;
 }
@@ -96,8 +96,8 @@
  *    IE 8.
  */
 
-.obj-start img,
-.obj-end img {
+.u-objStart img,
+.u-objEnd img {
     display: block; /* 1 */
     max-width: none; /* 2 */
 }
@@ -109,18 +109,18 @@
  * Depends on an appropriate `display` value.
  */
 
-.align-top {
+.u-alignTop {
     vertical-align: top;
 }
 
-.align-middle {
+.u-alignMiddle {
     vertical-align: middle;
 }
 
-.align-baseline {
+.u-alignBaseline {
     vertical-align: baseline;
 }
 
-.align-bottom {
+.u-alignBottom {
     vertical-align: bottom;
 }

@@ -14,7 +14,7 @@
  *    nodes.
  */
 
-.text-truncate {
+.u-textTruncate {
     max-width: 100%; /* 1 */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,7 +28,7 @@
  * Break strings when their length exceeds the width of their container.
  */
 
-.text-break {
+.u-textBreak {
     word-break: break-all;
     word-break: break-word;
     word-wrap: break-word;
@@ -40,14 +40,14 @@
  * Horizontal text alignment
  */
 
-.text-center {
+.u-textCenter {
     text-align: center;
 }
 
-.text-left {
+.u-textLeft {
     text-align: left;
 }
 
-.text-right {
+.u-textRight {
     text-align: right;
 }
