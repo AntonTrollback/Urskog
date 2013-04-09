@@ -30,6 +30,19 @@
   <aside class="Shop js-displayOption u-marginTm u-pullEnd">
 
   <form action="/products/<%= @board.slug %>/buy">
+    <% if @board.deck_only? %>
+
+    <label class="Control" for="deck-only">
+      <input type="radio" id="deck-only" name="buy_option" value="deck" checked> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
+    </label>
+
+    <div class="Shop-option js-option js-deck-only">
+      <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
+      <p>Free shipping worldwide</p>
+    </div>
+
+    <% else %>
+
     <label class="Control u-marginRl u-paddingRm" for="complete">
       <input type="radio" id="complete" name="buy_option" value="complete" checked> <span>Complete</span> <span class="Control-sub"><%= @board.price.complete %> <small>SEK</small></span>
     </label>
@@ -46,6 +59,8 @@
       <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
       <p>Free shipping worldwide</p>
     </div>
+
+    <% end %>
   
   </form>
 
