@@ -4,14 +4,11 @@
 
 .Shop {
   display: block;
-  width: 295px;
-  padding: 25px 28px;
+  min-width: 270px;
+  padding: 25px 27px;
   border: 1px solid rgb(231, 231, 231);
   border-radius: 3px;
-}
-
-.Shop-heading {
-  cursor: default;
+  @include user-select(none);
 }
 
 // Buy options
@@ -21,16 +18,17 @@
   margin-top: 20px;
 
   p {
+    text-align: center;
     cursor: default;
-    margin: 0;
-    font-size: 90%;
+    margin: 2px 0 -4px;
+    font-size: 14px;
     white-space: nowrap;
   }
 }
 
 .Shop-buyButton {
   width: 100%;
-  margin: 6px 0 10px;
+  margin: 8px 0 10px;
   text-align: center;
   text-indent: 4px;
 }

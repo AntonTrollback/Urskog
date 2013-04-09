@@ -70,7 +70,8 @@ h4 {
 
 table {
   width: 100%;
-  .table-fixed {
+
+  &.table-fixed {
     table-layout: fixed;
 
     td {
