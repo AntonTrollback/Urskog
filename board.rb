@@ -45,7 +45,7 @@ class Board
   end
 
   def deck_only?
-    price.complete.empty?
+    price.complete.nil?
   end
 end
 
@@ -63,7 +63,7 @@ class Price
   attr_reader :complete, :deck
 
   def initialize(price_hash)
-    @complete = price_hash[:complete] || ""
-    @deck = price_hash[:deck] || ""
+    @complete = price_hash[:complete]
+    @deck = price_hash[:deck]
   end
 end
