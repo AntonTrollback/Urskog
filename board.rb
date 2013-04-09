@@ -43,6 +43,10 @@ class Board
   def price
     @price ||= Price.new(self.price_hash)
   end
+
+  def deck_only?
+    price.complete.empty?
+  end
 end
 
 class NullBoard
@@ -59,7 +63,7 @@ class Price
   attr_reader :complete, :deck
 
   def initialize(price_hash)
-    @complete = price_hash[:complete]
-    @deck = price_hash[:deck]
+    @complete = price_hash[:complete] || ""
+    @deck = price_hash[:deck] || ""
   end
 end
