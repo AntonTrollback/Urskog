@@ -45,9 +45,13 @@
 }
 
 .ProductList-itemHeading {
-  @extend h2;
+  @include h3();
   display: block;
   text-align: center;
+
+  @include min-width(470px) {
+    @include h2();
+  }
 }
 
 .ProductList-itemImage {

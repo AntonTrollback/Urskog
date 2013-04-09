@@ -26,44 +26,66 @@ strong {
   font-weight: 500;
 }
 
-h1,
-h2,
-h3,
-h4 {
+// Mixins for headings
+// -----------------------------------------------------------------------------
+
+@mixin heading {
   font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   text-transform: uppercase;
   margin: 0 0 10px;
 }
 
-h1 {
+@mixin h1 {
   font-size: 34px;
   font-weight: 400;
   margin: 0 0 -12px 0;
 }
 
-h2 {
+@mixin h2 {
   font-size: 30px;
   font-weight: 400;
 }
 
-h3 {
+@mixin h3 {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-h4 {
+@mixin h4 {
   font-size: 16px;
   font-weight: 400;
 }
 
-.heading-small {
+@mixin h5 {
   font-size: 16px;
   font-weight: bold;
   text-transform: none;
   letter-spacing: normal;
 }
+
+// Headings default states and helper utilites
+// -----------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.u-heading1,
+.u-heading2,
+.u-heading3,
+.u-heading4,
+.u-heading5 {
+  @include heading();
+}
+
+h1, .u-heading1 { @include h1(); }
+h2, .u-heading2 { @include h2(); }
+h3, .u-heading3 { @include h3(); }
+h4, .u-heading4 { @include h4(); }
+h5, .u-heading5 { @include h5(); }
 
 // Tables
 // -----------------------------------------------------------------------------
@@ -71,13 +93,13 @@ h4 {
 table {
   width: 100%;
 
-  &.table-fixed {
+  &.is-fixed {
     table-layout: fixed;
 
     td {
+      display: inline-block;
       padding: 0;
       overflow: hidden;
-      display: inline-block;
       white-space: nowrap;
     }
   }
