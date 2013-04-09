@@ -19,6 +19,10 @@ label.Control {
     }
   }
 
+  &.is-disabled {
+    cursor: default;
+  }
+
   // Extra info for check/radio on new line
   .Control-sub {
     margin-left: 22px;
