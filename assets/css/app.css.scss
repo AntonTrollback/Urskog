@@ -27,15 +27,15 @@ $color-muted: #888;
 
 @import "components/suit-grid";
 
-@import "components/constrained";
+@import "components/page";
 @import "components/control";
 @import "components/button";
 @import "components/logo";
 @import "components/navigation";
+@import "components/footer";
 @import "components/shop";
 @import "components/product-list";
-@import "components/page-footer";
-@import "components/page";
+@import "components/constrained";
 
 // Utilities
 // -----------------------------------------------------------------------------
