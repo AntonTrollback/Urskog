@@ -1,0 +1,38 @@
+// =============================================================================
+// Page parts
+// =============================================================================
+
+.Page {
+
+}
+
+// Page header
+// -----------------------------------------------------------------------------
+
+.Page-header {
+  z-index: 2;
+  margin-bottom: 36px;
+  text-align: center;
+
+  // Used for emphasizing the logo but also as a layout helper
+  strong {
+    display: block;
+    width: 100%;
+    padding: 24px;
+    overflow: hidden;
+    background: #f6f5f2;
+  }
+}
+
+// Primary text content
+// -----------------------------------------------------------------------------
+
+.Page-intro {
+  @extend .Constrained;
+  width: 630px;
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: center;
+}

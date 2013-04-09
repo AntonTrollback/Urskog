@@ -2,33 +2,6 @@
 // Page specific styles
 // =============================================================================
 
-.page-header {
-  margin-bottom: 36px;
-  text-align: center;
-  z-index: 2;
-
-  strong {
-    display: block;
-    width: 100%;
-    background: #f6f5f2;
-    padding: 24px;
-    overflow: hidden;
-  }
-}
-
-// Start and about pages
-// -----------------------------------------------------------------------------
-
-.primary-content {
-  @extend .Constrained;
-  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 630px;
-  font-style: italic;
-  font-size: 16px;
-  line-height: 1.45;
-  text-align: center;
-}
-
 // Product pages
 // -----------------------------------------------------------------------------
 
@@ -36,10 +9,6 @@
   .Navigation--sub {
     visibility: visible;
     opacity: 1;
-  }
-  .Shop {
-    float: right;
-    margin-top: 10px;
   }
 }
 

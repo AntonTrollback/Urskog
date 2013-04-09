@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="<%= stylesheet_path 'app' %>">
   <script src="<%= javascript_path 'modernizr.min' %>"></script>
 </head>
-<body class="container <%= @slug %>-page">
+<body class="Page container <%= @slug %>-page">
 
 
-  <header class="page-header">
+  <header class="Page-header">
     <strong><a class="Logo ir" href="/">Urskog Longboard</a></strong>
     <%= erb :'parts/navigation', :layout => false %>
   </header>
@@ -26,7 +26,7 @@
   </div>
 
 
-  <footer class="page-footer">
+  <footer class="Page-footer Footer">
     <h2 class="u-isHiddenVisually">Basic information</h2>
     <ul>
       <li>Urskog Longboard

@@ -1,8 +1,8 @@
 // =============================================================================
-// Page footer
+// Footer
 // =============================================================================
 
-.page-footer {
+.Footer {
   text-align: center;
   font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -15,6 +15,7 @@
   @media only screen and (min-width:470px) {
     max-width: 686px;
   }
+
   &:before {
     content: "";
     @include hr();
@@ -24,6 +25,7 @@
     margin: 0;
     padding: 0;
   }
+
   li {
     display: inline-block;
     margin: 0 12px 10px;
@@ -35,6 +37,7 @@
       margin: 0 16px 10px;
     }
   }
+
   a {
     color: inherit;
   }
