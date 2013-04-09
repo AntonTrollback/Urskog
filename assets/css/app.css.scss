@@ -2,19 +2,6 @@
 // CSS setup
 // =============================================================================
 
-// Utilities
-// -----------------------------------------------------------------------------
-
-@import "bourbon";
-
-@import "utilities/suit-dimension";
-@import "utilities/suit-display";
-@import "utilities/suit-layout";
-@import "utilities/suit-link";
-@import "utilities/suit-space";
-@import "utilities/suit-state";
-@import "utilities/suit-text";
-
 // Variables
 // -----------------------------------------------------------------------------
 
@@ -23,12 +10,28 @@ $color-link: #007ac7;
 $color-hr: #e6e6e6;
 $color-muted: #888;
 
+// Mixins
+// -----------------------------------------------------------------------------
+
+@import "bourbon";
+
 // Base styles
 // -----------------------------------------------------------------------------
 
 @import "font";
 @import "normalize";
 @import "base";
+
+// Utilities
+// -----------------------------------------------------------------------------
+
+@import "utilities/suit-dimension";
+@import "utilities/suit-display";
+@import "utilities/suit-layout";
+@import "utilities/suit-link";
+@import "utilities/suit-space";
+@import "utilities/suit-state";
+@import "utilities/suit-text";
 
 // Components
 // -----------------------------------------------------------------------------
