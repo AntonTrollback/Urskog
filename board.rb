@@ -29,9 +29,11 @@ class Board
                 :woods
 
   def initialize(attributes={})
-    attributes.each do |name, value|
-      self.public_send("#{name}=", value)
-    end
+    @name   = attributes[:name]
+    @length = attributes[:length]
+    @price  = attributes[:price]
+    @slug   = attributes[:slug]
+    @woods  = attributes[:woods]
   end
 
   def wood_list
