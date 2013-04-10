@@ -12,7 +12,11 @@
         <li><a href="<%= retailer.website_url %>"><%= retailer.website %></a></li>
       </ul>
 
-      <% unless retailer.web_only? %>
+      <% if retailer.web_only? %>
+        <a href="<%= retailer.website_url %>" title="Go to website">
+          Picture of website?
+        </a>
+      <% else %>
         <a href="https://maps.google.se/maps?q=<%= retailer.address_encoded %>" title="View on Google Maps">
           <img class="u-sizeFull" src="http://maps.google.com/maps/api/staticmap?sensor=false&scale=2&size=400x250&markers=|color:red|<%= retailer.address_encoded %>" alt="Map of <%= retailer.name %> at <%= retailer.address %> in <%= retailer.location %>">
         </a>
