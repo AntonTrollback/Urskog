@@ -87,24 +87,6 @@ h3, .u-heading3 { @include h3(); }
 h4, .u-heading4 { @include h4(); }
 h5, .u-heading5 { @include h5(); }
 
-// Tables
-// -----------------------------------------------------------------------------
-
-table {
-  width: 100%;
-
-  &.is-fixed {
-    table-layout: fixed;
-
-    td {
-      display: inline-block;
-      padding: 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  }
-}
-
 // Links
 // -----------------------------------------------------------------------------
 

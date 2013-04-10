@@ -1,0 +1,35 @@
+// =============================================================================
+// Tables
+// =============================================================================
+
+.Table {
+  width: 100%;
+  font-size: 14px;
+}
+
+// Fixed width columns. Use with dimension utilities
+// -----------------------------------------------------------------------------
+
+.Table--fixed {
+  table-layout: fixed;
+
+  td {
+    display: inline-block;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+// Striped rows
+// -----------------------------------------------------------------------------
+
+.Table--striped {
+  tr {
+    line-height: 1.6;
+
+    &:nth-child(2n + 1) {
+      background: $color-stripe;
+    }
+  }
+}

@@ -9,6 +9,7 @@ $color-text: #4c4c4c;
 $color-link: #007ac7;
 $color-hr: #e8e6e5;
 $color-muted: #888;
+$color-stripe: #fafaf8;
 $page-width: 1000px;
 
 // Mixins
@@ -32,6 +33,7 @@ $page-width: 1000px;
 @import "components/page";
 @import "components/control";
 @import "components/button";
+@import "components/table";
 @import "components/logo";
 @import "components/navigation";
 @import "components/footer";
