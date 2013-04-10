@@ -2,35 +2,41 @@
 - :name: Hollywood Stockholm
   :location: Stockholm
   :address: Norrlandsgatan 21
-  :website: http://www.hollywood.se/
+  :website: hollywood.se
+  :website_url: http://www.hollywood.se/
   :mail: 08@hollywood.se
   :phone: 08 123 1234
 - :name: Hollywood Berzeliigatan
   :location: Gothenburg
   :address: Berzeliigatan 5
-  :website: http://www.hollywood.se/
+  :website: hollywood.se
+  :website_url: http://www.hollywood.se/
   :mail: 031.berzelii@hollywood.se
   :phone: 08 123 1234
 - :name: Hollywood östra hamngatan
   :location: Gothenburg
   :address: Östra Hamngatan 15
-  :website: http://www.hollywood.se/
+  :website: hollywood.se
+  :website_url: http://www.hollywood.se/
   :mail: 031.ostrahamn@hollywood.se
   :phone: 08 123 1234
 - :name: Hollywood Södra Larmgatan
   :location: Gothenburg
   :address: Södra larmgatan 11
-  :website: http://www.hollywood.se/
+  :website: hollywood.se
+  :website_url: http://www.hollywood.se/
   :mail: 031.sodralarm@hollywood.se
   :phone: 08 123 1234
 - :name: Hollywood Västerås
   :location: Gothenburg
   :address: Vasagatan 10
-  :website: http://www.hollywood.se/
+  :website: hollywood.se
+  :website_url: http://www.hollywood.se/
   :mail: info@hollywood.se
   :phone: 08 123 1234
 - :name: Hollywood.se
   :location: Web
-  :website: http://www.hollywood.se/
+  :website: hollywood.se
+  :website_url: http://www.hollywood.se/
   :mail: info@hollywood.se
   :phone: 08 123 1234

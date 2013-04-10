@@ -21,6 +21,7 @@ class Retailer
               :location,
               :address,
               :website,
+              :website_url,
               :mail,
               :phone
 
@@ -29,12 +30,17 @@ class Retailer
     @location = attributes[:location]
     @address  = attributes[:address]
     @website  = attributes[:website]
+    @website_url = attributes[:website_url]
     @mail     = attributes[:mail]
     @phone    = attributes[:phone]
   end
 
   def web_only?
     @location == "web"
+  end
+
+  def address_encoded
+    @address_encoded = Rack::Utils.escape(@address)
   end
 
 end

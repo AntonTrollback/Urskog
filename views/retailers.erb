@@ -1,13 +1,22 @@
 <h1 class="u-isHiddenVisually">Retailers, places to buy Urskog longboards</h1>
 
-<table class="Table Table--striped">
+<h2>Stockholm</h2>
+<ul class="Grid">
   <% @retailers.each do |retailer| %>
-    <tr>
-      <td><%= retailer.name %></td>
-      <td><%= retailer.address %></td>
-      <td><a href="mailto:<%= retailer.mail %>"><%= retailer.mail %></a></td>
-      <td><%= retailer.phone %></td>
-      <td><a href="<%= retailer.website %>">Visit website</a></td>
-    </tr>
+    <li class="Grid-cell u-size1of3 u-marginBl u-marginTl">
+      <h3 class="u-heading5"><%= retailer.name %></h3>
+      <ul class="List List--clean">
+        <li><%= retailer.address %></li>
+        <li><a href="mailto:<%= retailer.mail %>"><%= retailer.mail %></a></li>
+        <li><%= retailer.phone %></li>
+        <li><a href="<%= retailer.website_url %>"><%= retailer.website %></a></li>
+      </ul>
+
+      <% unless retailer.web_only? %>
+        <a href="https://maps.google.se/maps?q=<%= retailer.address_encoded %>" title="View on Google Maps">
+          <img class="u-sizeFull" src="http://maps.google.com/maps/api/staticmap?sensor=false&scale=2&size=400x250&markers=|color:red|<%= retailer.address_encoded %>" alt="Map of <%= retailer.name %> at <%= retailer.address %> in <%= retailer.location %>">
+        </a>
+      <% end %>
+    </li>
   <% end %>
-</table>
+</ul>
