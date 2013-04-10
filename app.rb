@@ -7,6 +7,7 @@ require 'bourbon'
 require 'coffee-script'
 
 require_relative 'board'
+require_relative 'retailer'
 
 class MyApp < Sinatra::Base
 
@@ -39,6 +40,7 @@ class MyApp < Sinatra::Base
   before do
     @boards = Board.all
     @board = NullBoard.new
+    @retailers = Retailer.all
   end
 
   get '/' do
