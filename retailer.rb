@@ -36,7 +36,7 @@ class Retailer
   end
 
   def web_only?
-    @location == "web"
+    @address.nil?
   end
 
   def address_encoded
