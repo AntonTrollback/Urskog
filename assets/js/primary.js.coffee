@@ -13,5 +13,3 @@ $ ->
     $parent = $(this).closest('.js-displayOption')
     $parent.find('.js-option').addClass('u-isHidden')
     $parent.find(".js-#{$(this).attr('id')}").removeClass('u-isHidden')
-
-
