@@ -1,32 +1,32 @@
-<form class="Shop js-displayOption" action="/products/<%= @board.slug %>/buy">
+<form class="Shop js-shop" action="/products/<%= @board.slug %>/buy">
   <% if @board.deck_only? %>
 
-    <label class="Control is-disabled Shop-firstOption" for="complete">
+    <label class="Control is-disabled" for="complete">
       <input type="radio" id="complete" name="buy_option" value="complete" disabled> <span>Complete</span> <span class="Control-sub">Not available</span>
     </label>
-    <label class="Control" for="deck-only">
-      <input type="radio" id="deck-only" name="buy_option" value="deck" checked> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
+    <label class="Control" for="deckOnly">
+      <input type="radio" id="deckOnly" name="buy_option" value="deck" checked> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
     </label>
 
-    <div class="Shop-option js-option js-deck-only">
+    <div class="Shop-option" id="deckOnlyContent">
       <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
       <p>Free shipping worldwide</p>
     </div>
 
   <% else %>
 
-    <label class="Control Shop-firstOption" for="complete">
-      <input type="radio" id="complete" name="buy_option" value="complete" checked> <span>Complete</span> <span class="Control-sub"><%= @board.price.complete %> <small>SEK</small></span>
+    <label class="Control" for="complete">
+      <input class="js-shopControl" type="radio" id="complete" name="buy_option" value="complete" checked> <span>Complete</span> <span class="Control-sub"><%= @board.price.complete %> <small>SEK</small></span>
     </label>
-    <label class="Control" for="deck-only">
-      <input type="radio" id="deck-only" name="buy_option" value="deck"> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
+    <label class="Control" for="deckOnly">
+      <input class="js-shopControl" type="radio" id="deckOnly" name="buy_option" value="deck"> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
     </label>
 
-    <div class="Shop-option js-option js-complete">
+    <div class="Shop-option js-shopOption" id="completeContent">
       <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.complete %> <small>SEK</small></strong></span></button>
       <p>Free shipping worldwide</p>
     </div>
-    <div class="Shop-option js-option js-deck-only u-isHidden">
+    <div class="Shop-option js-shopOption u-isHidden" id="deckOnlyContent">
       <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
       <p>Free shipping worldwide</p>
     </div>

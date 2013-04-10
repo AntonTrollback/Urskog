@@ -9,14 +9,14 @@
   border: 1px solid $color-hr;
   border-radius: 3px;
   @include user-select(none);
+
+  .Control:first-of-type {
+    margin-right: 30px;
+  }
 }
 
 // Buy options
 // -----------------------------------------------------------------------------
-
-.Shop-firstOption {
-  margin-right: 30px;
-}
 
 .Shop-option {
   margin-top: 20px;
