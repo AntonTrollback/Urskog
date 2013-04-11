@@ -5,7 +5,7 @@ require 'yaml'
 class Retailer
 
   def self.all
-    @yaml_file ||= YAML.load_file("retailers.yml")
+    @yaml_file ||= YAML.load_file("data/retailers.yml")
     @retailers ||= retailers(@yaml_file)
   end
 

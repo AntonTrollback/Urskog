@@ -5,7 +5,7 @@ require 'yaml'
 class Board
 
   def self.all
-    @yaml_file ||= YAML.load_file("boards.yml")
+    @yaml_file ||= YAML.load_file("data/boards.yml")
     @boards    ||= boards(@yaml_file)
   end
 
