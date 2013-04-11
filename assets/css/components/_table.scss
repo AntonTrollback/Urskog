@@ -21,7 +21,7 @@
     display: inline-block;
     padding: 0;
     overflow: hidden;
-    // Break words
+    // Break long words
     word-break: break-all;
     word-break: break-word;
     word-wrap: break-word;
@@ -32,10 +32,9 @@
 // -----------------------------------------------------------------------------
 
 .Table--striped {
-  tbody tr {
-    &:nth-child(2n + 1) {
-      background: $color-stripe;
-    }
+  // Stripe rows, but not in table head
+  tbody tr:nth-child(2n + 1) {
+    background: $color-stripe;
   }
 
   td {
@@ -44,32 +43,37 @@
 }
 
 
-// Inline tables for small viewports
+// Flaten tables for small viewports
 // -----------------------------------------------------------------------------
 
-.Table {
-  @include max-width(768px) {
-
-    thead td {
-      display: none;
-    }
-
-    td {
-      display: block;
-      width: auto !important; // override any utilitie classes
-      padding: 3px 15px;
-
-      &:first-child { margin-top: 10px; }
-      &:last-child { margin-bottom: 10px; }
-    }
-  }
-}
-
+// Show inline headings for every td
 .Table-backupHead {
   display: inline-block;
   margin-right: 5px;
 
   @include min-width(768px) {
     display: none;
+  }
+}
+
+.Table {
+  // Note: "desktop first" media query
+  @include max-width(768px) {
+
+    // Hide regular table head
+    thead td {
+      display: none;
+    }
+
+    // Break table columns to new lines
+    td {
+      display: block;
+      width: auto !important; // override any utility classes
+      padding: 3px 15px;
+
+      // Seperate table rows here, because we can't set padding on tr's
+      &:first-child { margin-top: 10px; }
+      &:last-child { margin-bottom: 10px; }
+    }
   }
 }
