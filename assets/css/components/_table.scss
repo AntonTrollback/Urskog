@@ -39,7 +39,7 @@
   }
 
   td {
-    padding: 4px 8px;
+    padding: 5px 8px;
   }
 }
 
@@ -57,7 +57,7 @@
     td {
       display: block;
       width: auto !important; // override any utilitie classes
-      margin: 0 5px;
+      padding: 3px 15px;
 
       &:first-child { margin-top: 10px; }
       &:last-child { margin-bottom: 10px; }
