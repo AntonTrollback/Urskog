@@ -39,6 +39,7 @@ build/config/buildinfo.properties
 /pkg
 /doc/api
 
-# Stylus and CoffeeScript related
+# Precompiler related
 node_modules
 parser.output
+/.sass-cache
