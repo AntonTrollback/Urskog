@@ -3,11 +3,13 @@
 require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require 'rack/ssl'
+
 require 'bourbon'
 require 'coffee-script'
 
-require_relative 'board'
-require_relative 'retailer'
+require_relative 'models/board'
+require_relative 'models/retailer'
+
 
 class MyApp < Sinatra::Base
 
