@@ -6,10 +6,10 @@
 // Add gutters
 // -----------------------------------------------------------------------------
 
-.Grid {
+.Grid--padding {
   margin: 0 -20px;
 }
 
-.Grid-cell {
+.Grid--padding .Grid-cell {
   padding: 0 20px;
 }

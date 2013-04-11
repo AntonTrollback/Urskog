@@ -1,25 +1,34 @@
 <h1 class="u-isHiddenVisually">Retailers, places to buy Urskog longboards</h1>
 
-<ul class="Grid">
-  <% @retailers.each do |retailer| %>
-    <li class="Grid-cell u-size1of3 u-marginBl u-marginTm u-paddingBm">
-      <h3 class="u-heading5"><%= retailer.name %></h3>
-      <ul class="List List--clean">
-        <li><%= retailer.address %></li>
-        <li><a href="mailto:<%= retailer.mail %>"><%= retailer.mail %></a></li>
-        <!--<li><%= retailer.phone %></li>-->
-        <li><a href="<%= retailer.website_url %>"><%= retailer.website %></a></li>
-      </ul>
-
-      <% if retailer.web_only? %>
-        <a href="<%= retailer.website_url %>" title="Go to website">
-          Picture of website?
-        </a>
-      <% else %>
-        <a href="https://maps.google.se/maps?q=<%= retailer.address_encoded %>" title="View on Google Maps">
-          <img class="u-sizeFull" src="http://maps.google.com/maps/api/staticmap?sensor=false&scale=2&size=350x200&markers=|color:red|<%= retailer.address_encoded %>" alt="Map of <%= retailer.name %> at <%= retailer.address %> in <%= retailer.location %>">
-        </a>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<table class="Table Table--striped Table--fixed">
+  <thead>
+    <tr>
+      <td class="u-size1of4">Name</td>
+      <td class="u-size1of4">Mail</td>
+      <td class="u-size1of5">Website</td>
+      <td class="u-size3of10">Address</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @retailers.each do |retailer| %>
+      <tr>
+        <td class="u-size1of4">
+          <strong class="Table-backupHead">Name:</strong>
+          <%= retailer.name %>
+        </td>
+        <td class="u-size1of4">
+          <strong class="Table-backupHead">Mail:</strong>
+          <a href="mailto:<%= retailer.mail %>"><%= retailer.mail %></a>
+        </td>
+        <td class="u-size1of5">
+          <strong class="Table-backupHead">Website:</strong>
+          <a href="<%= retailer.website_url %>" target="_blank"><%= retailer.website %></a>
+        </td>
+        <td class="u-size3of10">
+          <strong class="Table-backupHead">Address:</strong>
+          <a href="https://maps.google.se/maps?q=<%= retailer.address_encoded %>" target="_blank" title="Open in Google Maps"><%= retailer.address %></a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

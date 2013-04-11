@@ -6,13 +6,11 @@
   list-style: square;
 }
 
-// Modifier for a devided list
+// Modifier for a clean list
 // -----------------------------------------------------------------------------
 
 .List--clean {
-  padding-right: 0;
   padding-left: 0;
-  margin-right: 0;
   margin-left: 0;
   list-style: none;
 }

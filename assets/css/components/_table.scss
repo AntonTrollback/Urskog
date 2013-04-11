@@ -5,6 +5,10 @@
 .Table {
   width: 100%;
   font-size: 14px;
+
+  thead {
+    font-weight: 500;
+  }
 }
 
 // Fixed width columns. Use with dimension utilities
@@ -17,7 +21,10 @@
     display: inline-block;
     padding: 0;
     overflow: hidden;
-    white-space: nowrap;
+    // Break words
+    word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
   }
 }
 
@@ -25,11 +32,44 @@
 // -----------------------------------------------------------------------------
 
 .Table--striped {
-  tr {
-    line-height: 1.6;
-
+  tbody tr {
     &:nth-child(2n + 1) {
       background: $color-stripe;
     }
+  }
+
+  td {
+    padding: 4px 8px;
+  }
+}
+
+
+// Inline tables for small viewports
+// -----------------------------------------------------------------------------
+
+.Table {
+  @include max-width(768px) {
+
+    thead td {
+      display: none;
+    }
+
+    td {
+      display: block;
+      width: auto !important; // override any utilitie classes
+      margin: 0 5px;
+
+      &:first-child { margin-top: 10px; }
+      &:last-child { margin-bottom: 10px; }
+    }
+  }
+}
+
+.Table-backupHead {
+  display: inline-block;
+  margin-right: 5px;
+
+  @include min-width(768px) {
+    display: none;
   }
 }
