@@ -89,8 +89,8 @@ class MyApp < Sinatra::Base
     erb :product
   end
 
-  # BUY
-  get '/products/:slug/buy' do
+  # Checkout
+  get '/products/:slug/checkout' do
     @board = Board.find(params[:slug])
     redirect "/products" if @board.name.empty?
     @slug = "checkout"
@@ -98,10 +98,10 @@ class MyApp < Sinatra::Base
     @buy_option = params[:buy_option]
     @wood_type = params[:wood_type]
     @calculator = AmountCalculator.new(@board.price.send(@buy_option))
-    erb :buy
+    erb :checkout
   end
 
-  post '/buy/:slug' do
+  post '/checkout/:slug' do
     p params
 
     'NICE'
