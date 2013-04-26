@@ -13,3 +13,7 @@ gem "rack-ssl", "~> 1.3.3"
 gem "thin"
 
 gem "paymill", "~> 0.3.0"
+
+group :test do
+  gem "rspec", "~> 2.13.0"
+end
