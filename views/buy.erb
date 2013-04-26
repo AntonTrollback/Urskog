@@ -1,4 +1,10 @@
-<form class="Constrained Constrained--extraTight" id="payment-form" action="/buy/<%= @board.slug %>" method="POST">
+<form class="Constrained Constrained--extraTight"
+      id="payment-form"
+      action="/buy/<%= @board.slug %>"
+      method="POST"
+      novalidate
+      autocomplete="on">
+
 
   <!-- For Paymill token -->
   <input class="card-amount-int" type="hidden" value="<%= @calculator.amount %>">
@@ -8,6 +14,52 @@
   <input type="hidden" name="buy_option" value="<%= @buy_option %>">
   <input type="hidden" name="board" value="<%= @wood_type %>">
 
+
+  <h2 class="u-heading5">Shipping information</h2>
+
+  <div class="Grid Grid--narrow">
+    <div class="Grid-cell u-size1of2">
+      <div class="Control">
+        <label>Name</label>
+        <input type="text" name="user[name]">
+      </div>
+    </div>
+    <div class="Grid-cell u-size1of2">
+      <div class="Control">
+        <label>Mail</label>
+        <input type="email" name="user[email]">
+      </div>
+    </div>
+    <div class="Grid-cell u-size1of2">
+      <div class="Control">
+        <label>Country</label>
+        <input type="text" name="user[country]">
+      </div>
+    </div>
+    <div class="Grid-cell u-size1of2">
+      <div class="Control">
+        <label>City</label>
+        <input type="text" name="user[city]">
+      </div>
+    </div>
+    <div class="Grid-cell u-size2of3">
+      <div class="Control">
+        <label>Street</label>
+        <input type="text" name="user[street]">
+      </div>
+    </div>
+    <div class="Grid-cell u-size1of3">
+      <div class="Control">
+        <label>Postal code</label>
+        <input type="text" name="user[postal_code]">
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2 class="u-heading5">Card information</h2>
 
   <div class="Grid Grid--narrow">
 
