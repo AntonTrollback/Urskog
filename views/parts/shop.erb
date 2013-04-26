@@ -32,4 +32,13 @@
     </div>
 
   <% end %>
+
+  <% @board.woods.each do |wood| %>
+  <label class="Control" for="<%= wood %>">
+    <input type="radio" id="<%= wood %>" name="wood_type" value="<%= wood %>"> <span><%= wood.capitalize %></span>
+  </label>
+  <% end %>
+
+
+
 </form>
