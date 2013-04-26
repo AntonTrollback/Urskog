@@ -45,5 +45,5 @@ PaymillResponseHandler = (error, result) ->
 
     # Insert token into form in order to submit to server
     form.append "<input type='hidden' name='paymillToken' value='" + token + "'/>"
-    #form.get(0).submit()
-  #$(".js-buy").removeAttr "disabled"
+    form.get(0).submit()
+  $(".js-buy").removeAttr "disabled"
