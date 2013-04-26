@@ -2,6 +2,18 @@
 // Controls, form elements
 // =============================================================================
 
+.Control {
+  margin-bottom: 15px;
+
+  input {
+    display: block;
+    width: 100%;
+  }
+}
+
+// radio buttons and checkboxes
+// -----------------------------------------------------------------------------
+
 label.Control {
   display: inline-block;
   cursor: pointer;

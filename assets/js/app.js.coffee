@@ -3,17 +3,17 @@
 
 $("#payment-form").submit (event) ->
   event.preventDefault()
-  #$(".submit-button").attr "disabled", "disabled"
+  #$(".js-buy").attr "disabled", "disabled"
 
   unless paymill.validateCardNumber($(".card-number").val())
     console.log "VALIDATE CARD NUMBER"
-    $(".payment-errors").text "Invalid card number"
-    $(".submit-button").removeAttr "disabled"
+    $(".js-errorOutput").text "Invalid card number"
+    $(".js-buy").removeAttr "disabled"
     return false
   unless paymill.validateExpiry($(".card-expiry-month").val(), $(".card-expiry-year").val())
     console.log "VALIDATE EXPIRY"
-    $(".payment-errors").text "Invalid expiration date"
-    $(".submit-button").removeAttr "disabled"
+    $(".js-errorOutput").text "Invalid expiration date"
+    $(".js-buy").removeAttr "disabled"
     return false
 
   console.log "CREATE TOKEN"
@@ -35,15 +35,15 @@ PaymillResponseHandler = (error, result) ->
 
   if error
     # Displays the error above the form
-    $(".payment-errors").text error.apierror
+    $(".js-errorOutput").text error.apierror
   else
-    $(".payment-errors").text ""
+    $(".js-errorOutput").text ""
     form = $("#payment-form")
-    
+
     # Token
     token = result.token
-    
+
     # Insert token into form in order to submit to server
     form.append "<input type='hidden' name='paymillToken' value='" + token + "'/>"
     #form.get(0).submit()
-  #$(".submit-button").removeAttr "disabled"
+  #$(".js-buy").removeAttr "disabled"
