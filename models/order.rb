@@ -10,7 +10,11 @@ class Order
   end
 
   def valid?
-    "VALIDATE"
+    true
+  end
+
+  def save
+    puts "saved"
     true
   end
 end
