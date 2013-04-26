@@ -7,12 +7,18 @@ gem "coffee-script"
 gem "sass"
 gem "bourbon"
 gem "uglifier", "~> 2.0.1"
-
 gem "rack-ssl", "~> 1.3.3"
-
 gem "thin"
-
 gem "paymill", "~> 0.3.0"
+gem "sinatra-activerecord", "~> 1.2.2"
+
+group :production do
+  gem "pg", "~> 0.15.1"
+end
+
+group :development do
+  gem "sqlite3", "~> 1.3.7"
+end
 
 group :test do
   gem "rspec", "~> 2.13.0"
