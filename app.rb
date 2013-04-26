@@ -10,6 +10,8 @@ require 'coffee-script'
 require_relative 'models/board'
 require_relative 'models/retailer'
 
+require_relative 'lib/amount_calculator'
+
 
 class MyApp < Sinatra::Base
 
@@ -93,6 +95,7 @@ class MyApp < Sinatra::Base
     redirect "/products" if @board.name.empty?
     @slug = "products"
     @title = @board.name
+    @calculator = AmountCalculator.new(@board.price.send(params[:buy_option]))
     erb :buy
   end
 
