@@ -9,8 +9,10 @@ require 'coffee-script'
 
 require_relative 'models/board'
 require_relative 'models/retailer'
+require_relative 'models/order'
 
 require_relative 'lib/amount_calculator'
+require_relative 'lib/paymentprocessor'
 
 
 class MyApp < Sinatra::Base
@@ -103,8 +105,13 @@ class MyApp < Sinatra::Base
 
   post '/checkout/:slug' do
     p params
-
-    'NICE'
+    order = Order.new(params)
+    if order.valid? && Paymentprocessor.purchase(order)
+      order.save
+      "NICE"
+    else
+      "LOL"
+    end
   end
 
   run! if app_file == $0
