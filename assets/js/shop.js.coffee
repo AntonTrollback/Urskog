@@ -18,3 +18,5 @@ app.shop =
   changeShopContent: (optionName) ->
     @el.find('.js-shopOption').addClass('u-isHidden')
     @el.find("##{optionName}Content").removeClass('u-isHidden')
+
+

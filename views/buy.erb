@@ -1,0 +1,23 @@
+<form id="payment-form" action="/buy" method="POST">
+  <input class="card-amount-int" type="hidden" value="4900" />
+  <input class="card-currency" type="hidden" value="EUR" />
+
+  <div class="form-row"><label>Card number</label>
+  <input class="card-number" type="text" value="4111111111111111" size="20" /></div>
+
+  <div class="form-row"><label>CVC (Prüfnummer)</label>
+  <input class="card-cvc" type="text" value="111" size="4" /></div>
+
+  <div class="form-row"><label>Name</label>
+  <input class="card-holdername" type="text" value="Joe Doe" size="20" /></div>
+
+  <div class="form-row"><label>Expiry Date (MM/YYYY)</label>
+  <input class="card-expiry-month" type="text" value="02" size="2" />
+  <span> / </span>
+  <input class="card-expiry-year" type="text" value="2015" size="4" /></div>
+
+  <div class="form-row"><label>Währung</label>
+
+  <button class="submit-button" type="submit">Submit</button>
+
+</form>
