@@ -1,35 +1,45 @@
-<form id="payment-form" action="/buy/<%= @board.slug %>" method="POST">
+<form class="Constrained Constrained--extraTight" id="payment-form" action="/buy/<%= @board.slug %>" method="POST">
 
-  <div class="Control">
-    <input class="card-amount-int" type="hidden" value="<%= @calculator.amount %>">
-    <input class="card-currency" type="hidden" value="EUR">
+  <!-- For Paymill token -->
+  <input class="card-amount-int" type="hidden" value="<%= @calculator.amount %>">
+  <input class="card-currency" type="hidden" value="EUR">
+
+  <!-- Buy options -->
+  <input type="hidden" name="buy_option" value="<%= @buy_option %>">
+  <input type="hidden" name="board" value="<%= @wood_type %>">
+
+
+  <div class="Grid Grid--narrow">
+
+    <div class="Control Grid-cell u-size3of4">
+      <label>Card number</label>
+      <input class="card-number" placeholder="•••• •••• •••• ••••" type="text" value="4111111111111111">
+    </div>
+
+    <div class="Control Grid-cell u-size1of4">
+      <label>Expiry Date</label>
+      <div class="Grid Grid--narrow">
+        <div class="Grid-cell u-size1of2">
+          <input class="card-expiry-month" placeholder="MM" type="text" value="02">
+        </div>
+        <div class="Grid-cell u-size1of2">
+          <input class="card-expiry-year" placeholder="YY" type="text" value="2015">
+        </div>
+      </div>
+    </div>
+
+    <div class="Control Grid-cell u-size3of4">
+      <label>Card code</label>
+      <input class="card-cvc" placeholder="CVC" type="text" value="111">
+    </div>
+
+    <div class="Control Grid-cell u-size1of4">
+      <label>Name</label>
+      <input class="card-holdername" type="text" value="Joe Doe">
+    </div>
+
   </div>
 
-  <div class="inputs">
-    <input type="hidden" name="buy_option" value="<%= @buy_option %>">
-    <input type="hidden" name="board" value="<%= @wood_type %>">
-  </div>
-
-  <div class="Control">
-    <label>Card number</label>
-    <input class="card-number" placeholder="•••• •••• •••• ••••" type="text" value="4111111111111111">
-  </div>
-
-  <div class="Control">
-    <label>Card code</label>
-    <input class="card-cvc" placeholder="CVC" type="text" value="111">
-  </div>
-
-  <div class="Control">
-    <label>Name</label>
-    <input class="card-holdername" type="text" value="Joe Doe">
-  </div>
-
-  <div class="Control">
-    <label>Expiry Date</label>
-    <input class="card-expiry-month" placeholder="MM" type="text" value="02">
-    <input class="card-expiry-year" placeholder="YY" type="text" value="2015">
-  </div>
 
   <button class="Button u-marginTl js-buy"><span>Confirm payment</span></button>
   <span class="js-errorOutput"></span>

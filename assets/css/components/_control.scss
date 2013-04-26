@@ -19,6 +19,8 @@ label.Control {
   cursor: pointer;
 
   input {
+    display: inline-block;
+    width: auto;
     margin: -5px 3px 0 0;
     vertical-align: middle;
 

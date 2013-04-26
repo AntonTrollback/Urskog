@@ -2,14 +2,24 @@
 // Tweaks for Suit Grid
 // =============================================================================
 
-
-// Add gutters
+// Modifier for wide gutters
 // -----------------------------------------------------------------------------
 
-.Grid--padding {
+.Grid--wide {
   margin: 0 -20px;
 }
 
-.Grid--padding .Grid-cell {
+.Grid--wide > .Grid-cell {
   padding: 0 20px;
+}
+
+// Modifier for narrow gutters
+// -----------------------------------------------------------------------------
+
+.Grid--narrow {
+  margin: 0 -6px;
+}
+
+.Grid--narrow > .Grid-cell {
+  padding: 0 6px;
 }
