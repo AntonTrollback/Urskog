@@ -1,7 +1,7 @@
 <form id="payment-form" action="/buy/<%= @board.slug %>" method="POST">
 
   <div class="Control">
-    <input class="card-amount-int" type="hidden" value="4900">
+    <input class="card-amount-int" type="hidden" value="<%= @calculator.amount %>">
     <input class="card-currency" type="hidden" value="EUR">
   </div>
 

@@ -95,8 +95,16 @@ class MyApp < Sinatra::Base
     redirect "/products" if @board.name.empty?
     @slug = "products"
     @title = @board.name
-    @calculator = AmountCalculator.new(@board.price.send(params[:buy_option]))
+    @buy_option = params[:buy_option]
+    @wood_type = params[:wood_type]
+    @calculator = AmountCalculator.new(@board.price.send(@buy_option))
     erb :buy
+  end
+
+  post '/buy/:slug' do
+    p params
+
+    'NICE'
   end
 
   run! if app_file == $0
