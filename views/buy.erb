@@ -1,8 +1,13 @@
-<form id="payment-form" action="/buy" method="POST">
+<form id="payment-form" action="/buy/<%= @board.slug %>" method="POST">
 
   <div class="Control">
     <input class="card-amount-int" type="hidden" value="4900">
     <input class="card-currency" type="hidden" value="EUR">
+  </div>
+
+  <div class="inputs">
+    <input type="hidden" name="buy_option" value="<%= @buy_option %>">
+    <input type="hidden" name="board" value="<%= @wood_type %>">
   </div>
 
   <div class="Control">
