@@ -1,4 +1,7 @@
 class Order
+  
+  attr_reader :token
+  
   def initialize(params)
     @name = params[:name]
     @email = params[:email]
@@ -6,7 +9,9 @@ class Order
     @city = params[:city]
     @street = params[:street]
     @postal_code = params[:postal_code]
-    @token = params[:token]
+    @token = params[:paymillToken]
+    @wood_type = params[:wood_type]
+    @buy_option = params[:buy_option]
   end
 
   def valid?
