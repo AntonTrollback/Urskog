@@ -104,9 +104,10 @@ class MyApp < Sinatra::Base
   end
 
   post '/checkout/:slug' do
-    p params
     order = Order.new(params)
-    if order.valid? && Paymentprocessor.purchase(order)
+    board = Board.find(params[:slug])
+    calculator = AmountCalculator.new(board.price.send(params[:buy_option]))
+    if order.valid? && Paymentprocessor.purchase(order, board, calculator)
       order.save
       "NICE"
     else
