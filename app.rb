@@ -19,12 +19,17 @@ require_relative 'lib/paymentprocessor'
 
 class MyApp < Sinatra::Base
 
-
   use Rack::SSL
 
   register Sinatra::ActiveRecordExtension
 
-  set :database_file, "config/database.yml"
+  configure :development do
+    set :database_file, "config/database.yml"
+  end
+  configure :production do
+    set :database, ENV['DATABASE_URL']
+  end
+
 
   # Serve assets using this protocol
   set :assets_protocol, :https
