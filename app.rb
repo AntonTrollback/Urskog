@@ -4,6 +4,8 @@ require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require 'rack/ssl'
 
+require 'sinatra/activerecord'
+
 require 'bourbon'
 require 'coffee-script'
 
@@ -18,6 +20,8 @@ require_relative 'lib/paymentprocessor'
 class MyApp < Sinatra::Base
 
   use Rack::SSL
+
+  register Sinatra::ActiveRecordExtension
 
   # Serve assets using this protocol
   set :assets_protocol, :https
@@ -104,9 +108,11 @@ class MyApp < Sinatra::Base
   end
 
   post '/checkout/:slug' do
-    order = Order.new(params)
+    order = Order.new(params["order"])
     board = Board.find(params[:slug])
-    calculator = AmountCalculator.new(board.price.send(params[:buy_option]))
+    price = board.price.send(params["order"]["type"])
+    calculator = AmountCalculator.new(price)
+
     if order.valid? && Paymentprocessor.purchase(order, board, calculator)
       order.save
       "NICE"
