@@ -13,6 +13,10 @@
     @include min-width(470px) {
       margin-top: 40px;
     }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 

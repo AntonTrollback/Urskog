@@ -1,12 +1,14 @@
-<h1 class="u-isHiddenVisually">List of Urskog longboards</h1>
+<div class="Constrained">
+  <h1 class="u-isHiddenVisually">Al of our longboards</h1>
 
-<ul class="ProductList ProductList--divided">
-  <% @boards.each do |board| %>
-    <li>
-      <a class="ProductList-item" href="/products/<%= board.slug %>">
-        <h2 class="ProductList-itemHeading"><%= board.name %></h2>
-        <img class="ProductList-itemImage" src="/boards/<%= board.slug %>/zebrano.jpg" alt="Image of <%= board.name %>">
-      </a>
-    </li>
-  <% end %>
-</ul>
+  <ul class="ProductList ProductList--divided">
+    <% @boards.each do |board| %>
+      <li>
+        <a class="ProductList-item" href="/products/<%= board.slug %>">
+          <h2 class="ProductList-itemHeading"><%= board.name %></h2>
+          <img class="ProductList-itemImage" src="/boards/<%= board.slug %>/zebrano.jpg" alt="Image of <%= board.name %>">
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

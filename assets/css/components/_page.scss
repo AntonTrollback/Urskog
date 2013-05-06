@@ -11,7 +11,6 @@
 
 .Page-header {
   z-index: 2;
-  margin-bottom: 36px;
   text-align: center;
 
   // Used for emphasizing the logo but also as a layout helper
@@ -28,24 +27,11 @@
 // -----------------------------------------------------------------------------
 
 .Page-main {
-  padding: 30px 15px 30px;
+  padding: 30px 20px 40px;
 
   @include min-width(768px) {
-    padding: 30px 10px 30px;
+    padding: 50px 20px 45px;
   }
-}
-
-// Primary text content
-// -----------------------------------------------------------------------------
-
-.Page-intro {
-  margin: 0 auto;
-  max-width: 600px;
-  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 16px;
-  line-height: 1.45;
-  text-align: center;
 }
 
 // Modifiers for page specific styles
@@ -54,6 +40,9 @@
 // TODO: refactor, this section should not be needed
 
 .Page--products {
+  .Page-header {
+    margin-bottom: 36px;
+  }
   .Navigation--sub {
     visibility: visible;
     opacity: 1;
