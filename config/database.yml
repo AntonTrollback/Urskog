@@ -1,0 +1,19 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: urskog
+  pool: 5
+  timeout: 5000
+  username: urskog
+  password: urskog
+  host: localhost
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: urskog
+  pool: 5
+  timeout: 5000
+  username: urskog
+  password: urskog
+  host: localhost
