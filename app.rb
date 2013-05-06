@@ -21,9 +21,9 @@ class MyApp < Sinatra::Base
 
   use Rack::SSL
 
-  register Sinatra::ActiveRecordExtension
-
   set :database_file, "config/database.yml"
+
+  register Sinatra::ActiveRecordExtension
 
   # Serve assets using this protocol
   set :assets_protocol, :https
