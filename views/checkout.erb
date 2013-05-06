@@ -11,8 +11,8 @@
   <input class="card-currency" type="hidden" value="EUR">
 
   <!-- Buy options -->
-  <input type="hidden" name="buy_option" value="<%= @buy_option %>">
-  <input type="hidden" name="wood_type" value="<%= @wood_type %>">
+  <input type="hidden" name="order[type]" value="<%= @buy_option %>">
+  <input type="hidden" name="order[wood_type]" value="<%= @wood_type %>">
 
 
   <h2 class="u-heading5">Shipping information</h2>
@@ -21,37 +21,37 @@
     <div class="Grid-cell u-size1of2">
       <div class="Control">
         <label>Name</label>
-        <input type="text" name="name">
+        <input type="text" name="order[name]">
       </div>
     </div>
     <div class="Grid-cell u-size1of2">
       <div class="Control">
         <label>Mail</label>
-        <input type="email" name="email">
+        <input type="email" name="order[email]">
       </div>
     </div>
     <div class="Grid-cell u-size1of2">
       <div class="Control">
         <label>Country</label>
-        <input type="text" name="country">
+        <input type="text" name="order[country]">
       </div>
     </div>
     <div class="Grid-cell u-size1of2">
       <div class="Control">
         <label>City</label>
-        <input type="text" name="city">
+        <input type="text" name="order[city]">
       </div>
     </div>
     <div class="Grid-cell u-size2of3">
       <div class="Control">
         <label>Street</label>
-        <input type="text" name="street">
+        <input type="text" name="order[street]">
       </div>
     </div>
     <div class="Grid-cell u-size1of3">
       <div class="Control">
         <label>Postal code</label>
-        <input type="text" name="postal_code">
+        <input type="text" name="order[postal_code]">
       </div>
     </div>
   </div>
