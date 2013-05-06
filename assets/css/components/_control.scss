@@ -44,3 +44,14 @@ label.Control {
     font-size: 90%;
   }
 }
+
+// validation states
+// -----------------------------------------------------------------------------
+
+.Control {
+  &.is-invalid {
+    input {
+      border-color: red;
+    }
+  }
+}
