@@ -3,19 +3,19 @@
 // =============================================================================
 
 .Constrained {
-  max-width: 1030px;
+  max-width: 820px;
   width: 100%;
   margin: 0 auto;
 }
 
-.Constrained--tight {
-  max-width: 850px;
+.Constrained--xs {
+  max-width: 610px;
 }
 
-.Constrained--tighter {
+.Constrained--s {
   max-width: 700px;
 }
 
-.Constrained--extraTight {
-  max-width: 610px;
+.Constrained--l {
+  max-width: 900px;
 }
