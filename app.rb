@@ -19,9 +19,12 @@ require_relative 'lib/paymentprocessor'
 
 class MyApp < Sinatra::Base
 
+
   use Rack::SSL
 
   register Sinatra::ActiveRecordExtension
+
+  set :database_file, "config/database.yml"
 
   # Serve assets using this protocol
   set :assets_protocol, :https
@@ -110,7 +113,7 @@ class MyApp < Sinatra::Base
   post '/checkout/:slug' do
     order = Order.new(params["order"])
     board = Board.find(params[:slug])
-    price = board.price.send(params["order"]["type"])
+    price = board.price.send(params["order"]["type_of_purchase"])
     calculator = AmountCalculator.new(price)
 
     if order.valid? && Paymentprocessor.purchase(order, board, calculator)
@@ -119,6 +122,13 @@ class MyApp < Sinatra::Base
     else
       "LOL"
     end
+  end
+
+
+  # FOR DEBUG
+  get '/orders' do
+    @orders = Order.all
+    erb :orders
   end
 
   run! if app_file == $0
