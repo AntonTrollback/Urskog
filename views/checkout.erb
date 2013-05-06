@@ -7,12 +7,20 @@
 
 
   <!-- For Paymill token -->
-  <input class="card-amount-int" value="<%= @calculator.amount %>" type="hidden">
-  <input class="card-currency" value="EUR" type="hidden">
+  <input class="card-amount-int"
+         value="<%= @calculator.amount %>"
+         type="hidden">
+  <input class="card-currency"
+         value="EUR"
+         type="hidden">
 
   <!-- Buy options -->
-  <input name="order[type_of_purchase]" value="<%= @buy_option %>" type="hidden">
-  <input name="order[wood_type]" value="<%= @wood_type %>" type="hidden">
+  <input name="order[type_of_purchase]"
+         value="<%= @buy_option %>"
+         type="hidden">
+  <input name="order[wood_type]"
+         value="<%= @wood_type %>"
+         type="hidden">
 
 
   <h2 class="u-heading5">Shipping information</h2>
@@ -20,76 +28,137 @@
   <div class="Grid Grid--narrow">
     <div class="Grid-cell u-size1of2">
       <div class="Control">
+
         <label for="order[name]">Name</label>
-        <input id="order[name]" name="order[name]" type="text" required>
+        <input id="order[name]"
+               name="order[name]"
+               type="text"
+               required>
+
       </div>
     </div>
     <div class="Grid-cell u-size1of2">
       <div class="Control">
+
         <label for="order[email]">Mail</label>
-        <input class="v-email" id="order[email]" name="order[email]" type="email" required>
+        <input class="v-email"
+               id="order[email]"
+               name="order[email]"
+               type="email"
+               required>
+
       </div>
     </div>
     <div class="Grid-cell u-size1of2">
       <div class="Control">
+
         <label for="order[country]">Country</label>
-        <input id="order[country]" name="order[country]" type="text" required>
+        <input id="order[country]"
+               name="order[country]"
+               type="text"
+               required>
+
       </div>
     </div>
     <div class="Grid-cell u-size1of2">
       <div class="Control">
+
         <label for="order[city]">City</label>
-        <input id="order[city]" name="order[city]" type="text" required>
+        <input id="order[city]"
+               name="order[city]"
+               type="text"
+               required>
+
       </div>
     </div>
     <div class="Grid-cell u-size2of3">
       <div class="Control">
+
         <label for="order[street]">Street</label>
-        <input id="order[street]" name="order[street]" type="text" required>
+        <input id="order[street]"
+               name="order[street]"
+               type="text"
+               required>
+
       </div>
     </div>
     <div class="Grid-cell u-size1of3">
       <div class="Control">
+
         <label for="order[postal_code]">Postal code</label>
-        <input id="order[postal_code]" name="order[postal_code]" type="text" required>
+        <input id="order[postal_code]"
+               name="order[postal_code]"
+               type="text"
+               required>
+
       </div>
     </div>
   </div>
 
 
-  <hr>
-
   <h2 class="u-heading5">Card information</h2>
 
   <div class="Grid Grid--narrow">
-
     <div class="Control Grid-cell u-size3of4">
-      <label for="card-number">Card number</label>
-      <input class="v-cardNumber" id="card-number" name="card-number" value="4111111111111111" placeholder="•••• •••• •••• ••••" type="text" required>
-    </div>
 
+      <label for="card-number">Card number</label>
+      <input class="v-cardNumber"
+             id="card-number"
+             name="card-number"
+             value="4111111111111111"
+             placeholder="•••• •••• •••• ••••"
+             type="text"
+             required>
+
+    </div>
     <div class="Control Grid-cell u-size1of4">
+
       <label for="card-expiry-month">Expires</label>
       <div class="Grid Grid--narrow">
         <div class="Grid-cell u-size1of2">
-          <input class="v-expiryMonth" id="card-expiry-month" value="02" placeholder="MM" type="text" required>
+          <input class="v-expiryMonth"
+                 id="card-expiry-month"
+                 name="card-expiry-month"
+                 value="02"
+                 placeholder="MM"
+                 type="text"
+                 required>
+
         </div>
         <div class="Grid-cell u-size1of2">
-          <input class="v-expiryYear" id="card-expiry-year" value="2015" placeholder="YY" type="text" required>
+          <input class="v-expiryYear"
+                 id="card-expiry-year"
+                 name="card-expiry-year"
+                 value="2015"
+                 placeholder="YY"
+                 type="text"
+                 required>
+
         </div>
       </div>
     </div>
-
     <div class="Control Grid-cell u-size3of4">
+
       <label for="card-holdername">Name on card</label>
-      <input id="card-holdername" name="card-holdername" value="Joe Doe" type="text" required>
-    </div>
+      <input id="card-holdername"
+             name="card-holdername"
+             value="Joe
+             Doe"
+             type="text"
+             required>
 
+    </div>
     <div class="Control Grid-cell u-size1of4">
-      <label for="card-cvc">Card code</label>
-      <input id="card-cvc" name="card-cvc" value="111" placeholder="CVC" type="text" required>
-    </div>
 
+      <label for="card-cvc">Card code</label>
+      <input id="card-cvc"
+             name="card-cvc"
+             value="111"
+             placeholder="CVC"
+             type="text"
+             required>
+
+    </div>
   </div>
 
 
