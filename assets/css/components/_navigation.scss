@@ -21,7 +21,7 @@
     display: inline-block;
     width: 25%;
 
-    @include min-width(768px) {
+    @include min-width(470px) {
       width: auto;
     }
   }
@@ -40,7 +40,7 @@
   background: transparent;
   -webkit-tap-highlight-color: rgba(black, 0);
 
-  @include min-width(768px) {
+  @include min-width(470px) {
     min-width: 98px;
   }
 

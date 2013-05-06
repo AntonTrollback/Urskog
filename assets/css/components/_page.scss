@@ -24,6 +24,17 @@
   }
 }
 
+// Main content
+// -----------------------------------------------------------------------------
+
+.Page-main {
+  padding: 30px 15px 30px;
+
+  @include min-width(768px) {
+    padding: 30px 10px 30px;
+  }
+}
+
 // Primary text content
 // -----------------------------------------------------------------------------
 
@@ -62,18 +73,4 @@
       max-width: 500px;
       float: left;
     }
-}
-
-.Page--contact {
-  section {
-    text-align: center;
-
-    ul {
-      font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: -4px 0 40px;
-      padding: 0;
-      list-style: none;
-      width: 100%;
-    }
-  }
 }

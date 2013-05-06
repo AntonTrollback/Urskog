@@ -34,6 +34,7 @@ strong {
   font-style: italic;
   text-transform: uppercase;
   margin: 0 0 10px;
+  color: $color-heading;
 }
 
 @mixin h1 {
@@ -81,11 +82,36 @@ h5,
   @include heading();
 }
 
-h1, .u-heading1 { @include h1(); }
-h2, .u-heading2 { @include h2(); }
-h3, .u-heading3 { @include h3(); }
-h4, .u-heading4 { @include h4(); }
-h5, .u-heading5 { @include h5(); }
+h1,
+.u-heading1 {
+  @include h1();
+}
+
+h2,
+.u-heading2 {
+  @include h2();
+  text-transform: none;
+}
+
+h3,
+.u-heading3 {
+  @include h3();
+}
+
+h4,
+.u-heading4 {
+  @include h4();
+}
+
+h5,
+.u-heading5 {
+  @include h5();
+  margin-bottom: 0;
+}
+
+.u-textCondensed {
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 // Links
 // -----------------------------------------------------------------------------
@@ -112,7 +138,7 @@ a {
 @mixin hr {
   display: block;
   width: 100%;
-  max-width: 620px;
+  max-width: 680px;
   height: 1px;
   margin: 25px auto;
   background: $color-hr;
