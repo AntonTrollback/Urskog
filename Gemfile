@@ -10,7 +10,7 @@ gem "uglifier", "~> 2.0.1"
 gem "rack-ssl", "~> 1.3.3"
 gem "thin"
 gem "paymill", "~> 0.3.0"
-gem "sinatra-activerecord", "~> 1.2.2"
+gem "sinatra-activerecord", :git => "git://github.com/janko-m/sinatra-activerecord.git"
 
 group :production do
   gem "pg", "~> 0.15.1"
