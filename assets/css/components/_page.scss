@@ -17,7 +17,7 @@
   strong {
     display: block;
     width: 100%;
-    padding: 24px;
+    padding: 22px 20px 19px;
     overflow: hidden;
     background: #f6f5f2;
   }
@@ -38,16 +38,6 @@
 // -----------------------------------------------------------------------------
 
 // TODO: refactor, this section should not be needed
-
-.Page--products {
-  .Page-header {
-    margin-bottom: 36px;
-  }
-  .Navigation--sub {
-    visibility: visible;
-    opacity: 1;
-  }
-}
 
 .product-info {
   @include clearfix;

@@ -4,15 +4,16 @@
 
 .Logo {
   display: inline-block;
-  width: 150px;
+  width: 135px;
   height: 51px;
   margin-right: -10px;
   text-indent: -200%;
   color: transparent;
-  background: asset-url('logo.png') no-repeat;
-  background: none, asset-url('logo.svg') no-repeat;
-  opacity: 0.75;
-  @include transition(opacity .2s ease);
+  background: no-repeat asset-url('logo.png');
+  background: none, no-repeat asset-url('logo.svg');
+  background-size: 100% auto;
+  opacity: 0.7;
+  @include transition(opacity .1s ease);
   -webkit-tap-highlight-color: rgba(black, 0);
 
   &:hover {
