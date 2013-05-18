@@ -13,6 +13,8 @@ gem "paymill", "~> 0.3.0"
 gem "sinatra-activerecord", :git => "git://github.com/janko-m/sinatra-activerecord.git"
 gem "pg", "~> 0.15.1"
 
+gem "pony", :git => "git://github.com/benprew/pony.git"
+
 group :test do
   gem "rspec", "~> 2.13.0"
 end
