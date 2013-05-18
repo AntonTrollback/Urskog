@@ -39,7 +39,7 @@ strong {
 
 @mixin h1 {
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 -12px 0;
 }
 
@@ -107,6 +107,15 @@ h5,
 .u-heading5 {
   @include h5();
   margin-bottom: 0;
+}
+
+.u-textSub {
+  color: $color-muted;
+  font-weight: 400;
+}
+
+.u-textSmaller {
+  font-size: 14px;
 }
 
 .u-textCondensed {
