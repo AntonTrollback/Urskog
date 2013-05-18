@@ -5,9 +5,34 @@
 .Control {
   margin-bottom: 15px;
 
-  input {
+  label {
     display: block;
-    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #444;
+  }
+}
+
+.Control-field {
+  display: block;
+  width: 100%;
+  display: block;
+  width: 100%;
+  box-shadow: none;
+  border: 1px solid #bbb;
+  padding: 7px 10px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  border-radius: 3px;
+  background: white;
+  box-shadow: inset 0 1px 0px rgba(black, .08);
+
+  &:focus {
+    outline: none;
+    border-color: $color-link;
+    background: lighten($color-link, 58%);
   }
 }
 
@@ -20,7 +45,6 @@ label.Control {
 
   input {
     display: inline-block;
-    width: auto;
     margin: -5px 3px 0 0;
     vertical-align: middle;
 
@@ -49,5 +73,5 @@ label.Control {
 // -----------------------------------------------------------------------------
 
 input.is-invalid {
-  border-color: red;
+  border-color: #e90000;
 }
