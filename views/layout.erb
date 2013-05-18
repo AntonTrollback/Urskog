@@ -8,12 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, maximum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-
   <link rel="stylesheet" href="<%= stylesheet_path 'app' %>">
   <script src="<%= javascript_path 'modernizr.min' %>"></script>
-  <script type="text/javascript">
-    var PAYMILL_PUBLIC_KEY = '19628440790b126911007115a22ab887';
-  </script>
 </head>
 <body class="Page Page--<%= @slug %>">
 
@@ -41,6 +37,8 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+<script>var PAYMILL_PUBLIC_KEY = '19628440790b126911007115a22ab887';</script>
 <script src="https://bridge.paymill.com"></script>
 <script src="<%= javascript_path 'plugins' %>"></script>
 <script src="<%= javascript_path 'app' %>"></script>
