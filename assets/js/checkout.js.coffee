@@ -71,8 +71,9 @@ app.checkout =
     that = window.app.checkout
 
     if error
-      alert "Something went wrong :("
       console.log "Error: ", error
+      alert "Something went wrong :("
+      that.showForm()
     else
       console.log "Result: ", result
       # Insert fresh token in order to submit to server
