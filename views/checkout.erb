@@ -150,7 +150,7 @@
             <label for="card-holdername">Name on card</label>
             <input class="Control-field v-name"
                    id="card-holdername"
-                   name="card-holdername"
+                   class="card-holdername"
                    type="text"
                    required>
 
@@ -160,7 +160,6 @@
           <label for="card-number">Card number</label>
           <input class="Control-field v-cardNumber"
                  id="card-number"
-                 name="card-number"
                  pattern="\d*"
                  x-autocompletetype="cc-number"
                  placeholder="●●●● ●●●● ●●●● ●●●●"
@@ -172,7 +171,6 @@
           <label for="card-expiry">Expires</label>
           <input class="Control-field v-expiry"
                  id="card-expiry"
-                 name="card-expiry"
                  pattern="\d*"
                  x-autocompletetype="cc-exp"
                  placeholder="MM / YY"
@@ -181,11 +179,9 @@
                  required>
 
         </div>
-        <div class="Control Grid-cell u-size1of2">
-          <label for="card-cvc">Card code</label>
+        <div class="Control Grid-cell u-size1of2"> <label for="card-cvc">Card code</label>
           <input class="Control-field v-cvc"
                  id="card-cvc"
-                 name="card-cvc"
                  placeholder="CVC"
                  pattern="\d*"
                  x-autocompletetype="cc-csc"

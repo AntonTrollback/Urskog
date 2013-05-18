@@ -63,13 +63,13 @@ app.checkout =
 
   createToken: (e) ->
     paymill.createToken
-      number:     @el.find("[name=card-number]").val()
-      exp_month:  @el.find("[name=card-expiry]").payment('cardExpiryVal').month
-      exp_year:   @el.find("[name=card-expiry]").payment('cardExpiryVal').year
-      cvc:        @el.find("[name=card-cvc]").val()
-      cardholder: @el.find("[name=card-holdername]").val()
-      amount_int: @el.find("[name=card-amount-int]").val() # Integer z.B. "4900" für 49,00 EUR
-      currency:   @el.find("[name=card-currency]").val() # ISO 4217 z.B. "EUR"
+      number:     @el.find("#card-number").val()
+      exp_month:  @el.find("#card-expiry").payment('cardExpiryVal').month
+      exp_year:   @el.find("#card-expiry").payment('cardExpiryVal').year
+      cvc:        @el.find("#card-cvc").val()
+      cardholder: @el.find("#card-holdername").val()
+      amount_int: @el.find("#card-amount-int").val() # Integer z.B. "4900" für 49,00 EUR
+      currency:   @el.find("#card-currency").val() # ISO 4217 z.B. "EUR"
     , @PaymillResponseHandler
 
 
@@ -83,6 +83,6 @@ app.checkout =
     else
       console.log "Result: ", result
       # Insert fresh token in order to submit to server
-      that.el.find("[name=order[token]").remove()
-      that.el.append "<input type='hidden' name='order[token]' value='" + result.token + "'/>"
+      that.el.find(".token").remove()
+      that.el.append "<input type='hidden' name='order[token]' class='token' value='" + result.token + "'/>"
       #that.el.get(0).submit()
