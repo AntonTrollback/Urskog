@@ -9,6 +9,8 @@ require 'sinatra/activerecord'
 require 'bourbon'
 require 'coffee-script'
 
+require_relative 'lib/order_email'
+
 require_relative 'models/board'
 require_relative 'models/retailer'
 require_relative 'models/order'
@@ -115,13 +117,28 @@ class MyApp < Sinatra::Base
     price = board.price.send(params["order"]["type_of_purchase"])
     calculator = AmountCalculator.new(price)
 
+    p order
+    p board
+    p calculator
+
     if order.valid? && Paymentprocessor.purchase(order, board, calculator)
+      OrderEmail.new(order, board, calculator).send
       order.save
       "NICE"
     else
       "LOL"
     end
   end
+
+
+  get '/test_email' do
+    Pony.mail({
+      :to => 'christopher.schmolzer@gmail.com',
+      :subject => 'hi', 
+      :html_body => '<b>LOL</b>'
+    })
+  end
+
 
 
   # FOR DEBUG
