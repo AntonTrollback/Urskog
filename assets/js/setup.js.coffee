@@ -10,5 +10,4 @@ jQuery ->
 
   # Init components
   app.shop.init($('.js-shop'))
-
   app.checkout.init($('#payment-form'))

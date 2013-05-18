@@ -17,23 +17,25 @@ app.checkout =
 
 
   createToken: (e) ->
-    console.log "CREATE TOKEN"
     paymill.createToken
-      number:     $(".card-number").val()
-      exp_month:  $(".card-expiry-month").val()
-      exp_year:   $(".card-expiry-year").val()
-      cvc:        $(".card-cvc").val()
-      cardholder: $(".card-holdername").val()
-      amount_int: $(".card-amount-int").val() # Integer z.B. "4900" für 49,00 EUR
-      currency:   $(".card-currency").val() # ISO 4217 z.B. "EUR"
+      number:     $("[name=card-number]").val()
+      exp_month:  $("[name=card-expiry]").payment('cardExpiryVal').month
+      exp_year:   $("[name=card-expiry]").payment('cardExpiryVal').year
+      cvc:        $("[name=card-cvc]").val()
+      cardholder: $("[name=card-holdername]").val()
+      amount_int: $("[name=card-amount-int]").val() # Integer z.B. "4900" für 49,00 EUR
+      currency:   $("[name=card-currency]").val() # ISO 4217 z.B. "EUR"
     , @PaymillResponseHandler
 
 
-  PaymillResponseHandler: (error, result) ->
-    console.log "error", error
-    console.log "result", result
+  PaymillResponseHandler: (error, result) =>
+    that = window.app.checkout
 
-    unless error
-      # Insert token into form in order to submit to server
-      @el.append "<input type='hidden' name='order[token]' value='" + result.token + "'/>"
-      @el.get(0).submit()
+    if error
+      alert "Something went wrong :("
+      console.log "Error: ", error
+    else
+      console.log "Result: ", result
+      # Insert token in order to submit to server
+      that.el.append "<input type='hidden' name='order[token]' value='" + result.token + "'/>"
+      #that.el.get(0).submit()

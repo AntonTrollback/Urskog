@@ -10,8 +10,8 @@ app.shop =
     @el.on 'change', '.js-shopControl', (e) ->
       that.changeShopContent($(this).attr('id'))
 
-    # Let's update shop content now, onload, because checked state's can be
-    # preserved if moving in browser history
+    # Change shop content now, onload, because radio button state can be
+    # preserved when moving in browser history
     @changeShopContent(@el.find('.js-shopControl:checked').attr('id'))
 
 

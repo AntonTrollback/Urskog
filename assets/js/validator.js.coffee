@@ -12,35 +12,37 @@ app.validator =
       ignore: ":hidden"
       focusInvalid: true
       errorPlacement: (error, field) ->
-        $(field).closest('.Control').addClass('is-invalid').removeClass('is-valid')
       success: (label, field) ->
-        $(field).closest('.Control').addClass('is-valid').removeClass('is-invalid')
     )
+
+    # Init jquery.payment from Stipe
+    $('.v-cardNumber').payment('formatCardNumber');
+    $('.v-expiry').payment('formatCardExpiry');
+    $('.v-cvc').payment('formatCardCVC');
 
 
   customTests: ->
+
     # Namespace email test
     $.validator.addClassRules "v-email", ->
       email: true
 
+    # Custom minimum length test for names because other one did not work
+    $.validator.addMethod "v-name", ((value, element) ->
+      @optional(element) or value.length >= 4 # Paymill set this limit
+    ), "msg"
+
     # Card number
     $.validator.addMethod "v-cardNumber", ((value, element) ->
-      @optional(element) or paymill.validateCardNumber(value)
+      $.payment.validateCardNumber(value)
     ), "msg"
 
-    # Card year
-    $.validator.addMethod "v-expiryYear", ((value, element) ->
-      # Paymill's validation ask for both year and month so let's
-      # fake one or the other to get single field validation
-      @optional(element) or paymill.validateExpiry('12', value)
-    ), "msg"
-
-    # Card month
-    $.validator.addMethod "v-expiryMonth", ((value, element) ->
-      @optional(element) or paymill.validateExpiry(value, '2050')
+    # Card expiry
+    $.validator.addMethod "v-expiry", ((value, element) ->
+      $.payment.validateCardExpiry($(element).payment('cardExpiryVal'))
     ), "msg"
 
     # CVC
     $.validator.addMethod "v-cvc", ((value, element) ->
-      @optional(element) or paymill.validateCvc(value)
+      $.payment.validateCardCVC(value)
     ), "msg"

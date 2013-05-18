@@ -48,10 +48,6 @@ label.Control {
 // validation states
 // -----------------------------------------------------------------------------
 
-.Control {
-  &.is-invalid {
-    input {
-      border-color: red;
-    }
-  }
+input.is-invalid {
+  border-color: red;
 }

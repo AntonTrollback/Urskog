@@ -5,15 +5,16 @@
       novalidate
       autocomplete="on">
 
-  <div class="Grid Grid--wide v1-Grid--2col">
+  <!-- For Paymill -->
+  <input name="card-amount-int"
+         value="<%= @calculator.amount %>"
+         type="hidden">
+  <input name="card-currency"
+         value="EUR"
+         type="hidden">
 
-    <!-- For Paymill token -->
-    <input class="card-amount-int"
-           value="<%= @calculator.amount %>"
-           type="hidden">
-    <input class="card-currency"
-           value="EUR"
-           type="hidden">
+
+  <div class="Grid Grid--wide v1-Grid--2col">
 
     <!-- Buy options -->
     <input name="order[type_of_purchase]"
@@ -32,7 +33,8 @@
           <div class="Control">
 
             <label for="order[name]">Name</label>
-            <input id="order[name]"
+            <input class="v-name"
+                   id="order[name]"
                    name="order[name]"
                    type="text"
                    required>
@@ -103,60 +105,53 @@
 
       <div class="Grid Grid--narrow">
         <div class="Control Grid-cell">
-          <div class="Control Grid-cell">
 
             <label for="card-holdername">Name on card</label>
-            <input id="card-holdername"
+            <input class="v-name"
+                   id="card-holdername"
                    name="card-holdername"
-                   value="Joe Doe"
                    type="text"
                    required>
 
-          </div>
+        </div>
+        <div class="Control Grid-cell">
+
           <label for="card-number">Card number</label>
           <input class="v-cardNumber"
                  id="card-number"
                  name="card-number"
-                 value="4111111111111111"
+                 pattern="\d*"
+                 x-autocompletetype="cc-number"
                  placeholder="•••• •••• •••• ••••"
                  type="text"
                  required>
 
         </div>
-        <div class="Control Grid-cell u-size1of3">
-
-          <label for="card-expiry-month">Expires</label>
-          <input class="v-expiryMonth"
-                 id="card-expiry-month"
-                 name="card-expiry-month"
-                 value="02"
-                 placeholder="MM"
+        <div class="Control Grid-cell u-size1of2">
+          <label for="card-expiry">Expires</label>
+          <input class="v-expiry"
+                 id="card-expiry"
+                 name="card-expiry"
+                 pattern="\d*"
+                 x-autocompletetype="cc-exp"
+                 placeholder="MM / YY"
+                 maxlength="9"
                  type="text"
                  required>
 
         </div>
-        <div class="Control Grid-cell u-size1of3">
-
-          <label for="card-expiry-month">-</label>
-          <input class="v-expiryYear"
-                 id="card-expiry-year"
-                 name="card-expiry-year"
-                 value="2015"
-                 placeholder="YY"
-                 type="text"
-                 required>
-
-        </div>
-        <div class="Control Grid-cell u-size1of3">
-
+        <div class="Control Grid-cell u-size1of2">
           <label for="card-cvc">Card code</label>
-          <input id="card-cvc"
+          <input class="v-cvc"
+                 id="card-cvc"
                  name="card-cvc"
-                 value="111"
                  placeholder="CVC"
+                 pattern="\d*"
+                 x-autocompletetype="cc-csc"
+                 maxlength="4"
+                 autocomplete="off"
                  type="text"
                  required>
-
         </div>
 
         <div class="Grid-cell u-textCenter u-paddingTm">
