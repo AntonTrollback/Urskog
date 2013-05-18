@@ -19,13 +19,16 @@
 
   <% end %>
 
-  <div>
+  <div class="Shop-section">
 
-    <% @board.woods.each do |wood| %>
-      <label class="Control" for="<%= wood %>">
-        <input type="radio" id="<%= wood %>" name="wood_type" value="<%= wood %>"> <span><%= wood.capitalize %></span>
-      </label>
-    <% end %>
+    <div class="Control">
+      <label class="u-marginRs" for="wood_type">Wood:</label>
+      <select name="wood_type" id="wood_type">
+        <% @board.woods.each do |wood| %>
+          <option value="<%= wood %>"><%= wood.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
   </div>
 
   <%= erb :'parts/buy_button' %>

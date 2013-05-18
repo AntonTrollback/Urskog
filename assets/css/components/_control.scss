@@ -6,7 +6,7 @@
   margin-bottom: 15px;
 
   label {
-    display: block;
+    display: inline-block;
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 4px;
@@ -34,6 +34,16 @@
     border-color: $color-link;
     background: lighten($color-link, 58%);
   }
+}
+
+// menus
+// -----------------------------------------------------------------------------
+
+.Control-menu {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: inherit;
+  opacity: .8;
 }
 
 // radio buttons and checkboxes
