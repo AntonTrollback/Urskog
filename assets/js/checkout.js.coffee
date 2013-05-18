@@ -75,6 +75,7 @@ app.checkout =
       console.log "Error: ", error
     else
       console.log "Result: ", result
-      # Insert token in order to submit to server
+      # Insert fresh token in order to submit to server
+      that.el.find("[name=order[token]").remove()
       that.el.append "<input type='hidden' name='order[token]' value='" + result.token + "'/>"
       #that.el.get(0).submit()
