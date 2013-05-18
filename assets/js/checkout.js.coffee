@@ -85,4 +85,4 @@ app.checkout =
       # Insert fresh token in order to submit to server
       that.el.find(".token").remove()
       that.el.append "<input type='hidden' name='order[token]' class='token' value='" + result.token + "'/>"
-      #that.el.get(0).submit()
+      that.el.get(0).submit()
