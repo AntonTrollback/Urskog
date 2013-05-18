@@ -34,6 +34,12 @@ app.checkout =
         e.preventDefault()
         that.nextAction()
 
+    # Prefill card name from shipping name
+    @el.find('[name=card-holdername]').one 'focus', (e) ->
+      $this = $(this)
+      if $this.val().length == 0
+        validShippingName = that.el.find('[name="order[name]"].is-valid').val()
+        $this.val(validShippingName)
 
 
   showConfirm: (e) ->
@@ -50,20 +56,20 @@ app.checkout =
 
   nextAction: (e) ->
     if @readyToBuy
-      $('.js-buy').click()
+      @el.find('.js-buy').click()
     else
-      $('.js-next').click()
+      @el.find('.js-next').click()
 
 
   createToken: (e) ->
     paymill.createToken
-      number:     $("[name=card-number]").val()
-      exp_month:  $("[name=card-expiry]").payment('cardExpiryVal').month
-      exp_year:   $("[name=card-expiry]").payment('cardExpiryVal').year
-      cvc:        $("[name=card-cvc]").val()
-      cardholder: $("[name=card-holdername]").val()
-      amount_int: $("[name=card-amount-int]").val() # Integer z.B. "4900" für 49,00 EUR
-      currency:   $("[name=card-currency]").val() # ISO 4217 z.B. "EUR"
+      number:     @el.find("[name=card-number]").val()
+      exp_month:  @el.find("[name=card-expiry]").payment('cardExpiryVal').month
+      exp_year:   @el.find("[name=card-expiry]").payment('cardExpiryVal').year
+      cvc:        @el.find("[name=card-cvc]").val()
+      cardholder: @el.find("[name=card-holdername]").val()
+      amount_int: @el.find("[name=card-amount-int]").val() # Integer z.B. "4900" für 49,00 EUR
+      currency:   @el.find("[name=card-currency]").val() # ISO 4217 z.B. "EUR"
     , @PaymillResponseHandler
 
 
