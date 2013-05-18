@@ -10,10 +10,33 @@ app.checkout =
     # Init validation
     app.validator.init(@el)
 
-    @el.submit (e) ->
+    @el.find('.js-next').click (e) ->
       e.preventDefault()
       if that.el.valid()
+        that.showConfirm()
+
+    @el.find('.js-prev').click (e) ->
+      e.preventDefault()
+      that.showForm()
+
+    @el.submit (e) ->
+      e.preventDefault()
+
+      # Validate again just to be sure
+      if that.el.valid()
         that.createToken()
+      else
+        that.showForm()
+
+
+  showConfirm: (e) ->
+    @el.find('.js-checkoutForm').addClass('u-isHidden')
+    @el.find('.js-checkoutConfirm').removeClass('u-isHidden')
+
+
+  showForm: (e) ->
+    @el.find('.js-checkoutForm').removeClass('u-isHidden')
+    @el.find('.js-checkoutConfirm').addClass('u-isHidden')
 
 
   createToken: (e) ->

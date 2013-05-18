@@ -14,7 +14,7 @@
          type="hidden">
 
 
-  <div class="Grid Grid--wide v2-Grid--2col">
+  <div class="Grid Grid--wide v2-Grid--2col js-checkoutForm">
 
     <!-- Buy options -->
     <input name="order[type_of_purchase]"
@@ -159,9 +159,26 @@
         </div>
 
         <div class="Grid-cell u-textCenter u-paddingTm">
-          <button class="Button Button--full js-buy"><span>Confirm payment</span></button>
+          <a href="#" class="Button Button--full js-next"><span>Ok, I'm done</span></a>
         </div>
       </div>
+    </div>
+  </div>
+
+
+  <div class="js-checkoutConfirm u-isHidden">
+    <div class="Grid Grid--wide v2-Grid--2col">
+      <div class="Grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, odio, labore quaerat voluptates nulla tempore fugiat aliquid neque sunt rerum nam minus ex expedita praesentium accusamus. Voluptate placeat libero in.
+      </div>
+      <div class="Grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, odio, labore quaerat voluptates nulla tempore fugiat aliquid neque sunt rerum nam minus ex expedita praesentium accusamus. Voluptate placeat libero in.
+      </div>
+    </div>
+
+    <div class="Grid-cell u-textCenter u-paddingTl u-marginTl">
+      <a href="#" class="js-prev u-marginRl">Take me back</a>
+      <button class="Button" type="submit"><span>Confirm payment</span></button>
     </div>
   </div>
 
