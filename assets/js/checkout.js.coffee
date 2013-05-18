@@ -1,6 +1,7 @@
 app.checkout =
   init: ($element) ->
     @el = $element
+    @readyToBuy = false
     @eventListeners()
 
 
@@ -21,22 +22,37 @@ app.checkout =
 
     @el.submit (e) ->
       e.preventDefault()
-
       # Validate again just to be sure
       if that.el.valid()
         that.createToken()
       else
         that.showForm()
 
+    # Support for pressing enter key
+    $(document).keypress (e) ->
+      if e.which is 13
+        e.preventDefault()
+        that.nextAction()
+
+
 
   showConfirm: (e) ->
     @el.find('.js-checkoutForm').addClass('u-isHidden')
     @el.find('.js-checkoutConfirm').removeClass('u-isHidden')
+    @readyToBuy = true
 
 
   showForm: (e) ->
     @el.find('.js-checkoutForm').removeClass('u-isHidden')
     @el.find('.js-checkoutConfirm').addClass('u-isHidden')
+    @readyToBuy = false
+
+
+  nextAction: (e) ->
+    if @readyToBuy
+      $('.js-buy').click()
+    else
+      $('.js-next').click()
 
 
   createToken: (e) ->
