@@ -27,7 +27,7 @@
 // -----------------------------------------------------------------------------
 
 .Page-main {
-  padding: 35px 20px;
+  padding: 30px 20px 40px;
 
   @include min-width(768px) {
     padding: 50px 20px 45px;
@@ -45,22 +45,4 @@
       padding-top: 28px;
     }
   }
-}
-
-
-// TODO: refactor, this section should not be needed
-
-.product-info {
-  @include clearfix;
-  position: relative;
-
-  table {
-    font-size: 14px;
-    width: 90%
-  }
-
-    article {
-      max-width: 500px;
-      float: left;
-    }
 }

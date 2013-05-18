@@ -56,7 +56,7 @@
   }
 }
 
-.Table {
+.Table--responsive {
   // Note: "desktop first" media query
   @include max-width(768px) {
 

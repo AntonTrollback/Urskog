@@ -23,7 +23,7 @@
 
     <div class="Control">
       <label class="u-marginRs" for="wood_type">Wood:</label>
-      <select name="wood_type" id="wood_type">
+      <select class="Control-menu" name="wood_type" id="wood_type">
         <% @board.woods.each do |wood| %>
           <option value="<%= wood %>"><%= wood.capitalize %></option>
         <% end %>
