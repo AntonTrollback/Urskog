@@ -27,7 +27,7 @@
 // -----------------------------------------------------------------------------
 
 .Page-main {
-  padding: 30px 20px 40px;
+  padding: 35px 20px;
 
   @include min-width(768px) {
     padding: 50px 20px 45px;
@@ -36,6 +36,17 @@
 
 // Modifiers for page specific styles
 // -----------------------------------------------------------------------------
+
+.Page--checkout {
+  .Page-main {
+    padding-top: 28px 20px;
+
+    @include min-width(768px) {
+      padding-top: 28px;
+    }
+  }
+}
+
 
 // TODO: refactor, this section should not be needed
 
