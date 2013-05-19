@@ -69,4 +69,8 @@
   &.is-active {
     display: block;
   }
+
+  > :first-child {
+    margin: 0;
+  }
 }
