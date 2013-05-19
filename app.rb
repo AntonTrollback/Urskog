@@ -13,6 +13,7 @@ require_relative 'config/datamapper_setup'
 require_relative 'db/migrations/all_migrations'
 
 require_relative 'lib/order_email'
+require_relative 'lib/receipt_email'
 
 require_relative 'models/board'
 require_relative 'models/retailer'
@@ -122,13 +123,13 @@ class MyApp < Sinatra::Base
 
     if order.valid? && Paymentprocessor.purchase(order, board, calculator)
       OrderEmail.new(order, board, calculator).send
+      ReceiptEmail.new(order, board, calculator).send
       order.save
       "NICE"
     else
       "LOL"
     end
   end
-
 
   get '/test_email' do
     Pony.mail({
