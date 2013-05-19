@@ -1,7 +1,9 @@
+require 'data_mapper'
+
 class Order
   include DataMapper::Resource 
 
-  property :id,   Integer
+  property :id,   Serial
   property :name, String
   property :email, String
   property :country, String
@@ -12,3 +14,5 @@ class Order
   property :wood_type, String
   property :type_of_purchase, String
 end
+
+DataMapper.finalize
