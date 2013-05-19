@@ -2,8 +2,8 @@
 window.app = {}
 
 # Init plugins from HTML5 Boilerplate Mobile
-MBP.hideUrlBarOnLoad()
 MBP.scaleFix()
+MBP.preventZoom()
 
 # Document ready
 jQuery ->
