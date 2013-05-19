@@ -134,12 +134,14 @@ class MyApp < Sinatra::Base
   get '/test_email' do
     Pony.mail({
       :to => 'christopher.schmolzer@gmail.com',
-      :subject => 'hi', 
+      :subject => 'hi',
       :html_body => '<b>LOL</b>'
     })
   end
 
-
+  get '*' do
+    redirect "/"
+  end
 
   # FOR DEBUG
   get '/orders' do
