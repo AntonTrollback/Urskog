@@ -4,6 +4,7 @@
 
 .Tabbed {
   clear: both;
+  padding-top: 20px;
 }
 
 // Tabbed navigation
@@ -13,23 +14,48 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  border-bottom: 1px solid $color-hr;
+  padding: 0 5px;
 
   li {
     display: inline-block;
-    margin-right: 5px;
-    background: #f2f2f2;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin: 0 3px -1px;
   }
 }
 
 .Tabbed-navItem {
-  background: #f2f2f2;
+  display: block;
+  padding: 7px 12px 5px;
+  border: 1px solid $color-hr;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #f1f0ed;
+  border-radius: 3px 3px 0 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #555;
+  }
+
+  &:hover {
+    color: #222;
+  }
 
   &.is-active {
-    background: black;
+    border-bottom-color: white;
+    background: white;
+    cursor: default;
+
+    &:hover {
+      color: #555;
+    }
   }
 }
 
@@ -38,6 +64,7 @@
 
 .Tabbed-section {
   display: none;
+  padding: 20px 0;
 
   &.is-active {
     display: block;
