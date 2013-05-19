@@ -35,10 +35,10 @@ app.checkout =
         that.nextAction()
 
     # Prefill card name from shipping name
-    @el.find('[name=card-holdername]').one 'focus', (e) ->
+    @el.find('#card-holdername').one 'focus', (e) ->
       $this = $(this)
       if $this.val().length == 0
-        validShippingName = that.el.find('[name="order[name]"].is-valid').val()
+        validShippingName = that.el.find('#order[name].is-valid').val()
         $this.val(validShippingName)
 
 
