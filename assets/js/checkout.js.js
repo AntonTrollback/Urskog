@@ -63,6 +63,7 @@
       }
     },
     createToken: function(e) {
+      this.el.find('[name*=card]').removeAttr('name');
       return paymill.createToken({
         number: this.el.find("#card-number").val(),
         exp_month: this.el.find("#card-expiry").payment('cardExpiryVal').month,

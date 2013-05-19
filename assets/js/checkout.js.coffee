@@ -62,6 +62,9 @@ app.checkout =
 
 
   createToken: (e) ->
+    # Paymill do not like name attribute
+    @el.find('[name*=card]').removeAttr('name')
+
     paymill.createToken
       number:     @el.find("#card-number").val()
       exp_month:  @el.find("#card-expiry").payment('cardExpiryVal').month
