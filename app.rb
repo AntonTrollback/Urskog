@@ -115,7 +115,7 @@ class MyApp < Sinatra::Base
     board = Board.find(params[:slug])
     price = board.price.send(params["order"]["type_of_purchase"])
     calculator = AmountCalculator.new(price)
-    order = Order.new(params["order"])
+    order = Order.new(params["order"].merge({price: price, board: board.name}))
 
     p order
     p board
