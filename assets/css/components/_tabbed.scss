@@ -5,6 +5,7 @@
 .Tabbed {
   clear: both;
   padding-top: 20px;
+  border-bottom: 1px solid $color-hr;
 }
 
 // Tabbed navigation
@@ -36,6 +37,8 @@
   text-transform: uppercase;
   background: #f1f0ed;
   border-radius: 3px 3px 0 0;
+  @include user-select(none);
+  -webkit-tap-highlight-color: rgba(black, 0);
 
   &:hover,
   &:active,
@@ -46,6 +49,10 @@
 
   &:hover {
     color: #222;
+  }
+
+  &:active {
+    color: #888;
   }
 
   &.is-active {
@@ -64,7 +71,7 @@
 
 .Tabbed-section {
   display: none;
-  padding: 20px 0;
+  padding: 20px 0 22px;
 
   &.is-active {
     display: block;
@@ -73,4 +80,19 @@
   > :first-child {
     margin: 0;
   }
+
+  // Refactor: should apply a .Tabbed-shop selector
+  .Shop {
+    border: 0;
+    padding: 0;
+  }
+
+  .Shop-option {
+    max-width: 300px;
+  }
+
+  .Table {
+    width: 100%;
+  }
 }
+
