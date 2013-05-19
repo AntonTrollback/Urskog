@@ -139,14 +139,16 @@ class MyApp < Sinatra::Base
     })
   end
 
-  get '*' do
-    redirect "/"
-  end
-
   # FOR DEBUG
   get '/orders' do
     @orders = Order.all
     erb :orders
+  end
+
+
+  # CATCH ALL
+  get '*' do
+    redirect "/"
   end
 
   run! if app_file == $0
