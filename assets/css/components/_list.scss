@@ -14,3 +14,14 @@
   margin: 0;
   list-style: none;
 }
+
+.List--divided {
+  @extend .List--clean;
+  font-size: 14px;
+  margin-top: -3px
+
+  li {
+    border-bottom: 1px solid $color-hr;
+    padding: 5px;
+  }
+}

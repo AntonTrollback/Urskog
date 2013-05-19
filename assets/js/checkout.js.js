@@ -40,12 +40,13 @@
         var $this, validShippingName;
         $this = $(this);
         if ($this.val().length === 0) {
-          validShippingName = that.el.find('#order[name].is-valid').val();
+          validShippingName = that.el.find('#order-name.is-valid').val();
           return $this.val(validShippingName);
         }
       });
     },
     showConfirm: function(e) {
+      this.enterConfirmData();
       this.el.find('.js-checkoutForm').addClass('u-isHidden');
       this.el.find('.js-checkoutConfirm').removeClass('u-isHidden');
       return this.readyToBuy = true;
@@ -62,6 +63,21 @@
         return this.el.find('.js-next').click();
       }
     },
+    enterConfirmData: function(e) {
+      var cardNumber, cardType, firstDigets;
+      $('#confirm-name').text(this.el.find("#order-name").val());
+      $('#confirm-email').text(this.el.find("#order-email").val());
+      $('#confirm-country').text(this.el.find("#order-country").val());
+      $('#confirm-street').text(this.el.find("#order-street").val());
+      $('#confirm-city').text(this.el.find("#order-city").val());
+      $('#confirm-postalCode').text(this.el.find("#order-postalCode").val());
+      cardNumber = this.el.find("#card-number").val();
+      firstDigets = cardNumber.substr(0, 5);
+      cardType = $.payment.cardType(cardNumber);
+      cardType = cardType.charAt(0).toUpperCase() + cardType.slice(1);
+      $('#confirm-cardNumber').text(firstDigets);
+      return $('#confirm-cardType').text(cardType);
+    },
     createToken: function(e) {
       this.el.find('[name*=card]').removeAttr('name');
       return paymill.createToken({
@@ -70,7 +86,7 @@
         exp_year: this.el.find("#card-expiry").payment('cardExpiryVal').year,
         cvc: this.el.find("#card-cvc").val(),
         cardholder: this.el.find("#card-holdername").val(),
-        amount_int: this.el.find("#card-amount-int").val(),
+        amount_int: this.el.find("#card-amountInt").val(),
         currency: this.el.find("#card-currency").val()
       }, this.PaymillResponseHandler);
     },

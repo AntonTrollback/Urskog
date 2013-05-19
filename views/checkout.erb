@@ -42,7 +42,7 @@
       autocomplete="on">
 
   <!-- For Paymill -->
-  <input name="card-amount-int"
+  <input name="card-amountInt"
          value="<%= @calculator.amount %>"
          type="hidden">
   <input name="card-currency"
@@ -68,9 +68,9 @@
         <div class="Grid-cell">
           <div class="Control">
 
-            <label for="order[name]">Name</label>
+            <label for="order-name">Name</label>
             <input class="Control-field v-name"
-                   id="order[name]"
+                   id="order-name"
                    name="order[name]"
                    type="text"
                    autofocus
@@ -81,9 +81,9 @@
         <div class="Grid-cell">
           <div class="Control">
 
-            <label for="order[email]">Mail</label>
+            <label for="order-email">Mail</label>
             <input class="Control-field v-email"
-                   id="order[email]"
+                   id="order-email"
                    name="order[email]"
                    type="email"
                    required>
@@ -93,9 +93,9 @@
         <div class="Grid-cell u-size1of2">
           <div class="Control">
 
-            <label for="order[country]">Country</label>
+            <label for="order-country">Country</label>
             <input class="Control-field"
-                   id="order[country]"
+                   id="order-country"
                    name="order[country]"
                    type="text"
                    required>
@@ -105,9 +105,9 @@
         <div class="Grid-cell u-size1of2">
           <div class="Control">
 
-            <label for="order[street]">Street</label>
+            <label for="order-street">Street</label>
             <input class="Control-field"
-                   id="order[street]"
+                   id="order-street"
                    name="order[street]"
                    type="text"
                    required>
@@ -117,9 +117,9 @@
         <div class="Grid-cell u-size1of2">
           <div class="Control">
 
-            <label for="order[city]">City</label>
+            <label for="order-city">City</label>
             <input class="Control-field"
-                   id="order[city]"
+                   id="order-city"
                    name="order[city]"
                    type="text"
                    required>
@@ -129,9 +129,9 @@
         <div class="Grid-cell u-size1of2">
           <div class="Control">
 
-            <label for="order[postal_code]">Postal code</label>
+            <label for="order-postalCode">Postal code</label>
             <input class="Control-field"
-                   id="order[postal_code]"
+                   id="order-postalCode"
                    name="order[postal_code]"
                    type="text"
                    required>
@@ -150,7 +150,7 @@
             <label for="card-holdername">Name on card</label>
             <input class="Control-field v-name"
                    id="card-holdername"
-                   name="card[holdername]"
+                   name="card-holdername"
                    type="text"
                    required>
 
@@ -160,7 +160,7 @@
           <label for="card-number">Card number</label>
           <input class="Control-field v-cardNumber"
                  id="card-number"
-                 name="card[number]"
+                 name="card-number"
                  pattern="\d*"
                  x-autocompletetype="cc-number"
                  placeholder="●●●● ●●●● ●●●● ●●●●"
@@ -172,7 +172,7 @@
           <label for="card-expiry">Expires</label>
           <input class="Control-field v-expiry"
                  id="card-expiry"
-                 name="card[expiry]"
+                 name="card-expiry"
                  pattern="\d*"
                  x-autocompletetype="cc-exp"
                  placeholder="MM / YY"
@@ -184,7 +184,7 @@
         <div class="Control Grid-cell u-size1of2"> <label for="card-cvc">Card code</label>
           <input class="Control-field v-cvc"
                  id="card-cvc"
-                 name="card[cvc]"
+                 name="card-cvc"
                  placeholder="CVC"
                  pattern="\d*"
                  x-autocompletetype="cc-csc"
@@ -203,18 +203,27 @@
 
 
   <div class="js-checkoutConfirm u-isHidden u-paddingTm">
+    <h3 class="u-heading2 u-marginBl">Confirm information</h3>
+
     <div class="Grid Grid--wide v2-Grid--2col">
       <div class="Grid-cell">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, odio, labore quaerat voluptates nulla tempore fugiat aliquid neque sunt rerum nam minus ex expedita praesentium accusamus. Voluptate placeat libero in.
+        <ul class="List List--divided">
+          <li><strong id="confirm-name"></strong>
+          <li id="confirm-email">
+          <li><span id="confirm-city"></span>, <span id="confirm-country"></span>
+          <li id="confirm-street">
+          <li id="confirm-postalCode">
+        </ul>
+        <ul class="List List--divided u-marginTm">
+          <li><strong id="confirm-cardType"></strong>
+          <li><span id="confirm-cardNumber"></span> ●●●● ●●●● ●●●●
+        </ul>
       </div>
       <div class="Grid-cell">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, odio, labore quaerat voluptates nulla tempore fugiat aliquid neque sunt rerum nam minus ex expedita praesentium accusamus. Voluptate placeat libero in.
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, odio, labore quaerat voluptates nulla tempore fugiat aliquid neque sunt rerum nam minus ex expedita praesentium accusamus. Voluptate placeat libero in.</p>
+        <a href="#" class="js-prev u-marginRl">Back</a>
+        <button class="Button js-buy u-marginTs" type="submit"><span>Confirm payment</span></button>
       </div>
-    </div>
-
-    <div class="Grid-cell u-textCenter u-paddingTl u-marginTl">
-      <a href="#" class="js-prev u-marginRl">Take me back</a>
-      <button class="Button js-buy" type="submit"><span>Confirm payment</span></button>
     </div>
   </div>
 
