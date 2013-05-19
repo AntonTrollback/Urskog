@@ -18,21 +18,26 @@ class Retailer
   end
 
   attr_reader :name,
-              :location,
+              :country,
+              :city,
+              :nice_url,
+              :url,
+              :email,
               :address,
-              :website,
-              :website_url,
-              :mail,
-              :phone
+              :meatworld,
+              :distribution
+
 
   def initialize(attributes={})
-    @name     = attributes[:name]
-    @location = attributes[:location]
-    @address  = attributes[:address]
-    @website  = attributes[:website]
-    @website_url = attributes[:website_url]
-    @mail     = attributes[:mail]
-    @phone    = attributes[:phone]
+    @name         = attributes[:name]
+    @country      = attributes[:country]
+    @city         = attributes[:city]
+    @nice_url     = attributes[:nice_url]
+    @url          = attributes[:url]
+    @email        = attributes[:email]
+    @address      = attributes[:address]
+    @meatworld    = attributes[:meatworl]
+    @distribution = attributes[:distribution]
   end
 
   def web_only?
