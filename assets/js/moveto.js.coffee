@@ -2,7 +2,7 @@ app.moveto =
   init: ($element) ->
     @el = $element
     @movers = $element
-    @breakpoint = 830
+    @breakpoint = 768
     @eventListeners()
     that = this
 

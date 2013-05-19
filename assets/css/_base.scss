@@ -116,7 +116,7 @@ h5,
 }
 
 .u-hideForWide {
-  @include min-width(830px) {
+  @include min-width(768px) {
     display: none;
   }
 }
