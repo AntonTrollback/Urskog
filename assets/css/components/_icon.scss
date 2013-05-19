@@ -15,13 +15,13 @@
 }
 
 .Icon--facebook {
-  background: asset-url('facebook.png');
-  background: none, no-repeat asset-url('facebook-x2.png');
+  background: asset_data_uri('facebook.png');
+  background: none, no-repeat asset_data_uri('facebook-x2.png');
   background-size: 100% auto;
 }
 
 .Icon--instagram {
-  background: asset-url('instagram.png');
-  background: none, no-repeat asset-url('instagram-x2.png');
+  background: asset_data_uri('instagram.png');
+  background: none, no-repeat asset_data_uri('instagram-x2.png');
   background-size: 100% auto;
 }
