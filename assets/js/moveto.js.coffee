@@ -7,14 +7,14 @@ app.moveto =
     that = this
 
     # Run on load
-    that.testSize($(window).width())
+    that.testSize(window.innerWidth)
 
 
   eventListeners: ->
     that = this
 
     $(window).resize ->
-      that.testSize($(window).width())
+      that.testSize(window.innerWidth)
 
 
   testSize: (width) ->
@@ -25,7 +25,6 @@ app.moveto =
 
 
   viewpoitAction: (size) ->
-    console.log 'Move to:', size
     @currentViewport = size
     @movers.each ->
       $this = $(this)
