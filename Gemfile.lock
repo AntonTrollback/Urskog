@@ -5,45 +5,65 @@ GIT
     pony (1.4.1)
       mail (> 2.0)
 
-GIT
-  remote: git://github.com/janko-m/sinatra-activerecord.git
-  revision: cd7345839c716f5bb555bb4ea1cc9701f8323f7d
-  specs:
-    sinatra-activerecord (1.2.2)
-      activerecord (~> 3.0)
-      sinatra (~> 1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (3.2.13)
-      activesupport (= 3.2.13)
-      builder (~> 3.0.0)
-    activerecord (3.2.13)
-      activemodel (= 3.2.13)
-      activesupport (= 3.2.13)
-      arel (~> 3.0.2)
-      tzinfo (~> 0.3.29)
-    activesupport (3.2.13)
-      i18n (= 0.6.1)
-      multi_json (~> 1.0)
-    arel (3.0.2)
+    addressable (2.2.8)
+    bcrypt-ruby (3.0.1)
     bourbon (3.1.1)
       sass (>= 3.2.0)
       thor
-    builder (3.0.4)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
     daemons (1.1.9)
+    datamapper (1.2.0)
+      dm-aggregates (~> 1.2.0)
+      dm-constraints (~> 1.2.0)
+      dm-core (~> 1.2.0)
+      dm-migrations (~> 1.2.0)
+      dm-serializer (~> 1.2.0)
+      dm-timestamps (~> 1.2.0)
+      dm-transactions (~> 1.2.0)
+      dm-types (~> 1.2.0)
+      dm-validations (~> 1.2.0)
     diff-lcs (1.2.4)
+    dm-aggregates (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-constraints (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-core (1.2.0)
+      addressable (~> 2.2.6)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-serializer (1.2.2)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      json_pure (~> 1.6)
+      multi_json (~> 1.0)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-transactions (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-types (1.2.2)
+      bcrypt-ruby (~> 3.0)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      multi_json (~> 1.0)
+      stringex (~> 1.4)
+      uuidtools (~> 2.1)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fastercsv (1.5.5)
     hike (1.2.1)
-    i18n (0.6.1)
     json (1.7.7)
+    json_pure (1.8.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -90,6 +110,7 @@ GEM
     sprockets-sass (0.9.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
+    stringex (1.5.1)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -99,10 +120,10 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.37)
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    uuidtools (2.1.4)
     yamler (0.1.0)
 
 PLATFORMS
@@ -111,6 +132,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   coffee-script
+  datamapper (~> 1.2.0)
   paymill (~> 0.3.0)
   pg (~> 0.15.1)
   pony!
@@ -118,7 +140,6 @@ DEPENDENCIES
   rspec (~> 2.13.0)
   sass
   sinatra
-  sinatra-activerecord!
   sinatra-asset-pipeline
   thin
   uglifier (~> 2.0.1)
