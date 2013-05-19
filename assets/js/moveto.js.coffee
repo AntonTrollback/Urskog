@@ -1,36 +1,40 @@
 app.moveto =
   init: ($element) ->
     @el = $element
+    @movers = $element
     @breakpoint = 830
     @eventListeners()
-
     that = this
 
     # Run on load
-    @el.each (i) ->
-      that.testSize($(this), $(window).width())
+    that.testSize($(window).width())
 
 
   eventListeners: ->
     that = this
 
     $(window).resize ->
-      that.el.each (i) ->
-        that.testSize($(this), $(window).width())
+      that.testSize($(window).width())
 
 
-  testSize: ($el, width) ->
-    if width >= @breakpoint
-      @wideViewpoitAction($el)
-    else
-      @narrowViewpoitAction($el)
+  testSize: (width) ->
+    if width >= @breakpoint && !@wideViewport
+      @wideViewpoitAction()
+      @wideViewport = true
+    else if width < @breakpoint && (@wideViewport || @wideViewport == undefined)
+      @narrowViewpoitAction()
+      @wideViewport = false
 
 
-  wideViewpoitAction: ($el)->
-    targetWideSelector = $el.attr('data-targetWide')
-    $el.appendTo(targetWideSelector)
+  wideViewpoitAction: ->
+    console.log('Move up')
+    @movers.each ->
+      $this = $(this)
+      $this.appendTo($this.attr('data-targetWide'))
 
 
-  narrowViewpoitAction: ($el)->
-    targetNarrowSelector = $el.attr('data-targetNarrow')
-    $el.appendTo(targetNarrowSelector)
+  narrowViewpoitAction: ->
+    console.log('Move down')
+    @movers.each ->
+      $this = $(this)
+      $this.appendTo($this.attr('data-targetNarrow'))
