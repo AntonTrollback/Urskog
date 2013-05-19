@@ -1,0 +1,45 @@
+// =============================================================================
+// Tabbed section
+// =============================================================================
+
+.Tabbed {
+  clear: both;
+}
+
+// Tabbed navigation
+// -----------------------------------------------------------------------------
+
+.Tabbed-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    background: #f2f2f2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.Tabbed-navItem {
+  background: #f2f2f2;
+
+  &.is-active {
+    background: black;
+  }
+}
+
+// Tabbed sections
+// -----------------------------------------------------------------------------
+
+.Tabbed-section {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

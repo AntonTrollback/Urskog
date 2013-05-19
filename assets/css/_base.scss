@@ -115,6 +115,12 @@ h5,
   font-weight: 400;
 }
 
+.u-hideForWide {
+  @include min-width(830px) {
+    display: none;
+  }
+}
+
 .u-textSmaller {
   font-size: 14px;
 }
