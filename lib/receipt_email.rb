@@ -12,7 +12,11 @@ class ReceiptEmail
     Pony.mail({
       :to => order.email,
       :subject => 'RECEIPT', 
-      :html_body => '<b>LOL</b>'
+      :html_body => "
+        <p>Name: #{order.name}</p>
+        <p>Email: #{order.email}</p>
+        <p>Street: #{order.street}</p>
+      "
     })
   end
 end
