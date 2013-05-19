@@ -1,1 +1,1 @@
-DataMapper.setup(:default, 'postgres://urskog:urskog@localhost/urskog')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://urskog:urskog@localhost/urskog')
