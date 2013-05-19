@@ -1,0 +1,27 @@
+// =============================================================================
+// Icon
+// =============================================================================
+
+.Icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-decoration: none;
+  text-indent: -200%;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.Icon--facebook {
+  background: asset-url('facebook.png');
+  background: none, no-repeat asset-url('facebook-x2.png');
+  background-size: 100% auto;
+}
+
+.Icon--instagram {
+  background: asset-url('instagram.png');
+  background: none, no-repeat asset-url('instagram-x2.png');
+  background-size: 100% auto;
+}
