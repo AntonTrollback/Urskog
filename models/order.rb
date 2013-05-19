@@ -1,5 +1,18 @@
-class Order < ActiveRecord::Base
-  
-  attr_accessible :token, :type_of_purchase, :wood_type, :name, :email, :country, :city, :street, :postal_code, :token
-  
+require 'data_mapper'
+
+class Order
+  include DataMapper::Resource 
+
+  property :id,   Serial
+  property :name, String
+  property :email, String
+  property :country, String
+  property :city, String
+  property :street, String
+  property :postal_code, String
+  property :token, String
+  property :wood_type, String
+  property :type_of_purchase, String
 end
+
+DataMapper.finalize
