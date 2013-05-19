@@ -1,3 +1,5 @@
+#= require jquery.js
+#= require plugins.js
 #= require setup.js
 #= require moveto.js
 #= require tabbed.js
