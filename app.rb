@@ -4,8 +4,6 @@ require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require 'rack/ssl'
 
-require 'sinatra/activerecord'
-
 require 'bourbon'
 require 'coffee-script'
 
@@ -22,10 +20,6 @@ require_relative 'lib/paymentprocessor'
 class MyApp < Sinatra::Base
 
   use Rack::SSL
-
-  set :database_file, "config/database.yml"
-
-  register Sinatra::ActiveRecordExtension
 
   # Serve assets using this protocol
   set :assets_protocol, :https
