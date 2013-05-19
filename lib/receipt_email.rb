@@ -2,12 +2,10 @@ require_relative '../config/pony_options'
 
 class ReceiptEmail
 
-  attr_reader :order, :board, :calculator
+  attr_reader :order
 
-  def initialize(order, board, calculator)
+  def initialize(order)
     @order = order
-    @board = board
-    @calculator = calculator
   end
 
   def send
