@@ -11,9 +11,13 @@ html {
 }
 
 body {
-  font: 300 16px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $color-text;
   cursor: default;
+
+  @include min-width(480px) {
+    font-size: 16px;
+  }
 }
 
 // Typography
