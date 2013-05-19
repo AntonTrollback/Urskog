@@ -20,7 +20,7 @@ app.moveto =
 
 
   testSize: ($el, width) ->
-    if width > @breakpoint
+    if width >= @breakpoint
       @wideViewpoitAction($el)
     else
       @narrowViewpoitAction($el)
