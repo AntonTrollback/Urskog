@@ -9,5 +9,6 @@ MBP.scaleFix()
 jQuery ->
 
   # Init components
+  app.moveto.init($('.js-moveTo'))
   app.shop.init($('.js-shop'))
   app.checkout.init($('#payment-form'))

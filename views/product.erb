@@ -2,33 +2,57 @@
 <div class="Constrained u-paddingBl u-cf">
   <article class="Constrained--xxs u-pullStart">
     <h1><%= @board.name %></h1>
-    <p>Urskog’s new model Stubbe is a dropthrough board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability.</p>
+    <div id="articleArea1">
+      <p class="js-moveTo" data-targetNarrow="#infoTab" data-targetWide="#articleArea1">Urskog’s new model Stubbe is a dropthrough board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability.</p>
+    </div>
 
-    <table class="Table Table--fixed u-textSmaller u-size9of10">
-      <tr>
-        <td class="u-size1of3"><strong>Wood:</strong>
-        <td class="u-size2of3"><%= @board.wood_list %>
-      </tr>
-      <tr>
-        <td class="u-size1of3"><strong>Lenght:</strong>
-        <td class="u-size1of3">950mm
-        <td class="u-size1of3">37,4”
-      </tr>
-      <tr>
-        <td class="u-size1of3"><strong>Width:</strong>
-        <td class="u-size1of3">225mm
-        <td class="u-size1of3">8,9”
-      </tr>
-      <tr>
-        <td class="u-size1of3"><strong>Wheelbase:</strong>
-        <td class="u-size1of3">690mm <td class="u-size1of3">27,1”
-      </tr>
-    </table>
+    <div id="articleArea2">
+      <table class="Table Table--fixed u-textSmaller u-size9of10 js-moveTo" data-targetNarrow="#specsTab" data-targetWide="#articleArea2">
+        <tr>
+          <td class="u-size1of3"><strong>Wood:</strong>
+          <td class="u-size2of3"><%= @board.wood_list %>
+        </tr>
+        <tr>
+          <td class="u-size1of3"><strong>Lenght:</strong>
+          <td class="u-size1of3">950mm
+          <td class="u-size1of3">37,4”
+        </tr>
+        <tr>
+          <td class="u-size1of3"><strong>Width:</strong>
+          <td class="u-size1of3">225mm
+          <td class="u-size1of3">8,9”
+        </tr>
+        <tr>
+          <td class="u-size1of3"><strong>Wheelbase:</strong>
+          <td class="u-size1of3">690mm <td class="u-size1of3">27,1”
+        </tr>
+      </table>
+    </div>
   </article>
 
-  <aside class="u-marginTm u-pullEnd">
-    <%= erb :'parts/shop', :layout => false %>
+  <aside class="u-marginTm u-pullEnd" id="shopAside">
+    <div class="js-moveTo" data-targetNarrow="#shopTab" data-targetWide="#shopAside">
+      <%= erb :'parts/shop', :layout => false %>
+    </div>
   </aside>
+
+  <div class="Tabbed u-isHidden">
+    <ul class="Tabbed-nav">
+      <li><a href="#" class="is-active">Info</a>
+      <li><a href="#">Specs</a>
+      <li><a href="#">Shop</a>
+    </ul>
+
+    <div class="Tabbed-section is-active" id="infoTab">
+
+    </div>
+    <div class="Tabbed-section" id="specsTab">
+
+    </div>
+    <div class="Tabbed-section" id="shopTab">
+
+    </div>
+  </div>
 </div>
 
 
