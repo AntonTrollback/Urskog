@@ -125,9 +125,9 @@ class MyApp < Sinatra::Base
       order.save
       OrderEmail.new(order).send
       ReceiptEmail.new(order).send
-      "NICE"
+      erb :success
     else
-      "LOL"
+      "Fuck, an error occurred. Please contact support@urskog.com"
     end
   end
 
