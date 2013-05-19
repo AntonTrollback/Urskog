@@ -20,11 +20,6 @@
   td {
     display: inline-block;
     padding: 0;
-    overflow: hidden;
-    // Break long words
-    word-break: break-all;
-    word-break: break-word;
-    word-wrap: break-word;
   }
 }
 
@@ -70,6 +65,11 @@
       display: block;
       width: auto !important; // override any utility classes
       padding: 3px 15px;
+      overflow: hidden;
+      // Break long words
+      word-break: break-all;
+      word-break: break-word;
+      word-wrap: break-word;
 
       // Seperate table rows here, because we can't set padding on tr's
       &:first-child { margin-top: 10px; }

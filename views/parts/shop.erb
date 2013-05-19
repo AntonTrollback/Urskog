@@ -1,19 +1,19 @@
 <form class="Shop js-shop" action="/products/<%= @board.slug %>/checkout">
   <% if @board.deck_only? %>
 
-    <label class="Control is-disabled" for="complete">
+    <label class="Control u-marginRl is-disabled" for="complete">
       <input type="radio" id="complete" name="buy_option" value="complete" disabled> <span>Complete</span> <span class="Control-sub">Not available</span>
     </label>
-    <label class="Control" for="deckOnly">
+    <label class="Control u-marginRm" for="deckOnly">
       <input type="radio" id="deckOnly" name="buy_option" value="deck" checked> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
     </label>
 
   <% else %>
 
-    <label class="Control" for="complete">
+    <label class="Control u-marginRl" for="complete">
       <input class="js-shopControl" type="radio" id="complete" name="buy_option" value="complete" checked> <span>Complete</span> <span class="Control-sub"><%= @board.price.complete %> <small>SEK</small></span>
     </label>
-    <label class="Control" for="deckOnly">
+    <label class="Control u-marginRm" for="deckOnly">
       <input class="js-shopControl" type="radio" id="deckOnly" name="buy_option" value="deck"> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
     </label>
 

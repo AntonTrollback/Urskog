@@ -9,10 +9,6 @@
   border: 1px solid $color-hr;
   border-radius: 3px;
   @include user-select(none);
-
-  .Control:first-of-type {
-    margin-right: 30px;
-  }
 }
 
 .Shop-section {
