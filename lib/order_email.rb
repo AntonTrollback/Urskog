@@ -12,8 +12,7 @@ class OrderEmail
     Pony.mail({
       :to => 'christopher.schmolzer@gmail.com',
       :subject => 'Ping! Purchase: #{order.board} #{order.type_of_purchase}',
-      :html_body => "
-Order information:
+      :body => "Order information:
 Date: #{order.date}
 ID: #{order.id}
 Token: #{order.token}

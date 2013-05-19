@@ -12,8 +12,7 @@ class ReceiptEmail
     Pony.mail({
       :to => order.email,
       :subject => 'Urskog Receipt',
-      :html_body => "
-Hi #{order.name},
+      :body => "Hi #{order.name},
 
 Thanks for your purchase! This email serves as your receipt. If you have any questions, please contact us anytime at
 support@urskog.com.
