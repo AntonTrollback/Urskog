@@ -123,7 +123,7 @@ class MyApp < Sinatra::Base
 
     if order.valid? && Paymentprocessor.purchase(order, board, calculator)
       order.save
-      OrderEmail.new(order, board, calculator).send
+      OrderEmail.new(order).send
       ReceiptEmail.new(order).send
       "NICE"
     else

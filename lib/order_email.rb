@@ -2,10 +2,8 @@ require_relative '../config/pony_options'
 
 class OrderEmail
 
-  def initialize(order, board, calculator)
+  def initialize(order)
     @order = order
-    @board = board
-    @calculator = calculator
   end
 
   def send
