@@ -46,14 +46,16 @@
   display: inline-block;
   margin-right: 5px;
 
-  @include min-width(768px) {
+  @include min-width(767px) {
     display: none;
   }
 }
 
 .Table--responsive {
+  font-size: 13px;
+
   // Note: "desktop first" media query
-  @include max-width(768px) {
+  @include max-width(767px) {
 
     // Hide regular table head
     thead td {

@@ -29,7 +29,7 @@ p {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 // Mixins for headings
@@ -55,7 +55,7 @@ strong {
 }
 
 @mixin h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -121,13 +121,13 @@ h5,
 }
 
 .u-hideForWide {
-  @include min-width(768px) {
+  @include min-width(767px) {
     display: none;
   }
 }
 
 .u-hideForNarrow {
-  @include max-width(768px) {
+  @include max-width(767px) {
     display: none;
   }
 }

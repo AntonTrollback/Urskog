@@ -2,7 +2,7 @@ app.moveto =
   init: ($element) ->
     @el = $element
     @movers = $element
-    @breakpoint = 768
+    @breakpoint = 767
     @eventListeners()
     @staticWidth = window.staticWidth
     that = this
