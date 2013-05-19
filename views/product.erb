@@ -2,11 +2,11 @@
 <div class="Constrained u-paddingBl u-cf">
   <article class="u-pullStart u-size6of10">
     <h1><%= @board.name %></h1>
-    <div id="articleArea1">
+    <div class="u-hideForNarrow" id="articleArea1">
       <p class="js-moveTo" data-targetNarrow="#infoTab" data-targetWide="#articleArea1">Urskog’s new model Stubbe is a dropthrough board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability.</p>
     </div>
 
-    <div id="articleArea2">
+    <div class="u-hideForNarrow" id="articleArea2">
       <table class="Table Table--fixed u-textSmaller u-size9of10 js-moveTo" data-targetNarrow="#specsTab" data-targetWide="#articleArea2">
         <tr>
           <td class="u-size1of3"><strong>Wood:</strong>
@@ -30,7 +30,7 @@
     </div>
   </article>
 
-  <aside class="u-marginTm u-pullEnd" id="shopAside">
+  <aside class="u-marginTm u-pullEnd u-hideForNarrow" id="shopAside">
     <div class="js-moveTo" data-targetNarrow="#shopTab" data-targetWide="#shopAside">
       <%= erb :'parts/shop', :layout => false %>
     </div>

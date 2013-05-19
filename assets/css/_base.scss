@@ -126,6 +126,12 @@ h5,
   }
 }
 
+.u-hideForNarrow {
+  @include max-width(768px) {
+    display: none;
+  }
+}
+
 .u-textSmaller {
   font-size: 14px;
 }
