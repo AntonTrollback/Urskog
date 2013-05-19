@@ -5,37 +5,30 @@
 // Media Queries with fixed width fallback
 // -----------------------------------------------------------------------------
 
-$no-mq-width: $page-width !default;
+$static-width: false !default;
 
 @mixin min-width($width) {
-  @if $no-mq-width >= $width {
-    .no-mq {
+  @if $static-width {
+    @if $static-width >= $width {
       @content;
     }
   }
-  @media (min-width: $width) {
-    @content;
+  @else {
+    @media (min-width: $width) {
+      @content;
+    }
   }
 }
 
 @mixin max-width($width) {
-  @if $width >= $no-mq-width {
-    .no-mq {
+  @if $static-width {
+    @if $width >= $static-width {
       @content;
     }
   }
-  @media (max-width: $width) {
-    @content;
-  }
-}
-
-@mixin min-max-width($min, $max) {
-  @if $no-mq-width >= $min and $no-mq-width <= $max {
-    .no-mq {
+  @else {
+    @media (max-width: $width) {
       @content;
     }
-  }
-  @media (min-width: $min) and (max-width: $max) {
-    @content;
   }
 }

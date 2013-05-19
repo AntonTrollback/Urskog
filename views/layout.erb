@@ -8,8 +8,12 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, maximum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="<%= stylesheet_path 'app' %>">
   <script src="<%= javascript_path 'modernizr.min' %>"></script>
+  <link rel="stylesheet" href="<%= stylesheet_path 'styles' %>">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="<%= stylesheet_path 'styles-no-mq' %>">
+    <script>var staticWidth = 1000-</script>
+  <![endif]-->
 </head>
 <body class="Page Page--<%= @slug %>">
 

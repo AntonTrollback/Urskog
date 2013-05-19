@@ -32,6 +32,10 @@
   @include min-width(768px) {
     padding: 50px 20px 45px;
   }
+
+  @if $static-width {
+    width: $static-width;
+  }
 }
 
 // Modifiers for page specific styles

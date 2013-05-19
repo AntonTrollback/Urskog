@@ -4,10 +4,13 @@ app.moveto =
     @movers = $element
     @breakpoint = 768
     @eventListeners()
+    @staticWidth = window.staticWidth
     that = this
 
     # Run on load
-    that.testSize(window.innerWidth)
+    width = if @staticWidth then @staticWidth else window.innerWidth
+    that.testSize(width)
+
 
 
   eventListeners: ->
