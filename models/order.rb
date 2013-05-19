@@ -1,5 +1,14 @@
 class Order
-  
-  attr_accessible :token, :type_of_purchase, :wood_type, :name, :email, :country, :city, :street, :postal_code, :token
-  
+  include DataMapper::Resource 
+
+  property :id,   Integer
+  property :name, String
+  property :email, String
+  property :country, String
+  property :city, String
+  property :street, String
+  property :postal_code, String
+  property :token, String
+  property :wood_type, String
+  property :type_of_purchase, String
 end

@@ -7,6 +7,11 @@ require 'rack/ssl'
 require 'bourbon'
 require 'coffee-script'
 
+require 'data_mapper'
+require_relative 'config/datamapper_setup'
+
+require_relative 'db/migrations/all_migrations'
+
 require_relative 'lib/order_email'
 
 require_relative 'models/board'
