@@ -13,6 +13,8 @@ class Order
   property :token, String
   property :wood_type, String
   property :type_of_purchase, String
+  property :price, String
+  property :board, String
 end
 
 DataMapper.finalize

@@ -25,4 +25,13 @@ migration 1, :create_orders_table do
   end
 end
 
+migration 2, :add_data_to_orders do
+  up do
+    modify_table :orders do
+      add_column :price, String, :limit => 50
+      add_column :board, String, :limit => 255
+    end
+  end
+end
+
 migrate_up!
