@@ -33,6 +33,8 @@ class MyApp < Sinatra::Base
   # CSS minification
   set :assets_css_compressor, :sass
 
+  set :assets_precompile, %w(app.js styles.css styles-no-mq.css *.png *.jpg *.svg *.eot *.ttf *.woff)
+
   # JavaScript minification
   set :assets_js_compressor, :uglifier
 
