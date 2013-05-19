@@ -28,13 +28,13 @@ VAT number: SE556797382001
 
 Product information:
 Model: #{order.board} #{order.type_of_purchase} in #{order.wood_type}
-Amount: #{order.price_no_vat} sek (including VAT)
+Amount: #{order.price} sek (including VAT)
 
 Shipping information:
-Country: #{order.price_no_vat}
-City: #{order.price_no_vat}
-Street: #{order.price_no_vat}
-Postal code: #{order.price_no_vat}
+Country: #{order.country}
+City: #{order.city}
+Street: #{order.street}
+Postal code: #{order.postal_code}
 
 
 We hope you enjoy your longboard!

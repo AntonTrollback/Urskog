@@ -1,7 +1,7 @@
 require 'data_mapper'
 
 class Order
-  include DataMapper::Resource 
+  include DataMapper::Resource
 
   property :id,   Serial
   property :name, String
@@ -15,6 +15,12 @@ class Order
   property :type_of_purchase, String
   property :price, String
   property :board, String
+
+
+  def date
+    ":)"
+  end
+
 end
 
 DataMapper.finalize

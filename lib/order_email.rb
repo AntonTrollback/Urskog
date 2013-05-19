@@ -22,17 +22,17 @@ Product information:
 Model: #{order.board}
 Containing: #{order.type_of_purchase}
 Wood: #{order.wood_type}
-Amount: #{order.price_no_vat} sek (including VAT)
+Amount: #{order.price} sek (including VAT)
 
 Customer information:
 Name: #{order.name}
 Email address: #{order.email}
 
 Shipping information:
-Country: #{order.price_no_vat}
-City: #{order.price_no_vat}
-Street: #{order.price_no_vat}
-Postal code: #{order.price_no_vat}
+Country: #{order.country}
+City: #{order.city}
+Street: #{order.street}
+Postal code: #{order.postal_code}
 
 
 Have fun packaging!
