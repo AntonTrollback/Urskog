@@ -18,23 +18,15 @@ app.moveto =
 
 
   testSize: (width) ->
-    if width >= @breakpoint && !@wideViewport
-      @wideViewpoitAction()
-      @wideViewport = true
-    else if width < @breakpoint && (@wideViewport || @wideViewport == undefined)
-      @narrowViewpoitAction()
-      @wideViewport = false
+    if width >= @breakpoint && (@currentViewport == "narrow" || !@currentViewport?)
+      @viewpoitAction("wide")
+    else if width < @breakpoint && (@currentViewport == "wide" || !@currentViewport?)
+      @viewpoitAction("narrow")
 
 
-  wideViewpoitAction: ->
-    console.log('Move up')
+  viewpoitAction: (size) ->
+    console.log 'Move to:', size
+    @currentViewport = size
     @movers.each ->
       $this = $(this)
-      $this.appendTo($this.attr('data-targetWide'))
-
-
-  narrowViewpoitAction: ->
-    console.log('Move down')
-    @movers.each ->
-      $this = $(this)
-      $this.appendTo($this.attr('data-targetNarrow'))
+      $this.appendTo($this.attr("data-target#{size}"))
