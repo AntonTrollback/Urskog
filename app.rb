@@ -119,11 +119,6 @@ class MyApp < Sinatra::Base
     calculator = AmountCalculator.new(price)
     order = Order.new(params["order"].merge({price: price, board: board.name}))
 
-    p order
-    p board
-    p calculator
-
-    # 1. Validate and save in DB
     begin order.save 
       if Paymentprocessor.purchase(order, board, calculator)
         OrderEmail.new(order).send
@@ -135,7 +130,6 @@ class MyApp < Sinatra::Base
     rescue => e
       erb :error
     end
-
   end
 
   # FOR DEBUG
