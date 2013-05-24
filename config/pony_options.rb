@@ -1,5 +1,7 @@
 require 'pony'
 
+ADMIN_EMAILS = 'christopher.schmolzer@gmail.com, anton@trollback.se'
+
 Pony.options = { 
   :from => 'order@urskog.com', 
   :via => :smtp, 

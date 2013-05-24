@@ -10,7 +10,7 @@ class OrderEmail
 
   def send
     Pony.mail({
-      :to => 'christopher.schmolzer@gmail.com, anton@trollback.se',
+      :to => ADMIN_EMAILS,
       :subject => "Ping! Purchase: #{order.board} #{order.type_of_purchase}",
       :body => "Order information:
 Date: #{order.date_time}
