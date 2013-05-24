@@ -71,13 +71,15 @@
       padding-bottom: 5px;
       border-bottom: 1px solid $color-hr-hex;
       border-bottom: 1px solid $color-hr;
+      margin: -3px 0 2px;
+      font-size: 16px;
     }
 
     // Break table columns to new lines
     td {
       display: block;
       width: auto !important; // override any utility classes
-      padding: 2px 15px 3px;
+      padding: 3px 15px;
       overflow: hidden;
       // Break long words
       word-break: break-all;
