@@ -55,7 +55,6 @@ class MyApp < Sinatra::Base
 
   before do
     @board = NullBoard.new
-    @retailers = Retailer.all
   end
 
   get '/' do
@@ -70,6 +69,7 @@ class MyApp < Sinatra::Base
   end
 
   get '/retailers/?' do
+    @retailers = Retailer.all
     @slug = "retailers"
     @title = "Retailers"
     erb :retailers
