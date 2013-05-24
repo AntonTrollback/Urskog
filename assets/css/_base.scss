@@ -16,7 +16,7 @@ body {
   color: $color-text;
   cursor: default;
 
-  @include min-width(480px) {
+  @include min-width(470px) {
     font-size: 16px;
   }
 }

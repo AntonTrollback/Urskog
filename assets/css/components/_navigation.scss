@@ -33,12 +33,16 @@
 .Navigation-item {
   position: relative;
   display: block;
-  padding: 7px 0;
+  padding: 7px 3px;
   text-decoration: none;
   line-height: 1.5;
   color: #4c4c4c;
   background: transparent;
   -webkit-tap-highlight-color: rgba(black, 0);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 
   @include min-width(470px) {
     min-width: 98px;

@@ -17,9 +17,14 @@
   strong {
     display: block;
     width: 100%;
-    padding: 21px 20px 19px;
+    padding: 14px 10px 11px;
     overflow: hidden;
     background: #f6f5f2;
+
+    @include min-width(470px) {
+      padding: 21px 10px 19px;
+    }
+
   }
 }
 
