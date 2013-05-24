@@ -1,5 +1,6 @@
 require 'paymill'
 require_relative 'paymill_config'
+require_relative 'payment_error_email'
 
 class Paymentprocessor
   def self.purchase(order, board, calculator)
@@ -9,10 +10,11 @@ class Paymentprocessor
         amount:       calculator.amount,
         currency:     'SEK',
       })
-    rescue
+    rescue => error
       # Email admin
       order.payment_went_wrong = true
       order.save
+      PaymentErrorEmail.new(order, error).send
       false
     end
   end
