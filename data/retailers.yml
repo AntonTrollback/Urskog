@@ -38,7 +38,7 @@
           :address: Kornettvägen 2
           :online: true
           :meatworld: true
-    
+
     Stockholm:
       - - :name: Hollywood
           :country: Sweden
@@ -192,20 +192,20 @@
 
 
   Nederlands:
-    - lol:
+    - Den haag:
       - - :name: Sickboards
           :country: Nederlands
-          :city: lol
+          :city: Den haag
           :nice_url: sickboards.nl
           :url: http://sickboards.nl/
           :distribution: true
 
 
   Japan:
-    - lol:
+    - Kyoto:
       - - :name: Fullmarks
           :country: Japan
-          :city: lol
+          :city: Kyoto
           :nice_url: full-marks.com
           :url: http://full-marks.com/
 
