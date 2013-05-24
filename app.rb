@@ -123,13 +123,17 @@ class MyApp < Sinatra::Base
     p board
     p calculator
 
-    if order.valid? && Paymentprocessor.purchase(order, board, calculator)
-      order.save
-      OrderEmail.new(order).send
-      ReceiptEmail.new(order).send
-      erb :success
+    # 1. Validate and save in DB
+    if order.valid? && order.save 
+      if Paymentprocessor.purchase(order, board, calculator)
+        OrderEmail.new(order).send
+        ReceiptEmail.new(order).send
+        erb :success
+      else
+        erb :payment_error
+      end
     else
-      "Fuck, an error occurred. Please contact support@urskog.com"
+      erb :error
     end
   end
 
