@@ -11,7 +11,7 @@ class PaymentErrorEmail
 
   def send
     Pony.mail({
-      :to => 'christopher.schmolzer@gmail.com',
+      :to => 'christopher.schmolzer@gmail.com, anton@trollback.se',
       :subject => "ERROR: Purchase: #{order.board} #{order.type_of_purchase}",
       :body => "Order information:
 Date: #{order.date_time}
