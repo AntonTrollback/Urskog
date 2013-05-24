@@ -1,5 +1,6 @@
 require 'data_mapper'
 require 'dm-timestamps'
+require 'active_support/all'
 
 class Order
   include DataMapper::Resource
@@ -20,7 +21,7 @@ class Order
   property :created_on, Date
 
   def date
-    ":)"
+    DateTime.parse(self.created_at.to_s).in_time_zone('Stockholm').to_date
   end
 
 end
