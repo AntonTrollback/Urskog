@@ -21,6 +21,7 @@ class Order
   property :created_on, Date
   property :payment_went_wrong, Boolean, :default => false
   property :receipt_went_wrong, Boolean, :default => false
+  property :receipt_went_wrong_msg, String
 
   def date
     convert_to_timezone.to_date

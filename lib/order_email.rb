@@ -9,11 +9,10 @@ class OrderEmail
   end
 
   def send
-    begin
-      Pony.mail({
-        :to => 'christopher.schmolzer@gmail.com, anton@trollback.se',
-        :subject => "Ping! Purchase: #{order.board} #{order.type_of_purchase}",
-        :body => "Order information:
+    Pony.mail({
+      :to => 'christopher.schmolzer@gmail.com, anton@trollback.se',
+      :subject => "Ping! Purchase: #{order.board} #{order.type_of_purchase}",
+      :body => "Order information:
 Date: #{order.date_time}
 ID: #{order.id}
 Token: #{order.token}
@@ -39,12 +38,7 @@ Have fun packaging!
 
 Dr. Website
 "
-      })
-    rescue => e
-      # Spara i Ordern
-      order.receipt_went_wrong = true
-      order.save
-    end
+    })
   end
 end
 

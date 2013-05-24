@@ -9,10 +9,11 @@ class ReceiptEmail
   end
 
   def send
-    Pony.mail({
-      :to => order.email,
-      :subject => 'Urskog Receipt',
-      :body => "Hi #{order.name},
+    begin
+      Pony.mail({
+        :to => order.email,
+        :subject => 'Urskog Receipt',
+        :body => "Hi #{order.name},
 
 Thanks for your purchase! This email serves as your receipt. If you have any questions, please contact us anytime at
 support@urskog.com.
@@ -39,7 +40,13 @@ Postal code: #{order.postal_code}
 We hope you enjoy your longboard!
 
 The Urskog team
-      "
-    })
+"
+      })
+    rescue => e
+      # Spara i Ordern
+      order.receipt_went_wrong = true
+      order.receipt_went_wrong_msg = e
+      order.save
+    end
   end
 end

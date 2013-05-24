@@ -58,4 +58,13 @@ migration 5, :add_receipt_went_wrong_flag_to_orders do
     end
   end
 end
+
+migration 6, :add_receipt_went_wrong_err_msg_to_orders do
+  up do
+    modify_table :orders do
+      add_column :receipt_went_wrong_msg, String, :limit => 255
+    end
+  end
+end
+
 migrate_up!
