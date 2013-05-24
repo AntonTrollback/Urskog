@@ -51,4 +51,11 @@ migration 4, :add_payment_went_wrong_flag_to_orders do
   end
 end
 
+migration 5, :add_receipt_went_wrong_flag_to_orders do
+  up do
+    modify_table :orders do
+      add_column :receipt_went_wrong, Boolean
+    end
+  end
+end
 migrate_up!
