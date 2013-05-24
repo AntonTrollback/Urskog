@@ -1,8 +1,0 @@
-<div class="Navigation Navigation--sub">
-  <h4 class="u-isHiddenVisually">Product navigation</h4>
-  <ul>
-    <% @boards.each do |board| %>
-      <li><a class="Navigation-item <%= "is-active" if @board.slug == board.slug %>" href="/products/<%= board.slug %>"><%= board.name %></a>
-    <% end %>
-  </ul>
-</div>
