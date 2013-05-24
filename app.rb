@@ -124,7 +124,7 @@ class MyApp < Sinatra::Base
     p calculator
 
     # 1. Validate and save in DB
-    if order.valid? && order.save 
+    begin order.valid? && order.save 
       if Paymentprocessor.purchase(order, board, calculator)
         OrderEmail.new(order).send
         ReceiptEmail.new(order).send
@@ -132,9 +132,10 @@ class MyApp < Sinatra::Base
       else
         erb :payment_error
       end
-    else
+    rescue
       erb :error
     end
+
   end
 
   get '/test_email' do
