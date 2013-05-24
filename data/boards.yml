@@ -2,8 +2,8 @@
 - :name: Kvist
   :slug: kvist
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2645
+    :deck: 1535
   :woods:
   - jacaranda
   - zebrano
@@ -34,8 +34,8 @@
 - :name: Kil
   :slug: kil
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 3199
+    :deck: 1899
   :woods:
   - walnut
   :setup: "Paris 180mm trucks, Orangatang 4 presidents 70mm 80a, High Quality Abec 5 Bearings, heat resistant x-core grip"
@@ -58,8 +58,8 @@
 - :name: Löv
   :slug: lov
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2845
+    :deck: 1609
   :woods:
   - jacaranda
   - zebrano
@@ -87,8 +87,8 @@
 - :name: Pinne
   :slug: pinne
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2645
+    :deck: 1535
   :woods:
   - jacaranda
   - zebrano
@@ -115,8 +115,8 @@
 - :name: Sticka
   :slug: sticka
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2545
+    :deck: 1449
   :woods:
   - jacaranda
   - zebrano
@@ -143,8 +143,8 @@
 - :name: Stubbe
   :slug: stubbe
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2845
+    :deck: 1609
   :woods:
   - jacaranda
   - zebrano
@@ -171,8 +171,8 @@
 - :name: Vidja
   :slug: vidja
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2845
+    :deck: 1609
   :woods:
   - jacaranda
   - zebrano
@@ -203,8 +203,8 @@
 - :name: Vidja drop through
   :slug: vidja-drop-through
   :price:
-    :complete: 1000
-    :deck: 500
+    :complete: 2845
+    :deck: 1609
   :woods:
   - jacaranda
   - zebrano
@@ -234,13 +234,9 @@
 - :name: Frö
   :slug: fro
   :price:
-    :complete: 1000
-    :deck: 500
+    :deck: 995
   :woods:
-  - jacaranda
-  - zebrano
   - walnut
-  :setup: "Paris 150mm trucks, Orangatang Fat free 65mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>For all those who doesn’t like to walk but like to take a cup of coffee and want to move between the cafés without effort, the Urskog pavement cruiser Frö is the model of choice, shoe sized with a small kick tail.</p>
   :length:
@@ -250,5 +246,5 @@
     :mm: 180
     :inch: 7.1
   :wheelbase:
-    :mm: 0
-    :inch: 0
+    :mm: 300
+    :inch: 11.8
