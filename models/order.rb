@@ -1,4 +1,5 @@
 require 'data_mapper'
+require 'dm-timestamps'
 
 class Order
   include DataMapper::Resource
@@ -15,7 +16,8 @@ class Order
   property :type_of_purchase, String
   property :price, String
   property :board, String
-
+  property :created_at, DateTime
+  property :created_on, Date
 
   def date
     ":)"

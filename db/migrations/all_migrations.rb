@@ -34,4 +34,13 @@ migration 2, :add_data_to_orders do
   end
 end
 
+migration 3, :add_created_at_to_orders do
+  up do
+    modify_table :orders do
+      add_column :created_at, DateTime
+      add_column :created_on, Date
+    end
+  end
+end
+
 migrate_up!
