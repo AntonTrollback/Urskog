@@ -138,14 +138,6 @@ class MyApp < Sinatra::Base
 
   end
 
-  get '/test_email' do
-    Pony.mail({
-      :to => 'christopher.schmolzer@gmail.com',
-      :subject => 'hi',
-      :html_body => '<b>LOL</b>'
-    })
-  end
-
   # FOR DEBUG
   get '/orders' do
     @orders = Order.all
