@@ -11,6 +11,8 @@ class Paymentprocessor
       })
     rescue
       # Email admin
+      order.payment_went_wrong = true
+      order.save
       false
     end
   end
