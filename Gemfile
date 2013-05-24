@@ -13,6 +13,9 @@ gem "paymill", "~> 0.3.0"
 gem "datamapper", "~> 1.2.0"
 gem "dm-postgres-adapter", "~> 1.2.0"
 
+gem "activesupport", "~> 3.2.13"
+gem "tzinfo", "~> 0.3.37"
+
 gem "pg", "~> 0.15.1"
 
 gem "pony", :git => "git://github.com/benprew/pony.git"
