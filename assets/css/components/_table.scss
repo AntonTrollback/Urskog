@@ -9,6 +9,10 @@
   thead {
     font-weight: 600;
   }
+
+  a {
+    color: inherit;
+  }
 }
 
 // Fixed width columns. Use with dimension utilities
@@ -27,7 +31,6 @@
 // -----------------------------------------------------------------------------
 
 .Table--striped {
-  // Stripe rows, but not in table head
   tbody tr:nth-child(2n + 1) {
     background: $color-stripe;
   }
@@ -62,11 +65,19 @@
       display: none;
     }
 
+    // Make strong td's somewhat like a heading
+    td strong:not(.Table-backupHead) {
+      display: block;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $color-hr-hex;
+      border-bottom: 1px solid $color-hr;
+    }
+
     // Break table columns to new lines
     td {
       display: block;
       width: auto !important; // override any utility classes
-      padding: 3px 15px;
+      padding: 2px 15px 3px;
       overflow: hidden;
       // Break long words
       word-break: break-all;
