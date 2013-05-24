@@ -134,6 +134,12 @@ class MyApp < Sinatra::Base
     erb :orders
   end
 
+  helpers do
+    def paymill_public_key
+      '19628440790b126911007115a22ab887'
+    end
+  end
+
   run! if app_file == $0
 
 end
