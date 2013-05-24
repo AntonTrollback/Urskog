@@ -1,10 +1,204 @@
 ---
-- :name: Stubbe
-  :length: 5000
+- :name: Kvist
+  :slug: kvist
   :price:
-    :complete: 2850
-    :deck: 1975
-  :slug: stubbe
+    :complete: 1000
+    :deck: 500
   :woods:
   - jacaranda
   - zebrano
+  - walnut
+  :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
+  :info: |
+    "<p>The lovechild of Pinne and Kil became Kvist.</p>
+     <p>With the competitive qualities from Kil, such as cut outs to avoid wheel bites when riding hard and deep concaves, it inherited its good retro looks from Pinne.</p>"
+  :length:
+    :mm: 805
+    :inch: 31.7
+  :width:
+    :mm: 200
+    :inch: 7.9
+  :wheelbase:
+    :mm: 690
+    :inch: 27.2
+  :second_wheelbase:
+    :mm: 720
+    :inch: 28.4
+  :concave:
+    :mm: 11
+    :inch: 0.43
+  :camber:
+    :mm: 12
+    :inch: 0.48
+
+- :name: Kil
+  :slug: kil
+  :price:
+    :complete: 1000
+    :deck: 500
+  :woods:
+  - walnut
+  :setup: "Paris 180mm trucks, Orangatang 4 presidents 70mm 80a, High Quality Abec 5 Bearings, heat resistant x-core grip"
+  :info: |
+    "<p>Kil is a wide,tall and stiff board with great stability. It’s an ordinary concave in the front while it has a W concave in the back.</p>
+     <p>Top mounted trucks, the hardness of the board and the W concave makes a matchless combination of stability and control. The W concave gives maximal grip and feel when doing toe side turns and slides. In other words, the perfect board for the dowhill control freak.</p>"
+  :length:
+    :mm: 970
+    :inch: 38.2
+  :width:
+    :mm: 850
+    :inch: 33.5
+  :wheelbase:
+    :mm: 850
+    :inch: 33.5
+  :concave:
+    :mm: 14
+    :inch: 0.55
+
+- :name: Löv
+  :slug: lov
+  :price:
+    :complete: 1000
+    :deck: 500
+  :woods:
+  - jacaranda
+  - zebrano
+  - walnut
+  :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
+  :info: |
+    "<p>Löv is a cruiseboard that lets you glide.</p>
+     <p>The board is long and thin with a big tail kick that reacts rapidly allowing both more technical riding and laidback cruising. The board has plenty of space for cross steps and dancing.</p>"
+  :length:
+    :mm: 880
+    :inch: 34.6
+  :width:
+    :mm: 220
+    :inch: 8.7
+  :wheelbase:
+    :mm: 726
+    :inch: 28.6
+  :concave:
+    :mm: 11
+    :inch: 0.43
+  :camber:
+    :mm: 12
+    :inch: 0.48
+
+- :name: Pinne
+  :slug: pinne
+  :price:
+    :complete: 1000
+    :deck: 500
+  :woods:
+  - jacaranda
+  - zebrano
+  - walnut
+  :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
+  :info: |
+    "<p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill.</p>"
+  :length:
+    :mm: 955
+    :inch: 37.6
+  :width:
+    :mm: 225
+    :inch: 8.9
+  :wheelbase:
+    :mm: 705
+    :inch: 22.8
+  :concave:
+    :mm: 11
+    :inch: 0.43
+  :camber:
+    :mm: 12
+    :inch: 0.48
+
+- :name: Sticka
+  :slug: sticka
+  :price:
+    :complete: 1000
+    :deck: 500
+  :woods:
+  - jacaranda
+  - zebrano
+  - walnut
+  :setup: "Paris 150mm trucks, Orangatang Fat free 65mm 80a, High Quality Abec 5 Bearings"
+  :info: |
+    "<p>Like a splinter of the Pinne board. The same easygoing retro styling but in a more practical format for those who want to carry the board with them everywhere they go. This quick and agile board will turn every obstacle into splinters.</p>"
+  :length:
+    :mm: 805
+    :inch: 31.7
+  :width:
+    :mm: 200
+    :inch: 7.9
+  :wheelbase:
+    :mm: 613
+    :inch: 24.1
+  :concave:
+    :mm: 11
+    :inch: 0.43
+  :camber:
+    :mm: 12
+    :inch: 0.48
+
+- :name: Vidja
+  :slug: vidja
+  :price:
+    :complete: 1000
+    :deck: 500
+  :woods:
+  - jacaranda
+  - zebrano
+  - walnut
+  :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
+  :info: |
+    "<p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>"
+  :length:
+    :mm: 1020
+    :inch: 40.2
+  :width:
+    :mm: 240
+    :inch: 9.45
+  :wheelbase:
+    :mm: 735
+    :inch: 28.9
+  :concave:
+    :mm: 12
+    :inch: 0.47
+  :rocker:
+    :mm: 10
+    :inch: 0.39
+  :rocker_kicks:
+    :mm: 17.3
+    :inch: 0.68
+
+
+- :name: Vidja drop through
+  :slug: vidja-drop-through
+  :price:
+    :complete: 1000
+    :deck: 500
+  :woods:
+  - jacaranda
+  - zebrano
+  - walnut
+  :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
+  :info: |
+    "<p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>"
+  :length:
+    :mm: 1020
+    :inch: 40.2
+  :width:
+    :mm: 240
+    :inch: 9.45
+  :wheelbase:
+    :mm: 735
+    :inch: 28.9
+  :concave:
+    :mm: 12
+    :inch: 0.47
+  :rocker:
+    :mm: 10
+    :inch: 0.39
+  :rocker_kicks:
+    :mm: 17.3
+    :inch: 0.68

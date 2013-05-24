@@ -10,22 +10,22 @@
       <table class="Table Table--fixed u-textSmaller u-size9of10 js-moveTo" data-targetNarrow="#specsTab" data-targetWide="#articleArea2">
         <tr>
           <td class="u-size3of8"><strong>Wood:</strong>
-          <td class="u-size3of8"><%= @board.wood_list %>
+          <td class="u-size5of8"><%= @board.wood_list %>
         </tr>
         <tr>
           <td class="u-size3of8"><strong>Lenght:</strong>
-          <td class="u-size3of8">950mm
-          <td class="u-size1of4">37,4”
+          <td class="u-size3of8"><%= @board.length.mm %>mm
+          <td class="u-size1of4"><%= @board.length.inch %>”
         </tr>
         <tr>
           <td class="u-size3of8"><strong>Width:</strong>
-          <td class="u-size3of8">225mm
-          <td class="u-size1of4">8,9”
+          <td class="u-size3of8"><%= @board.width.mm %>mm
+          <td class="u-size1of4"><%= @board.width.inch %>”
         </tr>
         <tr>
           <td class="u-size3of8"><strong>Wheelbase:</strong>
-          <td class="u-size3of8">690mm
-          <td class="u-size1of4">27,1”
+          <td class="u-size3of8"><%= @board.wheelbase.mm %>mm
+          <td class="u-size1of4"><%= @board.wheelbase.inch %>”
         </tr>
       </table>
     </div>

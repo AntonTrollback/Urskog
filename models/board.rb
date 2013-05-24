@@ -23,17 +23,25 @@ class Board
   end
 
   attr_reader :name,
-              :length,
-              :price_hash,
               :slug,
-              :woods
+              :price_hash,
+              :woods,
+              :setup,
+              :info,
+              :length_hash,
+              :width_hash,
+              :wheelbase_hash
 
   def initialize(attributes={})
-    @name   = attributes[:name]
-    @length = attributes[:length]
-    @price_hash  = attributes[:price]
-    @slug   = attributes[:slug]
-    @woods  = attributes[:woods]
+    @name           = attributes[:name]
+    @slug           = attributes[:slug]
+    @price_hash     = attributes[:price]
+    @woods          = attributes[:woods]
+    @setup          = attributes[:setup]
+    @info           = attributes[:info]
+    @length_hash    = attributes[:length]
+    @width_hash     = attributes[:width]
+    @wheelbase_hash = attributes[:wheelbase]
   end
 
   def wood_list
@@ -42,6 +50,18 @@ class Board
 
   def price
     @price ||= Price.new(self.price_hash)
+  end
+
+  def length
+    @length ||= Length.new(self.length_hash)
+  end
+
+  def width
+    @width ||= Width.new(self.width_hash)
+  end
+
+  def wheelbase
+    @wheelbase ||= Wheelbase.new(self.wheelbase_hash)
   end
 
   def deck_only?
@@ -65,5 +85,32 @@ class Price
   def initialize(price_hash)
     @complete = price_hash[:complete]
     @deck = price_hash[:deck]
+  end
+end
+
+class Length
+  attr_reader :mm, :inch
+
+  def initialize(length_hash)
+    @mm = length_hash[:mm]
+    @inch = length_hash[:inch]
+  end
+end
+
+class Width
+  attr_reader :mm, :inch
+
+  def initialize(width_hash)
+    @mm = width_hash[:mm]
+    @inch = width_hash[:inch]
+  end
+end
+
+class Wheelbase
+  attr_reader :mm, :inch
+
+  def initialize(wheelbase_hash)
+    @mm = wheelbase_hash[:mm]
+    @inch = wheelbase_hash[:inch]
   end
 end
