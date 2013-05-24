@@ -38,6 +38,8 @@
           :address: Kornettvägen 2
           :online: true
           :meatworld: true
+    
+    Stockholm:
       - - :name: Hollywood
           :country: Sweden
           :city: Stockholm
