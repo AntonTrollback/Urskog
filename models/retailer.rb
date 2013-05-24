@@ -1,18 +1,10 @@
 # encoding: utf-8
-
-require 'yaml'
-
 class Retailer
-
-  def self.all
-    @yaml_file ||= YAML.load_file("data/retailers.yml")
-    @retailers ||= retailers(@yaml_file)
-  end
 
   def self.retailers(yaml_file)
     retailers = []
     yaml_file.each do |item|
-      retailers << Retailer.new(item)
+      retailers << Retailer.new(item.first)
     end
     retailers
   end

@@ -16,6 +16,7 @@ require_relative 'lib/order_email'
 require_relative 'lib/receipt_email'
 
 require_relative 'models/board'
+require_relative 'models/country'
 require_relative 'models/retailer'
 require_relative 'models/order'
 
@@ -65,7 +66,7 @@ class MyApp < Sinatra::Base
   end
 
   get '/retailers/?' do
-    @retailers = Retailer.all
+    @countries = Country.all
     @slug = "retailers"
     @title = "Retailers"
     erb :retailers

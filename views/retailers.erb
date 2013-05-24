@@ -1,9 +1,9 @@
 <div class="Constrained Constrained--l">
   <h1 class="u-isHiddenVisually">Retailers: where to buy Urskog longboards</h1>
 
-  <%# @location.each do |location| %>
-    <h2><%# location.city %>, <%# location.country %></h2>
-
+  <% @countries.each do |country| %>
+    <% country.cities.each do |city| %>
+      <h2><%= city.name %>, <%= country.name %></h2>
     <table class="Table Table--striped Table--fixed Table--responsive">
       <thead class="u-isHidden">
         <tr>
@@ -14,8 +14,7 @@
         </tr>
       </thead>
       <tbody>
-
-        <% @retailers.each do |retailer| %>
+        <% city.retailers.each do |retailer| %>
           <tr>
             <td class="u-size1of4">
               <strong><%= retailer.name %></strong>
@@ -41,5 +40,6 @@
         <% end %>
       </tbody>
     </table>
-  <%# end %>
+    <% end %>
+  <% end %>
 </div>
