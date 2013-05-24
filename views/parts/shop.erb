@@ -1,4 +1,4 @@
-<form class="Shop js-shop" action="/products/<%= @board.slug %>/checkout">
+<form class="Shop js-shop" action="/checkout/<%= @board.slug %>">
   <% if @board.deck_only? %>
 
     <label class="Control u-marginRl is-disabled" for="complete">

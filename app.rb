@@ -98,7 +98,7 @@ class MyApp < Sinatra::Base
   end
 
   # Checkout
-  get '/products/:slug/checkout' do
+  get '/checkout/:slug' do
     @board = Board.find(params[:slug])
     redirect "/products" if @board.name.empty?
     @slug = "checkout"
