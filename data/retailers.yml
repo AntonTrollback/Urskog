@@ -1,203 +1,229 @@
-- :name: Blue
-  :country: Sverige
-  :city: Falkenberg
-  :nice_url: blue-online.se
-  :url: http://blue-online.se/
-  :email: info@blue-online.se
-  :address: Stortorget 1
-  :meatworld: true
+---
+- Sweden:
+  - Falkenberg:
+    - - :name: Blue
+        :country: Sweden
+        :city: Falkenberg
+        :nice_url: blue-online.se
+        :url: http://blue-online.se/
+        :email: info@blue-online.se
+        :address: Stortorget 1
+        :meatworld: true
 
-- :name: Hollywood
-  :country: Sverige
-  :city: Göteborg
-  :nice_url: Hollywood.se
-  :url: http://Hollywood.se/
-  :email: 031.ostrahamn@hollywood.se
-  :address: Östrahamngatan 15
-  :meatworld: true
+    Göteborg:
+      - - :name: Hollywood
+          :country: Sweden
+          :city: Göteborg
+          :nice_url: Hollywood.se
+          :url: http://Hollywood.se/
+          :email: 031.ostrahamn@hollywood.se
+          :address: Östrahamngatan 15
+          :meatworld: true
+      - - :name: Hollywood
+          :country: Sweden
+          :city: Göteborg
+          :nice_url: Hollywood.se
+          :url: http://Hollywood.se/
+          :email: 031.sodralarm@hollywood.se
+          :address: Södralarmgatan 11
+          :meatworld: true
 
-- :name: Hollywood
-  :country: Sverige
-  :city: Göteborg
-  :nice_url: Hollywood.se
-  :url: http://Hollywood.se/
-  :email: 031.sodralarm@hollywood.se
-  :address: Södralarmgatan 11
-  :meatworld: true
+    Malmö:
+      - - :name: Top12
+          :country: Sweden
+          :city: Malmö
+          :nice_url: top12.se
+          :url: http://top12.se/
+          :email: info@top12.se
+          :address: Kornettvägen 2
+          :online: true
+          :meatworld: true
+      - - :name: Hollywood
+          :country: Sweden
+          :city: Stockholm
+          :nice_url: Hollywood.se
+          :url: http://Hollywood.se/
+          :email: 08@hollywood.se
+          :address: Norrlandsgatan 14
+          :meatworld: true
+      - - :name: Brädkultur
+          :country: Sweden
+          :city: Stockholm
+          :address: Norrlandsgatan21
+          :meatworld: true
+      - - :name: Addnature
+          :country: Sweden
+          :city: Stockholm
+          :nice_url: addnature.com
+          :url: http://addnature.com/
+          :email: info@addnature.com
+          :address: Birger Jarlsgatan 65-67
+          :online: true
+          :meatworld: true
+      - - :name: Addnature
+          :country: Sweden
+          :city: Stockholm
+          :nice_url: addnature.com
+          :url: http://addnature.com/
+          :email: info@addnature.com
+          :address: Högbersgatan 30A
+          :online: true
+          :meatworld: true
+      - - :name: Sublime
+          :country: Sweden
+          :city: Stockholm
+          :nice_url: sublimeboards.com
+          :url: http://sublimeboards.com/
+          :email: info@sublimeboards.se
+          :online: true
 
-- :name: Top12
-  :country: Sverige
-  :city: Malmö
-  :nice_url: top12.se
-  :url: http://top12.se/
-  :email: info@top12.se
-  :address: Kornettvägen 2
-  :online: true
-  :meatworld: true
+    Sundsvall:
+      - - :name: Moyo
+          :country: Sweden
+          :city: Sundsvall
+          :nice_url: moyo.se
+          :url: http://moyo.se/
+          :email: info@moyo.se
+          :meatworld: true
+          :address: Up2 Shopping
 
-- :name: Hollywood
-  :country: Sverige
-  :city: Stockholm
-  :nice_url: Hollywood.se
-  :url: http://Hollywood.se/
-  :email: 08@hollywood.se
-  :address: Norrlandsgatan 14
-  :meatworld: true
+    Trollhättan:
+      - - :name: Junkyard
+          :country: Sweden
+          :city: Trollhättan
+          :nice_url: junkyard.eu
+          :url: http://junkyard.eu/
+          :email: info@junkyard.eu
+          :address: Ladugårdsvägen 101
+          :online: true
+          :meatworld: true
 
-- :name: Brädkultur
-  :country: Sverige
-  :city: Stockholm
-  :address: Norrlandsgatan21
-  :meatworld: true
+    Umeå:
+      - - :name: Moyo
+          :country: Sweden
+          :city: Umeå
+          :nice_url: moyo.se
+          :url: http://moyo.se/
+          :email: info@moyo.se
+          :address: Kyrkogatan 21
+          :meatworld: true
 
-- :name: Addnature
-  :country: Sverige
-  :city: Stockholm
-  :nice_url: addnature.com
-  :url: http://addnature.com/
-  :email: info@addnature.com
-  :address: Birger Jarlsgatan 65-67
-  :online: true
-  :meatworld: true
+    Vara:
+      - - :name: Life on a Board
+          :country: Sweden
+          :city: Vara
+          :nice_url: lifeonaboard.se
+          :url: http://lifeonaboard.se/
+          :email: info@lifeonaboard.se
+          :online: true
 
-- :name: Addnature
-  :country: Sverige
-  :city: Stockholm
-  :nice_url: addnature.com
-  :url: http://addnature.com/
-  :email: info@addnature.com
-  :address: Högbersgatan 30A
-  :online: true
-  :meatworld: true
+    Varberg:
+      - - :name: Surfers Paradise
+          :country: Sweden
+          :city: Varberg
+          :nice_url: surfers.se
+          :url: http://surfers.se/
+          :email: info@surfers.se
+          :address: Södergatan22
+          :online: true
+          :meatworld: true
 
-- :name: Sublime
-  :country: Sverige
-  :city: Stockholm
-  :nice_url: sublimeboards.com
-  :url: http://sublimeboards.com/
-  :email: info@sublimeboards.se
-  :online: true
+    Varberg:
+      - - :name: Blue
+          :country: Sweden
+          :city: Varberg
+          :nice_url: blue-online.se
+          :url: http://blue-online.se/
+          :email: info@blue-online.se
+          :meatworld: true
 
-- :name: Moyo
-  :country: Sverige
-  :city: Sundsvall
-  :nice_url: moyo.se
-  :url: http://moyo.se/
-  :email: info@moyo.se
-  :meatworld: true
-  :address: Up2 Shopping
+    Västerås:
+      - - :name: Hollywood
+          :country: Sweden
+          :city: Västerås
+          :nice_url: Hollywood.se
+          :url: http://Hollywood.se/
+          :email: 021@hollywood.se
+          :address: Östra kyrkogatan 2
+          :meatworld: true
 
-- :name: Junkyard
-  :country: Sverige
-  :city: Trollhättan
-  :nice_url: junkyard.eu
-  :url: http://junkyard.eu/
-  :email: info@junkyard.eu
-  :address: Ladugårdsvägen 101
-  :online: true
-  :meatworld: true
+    Östersund:
+      - - :name: MrBoard
+          :country: Sweden
+          :city: Östersund
+          :nice_url: mrboard.se
+          :url: http://mrboard.se/
+          :email: info@mrboards.se
+          :address: Färjemansgatan 13
+          :online: true
+          :meatworld: true
 
-- :name: Moyo
-  :country: Sverige
-  :city: Umeå
-  :nice_url: moyo.se
-  :url: http://moyo.se/
-  :email: info@moyo.se
-  :address: Kyrkogatan 21
-  :meatworld: true
+    Jönköping:
+      - - :name: Boardlife
+          :country: Sweden
+          :city: Jönköping
+          :nice_url: boardlife.se
+          :url: http://boardlife.se/
+          :email: info@boardlife.se
+          :online: true
 
-- :name: Life on a Board
-  :country: Sverige
-  :city: Vara
-  :nice_url: lifeonaboard.se
-  :url: http://lifeonaboard.se/
-  :email: info@lifeonaboard.se
-  :online: true
+    Borlänge:
+      - - :name: Brädgårn
+          :country: Sweden
+          :city: Borlänge
+          :nice_url: bradgarn.se
+          :url: http://bradgarn.se/
+          :email: info@bradgarn.se
+          :address: Sveagatan 5
+          :online: true
+          :meatworld: true
 
-- :name: Surfers Paradise
-  :country: Sverige
-  :city: Varberg
-  :nice_url: surfers.se
-  :url: http://surfers.se/
-  :email: info@surfers.se
-  :address: Södergatan22
-  :online: true
-  :meatworld: true
 
-- :name: Blue
-  :country: Sverige
-  :city: Varberg
-  :nice_url: blue-online.se
-  :url: http://blue-online.se/
-  :email: info@blue-online.se
-  :meatworld: true
+  Germany:
+    - Hamburg:
+      - - :name: MDCN
+          :country: Germany
+          :city: Hamburg
+          :nice_url: mdcn.de
+          :url: http://mdcn.de/
+          :distribution: true
 
-- :name: Hollywood
-  :country: Sverige
-  :city: Västerås
-  :nice_url: Hollywood.se
-  :url: http://Hollywood.se/
-  :email: 021@hollywood.se
-  :address: Östra kyrkogatan 2
-  :meatworld: true
 
-- :name: MrBoard
-  :country: Sverige
-  :city: Östersund
-  :nice_url: mrboard.se
-  :url: http://mrboard.se/
-  :email: info@mrboards.se
-  :address: Färjemansgatan 13
-  :online: true
-  :meatworld: true
+  Nederlands:
+    - lol:
+      - - :name: Sickboards
+          :country: Nederlands
+          :city: lol
+          :nice_url: sickboards.nl
+          :url: http://sickboards.nl/
+          :distribution: true
 
-- :name: Boardlife
-  :country: Sverige
-  :city: Jönköping
-  :nice_url: boardlife.se
-  :url: http://boardlife.se/
-  :email: info@boardlife.se
-  :online: true
 
-- :name: Brädgårn
-  :country: Sverige
-  :city: Borlänge
-  :nice_url: bradgarn.se
-  :url: http://bradgarn.se/
-  :email: info@bradgarn.se
-  :address: Sveagatan 5
-  :online: true
-  :meatworld: true
+  Japan:
+    - lol:
+      - - :name: Fullmarks
+          :country: Japan
+          :city: lol
+          :nice_url: full-marks.com
+          :url: http://full-marks.com/
 
-- :name: MDCN
-  :country: Germany
-  :city: Hamburg
-  :nice_url: mdcn.de
-  :url: http://mdcn.de/
-  :Distrobution: true
 
-- :name: Sickboards
-  :country: Nederlands
-  :nice_url: sickboards.nl
-  :url: http://sickboards.nl/
-  :Distrobution: true
+  France:
+    - Fancy:
+      - - :name: Easy Risers
+          :country: France
+          :city: Fancy
+          :nice_url: easyrisers.fr
+          :url: http://easyrisers.fr/
+          :online: true
+          :meatworld: true
 
-- :name: Fullmarks
-  :country: Japan
-  :nice_url: full-marks.com
-  :url: http://full-marks.com/
 
-- :name: Easy Risers
-  :country: France
-  :city: Fancy
-  :nice_url: easyrisers.fr
-  :url: http://easyrisers.fr/
-  :online: true
-  :meatworld: true
-
-- :name: Ufo Longboards
-  :country: Spain
-  :city: Madrid
-  :nice_url: ufolongboards.com
-  :url: http://ufolongboards.com/
-  :meatworld: true
+  Spain:
+    - Madrid:
+      - - :name: Ufo Longboards
+          :country: Spain
+          :city: Madrid
+          :nice_url: ufolongboards.com
+          :url: http://ufolongboards.com/
+          :meatworld: true
