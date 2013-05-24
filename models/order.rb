@@ -21,7 +21,17 @@ class Order
   property :created_on, Date
 
   def date
-    DateTime.parse(self.created_at.to_s).in_time_zone('Stockholm').to_date
+    convert_to_timezone.to_date
+  end
+
+  def date_time
+    convert_to_timezone
+  end
+
+  private
+
+  def convert_to_timezone
+    DateTime.parse(self.created_at.to_s).in_time_zone('Stockholm')
   end
 
 end

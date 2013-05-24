@@ -13,7 +13,7 @@ class OrderEmail
       :to => 'christopher.schmolzer@gmail.com',
       :subject => "Ping! Purchase: #{order.board} #{order.type_of_purchase}",
       :body => "Order information:
-Date: #{order.date}
+Date: #{order.date_time}
 ID: #{order.id}
 Token: #{order.token}
 
