@@ -1,6 +1,10 @@
 require 'pony'
 
-ADMIN_EMAILS = 'christopher.schmolzer@gmail.com, anton@trollback.se'
+if ENV['RACK_ENV'] == "production"
+  ADMIN_EMAILS = 'christopher@schmolzer.se, anton@trollback.se'
+else
+  ADMIN_EMAILS = 'christopher.schmolzer@gmail.com, anton@trollback.se'
+end
 
 Pony.options = { 
   :from => 'order@urskog.com', 
