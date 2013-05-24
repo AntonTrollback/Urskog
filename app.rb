@@ -53,10 +53,6 @@ class MyApp < Sinatra::Base
     "is-active" if item == @slug
   end
 
-  before do
-    @board = NullBoard.new
-  end
-
   get '/' do
     @slug = "home"
     erb :index
