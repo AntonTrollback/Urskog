@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Custom utilities
+   ========================================================================== */
+
+/**
+ * Remove from the flow and screen readers at specifc viewport sizes
+ */
+
+.u-hideForWide {
+  @include min-width(767px) {
+    display: none;
+  }
+}
+
+.u-hideForNarrow {
+  @include max-width(767px) {
+    display: none;
+  }
+}
+
+/**
+ * Control text styles
+ */
+
+.u-textSmaller {
+  font-size: 14px;
+}
+
+.u-textCondensed {
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.u-textQuote {
+  font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: center;
+}
