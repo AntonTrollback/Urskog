@@ -29,6 +29,10 @@
   background: white;
   box-shadow: inset 0 1px 0px rgba(black, .08);
 
+  &:-webkit-placeholder { color: #bbb; }
+  &:-moz-placeholder { color: #bbb; }
+  &:placeholder { color: #bbb; }
+
   &:focus {
     outline: none;
     border-color: $color-link;
