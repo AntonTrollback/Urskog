@@ -41,6 +41,9 @@ class MyApp < Sinatra::Base
 
   register Sinatra::AssetPipeline
 
+  configure do
+    use Rack::Deflater
+  end
 
   def title
     if defined? @title
@@ -116,7 +119,7 @@ class MyApp < Sinatra::Base
     calculator = AmountCalculator.new(price)
     order = Order.new(params["order"].merge({price: price, board: board.name}))
 
-    begin order.save 
+    begin order.save
       if Paymentprocessor.purchase(order, board, calculator)
         OrderEmail.new(order).send
         ReceiptEmail.new(order).send
