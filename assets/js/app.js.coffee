@@ -6,3 +6,4 @@
 #= require validator.js
 #= require shop.js
 #= require checkout.js
+#= require rotate.js

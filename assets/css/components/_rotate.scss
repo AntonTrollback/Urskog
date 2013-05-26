@@ -1,0 +1,32 @@
+// =============================================================================
+// 460 rotation of product. See jQuery.Reel for classnames
+// =============================================================================
+
+.reel-overlay {
+  position: relative;
+  margin: 0 auto;
+  outline: 1px solid rgba(red, .2);
+}
+
+// Loading state
+// -----------------------------------------------------------------------------
+
+.reel-preloader {
+  display: none;
+}
+
+.reel-loading {
+  position: relative;
+
+  .reel-preloader {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    display: block;
+    width: 40px !important;
+    height: 40px !important;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+    background: black !important;
+  }
+}
