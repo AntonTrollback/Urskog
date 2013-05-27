@@ -151,7 +151,7 @@
   - walnut
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
   :info: |
-    <p>Urskog’s model Stubbe is a dropthrough board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability. Stubbe has a core of 7 layers of Swedish Birch and gives a semi-hard flex.</p>
+    <p>Urskog’s model Stubbe is a drop through board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability. Stubbe has a core of 7 layers of Swedish Birch and gives a semi-hard flex.</p>
   :length:
     :mm: 950
     :inch: 37.4
@@ -201,7 +201,7 @@
 
 
 - :name: Vidja drop through
-  :slug: vidja-drop-through
+  :slug: vidja-dropthrough
   :price:
     :complete: 2845
     :deck: 1609
