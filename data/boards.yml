@@ -6,8 +6,9 @@
     :deck: 1535
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>The lovechild of Pinne and Kil became Kvist.</p>
@@ -37,7 +38,8 @@
     :complete: 3199
     :deck: 1899
   :woods:
-  - walnut
+  - jacaranda
+  :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang 4 presidents 70mm 80a, High Quality Abec 5 Bearings, heat resistant x-core grip"
   :info: |
     <p>Kil is a wide, tall and stiff board with great stability. It’s an ordinary concave in the front while it has a W concave in the back.</p>
@@ -62,8 +64,9 @@
     :deck: 1609
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>Löv is a cruiseboard that lets you glide.</p>
@@ -91,8 +94,9 @@
     :deck: 1535
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: zebrano
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill.</p>
@@ -119,8 +123,9 @@
     :deck: 1449
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: jacaranda
   :setup: "Paris 150mm trucks, Orangatang Fat free 65mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>Like a splinter of the Pinne board. The same easygoing retro styling but in a more practical format for those who want to carry the board with them everywhere they go. This quick and agile board will turn every obstacle into splinters.</p>
@@ -147,8 +152,9 @@
     :deck: 1609
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
   :info: |
     <p>Urskog’s model Stubbe is a drop through board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability. Stubbe has a core of 7 layers of Swedish Birch and gives a semi-hard flex.</p>
@@ -175,8 +181,9 @@
     :deck: 1609
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: zebrano
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
   :info: |
     <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
@@ -207,8 +214,9 @@
     :deck: 1609
   :woods:
   - jacaranda
-  - zebrano
   - walnut
+  - zebrano
+  :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
   :info: |
     <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
@@ -237,6 +245,7 @@
     :deck: 995
   :woods:
   - walnut
+  :promoted_wood: walnut
   :info: |
     <p>For all those who doesn’t like to walk but like to take a cup of coffee and want to move between the cafés without effort, the Urskog pavement cruiser Frö is the model of choice, shoe sized with a small kick tail.</p>
   :length:

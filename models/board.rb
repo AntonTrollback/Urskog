@@ -26,6 +26,7 @@ class Board
               :slug,
               :price_hash,
               :woods,
+              :promoted_wood,
               :setup,
               :info,
               :length_hash,
@@ -37,6 +38,7 @@ class Board
     @slug           = attributes[:slug]
     @price_hash     = attributes[:price]
     @woods          = attributes[:woods]
+    @promoted_wood          = attributes[:promoted_wood]
     @setup          = attributes[:setup]
     @info           = attributes[:info]
     @length_hash    = attributes[:length]
