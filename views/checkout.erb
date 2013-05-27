@@ -22,9 +22,9 @@
     <div class="Grid-cell u-marginTl u-paddingTm">
 
       <% if @buy_option == "complete" %>
-        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>/<%= @wood_type %>.jpg">
+        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
       <% else %>
-        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>/<%= @wood_type %>.jpg">
+        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
       <% end %>
 
     </div>
