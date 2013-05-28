@@ -5,7 +5,7 @@ app.rotate =
 
     # init jQuery Reel
     @el.reel(
-      path: "http://urskog.com/img/360/#{that.el.data('name')}/"
+      path: that.el.data('url')
       images: that.frames(119)
       vertical: true
       wheelable: false
@@ -22,7 +22,7 @@ app.rotate =
     i = 1
 
     while i <= frames
-      name = [i, ".jpg"].join("")
+      name = [i, "." + @el.data('extension')].join("")
       name = "0" + name  while name.length < 7
       stack.push name
       i += every
