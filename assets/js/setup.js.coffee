@@ -13,4 +13,4 @@ jQuery ->
   app.tabbed.init($('.js-tabbed'))
   app.shop.init($('.js-shop'))
   app.checkout.init($('#payment-form'))
-  app.rotate.init($('.js-rotate'))
+  # app.rotate.init($('.js-rotate'))
