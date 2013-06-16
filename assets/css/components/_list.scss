@@ -3,7 +3,14 @@
 // =============================================================================
 
 .List {
-  list-style: square;
+  a.is-active {
+    color: inherit;
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 // Modifier for a clean list

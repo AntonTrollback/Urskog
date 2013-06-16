@@ -21,5 +21,5 @@ app.tabbed =
 
 
   showSection: (index) ->
-    @sections.removeClass('is-active')
-    $(@sections.get(index)).addClass('is-active')
+    @sections.addClass('u-isHidden')
+    $(@sections.get(index)).removeClass('u-isHidden')

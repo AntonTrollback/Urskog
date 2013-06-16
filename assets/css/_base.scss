@@ -38,7 +38,6 @@ strong {
 @mixin heading {
   font-family: "helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
-  text-transform: uppercase;
   margin: 0 0 10px;
   color: $color-heading;
 }
@@ -47,30 +46,31 @@ strong {
   font-size: 34px;
   font-weight: 500;
   margin: 0 0 -12px 0;
+  text-transform: uppercase;
 }
 
 @mixin h2 {
   font-size: 28px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 @mixin h3 {
   font-size: 22px;
   font-weight: 300;
+  text-transform: none;
   letter-spacing: 1px;
+  margin: 25px 0 10px;
 }
 
 @mixin h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
+  text-transform: none;
+  font-style: normal;
+  margin: 25px 0 -5px;
 }
 
-@mixin h5 {
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: normal;
-}
 
 // Headings default states and helper utilites
 // -----------------------------------------------------------------------------
@@ -107,12 +107,6 @@ h3,
 h4,
 .u-heading4 {
   @include h4();
-}
-
-h5,
-.u-heading5 {
-  @include h5();
-  margin-bottom: 0;
 }
 
 // Links

@@ -81,6 +81,12 @@ class MyApp < Sinatra::Base
     erb :contact
   end
 
+  get '/information/?' do
+    @slug = "information"
+    @title = "Information"
+    erb :information
+  end
+
   # List of products
   get '/products/?' do
     @boards = Board.all

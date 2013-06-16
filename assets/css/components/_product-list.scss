@@ -50,8 +50,10 @@
 
 .ProductList-itemHeading {
   @include h3();
+  margin-top: 0;
   display: block;
   text-align: center;
+  letter-spacing: 1px;
 
   @include min-width(470px) {
     @include h2();

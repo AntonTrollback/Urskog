@@ -73,12 +73,7 @@
 // -----------------------------------------------------------------------------
 
 .Tabbed-section {
-  display: none;
   padding: 20px 0 22px;
-
-  &.is-active {
-    display: block;
-  }
 
   > :first-child {
     margin: 0;
