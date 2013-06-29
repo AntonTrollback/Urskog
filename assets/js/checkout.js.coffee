@@ -101,7 +101,6 @@ app.checkout =
       alert "Something went wrong :("
       that.showForm()
     else
-      console.log "Result: ", result
       # Insert fresh token in order to submit to server
       that.el.find(".token").remove()
       that.el.append "<input type='hidden' name='order[token]' class='token' value='" + result.token + "'/>"
