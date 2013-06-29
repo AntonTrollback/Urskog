@@ -147,7 +147,7 @@ class MyApp < Sinatra::Base
   helpers do
     def paymill_public_key
       if ENV['RACK_ENV'] == "production"
-        '19628440790b126911007115a22ab887'
+        '8a8394c43de70da4013defbee629159a'
       else
         '19628440790b126911007115a22ab887'
       end
