@@ -9,7 +9,7 @@
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
-  color: #808080;
+  color: #888;
 
   &:before {
     content: "";
@@ -33,5 +33,14 @@
 
   a {
     color: inherit;
+  }
+}
+
+.Footer-divider {
+  &:before {
+    content: "•";
+    padding-right: 23px;
+    margin-left: -7px;
+    color: #bbb;
   }
 }
