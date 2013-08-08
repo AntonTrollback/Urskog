@@ -79,7 +79,7 @@
     margin: 0;
   }
 
-  // Refactor: this should not be here without a .Tabbed-# selector
+  // Refactor: this should not be here without a .Tabbed-* selector
   .Shop {
     border: 0;
     padding: 0;
@@ -96,3 +96,8 @@
   }
 }
 
+// Correct padding when children are paragraphs
+
+.Tabbed-section--tighter {
+  padding: 4px 0 6px;
+}
