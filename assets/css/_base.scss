@@ -45,6 +45,7 @@ strong {
 @mixin h1 {
   font-size: 34px;
   font-weight: 500;
+  line-height: 1.2;
   margin: 0 0 -12px 0;
   text-transform: uppercase;
 }
@@ -65,7 +66,7 @@ strong {
 
 @mixin h4 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: none;
   font-style: normal;
   margin: 25px 0 -5px;
