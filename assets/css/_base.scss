@@ -130,6 +130,11 @@ a {
   &:focus {
     outline: 1px solid dotted;
   }
+
+  &.is-disabled {
+    pointer-events: none;
+    color: $color-muted;
+  }
 }
 
 // Horizontal rule

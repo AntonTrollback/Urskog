@@ -29,6 +29,9 @@ app.checkout =
       e.preventDefault()
       # Validate again just to be sure
       if that.el.valid()
+        # Disable button
+        $('.js-buy').attr('disabled', 'disabled').find('span').text('Loading…')
+        $('.js-buy').siblings('a').addClass('is-disabled')
         that.createToken()
       else
         that.showForm()
