@@ -4,6 +4,11 @@ app.checkout =
     @readyToBuy = false
     @eventListeners()
 
+    if window.location.hash is "#dev"
+      inputs = @el.find('input[data-dev]')
+      for input in inputs
+        $(input).val($(input).data('dev'))
+
 
   eventListeners: ->
     that = this
