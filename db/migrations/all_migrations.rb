@@ -67,4 +67,12 @@ migration 6, :add_receipt_went_wrong_err_msg_to_orders do
   end
 end
 
+migration 6, :phone_number_to_orders do
+  up do
+    modify_table :orders do
+      add_column :phone_number, String, :limit => 255
+    end
+  end
+end
+
 migrate_up!

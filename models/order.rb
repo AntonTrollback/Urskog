@@ -17,6 +17,7 @@ class Order
   property :type_of_purchase, String
   property :price, String
   property :board, String
+  property :phone_number, String
   property :created_at, DateTime
   property :created_on, Date
   property :payment_went_wrong, Boolean, :default => false
