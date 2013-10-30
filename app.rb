@@ -138,12 +138,6 @@ class MyApp < Sinatra::Base
     end
   end
 
-  # FOR DEBUG
-  get '/orders' do
-    @orders = Order.all
-    erb :orders
-  end
-
   helpers do
     def paymill_public_key
       if ENV['RACK_ENV'] == "production"
