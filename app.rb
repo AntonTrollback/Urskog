@@ -138,6 +138,17 @@ class MyApp < Sinatra::Base
     end
   end
 
+
+  # ADMIN
+  get '/login' do
+    erb :login
+  end
+
+  get '/admin' do
+    erb :'admin/dashboard', layout: :admin
+  end
+ 
+ 
   helpers do
     def paymill_public_key
       if ENV['RACK_ENV'] == "production"
