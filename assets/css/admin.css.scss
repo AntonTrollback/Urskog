@@ -4,3 +4,9 @@
 .container {
   padding-top: 42px;
 }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px !important;
+  }
+}
