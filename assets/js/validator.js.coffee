@@ -27,9 +27,9 @@ app.validator =
     $.validator.addClassRules "v-email", ->
       email: true
 
-    # Custom minimum length test for names because other one did not work
-    $.validator.addMethod "v-name", ((value, element) ->
-      @optional(element) or value.length >= 4 # Paymill set this limit
+    # Has 4 or more characters
+    $.validator.addMethod "v-length", ((value, element) ->
+      @optional(element) or value.length >= 4 # Also a Paymill limit
     ), "msg"
 
     # Card number
