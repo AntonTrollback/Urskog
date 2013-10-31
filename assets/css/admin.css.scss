@@ -61,6 +61,10 @@ thead .table-asc {
 
 .table td {
   position: relative;
+
+  &.text-success {
+    background-color: #dff0d8;
+  }
 }
 
 .table-checkbox {
