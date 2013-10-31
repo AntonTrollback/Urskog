@@ -2,9 +2,19 @@
 @import "bootstrap";
 
 
+@media (max-width: 768px) {
+  .navbar {
+    margin-right: -15px;
+    margin-left: -15px;
+    border-right: 0;
+    border-left: 0;
+  }
+}
 
-.container {
-  padding-top: 42px;
+@media (min-width: 768px) {
+  .container {
+    padding-top: 20px;
+  }
 }
 
 @media (min-width: 992px) {
