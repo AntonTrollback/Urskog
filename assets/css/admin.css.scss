@@ -1,4 +1,6 @@
+@import "bourbon";
 @import "bootstrap";
+
 
 
 .container {
@@ -13,12 +15,34 @@
 
 
 
-
 .table-head {
   cursor: pointer;
+  position: relative;
+
+  .glyphicon {
+    display: none;
+  }
 }
 
-.table-desc,
 .table-asc {
-  text-decoration: underline;
+  background: #f5f5f5;
+
+  .glyphicon {
+    display: block;
+    position: absolute;
+    font-size: 11px;
+    color: #bdbdbd;
+    top: 12px;
+    right: 10px;
+    @include transform(rotate(90deg));
+  }
+}
+
+.table-desc {
+  @extend .table-asc;
+
+  .glyphicon {
+    right: 12px;
+    @include transform(rotate(-90deg));
+  }
 }
