@@ -29,20 +29,22 @@
     <h3 class="panel-title">Lägg till återförsäljare</h3>
   </div>
 
-  <form class="panel-body" role="form">
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm-6">
-          <label for="name">Återförsäljarens namn</label>
-          <input type="text" class="form-control" id="name">
+  <form role="form">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-5">
+            <label for="name">Återförsäljarens namn</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
         </div>
       </div>
     </div>
-  </form>
 
-  <div class="panel-footer">
-    <a href="#" class="btn btn-success">Spara</a>
-  </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-success">Spara</button>
+    </div>
+  </form>
 </div>
 
 
@@ -148,20 +150,22 @@
     <h3 class="panel-title">Skapa presentkortskoder</h3>
   </div>
 
-  <form class="panel-body" role="form">
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm-3">
-          <label for="amount">Antal</label>
-          <input type="number" class="form-control" id="amount">
+  <form role="form">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-3">
+            <label for="amount">Antal</label>
+            <input type="number" class="form-control" id="amount" required>
+          </div>
         </div>
       </div>
     </div>
-  </form>
 
-  <div class="panel-footer">
-    <a href="#" class="btn btn-success">Skapa</a>
-  </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-success">Skapa</button>
+    </div>
+  </form>
 </div>
 
 
@@ -211,4 +215,33 @@
   <div class="panel-footer">
     <a href="#" class="btn btn-primary">Skapa nya</a>
   </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Skapa presentkortskoder</h3>
+  </div>
+
+  <form role="form">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-3">
+            <label for="amount">Antal</label>
+            <input type="number" class="form-control" id="amount" required>
+          </div>
+          <div class="col-sm-3">
+            <label for="info">Information</label>
+            <input type="text" class="form-control" id="info" placeholder="Bara något ord" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-success">Skapa</button>
+    </div>
+  </form>
 </div>
