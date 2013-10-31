@@ -15,16 +15,16 @@
 
 
 
+.table thead .glyphicon {
+  display: none;
+}
+
 .table-head {
   cursor: pointer;
   position: relative;
-
-  .glyphicon {
-    display: none;
-  }
 }
 
-.table-asc {
+thead .table-asc {
   background: #f5f5f5;
 
   .glyphicon {
@@ -33,7 +33,7 @@
     font-size: 11px;
     color: #bdbdbd;
     top: 12px;
-    right: 10px;
+    right: 8px;
     @include transform(rotate(90deg));
   }
 }
@@ -42,7 +42,8 @@
   @extend .table-asc;
 
   .glyphicon {
-    right: 12px;
+    right: 10px;
     @include transform(rotate(-90deg));
   }
+}
 }
