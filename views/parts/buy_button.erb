@@ -1,15 +1,27 @@
 <% if @board.deck_only? %>
   <div class="Shop-option" id="deckOnlyContent">
-    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
-    <p>Free shipping worldwide</p>
+    <% if @board.out_of_stock %>
+      <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+    <% else %>
+      <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %><small>SEK</small></strong></span></button>
+    <% end %>
+      <p>Free shipping worldwide</p>
   </div>
 <% else %>
   <div class="Shop-option js-shopOption" id="completeContent">
-    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.complete %> <small>SEK</small></strong></span></button>
+    <% if @board.out_of_stock %>
+      <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+    <% else %>
+      <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.complete %> <small>SEK</small></strong></span></button>
+    <% end %>
     <p>Free shipping worldwide</p>
   </div>
   <div class="Shop-option js-shopOption u-isHidden" id="deckOnlyContent">
-    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
+    <% if @board.out_of_stock %>
+      <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+    <% else %>
+      <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.deck %> <small>SEK</small></strong></span></button>
+    <% end %>
     <p>Free shipping worldwide</p>
   </div>
 <% end %>

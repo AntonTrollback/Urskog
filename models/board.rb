@@ -24,6 +24,7 @@ class Board
 
   attr_reader :name,
               :slug,
+              :out_of_stock,
               :price_hash,
               :woods,
               :promoted_wood,
@@ -36,9 +37,10 @@ class Board
   def initialize(attributes={})
     @name           = attributes[:name]
     @slug           = attributes[:slug]
+    @out_of_stock   = attributes[:out_of_stock]
     @price_hash     = attributes[:price]
     @woods          = attributes[:woods]
-    @promoted_wood          = attributes[:promoted_wood]
+    @promoted_wood  = attributes[:promoted_wood]
     @setup          = attributes[:setup]
     @info           = attributes[:info]
     @length_hash    = attributes[:length]
