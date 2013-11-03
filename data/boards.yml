@@ -61,7 +61,7 @@
 
 - :name: Löv
   :slug: lov
-  :out_of_stock: false
+  :out_of_stock: true
   :price:
     :complete: 2845
     :deck: 1609
@@ -249,7 +249,7 @@
 
 - :name: Frö
   :slug: fro
-  :out_of_stock: false
+  :out_of_stock: true
   :price:
     :deck: 995
   :woods:
