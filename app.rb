@@ -179,6 +179,7 @@ class MyApp < Sinatra::Base
     giftcards.each do |g|
       @retailer.giftcards << g
     end
+    @retailer.save
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
   end
 

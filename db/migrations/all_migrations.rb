@@ -102,5 +102,27 @@ migration 9, :create_giftcards do
   end
 end
 
+migration 10, :add_metadata_to_giftcards do
+  up do
+    modify_table :giftcards do
+      add_column :constructed, "BOOLEAN"
+      add_column :shipped, "BOOLEAN"
+      add_column :registered, DateTime
+      add_column :created_at, DateTime
+      add_column :created_on, Date
+    end
+  end
+
+  down do
+    modify_table :giftcards do
+      remove_column :constructed
+      remove_column :shipped
+      remove_column :registered
+      remove_column :created_at
+      remove_column :created_on
+    end
+  end
+end
+
 #migrate_down!
 migrate_up!
