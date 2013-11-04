@@ -18,6 +18,7 @@ require_relative 'lib/receipt_email'
 require_relative 'models/board'
 require_relative 'models/country'
 require_relative 'models/retailer'
+require_relative 'models/dm_retailer'
 require_relative 'models/order'
 
 require_relative 'lib/amount_calculator'
@@ -147,7 +148,19 @@ class MyApp < Sinatra::Base
 
   # Admin dashboard
   get '/admin' do
+    @retailers = DMRetailer.all
     erb :'admin/dashboard', layout: :admin
+  end
+
+  # RETAILERS
+  post '/admin/retailers/add' do
+    retailer = DMRetailer.new(params["retailer"])
+    if retailer.save
+      erb :'admin/dashboard', layout: :admin
+    else
+      p retailer.errors
+      p "ERROR"
+    end
   end
 
 

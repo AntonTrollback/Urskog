@@ -8,14 +8,12 @@
       <span class="text-danger">Obundna</span>
       <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
     </a>
+    <% @retailers.each do |retailer| %>
     <a href="#" class="list-group-item">
-      urskog.com
+      <%= retailer.name %>
       <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
     </a>
-    <a href="#" class="list-group-item">
-      Hollywood
-      <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
-    </a>
+    <% end %>
   </div>
   <div class="panel-footer">
     <a href="#" class="btn btn-primary">Lägg till</a>
@@ -29,13 +27,13 @@
     <h3 class="panel-title">Lägg till återförsäljare</h3>
   </div>
 
-  <form role="form">
+  <form role="form" method="post" action="/admin/retailers/add">
     <div class="panel-body">
       <div class="form-group">
         <div class="row">
           <div class="col-sm-5">
             <label for="name">Återförsäljarens namn</label>
-            <input type="text" class="form-control" id="name" required>
+            <input type="text" class="form-control" id="name" name="retailer[name]" required>
           </div>
         </div>
       </div>

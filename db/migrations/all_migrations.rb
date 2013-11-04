@@ -67,10 +67,19 @@ migration 6, :add_receipt_went_wrong_err_msg_to_orders do
   end
 end
 
-migration 6, :phone_number_to_orders do
+migration 7, :phone_number_to_orders do
   up do
     modify_table :orders do
       add_column :phone_number, String, :limit => 255
+    end
+  end
+end
+
+migration 8, :create_retailers do
+  up do
+    create_table :dm_retailers do
+      column :id,   Integer, :serial => true
+      column :name, String, :size => 255
     end
   end
 end
