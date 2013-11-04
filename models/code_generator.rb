@@ -1,4 +1,4 @@
-class GiftcardsGenerator
+class CodeGenerator
   def self.generate(existing, amount)
     self.new(existing, amount).generate
   end
