@@ -19,6 +19,7 @@ require_relative 'models/board'
 require_relative 'models/country'
 require_relative 'models/retailer'
 require_relative 'models/dm_retailer'
+require_relative 'models/gift_cards_generator'
 require_relative 'models/order'
 
 require_relative 'lib/amount_calculator'
@@ -156,11 +157,29 @@ class MyApp < Sinatra::Base
   post '/admin/retailers/add' do
     retailer = DMRetailer.new(params["retailer"])
     if retailer.save
+      @retailers = DMRetailer.all
       erb :'admin/dashboard', layout: :admin
     else
       p retailer.errors
       p "ERROR"
     end
+  end
+
+  # Giftcards
+  get '/admin/retailers/:id/giftcards' do
+    @retailer = DMRetailer.find(params[:id]).first
+    @giftcards = @retailer.giftcards.all
+    erb :'admin/giftcards', layout: :admin
+  end
+
+  post '/admin/retailers/:id/giftcards/add' do
+    @retailer = DMRetailer.find(params[:id]).first
+    # The generator only creates the codez, add them to the retailer later
+    giftcards = GiftcardsGenerator.generate(params["amount"])
+    giftcards.each do |g|
+      @retailer.giftcards << g
+    end
+    redirect "/admin/retailers/#{@retailer.id}/giftcards"
   end
 
 

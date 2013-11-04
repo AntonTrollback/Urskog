@@ -82,6 +82,25 @@ migration 8, :create_retailers do
       column :name, String, :size => 255
     end
   end
+  
+  down do
+    drop_table :dm_retailers
+  end
 end
 
+migration 9, :create_giftcards do
+  up do
+    create_table :giftcards do
+      column :id,   Integer, :serial => true
+      column :code, String, :size => 50
+      column :dm_retailer_id, Integer
+    end
+  end
+
+  down do
+    drop_table :giftcards
+  end
+end
+
+#migrate_down!
 migrate_up!

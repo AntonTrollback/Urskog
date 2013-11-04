@@ -9,7 +9,7 @@
       <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
     </a>
     <% @retailers.each do |retailer| %>
-    <a href="#" class="list-group-item">
+      <a href="/admin/retailers/<%= retailer.id %>/giftcards" class="list-group-item">
       <%= retailer.name %>
       <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
     </a>
@@ -44,104 +44,6 @@
     </div>
   </form>
 </div>
-
-
-<!-- ÅF view/presentkort -->
-<div class="panel panel-default giftcard-list">
-  <div class="panel-heading">
-    <h3 class="panel-title">Hollywood</h3>
-  </div>
-
-  <div class="panel-table">
-    <table class="table table-sort">
-      <thead>
-        <tr>
-          <th>Presentkortskod</th>
-          <th>Skapad <span class="glyphicon glyphicon-play"></span></th>
-          <th>Tillverkad <span class="glyphicon glyphicon-play"></span></th>
-          <th>Skickad <span class="glyphicon glyphicon-play"></span></th>
-          <th>Registrerad <span class="glyphicon glyphicon-play"></span></th>
-          <th>Rabattkod <span class="glyphicon glyphicon-play"></span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr id="01">
-          <td>01B3C5D7E9</td>
-          <td>2013-10-13</td>
-          <td>
-            <form>
-              <label class="table-checkbox table-status active">
-                <input type="checkbox" checked>
-                <span>1</span>
-              </label>
-            </form>
-          </td>
-          <td>
-            <form>
-              <label class="table-checkbox table-status">
-                <input type="checkbox">
-                <span>0</span>
-              </label>
-            </form>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-
-        <tr id="02">
-          <td>5D7E901B3C</td>
-          <td>2013-10-23</td>
-          <td>
-            <form>
-              <label class="table-checkbox table-status active">
-                <input type="checkbox" checked>
-                <span>1</span>
-              </label>
-            </form>
-          </td>
-          <td>
-            <form>
-              <label class="table-checkbox table-status active">
-                <input type="checkbox" checked>
-                <span>1</span>
-              </label>
-            </form>
-          </td>
-          <td class="text-success">2013-11-01</td>
-          <td><a href="#">EASCE</a></td>
-        </tr>
-
-        <tr id="03">
-          <td>1B05D7E93C</td>
-          <td>2013-11-01</td>
-          <td>
-            <form>
-              <label class="table-checkbox table-status active">
-                <input type="checkbox" checked>
-                <span>1</span>
-              </label>
-            </form>
-          </td>
-          <td>
-            <form>
-              <label class="table-checkbox table-status active">
-                <input type="checkbox" checked>
-                <span>1</span>
-              </label>
-            </form>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="panel-footer">
-    <a href="#" class="btn btn-primary">Skapa nya</a>
-  </div>
-</div>
-
 
 <!-- OBUNDNA view/presentkort -->
 <div class="panel panel-default giftcard-list">
@@ -264,31 +166,6 @@
       <button type="submit" class="btn btn-info" disabled>Flytta <span>(0)</span></button>
     </form>
   </div>
-</div>
-
-
-<!-- ÅF skapa nya presentkort -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Skapa presentkortskoder</h3>
-  </div>
-
-  <form role="form">
-    <div class="panel-body">
-      <div class="form-group">
-        <div class="row">
-          <div class="col-sm-3">
-            <label for="amount">Antal</label>
-            <input type="number" class="form-control" id="amount" required>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel-footer">
-      <button type="submit" class="btn btn-success">Skapa</button>
-    </div>
-  </form>
 </div>
 
 
