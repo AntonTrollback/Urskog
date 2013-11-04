@@ -19,6 +19,7 @@ require_relative 'models/board'
 require_relative 'models/country'
 require_relative 'models/retailer'
 require_relative 'models/dm_retailer'
+require_relative 'models/coupon'
 require_relative 'models/gift_cards_generator'
 require_relative 'models/order'
 
@@ -181,6 +182,17 @@ class MyApp < Sinatra::Base
     end
     @retailer.save
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
+  end
+
+  # Coupon
+  get '/admin/coupons' do
+    erb :'admin/coupons', layout: :admin
+  end
+
+  post '/admin/coupons/add' do
+    p Coupon.new(params["coupon"])
+    p params
+    #erb :'admin/coupons', layout: :admin
   end
 
 

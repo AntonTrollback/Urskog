@@ -1,0 +1,90 @@
+<!-- Rabattkoder start -->
+<div class="panel panel-default giftcard-list">
+  <div class="panel-heading">
+    <h3 class="panel-title">Rabattkoder</h3>
+  </div>
+
+  <div class="panel-table">
+    <table class="table table-sort">
+      <thead>
+        <tr>
+          <th>Rabattkod</th>
+          <th>Procent <span class="glyphicon glyphicon-play"></span></th>
+          <th>Skapad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Förbrukad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Information <span class="glyphicon glyphicon-play"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="21">
+          <td>EASCE</td>
+          <td>25%</td>
+          <td>2013-10-13</td>
+          <td class="text-success">2013-11-17</td>
+          <td><a href="#">Presentkort</a></td>
+        </tr>
+        <tr id="22">
+          <td>PWLGE</td>
+          <td>15%</td>
+          <td>2013-08-02</td>
+          <td></td>
+          <td>Ross</td>
+        </tr>
+        <tr id="23">
+          <td>LOLQS</td>
+          <td>15%</td>
+          <td>2013-02-29</td>
+          <td class="text-success">2013-04-18</td>
+          <td>Matte</td>
+        </tr>
+        <tr id="24">
+          <td>VFDMS</td>
+          <td>25%</td>
+          <td>2013-10-13</td>
+          <td></td>
+          <td><a href="#">Presentkort</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel-footer">
+    <!-- (FUTURE) -->
+    <button class="btn btn-primary" disabled>Skapa nya</button>
+  </div>
+</div>
+
+<!-- Rabattkoder add more (FUTURE) -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Skapa rabattkoder</h3>
+  </div>
+
+  <form role="form" method="post" action="/admin/coupons/add">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-3">
+            <label for="amount">Antal</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+          </div>
+          <div class="col-sm-3">
+            <label for="info">Information</label>
+            <input type="text" class="form-control" id="info" placeholder="Bara något ord" name="coupon[information]" required>
+          </div>
+          <div class="col-sm-3">
+            <label for="discount">Rabatt</label>
+            <div class="input-group">
+              <input type="number" class="form-control" id="discount" placeholder="25" name="coupon[discount]" required>
+              <span class="input-group-addon">%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-success">Skapa</button>
+    </div>
+  </form>
+</div>

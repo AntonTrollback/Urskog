@@ -124,5 +124,23 @@ migration 10, :add_metadata_to_giftcards do
   end
 end
 
+migration 11, :create_coupons do
+  up do
+    create_table :coupons do
+      column :id,   Integer, :serial => true
+      column :code, String, :size => 50
+      column :information, String, :size => 100
+      column :discount, Float
+      column :created_at, DateTime
+      column :created_on, Date
+      column :giftcard_id, Integer
+    end
+  end
+
+  down do
+    drop_table :coupons
+  end
+end
+
 #migrate_down!
 migrate_up!
