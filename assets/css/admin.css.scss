@@ -28,6 +28,24 @@
   margin-top: 50px;
 }
 
+
+.panel-table {
+
+  .table {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    overflow: auto;
+
+    .table {
+      min-width: 735px;
+    }
+  }
+}
+
+
+
 .table thead .glyphicon {
   display: none;
 }
