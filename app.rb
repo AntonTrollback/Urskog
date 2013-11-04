@@ -120,7 +120,7 @@ class MyApp < Sinatra::Base
     @buy_option = params[:buy_option]
     @wood_type = params[:wood_type]
     @calculator = AmountCalculator.new(@board.price.send(@buy_option))
-    erb :checkout
+    erb :'checkout/checkout'
   end
 
   post '/checkout/:slug' do
@@ -133,15 +133,14 @@ class MyApp < Sinatra::Base
       if Paymentprocessor.purchase(order, board, calculator)
         OrderEmail.new(order).send
         ReceiptEmail.new(order).send
-        erb :success
+        erb :'checkout/success'
       else
-        erb :payment_error
+        erb :'checkout/payment_error'
       end
     rescue => e
-      erb :error
+      erb :'checkout/error'
     end
   end
-
 
   # Admin login
   get '/login' do
