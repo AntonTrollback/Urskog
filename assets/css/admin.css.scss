@@ -1,6 +1,11 @@
 @import "bourbon";
 @import "bootstrap";
 
+/**
+ * Navigation
+ *
+ * Tweak margins and make full width on narrow viewports
+ */
 
 @media (max-width: 768px) {
   .navbar {
@@ -23,14 +28,19 @@
   }
 }
 
+/**
+ * Login window
+ */
 
 .login {
   margin-top: 50px;
 }
 
+/**
+ * Extend panels with scrollable tables
+ */
 
 .panel-table {
-
   .table {
     margin-bottom: 0;
   }
@@ -44,7 +54,9 @@
   }
 }
 
-
+/**
+ * Extend table head with asc/desc sorting
+ */
 
 .table thead .glyphicon {
   display: none;
@@ -78,15 +90,21 @@ thead .table-desc {
   }
 }
 
-
+/**
+ * Add some styles for table cells
+ */
 
 .table td {
-  position: relative;
+  position: relative; /* Needed below */
 
   &.text-success {
     background-color: #dff0d8;
   }
 }
+
+/**
+ * Extend tables with checkbox table cells
+ */
 
 .table-checkbox {
   width: 100%;
@@ -127,6 +145,10 @@ thead .table-desc {
     background-color: #d9edf7;
   }
 }
+
+/**
+ * Add highlighting for table rows
+ */
 
 .highlighted-row {
   color: #c09853;
