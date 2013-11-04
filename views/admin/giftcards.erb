@@ -1,28 +1,3 @@
-<!-- ÅF skapa nya presentkort -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Skapa presentkortskoder</h3>
-  </div>
-
-  <form role="form" method="post" action="/admin/retailers/<%= @retailer.id %>/giftcards/add">
-    <div class="panel-body">
-      <div class="form-group">
-        <div class="row">
-          <div class="col-sm-3">
-            <label for="amount">Antal</label>
-            <input type="number" class="form-control" id="amount" name="amount" required>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel-footer">
-      <button type="submit" class="btn btn-success">Skapa</button>
-    </div>
-  </form>
-</div>
-
-<!-- ÅF view/presentkort -->
 <div class="panel panel-default giftcard-list">
   <div class="panel-heading">
     <h3 class="panel-title"><%= @retailer.name %></h3>
@@ -32,7 +7,7 @@
     <table class="table table-sort">
       <thead>
         <tr>
-          <th>Presentkortskod</th>
+          <th>Kod</th>
           <th>Skapad <span class="glyphicon glyphicon-play"></span></th>
           <th>Tillverkad <span class="glyphicon glyphicon-play"></span></th>
           <th>Skickad <span class="glyphicon glyphicon-play"></span></th>
@@ -68,8 +43,29 @@
       </tbody>
     </table>
   </div>
+</div>
 
-  <div class="panel-footer">
-    <a href="#" class="btn btn-primary">Skapa nya</a>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Generera nya</h3>
   </div>
+
+  <form role="form" method="post" action="/admin/retailers/<%= @retailer.id %>/giftcards/add">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="amount">Antal</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary">Generera</button>
+    </div>
+  </form>
 </div>
