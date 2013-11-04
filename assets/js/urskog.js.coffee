@@ -3,12 +3,12 @@
 #= require lib/jquery.payment.js
 #  require lib/jquery.reel.js
 #= require lib/mbp.js
-#= require moveto.js
-#= require tabbed.js
-#= require validator.js
-#= require shop.js
-#= require checkout.js
-#  require rotate.js
+#= require modules/moveto.js
+#= require modules/tabbed.js
+#= require modules/validator.js
+#= require modules/shop.js
+#= require modules/checkout.js
+#  require modules/rotate.js
 
 MBP.scaleFix()
 MBP.preventZoom()
