@@ -19,6 +19,7 @@ app.giftcardList =
     @markedForMoving = []
     @events()
     @initSorter()
+    @highlightLinkedItem()
 
   events: ->
     that = this
@@ -77,3 +78,6 @@ app.giftcardList =
         .find("button").attr("disabled", true)
         .find("span").text("(0)")
 
+  highlightLinkedItem: ->
+    id = location.hash.substring(1)
+    $("##{id}").addClass('highlighted-row')
