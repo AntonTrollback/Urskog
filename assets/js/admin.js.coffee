@@ -1,6 +1,6 @@
-#= require jquery.js
-#= require bootstrap.js
-#= require jquery.tablesorter.js
+#= require lib/jquery.js
+#= require lib/jquery.tablesorter.js
+#= require lib/bootstrap.js
 
 admin = {}
 
