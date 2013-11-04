@@ -1,13 +1,11 @@
-require_relative './giftcard'
-
 class GiftcardsGenerator
-  def self.generate(amount)
-    self.new(amount).generate
+  def self.generate(existing, amount)
+    self.new(existing, amount).generate
   end
 
   attr_reader :amount, :existing_kodez
-  def initialize(amount)
-    @existing_kodez = Giftcard.all.map(&:code)
+  def initialize(existing, amount)
+    @existing_kodez = existing
     @amount = amount.to_i
   end
 
@@ -19,7 +17,7 @@ class GiftcardsGenerator
       while not_unique? str
         str = SecureRandom.hex(5)
       end
-      str = Giftcard.new({code: str.upcase})
+      str = str.upcase
       kodez << str
     end
     kodez

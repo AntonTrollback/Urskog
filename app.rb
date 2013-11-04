@@ -21,6 +21,7 @@ require_relative 'models/retailer'
 require_relative 'models/dm_retailer'
 require_relative 'models/coupon'
 require_relative 'models/gift_cards_generator'
+require_relative 'models/giftcard'
 require_relative 'models/order'
 
 require_relative 'lib/amount_calculator'
@@ -176,9 +177,10 @@ class MyApp < Sinatra::Base
   post '/admin/retailers/:id/giftcards/add' do
     @retailer = DMRetailer.find(params[:id]).first
     # The generator only creates the codez, add them to the retailer later
-    giftcards = GiftcardsGenerator.generate(params["amount"])
+    giftcards = GiftcardsGenerator.generate(Giftcard.all.map(&:code),
+                                            params["amount"])
     giftcards.each do |g|
-      @retailer.giftcards << g
+      @retailer.giftcards << Giftcard.new({code: g})
     end
     @retailer.save
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
