@@ -1,9 +1,10 @@
 app.shop =
   init: ($element) ->
     @el = $element
-    @eventListeners()
+    return false  unless @el.length
+    @binds()
 
-  eventListeners: ->
+  binds: ->
     that = this
 
     # Radio buttons are used to determine shop content

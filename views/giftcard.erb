@@ -1,4 +1,4 @@
-<form class="Constrained Constrained--xs"
+<form class="Constrained Constrained--xs v-form"
       id="register-giftcard-form"
       action="-"
       method="POST"
@@ -27,7 +27,7 @@
         <div class="Grid-cell">
           <div class="Control">
 
-            <label for="giftcard-email">Mail</label>
+            <label for="giftcard-email">Mail <span class="u-textMuted">(will receive the discount code)</span></label>
             <input class="Control-field v-email"
                    id="giftcard-email"
                    name="giftcard[email]"
@@ -44,20 +44,20 @@
         <div class="Grid-cell">
           <div class="Control">
 
-            <label for="giftcard-email">Giftcard</label>
-            <input class="Control-field v-email"
-                   id="giftcard-email"
-                   name="giftcard[email]"
-                   type="email"
+            <label for="giftcard-string">Giftcard code <span class="u-textMuted"></span></label>
+            <input class="Control-field v-giftcard"
+                   id="giftcard-string"
+                   name="giftcard[string]"
+                   type="text"
                    maxlength="10"
                    placeholder="●●●●●●●●●●"
-                   data-dev="anton@urskog.com"
+                   data-dev="0123456789"
                    required>
 
           </div>
         </div>
         <div class="Grid-cell u-textCenter u-paddingTm">
-          <button type="submit" class="Button Button--full"><span>Ok, I'm done</span></a>
+          <button type="submit" class="Button Button--full v-submit"><span>Ok, I'm done</span></a>
         </div>
       </div>
     </div>

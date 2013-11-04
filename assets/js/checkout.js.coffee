@@ -1,16 +1,11 @@
 app.checkout =
   init: ($element) ->
     @el = $element
+    return false  unless @el.length
     @readyToBuy = false
-    @eventListeners()
+    @binds()
 
-    if window.location.hash is "#dev"
-      inputs = @el.find('input[data-dev]')
-      for input in inputs
-        $(input).val($(input).data('dev'))
-
-
-  eventListeners: ->
+  binds: ->
     that = this
 
     # Init validation

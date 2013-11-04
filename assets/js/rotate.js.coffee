@@ -1,6 +1,7 @@
 app.rotate =
   init: ($element) ->
     @el = $element
+    return false  unless @el.length
     that = this
 
     # init jQuery Reel

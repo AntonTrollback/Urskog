@@ -1,9 +1,10 @@
 app.moveto =
   init: ($element) ->
     @el = $element
+    return false  unless @el.length
     @movers = $element
     @breakpoint = 767
-    @eventListeners()
+    @binds()
     @staticWidth = window.staticWidth
     that = this
 
@@ -13,7 +14,7 @@ app.moveto =
 
 
 
-  eventListeners: ->
+  binds: ->
     that = this
 
     $(window).resize ->

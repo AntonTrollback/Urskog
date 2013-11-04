@@ -1,11 +1,12 @@
 app.tabbed =
   init: ($element) ->
     @el = $element
+    return false  unless @el.length
     @navItems = @el.find('.js-tabbedNavItem')
     @sections = @el.find('.js-tabbedSection')
-    @eventListeners()
+    @binds()
 
-  eventListeners: ->
+  binds: ->
     that = this
 
     @el.find('.js-tabbedNavItem').click (e) ->

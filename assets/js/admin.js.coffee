@@ -14,14 +14,15 @@ $ ->
 app.giftcardList =
   init: ($element) ->
     @el = $element
+    return false  unless @el.length
     @table = @el.find(".table-sort")
     @retainerMover = @el.find(".retailer-mover")
     @markedForMoving = []
-    @events()
+    @binds()
     @initSorter()
     @highlightLinkedItem()
 
-  events: ->
+  binds: ->
     that = this
 
     $(".table-checkbox").on "change", "input", ->
