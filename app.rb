@@ -49,6 +49,7 @@ class MyApp < Sinatra::Base
     use Rack::Deflater
   end
 
+
   def title
     if defined? @title
       "#{@title} — Urskog Longboard"
@@ -60,6 +61,7 @@ class MyApp < Sinatra::Base
   def active(item)
     "is-active" if item == @slug
   end
+
 
   get '/' do
     @slug = "home"
@@ -91,7 +93,11 @@ class MyApp < Sinatra::Base
     erb :information
   end
 
-  # List of products
+  get '/giftcard/?' do
+    @slug = "giftcard"
+    erb :register_giftcard
+  end
+
   get '/products/?' do
     @boards = Board.all
     @slug = "products"
@@ -99,7 +105,6 @@ class MyApp < Sinatra::Base
     erb :products
   end
 
-  # Single product
   get '/products/:slug' do
     @board = Board.find(params[:slug])
     if @board.name == ""
@@ -111,7 +116,7 @@ class MyApp < Sinatra::Base
     erb :product
   end
 
-  # Checkout
+
   get '/checkout/:slug' do
     @board = Board.find(params[:slug])
     redirect "/products" if @board.name.empty?
@@ -142,11 +147,6 @@ class MyApp < Sinatra::Base
     end
   end
 
-  # Giftcards
-  get '/giftcard' do
-    @slug = "giftcard"
-    erb :giftcard
-  end
 
   # Admin login
   get '/login' do
@@ -154,13 +154,13 @@ class MyApp < Sinatra::Base
     erb :'admin/login', layout: :admin
   end
 
-  # Admin dashboard
+  # Dashboard
   get '/admin' do
     @retailers = DMRetailer.all
     erb :'admin/dashboard', layout: :admin
   end
 
-  # RETAILERS
+  # Retailers
   post '/admin/retailers/add' do
     retailer = DMRetailer.new(params["retailer"])
     if retailer.save
@@ -206,10 +206,6 @@ class MyApp < Sinatra::Base
     redirect "/admin/coupons"
   end
 
-
-  #
-  # Paymill key
-  #
 
   helpers do
     def paymill_public_key
