@@ -142,6 +142,12 @@ class MyApp < Sinatra::Base
     end
   end
 
+  # Giftcards
+  get '/giftcard' do
+    @slug = "giftcard"
+    erb :giftcard
+  end
+
   # Admin login
   get '/login' do
     @slug = "login"

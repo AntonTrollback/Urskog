@@ -1,0 +1,69 @@
+<form class="Constrained Constrained--xs"
+      id="register-giftcard-form"
+      action="-"
+      method="POST"
+      novalidate
+      autocomplete="on">
+
+  <h1 class="u-textCenter u-paddingBl u-marginBl">Register giftcard</h1>
+
+  <div class="Grid Grid--wide v2-Grid--2col js-registerGiftcard">
+
+    <div class="Grid-cell u-marginBl">
+      <div class="Grid Grid--narrow">
+        <div class="Grid-cell">
+          <div class="Control">
+
+            <label for="giftcard-name">Name</label>
+            <input class="Control-field v-length"
+                   id="giftcard-name"
+                   name="giftcard[name]"
+                   type="text"
+                   data-dev="Example Name"
+                   required>
+
+          </div>
+        </div>
+        <div class="Grid-cell">
+          <div class="Control">
+
+            <label for="giftcard-email">Mail</label>
+            <input class="Control-field v-email"
+                   id="giftcard-email"
+                   name="giftcard[email]"
+                   type="email"
+                   data-dev="anton@urskog.com"
+                   required>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Grid-cell">
+        <div class="Grid-cell">
+          <div class="Control">
+
+            <label for="giftcard-email">Giftcard</label>
+            <input class="Control-field v-email"
+                   id="giftcard-email"
+                   name="giftcard[email]"
+                   type="email"
+                   maxlength="10"
+                   placeholder="●●●●●●●●●●"
+                   data-dev="anton@urskog.com"
+                   required>
+
+          </div>
+        </div>
+        <div class="Grid-cell u-textCenter u-paddingTm">
+          <button type="submit" class="Button Button--full"><span>Ok, I'm done</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<script>var PAYMILL_PUBLIC_KEY = '<%= paymill_public_key %>';</script>
+<script src="https://bridge.paymill.com"></script>
