@@ -2,13 +2,13 @@
 #= require lib/jquery.tablesorter.js
 #= require lib/bootstrap.js
 
-admin = {}
+app = {}
 
 $ ->
-  admin.giftcardList.init($('.giftcard-list'))
+  app.giftcardList.init($('.giftcard-list'))
 
 
-admin.giftcardList =
+app.giftcardList =
   init: ($element) ->
     @el = $element
     return false  unless @el.length
