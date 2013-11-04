@@ -41,7 +41,8 @@ app.giftcardList =
         that.updateRetailerMover(id)
       else if typeStatus
         that.updateDatabase(id, checked)
-        that.updateSorter()
+
+      that.updateSorter()
 
   initSorter: ->
     @table.tablesorter({
