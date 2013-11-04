@@ -88,12 +88,21 @@ thead .table-desc {
     display: none;
   }
 
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.table-status {
   &.active {
     color: #468847;
     background-color: #dff0d8;
   }
+}
 
-  &.disabled {
-    cursor: not-allowed;
+.table-mark {
+  &.active {
+    color: #3a87ad;
+    background-color: #d9edf7;
   }
 }

@@ -15,6 +15,8 @@ app.giftcardList =
   init: ($element) ->
     @el = $element
     @table = @el.find(".table-sort")
+    @retainerMover = @el.find(".retailer-mover")
+    @markedForMoving = []
     @events()
     @initSorter()
 
@@ -23,17 +25,22 @@ app.giftcardList =
 
     $(".table-checkbox").on "change", "input", ->
       $input = $(this)
-      $form = $input.closest('form')
-      $label = $input.parent()
+      $label = $input.closest("label")
+      id = $input.closest("tr").attr("id")
       checked = $input.is(":checked")
+      typeStatus = $label.is(".table-status")
+      typeMark = $label.is(".table-mark")
 
       if checked
         $label.addClass("active").find("span").text("1")
       else
         $label.removeClass("active").find("span").text("0")
 
-      that.updateSorter()
-      that.updateDatabase($form, checked)
+      if typeMark
+        that.updateRetailerMover(id)
+      else if typeStatus
+        that.updateDatabase(id, checked)
+        that.updateSorter()
 
   initSorter: ->
     @table.tablesorter({
@@ -47,8 +54,26 @@ app.giftcardList =
   updateSorter: ->
     @table.trigger("update")
 
-  updateDatabase: (form, state) ->
-    console.log("AJAX:", form, state)
+  updateDatabase: (id, state) ->
+    console.log("AJAX:", id, state)
 
+  updateRetailerMover: (id) ->
+    found = $.inArray(id, @markedForMoving)
+    if found >= 0
+      @markedForMoving.splice found, 1
+    else
+      @markedForMoving.push(id)
+    @updateRetailerForm()
 
+  updateRetailerForm: ->
+    @retainerMover.find("[type='hidden']").val(@markedForMoving)
+
+    if @markedForMoving.length
+      @retainerMover
+        .find("button").attr("disabled", false)
+        .find("span").text("(#{@markedForMoving.length})")
+    else
+      @retainerMover
+        .find("button").attr("disabled", true)
+        .find("span").text("(0)")
 
