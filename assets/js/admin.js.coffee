@@ -2,16 +2,13 @@
 #= require bootstrap.js
 #= require jquery.tablesorter.js
 
-console.log("Disabling Autopilot... You're in charge now")
-
-app = {}
+admin = {}
 
 $ ->
-  app.giftcardList.init($('.giftcard-list'))
+  admin.giftcardList.init($('.giftcard-list'))
 
 
-
-app.giftcardList =
+admin.giftcardList =
   init: ($element) ->
     @el = $element
     return false  unless @el.length
@@ -24,7 +21,6 @@ app.giftcardList =
 
   binds: ->
     that = this
-
     $(".table-checkbox").on "change", "input", ->
       $input = $(this)
       $label = $input.closest("label")
