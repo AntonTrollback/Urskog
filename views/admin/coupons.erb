@@ -16,34 +16,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr id="21">
-          <td>EASCE</td>
-          <td>25%</td>
-          <td>2013-10-13</td>
+        <% @coupons.each do |c| %>
+        <tr id="<%= c.id %>">
+          <td><%= c.code %></td>
+          <td><%= c.discount %>%</td>
+          <td><%= c.created_on %></td>
           <td class="text-success">2013-11-17</td>
-          <td><a href="#">Presentkort</a></td>
+          <td><a href="#"><%= c.information %></a></td>
         </tr>
-        <tr id="22">
-          <td>PWLGE</td>
-          <td>15%</td>
-          <td>2013-08-02</td>
-          <td></td>
-          <td>Ross</td>
-        </tr>
-        <tr id="23">
-          <td>LOLQS</td>
-          <td>15%</td>
-          <td>2013-02-29</td>
-          <td class="text-success">2013-04-18</td>
-          <td>Matte</td>
-        </tr>
-        <tr id="24">
-          <td>VFDMS</td>
-          <td>25%</td>
-          <td>2013-10-13</td>
-          <td></td>
-          <td><a href="#">Presentkort</a></td>
-        </tr>
+        <% end %>
       </tbody>
     </table>
   </div>

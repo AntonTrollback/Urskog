@@ -188,13 +188,17 @@ class MyApp < Sinatra::Base
 
   # Coupon
   get '/admin/coupons' do
+    @coupons = Coupon.all
     erb :'admin/coupons', layout: :admin
   end
 
   post '/admin/coupons/add' do
-    p Coupon.new(params["coupon"])
-    p params
-    #erb :'admin/coupons', layout: :admin
+    codes = CodeGenerator.generate(Coupon.all.map(&:code),
+                                            params["amount"])
+    codes.each do |c|
+      Coupon.create(params["coupon"].merge({code: c}))
+    end
+    redirect "/admin/coupons"
   end
 
 
