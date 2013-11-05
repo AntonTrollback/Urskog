@@ -197,6 +197,13 @@ class MyApp < Sinatra::Base
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
   end
 
+  put '/admin/retailers/:id/giftcards' do
+    p "update the giftcard"
+    @retailer = DMRetailer.find_one(params[:id])
+    p @retailer
+  end
+
+
   # Coupon
   get '/admin/coupons' do
     @coupons = Coupon.all

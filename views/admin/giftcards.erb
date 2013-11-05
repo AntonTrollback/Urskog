@@ -18,26 +18,24 @@
       <tbody>
         <% @giftcards.each do |g| %>
         <tr id="<%= g.id %>">
+          <form action="/admin/retailers/<%= @retailer.id %>/giftcards">
           <td><%= g.code %></td>
           <td><%= g.created_on %></td>
           <td>
-            <form>
-              <label class="table-checkbox table-status">
-                <input type="checkbox" <%= "checked" if g.constructed? %>>
-                <span>1</span>
-              </label>
-            </form>
+            <label class="table-checkbox table-status">
+              <input type="checkbox" <%= "checked" if g.constructed? %>>
+              <span>1</span>
+            </label>
           </td>
           <td>
-            <form>
-              <label class="table-checkbox table-status">
-                <input type="checkbox" <%= "checked" if g.shipped? %>>
-                <span>0</span>
-              </label>
-            </form>
+            <label class="table-checkbox table-status">
+              <input type="checkbox" <%= "checked" if g.shipped? %>>
+              <span>0</span>
+            </label>
           </td>
           <td><%= g.registered %></td>
           <td>RABBATKOD</td>
+        </form>
         </tr>
         <% end %>
       </tbody>

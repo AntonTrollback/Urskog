@@ -29,6 +29,9 @@ app.giftcardList =
       typeStatus = $label.is(".table-status")
       typeMark = $label.is(".table-mark")
 
+      # ANTON FIXA
+      formAction = $input[0].baseURI
+
       if checked
         $label.addClass("active").find("span").text("1")
       else
@@ -37,7 +40,7 @@ app.giftcardList =
       if typeMark
         that.updateRetailerMover(id)
       else if typeStatus
-        that.updateDatabase(id, checked)
+        that.updateDatabase(id, checked, formAction)
 
       that.updateSorter()
 
@@ -53,8 +56,15 @@ app.giftcardList =
   updateSorter: ->
     @table.trigger("update")
 
-  updateDatabase: (id, state) ->
-    console.log("AJAX:", id, state)
+  updateDatabase: (id, state, form) ->
+    console.log("AJAX:", id, state, form)
+    $.ajax
+      url: form.attr("action")
+      data: form.serialize()
+      type: "PUT"
+      success: (result) ->
+        console.log result
+
 
   updateRetailerMover: (id) ->
     found = $.inArray(id, @markedForMoving)
