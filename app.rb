@@ -65,6 +65,7 @@ class MyApp < Sinatra::Base
 
   get '/' do
     @slug = "home"
+    @fb_id = "6009404780545"
     erb :index
   end
 
@@ -84,6 +85,7 @@ class MyApp < Sinatra::Base
   get '/contact/?' do
     @slug = "contact"
     @title = "Contact"
+    @fb_id = "6009404782145"
     erb :contact
   end
 
@@ -95,6 +97,7 @@ class MyApp < Sinatra::Base
 
   get '/giftcard/?' do
     @slug = "giftcard"
+    @fb_id = "6009404792745"
     erb :register_giftcard
   end
 
@@ -102,6 +105,7 @@ class MyApp < Sinatra::Base
     @boards = Board.all
     @slug = "products"
     @title = "Products"
+    @fb_id = "6009404790345"
     erb :products
   end
 
@@ -121,6 +125,7 @@ class MyApp < Sinatra::Base
     @board = Board.find(params[:slug])
     redirect "/products" if @board.name.empty?
     @slug = "checkout"
+    @fb_id = "6009404782345"
     @title = @board.name
     @buy_option = params[:buy_option]
     @wood_type = params[:wood_type]
@@ -138,6 +143,7 @@ class MyApp < Sinatra::Base
       if Paymentprocessor.purchase(order, board, calculator)
         OrderEmail.new(order).send
         ReceiptEmail.new(order).send
+        @fb_id = "6009404791345"
         erb :'checkout/success'
       else
         erb :'checkout/payment_error'
