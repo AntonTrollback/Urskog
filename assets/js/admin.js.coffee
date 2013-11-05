@@ -24,13 +24,11 @@ app.giftcardList =
     $(".table-checkbox").on "change", "input", ->
       $input = $(this)
       $label = $input.closest("label")
+      $form = $input.closest("form")
       id = $input.closest("tr").attr("id")
       checked = $input.is(":checked")
       typeStatus = $label.is(".table-status")
       typeMark = $label.is(".table-mark")
-
-      # ANTON FIXA
-      formAction = $input[0].baseURI
 
       if checked
         $label.addClass("active").find("span").text("1")
@@ -40,7 +38,7 @@ app.giftcardList =
       if typeMark
         that.updateRetailerMover(id)
       else if typeStatus
-        that.updateDatabase(id, checked, formAction)
+        that.updateDatabase(id, checked, $form)
 
       that.updateSorter()
 
