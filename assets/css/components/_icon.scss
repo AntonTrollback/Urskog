@@ -4,24 +4,32 @@
 
 .Icon {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 31px;
+  height: 31px;
   text-decoration: none;
   text-indent: -200%;
+  opacity: .55;
+  @include transition(opacity .1s ease);
 
   &:hover {
     text-decoration: none;
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: 0.55;
+    @include transition(opacity 0 ease);
   }
 }
 
 .Icon--facebook {
   background: asset_data_uri('facebook.png');
   background: none, no-repeat asset_data_uri('facebook-x2.png');
-  background-size: 100% auto;
+  background-size: 30px auto;
 }
 
 .Icon--instagram {
   background: asset_data_uri('instagram.png');
   background: none, no-repeat asset_data_uri('instagram-x2.png');
-  background-size: 100% auto;
+  background-size: 30px auto;
 }
