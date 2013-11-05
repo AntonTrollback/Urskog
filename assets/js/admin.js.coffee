@@ -55,7 +55,6 @@ app.giftcardList =
     @table.trigger("update")
 
   updateDatabase: (id, state, form) ->
-    console.log("AJAX:", id, state, form)
     $.ajax
       url: form.attr("action")
       data: form.serialize()

@@ -198,9 +198,10 @@ class MyApp < Sinatra::Base
   end
 
   put '/admin/retailers/:id/giftcards' do
-    p "update the giftcard"
-    @retailer = DMRetailer.find_one(params[:id])
-    p @retailer
+    @retailer = DMRetailer.find(params[:id]).first
+    @giftcard = @retailer.giftcards.get(params["giftcard"]["id"])
+    @giftcard.update(params["giftcard"])
+    @giftcard.save
   end
 
 
