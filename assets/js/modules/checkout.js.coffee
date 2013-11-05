@@ -8,9 +8,6 @@ app.checkout =
   binds: ->
     that = this
 
-    # Init validation
-    app.validator.init(@el)
-
     @el.find('.js-next').click (e) ->
       e.preventDefault()
       if that.el.valid()
@@ -22,14 +19,9 @@ app.checkout =
 
     @el.submit (e) ->
       e.preventDefault()
-      # Validate again just to be sure
-      if that.el.valid()
-        # Disable button
-        $('.js-buy').attr('disabled', 'disabled').find('span').text('Loading…')
-        $('.js-buy').siblings('a').addClass('is-disabled')
-        that.createToken()
-      else
-        that.showForm()
+      $('.js-buy').attr('disabled', 'disabled').find('span').text('Loading…')
+      $('.js-buy').siblings('a').addClass('is-disabled')
+      that.createToken()
 
     # Support for pressing enter key
     $(document).keypress (e) ->
