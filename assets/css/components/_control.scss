@@ -38,6 +38,17 @@
     border-color: $color-link;
     background: lighten($color-link, 58%);
   }
+
+  &[readonly] {
+    background: #f2f2f2;
+    text-align: center;
+    font-size: 30px;
+    color: #585858;
+
+    &:focus {
+      background: #f2f2f2;
+    }
+  }
 }
 
 // menus
