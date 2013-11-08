@@ -5,13 +5,37 @@
       novalidate
       autocomplete="on">
 
-  <h1 class="u-textCenter u-paddingBl u-marginBl">Register giftcard</h1>
+  <h1 class="u-heading2 u-marginBm">Register your gift card</h1>
 
   <div class="Grid Grid--wide v2-Grid--2col js-registerGiftcard">
 
-    <div class="Grid-cell u-marginBl">
+    <div class="Grid-cell u-textSmaller">
+      <p>Have you received a gift card? Awesome! <br>Each gift card you register equals a <strong>25%</strong> discount on any purchase on urskog.com</p>
+      <ul class="List List--spacing u-textSmaller u-paddingLl">
+        <li>Fill out the fields on this page to get your <strong>discount code</strong></li>
+        <li>You will also receive a copy of the discount to your email, for safekeeping</li>
+        <li>If you have more than one gift card, simply visit this page as many times needed</li>
+        <li>Enter your discount code(s) when making a purchase on urskog.com</li>
+      </ul>
+    </div>
+
+    <div class="Grid-cell">
       <div class="Grid Grid--narrow">
         <div class="Grid-cell">
+          <div class="Control">
+
+            <label for="giftcard-string">Gift card</label>
+            <input class="Control-field v-giftcard"
+                   id="giftcard-string"
+                   name="giftcard[string]"
+                   type="text"
+                   maxlength="10"
+                   placeholder="●●●●●●●●●●"
+                   data-dev="0123456789"
+                   required
+                   autofocus>
+
+          </div>
           <div class="Control">
 
             <label for="giftcard-name">Name</label>
@@ -27,7 +51,7 @@
         <div class="Grid-cell">
           <div class="Control">
 
-            <label for="giftcard-email">Mail <span class="u-textMuted">(will receive the discount code)</span></label>
+            <label for="giftcard-email">Email</label>
             <input class="Control-field v-email"
                    id="giftcard-email"
                    name="giftcard[email]"
@@ -37,27 +61,8 @@
 
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="Grid-cell">
         <div class="Grid-cell">
-          <div class="Control">
-
-            <label for="giftcard-string">Giftcard code <span class="u-textMuted"></span></label>
-            <input class="Control-field v-giftcard"
-                   id="giftcard-string"
-                   name="giftcard[string]"
-                   type="text"
-                   maxlength="10"
-                   placeholder="●●●●●●●●●●"
-                   data-dev="0123456789"
-                   required>
-
-          </div>
-        </div>
-        <div class="Grid-cell u-textCenter u-paddingTm">
-          <button type="submit" class="Button Button--full v-submit"><span>Ok, I'm done</span></a>
+          <button type="submit" class="Button Button--full u-marginTs v-submit"><span>Get your discount</span></button>
         </div>
       </div>
     </div>
