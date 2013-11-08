@@ -19,6 +19,16 @@
 }
 
 /**
+ * Alter display property at specifc viewport sizes
+ */
+
+.u-blockForExtraNarrow {
+  @include max-width(470px) {
+    display: block;
+  }
+}
+
+/**
  * Control text styles
  */
 

@@ -16,14 +16,18 @@ MBP.enableActive()
 
 jQuery ->
 
-  app.validator.init($('.v-form'))
-  app.moveto.init($('.js-moveTo'))
-  app.tabbed.init($('.js-tabbed'))
-  app.shop.init($('.js-shop'))
-  app.checkout.init($('#payment-form'))
+  app.validator.init($(".v-form"))
+  app.moveto.init($(".js-moveTo"))
+  app.tabbed.init($(".js-tabbed"))
+  app.shop.init($(".js-shop"))
+  app.checkout.init($("#payment-form"))
+
+
+  $("input[readonly]").on "click", ->
+    $(this).select()
 
   # dev helper
   if window.location.hash is "#dev"
-    inputs = $('input[data-dev]')
+    inputs = $("input[data-dev]")
     for input in inputs
-      $(input).val($(input).data('dev'))
+      $(input).val($(input).data("dev"))
