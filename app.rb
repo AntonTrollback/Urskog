@@ -52,7 +52,7 @@ class MyApp < Sinatra::Base
 
   def title
     if defined? @title
-      "#{@title} — Urskog Longboard"
+      "#{@title} &middot; Urskog Longboard"
     else
       "Urskog Longboard"
     end
