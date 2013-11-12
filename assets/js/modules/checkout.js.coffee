@@ -1,59 +1,35 @@
 app.checkout =
+
   init: ($element) ->
     @el = $element
     return false  unless @el.length
     @readyToBuy = false
+    @buyButton = @el.find(".js-buy")
     @binds()
 
   binds: ->
     that = this
 
-    #@el.find('.js-next').click (e) ->
-    #  e.preventDefault()
-    #  if that.el.valid()
-    #    that.showConfirm()
-
-    #@el.find('.js-prev').click (e) ->
-    #  e.preventDefault()
-    #  that.showForm()
+    app.eventListener.add "walker", "walked", (data) ->
+      if data.direction = "forward"
+        if data.id == "card-details"
+          that.prefillCardName()
+        else if data.id == "confirm"
+          that.printConfirmData()
 
     @el.submit (e) ->
       e.preventDefault()
-      $('.js-buy').attr('disabled', 'disabled').find('span').text('Loading…')
-      $('.js-buy').siblings('a').addClass('is-disabled')
+      that.buyButton.attr('disabled', 'disabled').find('span').text('Loading…')
+      that.buyButton.siblings('a').addClass('is-disabled')
       that.createToken()
 
-    # Support for pressing enter key
-    $(document).keypress (e) ->
-      if e.which is 13
-        e.preventDefault()
-        that.nextAction()
+  prefillCardName: ->
+    # Prefill from valid shipping name
+    $cardName = @el.find('#card-holdername')
+    if $cardName.val().length == 0
+      $cardName.val(@el.find('#order-name.is-valid').val())
 
-    # Prefill card name from shipping name
-    @el.find('#card-holdername').one 'focus', (e) ->
-      $this = $(this)
-      if $this.val().length == 0
-        validShippingName = that.el.find('#order-name.is-valid').val()
-        $this.val(validShippingName)
-
-  showConfirm: (e) ->
-    @enterConfirmData()
-    @el.find('.js-checkoutForm').addClass('u-isHidden')
-    @el.find('.js-checkoutConfirm').removeClass('u-isHidden')
-    @readyToBuy = true
-
-  showForm: (e) ->
-    @el.find('.js-checkoutForm').removeClass('u-isHidden')
-    @el.find('.js-checkoutConfirm').addClass('u-isHidden')
-    @readyToBuy = false
-
-  nextAction: (e) ->
-    if @readyToBuy
-      @el.find('.js-buy').click()
-    else
-      @el.find('.js-next').click()
-
-  enterConfirmData: (e) ->
+  printConfirmData: ->
     fields = ["name", "email", "phone", "country", "street", "city", "postalCode"]
     for field in fields
       $("#confirm-#{field}").text(@el.find("#order-#{field}").val())
@@ -65,7 +41,7 @@ app.checkout =
     $('#confirm-cardNumber').text(firstDigets)
     $('#confirm-cardType').text(cardType)
 
-  createToken: (e) ->
+  createToken: ->
     # Paymill do not like name attribute
     @el.find('[name*=card]').removeAttr('name')
 
