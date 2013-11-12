@@ -54,13 +54,9 @@ app.checkout =
       @el.find('.js-next').click()
 
   enterConfirmData: (e) ->
-    $('#confirm-name').text(@el.find("#order-name").val())
-    $('#confirm-email').text(@el.find("#order-email").val())
-    $('#confirm-phone_number').text(@el.find("#order-phone_number").val())
-    $('#confirm-country').text(@el.find("#order-country").val())
-    $('#confirm-street').text(@el.find("#order-street").val())
-    $('#confirm-city').text(@el.find("#order-city").val())
-    $('#confirm-postalCode').text(@el.find("#order-postalCode").val())
+    fields = ["name", "email", "phone", "country", "street", "city", "postalCode"]
+    for field in fields
+      $("#confirm-#{field}").text(@el.find("#order-#{field}").val())
 
     cardNumber = @el.find("#card-number").val()
     firstDigets = cardNumber.substr(0, 5)
