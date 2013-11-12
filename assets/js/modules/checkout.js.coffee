@@ -8,14 +8,14 @@ app.checkout =
   binds: ->
     that = this
 
-    @el.find('.js-next').click (e) ->
-      e.preventDefault()
-      if that.el.valid()
-        that.showConfirm()
+    #@el.find('.js-next').click (e) ->
+    #  e.preventDefault()
+    #  if that.el.valid()
+    #    that.showConfirm()
 
-    @el.find('.js-prev').click (e) ->
-      e.preventDefault()
-      that.showForm()
+    #@el.find('.js-prev').click (e) ->
+    #  e.preventDefault()
+    #  that.showForm()
 
     @el.submit (e) ->
       e.preventDefault()
@@ -36,26 +36,22 @@ app.checkout =
         validShippingName = that.el.find('#order-name.is-valid').val()
         $this.val(validShippingName)
 
-
   showConfirm: (e) ->
     @enterConfirmData()
     @el.find('.js-checkoutForm').addClass('u-isHidden')
     @el.find('.js-checkoutConfirm').removeClass('u-isHidden')
     @readyToBuy = true
 
-
   showForm: (e) ->
     @el.find('.js-checkoutForm').removeClass('u-isHidden')
     @el.find('.js-checkoutConfirm').addClass('u-isHidden')
     @readyToBuy = false
-
 
   nextAction: (e) ->
     if @readyToBuy
       @el.find('.js-buy').click()
     else
       @el.find('.js-next').click()
-
 
   enterConfirmData: (e) ->
     $('#confirm-name').text(@el.find("#order-name").val())
@@ -73,7 +69,6 @@ app.checkout =
     $('#confirm-cardNumber').text(firstDigets)
     $('#confirm-cardType').text(cardType)
 
-
   createToken: (e) ->
     # Paymill do not like name attribute
     @el.find('[name*=card]').removeAttr('name')
@@ -87,7 +82,6 @@ app.checkout =
       amount_int: @el.find("#card-amountInt").val() # Integer z.B. "4900" für 49,00 EUR
       currency:   @el.find("#card-currency").val() # ISO 4217 z.B. "EUR"
     , @PaymillResponseHandler
-
 
   PaymillResponseHandler: (error, result) =>
     that = window.app.checkout

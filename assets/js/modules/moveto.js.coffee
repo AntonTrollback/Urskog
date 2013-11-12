@@ -12,21 +12,17 @@ app.moveto =
     width = if @staticWidth then @staticWidth else window.innerWidth
     that.testSize(width)
 
-
-
   binds: ->
     that = this
 
     $(window).resize ->
       that.testSize(window.innerWidth)
 
-
   testSize: (width) ->
     if width >= @breakpoint && (@currentViewport == "narrow" || !@currentViewport?)
       @viewpoitAction("wide")
     else if width < @breakpoint && (@currentViewport == "wide" || !@currentViewport?)
       @viewpoitAction("narrow")
-
 
   viewpoitAction: (size) ->
     @currentViewport = size

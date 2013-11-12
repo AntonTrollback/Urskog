@@ -5,6 +5,7 @@
 #= require lib/mbp.js
 #= require modules/moveto.js
 #= require modules/tabbed.js
+#= require modules/walker.js
 #= require modules/validator.js
 #= require modules/shop.js
 #= require modules/checkout.js
@@ -20,6 +21,7 @@ jQuery ->
   app.moveto.init($(".js-moveTo"))
   app.tabbed.init($(".js-tabbed"))
   app.shop.init($(".js-shop"))
+  app.walker.init($(".js-walker"))
   app.checkout.init($("#payment-form"))
 
 

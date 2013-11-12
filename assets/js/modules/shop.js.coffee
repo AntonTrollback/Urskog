@@ -15,7 +15,6 @@ app.shop =
     # preserved when moving in browser history
     @changeShopContent(@el.find('.js-shopControl:checked').attr('id'))
 
-
   changeShopContent: (optionName) ->
     @el.find('.js-shopOption').addClass('u-isHidden')
     @el.find("##{optionName}Content").removeClass('u-isHidden')

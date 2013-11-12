@@ -29,7 +29,7 @@
 <hr class="Hr Hr--full">
 
 
-<form class="Constrained Constrained--xs u-paddingTl v-form"
+<form class="Constrained Constrained--xs u-paddingTl v-form js-walker"
       id="payment-form"
       action="/checkout/<%= @board.slug %>"
       method="POST"
@@ -55,9 +55,9 @@
          type="hidden">
 
 
-  <section class="js-formStep">
+  <section class="js-step" id="shipping-information">
     <h2 class="u-heading2 u-marginBl">Shipping information</h2>
-    <div class="Grid Grid--wide Grid--center v2-Grid--2col js-checkoutForm">
+    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
       <div class="Grid-cell u-marginBl">
         <div class="Grid Grid--narrow">
           <div class="Grid-cell">
@@ -150,9 +150,9 @@
   </section>
 
 
-  <section class="js-formStep u-isHidden">
+  <section class="js-step u-isHidden" id="card-details">
     <h2 class="u-heading2 u-marginBl">Card details</h2>
-    <div class="Grid Grid--wide Grid--center v2-Grid--2col js-checkoutForm">
+    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
       <div class="Grid-cell u-marginBl">
         <div class="Control">
             <label for="card-holdername">Name on card</label>
@@ -214,7 +214,7 @@
   </section>
 
 
-  <section class="js-formStep u-isHidden" class="u-paddingTm">
+  <section class="js-step u-paddingTm u-isHidden" id="confirm">
     <h2 class="u-heading2 u-marginBl">Confirm purchase</h2>
     <div class="Grid Grid--wide v2-Grid--2col">
       <div class="Grid-cell">
