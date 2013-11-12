@@ -4,43 +4,50 @@ app.walker =
     @el = $element
     return false  unless @el.length
     @steps = @el.find(".js-step")
-    @backward = @el.find(".js-prev")
-    @forward = @el.find(".js-next")
+    @validatedWalker = @el.is('.js-validate')
+    if @validatedWalker
+      @allowedToWalk = false
     @binds()
 
   binds: ->
     that = this
 
-    @backward.on "click", (e) ->
+    @el.find(".js-prev").on "click", (e) ->
       e.preventDefault()
-      that.moveBackward()
+      that.walkBackward()
 
-    @forward.on "click", (e) ->
+    @el.find(".js-next").on "click", (e) ->
       e.preventDefault()
-      that.moveForward()
+      that.walkForward()
 
+    app.eventListener.add "validator", "validate", (data) ->
+      if data.valid
+        that.allowedToWalk = true
+      else
+        that.allowedToWalk = false
 
   getIndex: (item) ->
     @steps.index($(item[0]))
 
-  moveBackward: ->
+  walkBackward: ->
     target = @steps.not(".u-isHidden").prev(".js-step")
-    @moveTo(@getIndex(target))
+    @walk(@getIndex(target), "backward")
 
-  moveForward: ->
+  walkForward: ->
     target = @steps.not(".u-isHidden").next(".js-step")
-    @moveTo(@getIndex(target))
+    @walk(@getIndex(target), "forward")
 
-  moveTo: (index) ->
-    @steps.not("u-isHidden").addClass("u-isHidden")
-    $(@steps[index]).removeClass("u-isHidden")
-    #@updateNavigation(index)
+  walk: (index, direction) ->
+    if @validatedWalker and direction == "forward"
+      app.eventListener.fire "walker", "wishToWalk", null
 
-  #updateNavigation: (current) ->
-  #  @prevButton.prepareTransition().removeClass("is-disabled")
-  #  @nextButton.prepareTransition().removeClass("is-disabled")
-  #
-  #  if current + 1 == 1
-  #    @prevButton.prepareTransition().addClass("is-disabled")
-  #  if current + 1 == @steps.length
-  #    @nextButton.prepareTransition().addClass("is-disabled")
+    if @allowedToWalk or direction == "backward"
+      @steps.not("u-isHidden").addClass("u-isHidden")
+      $target = $(@steps[index]).removeClass("u-isHidden")
+
+      data =
+        id: $target.attr("id")
+        direction: direction
+      app.eventListener.fire "walker", "walked", data
+
+

@@ -29,8 +29,7 @@
 <hr class="Hr Hr--full">
 
 
-<form class="Constrained Constrained--xs u-paddingTl v-form js-walker"
-      id="payment-form"
+<form class="Constrained Constrained--xs u-paddingTl js-walker js-checkout js-validate"
       action="/checkout/<%= @board.slug %>"
       method="POST"
       novalidate
@@ -233,7 +232,7 @@
       <div class="Grid-cell">
         <p>Great work! Pressing the confirm button below will complete your purchase. The board will be shipped with DHL and arrived to you within <strong>three to five days</strong>. A package tracking ID will be sent to you by email.</p>
         <a href="#" class="js-prev u-pullStart" style="margin-top:17px">Back</a>
-        <button class="Button js-buy u-marginTs u-pullEnd u-size4of5" type="submit"><span>Confirm</span></button>
+        <button type="submit" class="Button js-buy u-marginTs u-pullEnd u-size4of5"><span>Confirm</span></button>
       </div>
     </div>
   </section>

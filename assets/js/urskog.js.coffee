@@ -18,12 +18,12 @@ MBP.enableActive()
 
 jQuery ->
 
-  app.validator.init($(".v-form"))
-  app.moveto.init($(".js-moveTo"))
-  app.tabbed.init($(".js-tabbed"))
-  app.shop.init($(".js-shop"))
+  app.validator.init($(".js-validate"))
   app.walker.init($(".js-walker"))
-  app.checkout.init($("#payment-form"))
+  app.tabbed.init($(".js-tabbed"))
+  app.moveto.init($(".js-moveTo"))
+  app.shop.init($(".js-shop"))
+  app.checkout.init($(".js-checkout"))
 
 
   $("input[readonly]").on "click", ->

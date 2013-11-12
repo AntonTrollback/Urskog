@@ -1,4 +1,5 @@
 app.validator =
+
   init: ($element) ->
     @el = $element
     return false  unless @el.length
@@ -9,23 +10,32 @@ app.validator =
   binds: ->
     that = this
 
-    @el.on 'click', '.v-submit', (e) ->
+    @el.on "click", ".js-submit", (e) ->
       e.preventDefault()
-      if that.el.valid()
-        that.el.submit()
+      if that.validate()
+        $(this).trigger("submit")
+
+    app.eventListener.add "walker", "wishToWalk", (data) ->
+      that.validate()
+
+  validate: () ->
+    valid = @el.valid()
+    data =
+      valid: valid
+    app.eventListener.fire "validator", "validate", data
+    return valid
 
   initPlugin: ->
     @el.validate(
       errorClass: "is-invalid"
       validClass: "is-valid"
-      ignore: ":hidden"
+      ignore: ":hidden *,:disabled"
       focusInvalid: true
       errorPlacement: (error, field) ->
       success: (label, field) ->
     )
 
   customTests: ->
-
     # Extend validation with jquery.payment plugin
     $('.v-cardNumber').payment('formatCardNumber');
     $('.v-expiry').payment('formatCardExpiry');
@@ -42,7 +52,7 @@ app.validator =
 
     # Has 4 or more characters
     $.validator.addMethod "v-length", ((value, element) ->
-      @optional(element) or value.length >= 4 # Also a Paymill limit
+      @optional(element) or value.length >= 4 # Paymill limit
     ), "msg"
 
     # Card number
