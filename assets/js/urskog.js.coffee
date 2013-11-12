@@ -3,6 +3,7 @@
 #= require lib/jquery.payment.js
 #  require lib/jquery.reel.js
 #= require lib/mbp.js
+#= require modules/eventlistener.js
 #= require modules/moveto.js
 #= require modules/tabbed.js
 #= require modules/walker.js
