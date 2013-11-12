@@ -14,9 +14,10 @@ require_relative 'db/migrations/all_migrations'
 
 require_relative 'lib/order_email'
 require_relative 'lib/receipt_email'
+require_relative 'lib/giftcard_email'
 
 require_relative 'models/board'
-require_relative 'models/country'
+require_relative 'models/country' 
 require_relative 'models/retailer'
 require_relative 'models/dm_retailer'
 require_relative 'models/coupon'
@@ -96,9 +97,38 @@ class MyApp < Sinatra::Base
   end
 
   get '/giftcard/?' do
+    @flash = {}
     @slug = "giftcard"
     @fb_id = "6009404792745"
     erb :register_giftcard
+  end
+  
+  post '/giftcard' do
+    @flash = {}
+    # Find giftcard
+    giftcard = Giftcard.first(code: params["giftcard"]["string"])
+    # Check if it's valid (not registered and exists)
+    if giftcard.nil? || giftcard.registered?
+      # Show error message
+      @flash["error"] = "Your giftcard code is invalid"
+      @flash["name"]  = params["giftcard"]["name"]
+      @flash["email"] = params["giftcard"]["email"]
+      erb :register_giftcard
+    else
+      # Update the giftcard with the users information(name, email)
+      giftcard.register(params["giftcard"]["name"],
+                        params["giftcard"]["email"])
+
+      # Generate coupon
+      @code = CodeGenerator.generate(Coupon.all.map(&:code), 1).first
+      # Create the coupon as a child to the giftcard
+      giftcard.coupons.create({code: @code, discount: 25})
+      # Send okay mail
+      GiftcardEmail.new(params["giftcard"]["name"],
+                        params["giftcard"]["email"],
+                        @code).send
+      erb :register_success
+    end
   end
 
   get '/products/?' do

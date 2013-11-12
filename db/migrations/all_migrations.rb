@@ -142,5 +142,20 @@ migration 11, :create_coupons do
   end
 end
 
+migration 12, :add_name_and_email_to_giftcards do
+  up do
+    modify_table :giftcards do
+      add_column :name, String, :size => 255
+      add_column :email, String, :size => 255
+    end
+  end
+
+  down do
+    modify_table :giftcards do
+      remove_column :name
+      remove_column :email
+    end
+  end
+end
 #migrate_down!
 migrate_up!

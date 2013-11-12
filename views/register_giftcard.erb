@@ -1,9 +1,15 @@
 <form class="Constrained Constrained--xs v-form"
       id="register-giftcard-form"
-      action="-"
+      action="/giftcard"
       method="POST"
       novalidate
       autocomplete="on">
+
+  <% unless @flash["error"].nil? %>
+  <div class="error">
+    ERROR: <%= @flash["error"] %>
+  </div>
+  <% end %>
 
   <h1 class="u-heading2 u-marginBm">Register your gift card</h1>
 
@@ -44,6 +50,7 @@
                    name="giftcard[name]"
                    type="text"
                    data-dev="Example Name"
+                   value="<%= @flash["name"] %>"
                    required>
 
           </div>
@@ -57,6 +64,7 @@
                    name="giftcard[email]"
                    type="email"
                    data-dev="anton@urskog.com"
+                   value="<%= @flash["email"] %>"
                    required>
 
           </div>
