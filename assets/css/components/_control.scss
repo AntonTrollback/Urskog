@@ -53,7 +53,7 @@
   &[disabled] {
     background: #f2f2f2;
     color: #585858;
-    cursor: not-allowed;
+    cursor: default;
   }
 
   &.is-correct {
@@ -150,6 +150,18 @@ label.Control {
 .Control-field.is-invalid {
   + .Control-addon {
     border-top-color: $color-danger;
+    color: $color-danger;
+  }
+}
+
+.Control-field.is-correct + .Control-addon,
+.Control-addon:disabled {
+  color: #A0A0A0;
+  background: #f8f8f8;
+  text-shadow: 0 1px white;
+
+  &:active {
+    box-shadow: none;
   }
 }
 
