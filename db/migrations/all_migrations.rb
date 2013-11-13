@@ -157,5 +157,20 @@ migration 12, :add_name_and_email_to_giftcards do
     end
   end
 end
+
+migration 13, :add_registered do
+  up do
+    modify_table :coupons do
+      add_column :registered, DateTime
+    end
+  end
+
+  down do
+    modify_table :coupons do
+      remove_column :registered
+    end
+  end
+end
+
 #migrate_down!
 migrate_up!

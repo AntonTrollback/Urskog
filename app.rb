@@ -131,6 +131,19 @@ class MyApp < Sinatra::Base
     end
   end
 
+  post '/discount' do
+    # Find the coupon
+    coupon = Coupon.first(code: params["code"])
+
+    if coupon.nil? || coupon.used?
+      {status: false, sum: params["amount"]}.to_json
+    else
+      new_sum = calculate_discount(params["amount"], coupon.discount)
+      coupon.use
+      {status: true, sum: new_sum}.to_json
+    end
+  end
+
   get '/products/?' do
     @boards = Board.all
     @slug = "products"
@@ -183,6 +196,9 @@ class MyApp < Sinatra::Base
     end
   end
 
+  def calculate_discount(amount, discount)
+    (amount.to_f * ((100 - discount).to_f / 100)).round.to_i
+  end
 
   # Admin login
   get '/login' do
