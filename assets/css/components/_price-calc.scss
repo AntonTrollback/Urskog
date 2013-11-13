@@ -11,15 +11,18 @@
   padding: 14px 0 16px 17px;
 
   &.is-reduced {
+    .PriceCalc-result {
+      color: $color-success;
+    }
+
     .PriceCalc-desc {
-      color: #999;
+      display: block;
     }
   }
 }
 
 .PriceCalc-result {
   font-size: 18px;
-  color: $color-success;
 
   strong {
     display: inline-block;
@@ -30,5 +33,7 @@
 }
 
 .PriceCalc-desc {
+  display: none;
   font-size: 14px;
+  color: #888;
 }

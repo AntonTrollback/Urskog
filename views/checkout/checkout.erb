@@ -49,11 +49,11 @@
          type="hidden">
 
   <section class="js-step" id="discount-codes">
-    <h2 class="u-heading2 u-marginBl">Discounts</h2>
+    <h2 class="u-heading2 u-marginBl">Discount</h2>
     <div class="Grid Grid--wide Grid--center v2-Grid--2col">
       <div class="Grid-cell u-textSmaller">
-        <p class="u-marginTs">If you have any discounts that you wish to use, enter them here. If not, simply press the "next" button.</p>
-        <p>Have you recived a giftcard? <br>You first need to <a href="/giftcard">register it</a> to get the discount.</p>
+        <p class="u-marginTs">If you have any discount codes that you wish to use, enter them here. If not, simply press the "next" button.</p>
+        <p>Have you recived a giftcard? <br>You first need to <a href="/giftcard" target="_blank">register it</a> to get the discount.</p>
 
 
 
@@ -77,6 +77,25 @@
         </div>
       </div>
       <div class="Grid-cell">
+        <div class="Grid Grid--narrow v3-Grid--2col">
+          <div class="Grid-cell">
+            <div class="Control has-addon">
+            <input class="Control-field"
+                   name="discount[string]"
+                   type="text"
+                   maxlength="10"
+                   placeholder="●●●●●●●●●●"
+                   autocomplete="off"
+                   data-dev="0123456789">
+            <button class="Control-addon">Save</button>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="Control">
+              <button class="Control-creator">Add another</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="Grid-cell u-textCenter u-marginTl">
         <a href="#" class="Button Button--full js-next"><span>Next</span></a>
