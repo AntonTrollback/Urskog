@@ -139,7 +139,6 @@ class MyApp < Sinatra::Base
       {status: false, sum: params["amount"]}.to_json
     else
       new_sum = calculate_discount(params["amount"], coupon.discount)
-      coupon.use
       {status: true, sum: new_sum}.to_json
     end
   end
