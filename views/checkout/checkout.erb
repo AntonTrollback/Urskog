@@ -9,18 +9,13 @@
           <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> the deck and some stickers.</p>
         <% end %>
         <p class="u-marginTn u-marginBm"><strong class="u-marginRs">Type of wood:</strong> <%= @wood_type %></p>
-        <% if @buy_option == "complete" %>
-          <p class="u-marginTm"><strong class="u-marginRs">Total price:</strong> <%= @board.price.complete %> <small>SEK</small> (free shipping)</p>
-        <% else %>
-          <p class="u-marginTm"><strong class="u-marginRs">Total price:</strong> <%= @board.price.deck %> <small>SEK</small> (free shipping)</p>
-        <% end %>
       </div>
     </div>
     <div class="Grid-cell u-marginTl u-paddingTm">
       <% if @buy_option == "complete" %>
-        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg">
+        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg">
       <% else %>
-        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
+        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
       <% end %>
     </div>
   </div>
@@ -53,8 +48,44 @@
          value="<%= @wood_type %>"
          type="hidden">
 
+  <section class="js-step" id="discount-codes">
+    <h2 class="u-heading2 u-marginBl">Discounts</h2>
+    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
+      <div class="Grid-cell u-textSmaller">
+        <p class="u-marginTs">If you have any discounts that you wish to use, enter them here. If not, simply press the "next" button.</p>
+        <p>Have you recived a giftcard? <br>You first need to <a href="/giftcard">register it</a> to get the discount.</p>
 
-  <section class="js-step" id="shipping-information">
+
+
+
+        <div class="PriceCalc">
+          <div class="PriceCalc-result">
+            <% if @buy_option == "complete" %>
+              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.complete %></span> <small>SEK</small>
+            <% else %>
+              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.deck %></span> <small>SEK</small>
+            <% end %>
+          </div>
+          <div class="PriceCalc-desc">
+            <% if @buy_option == "complete" %>
+              <span class="js-defaultPrice"><%= @board.price.complete %></span>
+            <% else %>
+              <span class="js-defaultPrice"><%= @board.price.deck %></span>
+            <% end %>
+             - <span class="js-discount">0 <small>SEK</small></span> (<span class="js-discountPercentage">0%</span>)</span>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell">
+      </div>
+      <div class="Grid-cell u-textCenter u-marginTl">
+        <a href="#" class="Button Button--full js-next"><span>Next</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="js-step u-isHidden" id="shipping-information">
     <h2 class="u-heading2 u-marginBl">Shipping information</h2>
     <div class="Grid Grid--wide Grid--center v2-Grid--2col">
       <div class="Grid-cell">
@@ -143,7 +174,8 @@
         </div>
       </div>
       <div class="Grid-cell u-textCenter u-marginTl">
-        <a href="#" class="Button Button--full js-next"><span>Ok, next</span></a>
+        <a href="#" class="js-prev u-pullStart" style="margin-top:17px">Back</a>
+        <a href="#" class="Button Button--full js-next u-marginTs u-pullEnd u-size4of5"><span>Next</span></a>
       </div>
     </div>
   </section>
