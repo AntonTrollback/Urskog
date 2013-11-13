@@ -10,6 +10,7 @@
 #= require modules/validator.js
 #= require modules/shop.js
 #= require modules/checkout.js
+#= require modules/discount.js
 #  require modules/rotate.js
 
 MBP.scaleFix()
@@ -24,6 +25,7 @@ jQuery ->
   app.moveto.init($(".js-moveTo"))
   app.shop.init($(".js-shop"))
   app.checkout.init($(".js-checkout"))
+  app.discount.init($(".js-discount"))
 
 
   $("input[readonly]").on "click", ->

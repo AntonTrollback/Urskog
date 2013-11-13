@@ -48,7 +48,7 @@
          value="<%= @wood_type %>"
          type="hidden">
 
-  <section class="js-step" id="discount-codes">
+  <section class="js-step js-discount" id="discount-codes">
     <h2 class="u-heading2 u-marginBl">Discount</h2>
     <div class="Grid Grid--wide Grid--center v2-Grid--2col">
       <div class="Grid-cell u-textSmaller">
@@ -78,21 +78,23 @@
       </div>
       <div class="Grid-cell">
         <div class="Grid Grid--narrow v3-Grid--2col">
-          <div class="Grid-cell">
-            <div class="Control has-addon">
-            <input class="Control-field"
-                   name="discount[string]"
-                   type="text"
-                   maxlength="10"
-                   placeholder="●●●●●●●●●●"
-                   autocomplete="off"
-                   data-dev="0123456789">
-            <button class="Control-addon">Save</button>
+          <% 4.times do |i| %>
+            <div class='Grid-cell <%= "u-isHidden" unless i == 0 %> js-discountControl'>
+              <div class="Control has-addon">
+              <input class="Control-field"
+                     name="discount[string]"
+                     type="text"
+                     maxlength="10"
+                     placeholder="●●●●●●●●●●"
+                     autocomplete="off"
+                     data-dev="0123456789">
+              <button class="Control-addon">Save</button>
+              </div>
             </div>
-          </div>
+          <% end %>
           <div class="Grid-cell">
             <div class="Control">
-              <button class="Control-creator">Add another</button>
+              <button class="Control-creator js-showControl">Add another</button>
             </div>
           </div>
         </div>
