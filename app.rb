@@ -135,7 +135,7 @@ class MyApp < Sinatra::Base
     # Find the coupon
     coupon = Coupon.first(code: params["code"])
 
-    if coupon.nil? || coupon.used?
+    if Coupon.valid?(coupon)
       {status: false, sum: params["amount"]}.to_json
     else
       new_sum = calculate_discount(params["amount"], coupon.discount)

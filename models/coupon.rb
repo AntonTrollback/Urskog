@@ -11,6 +11,10 @@ class Coupon
 
   belongs_to :giftcard, :required => false
 
+  def self.valid?(coupon)
+    coupon.nil? || coupon.used?
+  end
+
   def used?
     registered
   end
