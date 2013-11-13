@@ -40,13 +40,14 @@
          type="hidden"
          id="card-currency">
 
-  <!-- Buy options -->
+  <!-- Buy settings -->
   <input name="order[type_of_purchase]"
          value="<%= @buy_option %>"
          type="hidden">
   <input name="order[wood_type]"
          value="<%= @wood_type %>"
          type="hidden">
+  <input name="order[discount]" type="hidden">
 
   <section class="js-step js-discount" id="discount-codes">
     <h2 class="u-heading2 u-marginBl">Discount</h2>

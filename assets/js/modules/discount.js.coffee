@@ -4,6 +4,8 @@ app.discount =
     @el = $element
     return false  unless @el.length
     @controls = @el.find(".js-discountControl")
+    @currentTotal = parseInt(@el.find(".js-priceResult").val())
+    @usedCodes = []
     @binds()
 
   binds: ->
@@ -15,12 +17,11 @@ app.discount =
 
     @controls.on "click", "button", (e) ->
       e.preventDefault()
-      console.log("ACTION")
       $this = $(this)
 
       $input = $this.siblings("input")
       state = $input.data("state")
-      that.getDiscountStatus($this, $input)
+      that.discountButtonAction($this, $input)
 
     # Clear states on input focus
     @controls.on "focus", "input", (e) ->
@@ -43,25 +44,49 @@ app.discount =
     unless @controls.is(".u-isHidden")
       $button.hide()
 
-  getDiscountStatus: ($button, $input) ->
-    that = this
+  discountButtonAction: ($button, $input) ->
     value = $input.val()
 
     if @validateDiscount(value)
       @loadingState($button, $input)
-      setTimeout (->
-        if window.location.hash is "#valid"
-          that.successState($button, $input)
-        else
-          that.errorState($button, $input)
-      ), 1500
+      @getDiscountStatus($button, $input, value, @currentTotal)
     else
       @errorState($button, $input, "Invalid")
 
-
-
   validateDiscount: (value) ->
-    value.length == 10 and /^[A-Za-z0-9]+$/.test(value)
+    that = this
+    $.inArray(value, @usedCodes) == -1 and (value.length == 10 and /^[A-Za-z0-9]+$/.test(value))
+
+  getDiscountStatus: ($button, $input, code, currentTotal) ->
+    that = this
+
+    setTimeout (->
+      SENDIN = [code, currentTotal]
+      data =
+        status: window.location.hash is "#valid"
+        amount: 1000
+        percentage: 25
+
+      if data.status
+        that.saveDiscount($button, $input, code, data)
+      else
+        that.errorState($button, $input)
+    ), 1500
+
+    return true
+
+  saveDiscount: ($button, $input, code, data) ->
+    @successState($button, $input)
+    @currentTotal = data.amount
+    @currentPercentage = @currentPercentage + data.percentage
+    @usedCodes.push(code)
+
+    eventData =
+      code: code
+      amount: @currentTotal
+      percentage: @currentPercentage
+
+    app.eventListener.fire "discount", "added", eventData
 
   loadingState: ($button, $input) ->
     @clearState($button, $input)

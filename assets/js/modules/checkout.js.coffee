@@ -15,6 +15,9 @@ app.checkout =
         else if data.id == "confirm"
           that.printConfirmData()
 
+    app.eventListener.add "discount", "added", (data) ->
+      # Update DOM
+
     @el.on "click", ".js-buy", (e) ->
       e.preventDefault()
       that.createToken()
