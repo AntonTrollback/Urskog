@@ -49,7 +49,7 @@ app.discount =
 
     if @validateDiscount(value)
       @loadingState($button, $input)
-      @getDiscountStatus($button, $input, value, @currentTotal)
+      @getDiscountStatus($button, $input, value)
     else
       @errorState($button, $input, "Invalid")
 
@@ -57,27 +57,26 @@ app.discount =
     that = this
     $.inArray(value, @usedCodes) == -1 and (value.length == 10 and /^[A-Za-z0-9]+$/.test(value))
 
-  getDiscountStatus: ($button, $input, code, currentTotal) ->
+  getDiscountStatus: ($button, $input, code) ->
     that = this
 
-    setTimeout (->
-      SENDIN = [code, currentTotal]
-      data =
-        status: window.location.hash is "#valid"
-        amount: 1000
-        percentage: 25
+    data =
+      code: code
+      amount: @currentTotal
 
-      if data.status
-        that.saveDiscount($button, $input, code, data)
-      else
-        that.errorState($button, $input)
-    ), 1500
-
-    return true
+    $.ajax
+      url: "/discount"
+      data: JSON.stringify(data)
+      type: "PUT"
+      success: (result) ->
+        if result.status
+          that.saveDiscount($button, $input, code, result)
+        else
+          that.errorState($button, $input)
 
   saveDiscount: ($button, $input, code, data) ->
     @successState($button, $input)
-    @currentTotal = data.amount
+    @currentTotal = data.sum
     @currentPercentage = @currentPercentage + data.percentage
     @usedCodes.push(code)
 
