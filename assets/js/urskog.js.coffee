@@ -3,11 +3,14 @@
 #= require lib/jquery.payment.js
 #  require lib/jquery.reel.js
 #= require lib/mbp.js
+#= require modules/eventlistener.js
 #= require modules/moveto.js
 #= require modules/tabbed.js
+#= require modules/walker.js
 #= require modules/validator.js
 #= require modules/shop.js
 #= require modules/checkout.js
+#= require modules/discount.js
 #  require modules/rotate.js
 
 MBP.scaleFix()
@@ -16,11 +19,13 @@ MBP.enableActive()
 
 jQuery ->
 
-  app.validator.init($(".v-form"))
-  app.moveto.init($(".js-moveTo"))
+  app.validator.init($(".js-validate"))
+  app.walker.init($(".js-walker"))
   app.tabbed.init($(".js-tabbed"))
+  app.moveto.init($(".js-moveTo"))
   app.shop.init($(".js-shop"))
-  app.checkout.init($("#payment-form"))
+  app.checkout.init($(".js-checkout"))
+  app.discount.init($(".js-discount"))
 
 
   $("input[readonly]").on "click", ->

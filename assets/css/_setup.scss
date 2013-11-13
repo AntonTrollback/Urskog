@@ -12,6 +12,8 @@ $color-hr: rgba(204, 201, 199, .5);
 $color-hr-hex: #e8e6e5;
 $color-muted: #888;
 $color-stripe: #f6f5f2;
+$color-success: #3F9E21;
+$color-danger: #f06060;
 
 // Mixins
 // -----------------------------------------------------------------------------
@@ -47,6 +49,7 @@ $color-stripe: #f6f5f2;
 @import "components/tabbed";
 @import "components/icon";
 @import "components/rotate";
+@import "components/price-calc";
 
 // Utilities
 // -----------------------------------------------------------------------------

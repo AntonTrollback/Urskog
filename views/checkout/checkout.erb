@@ -1,9 +1,7 @@
 <section class="Constrained Constrained--xs">
   <div class="Grid Grid--wide v2-Grid--2col">
     <div class="Grid-cell">
-
       <h1><%= @board.name %></h1>
-
       <div class="u-textSmaller">
         <% if @buy_option == "complete" %>
           <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> <%= @board.setup %></p>
@@ -11,31 +9,22 @@
           <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> the deck and some stickers.</p>
         <% end %>
         <p class="u-marginTn u-marginBm"><strong class="u-marginRs">Type of wood:</strong> <%= @wood_type %></p>
-        <% if @buy_option == "complete" %>
-          <p class="u-marginTm"><strong class="u-marginRs">Total price:</strong> <%= @board.price.complete %> <small>SEK</small> (free shipping)</p>
-        <% else %>
-          <p class="u-marginTm"><strong class="u-marginRs">Total price:</strong> <%= @board.price.deck %> <small>SEK</small> (free shipping)</p>
-        <% end %>
       </div>
-
     </div>
     <div class="Grid-cell u-marginTl u-paddingTm">
-
       <% if @buy_option == "complete" %>
-        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg">
+        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg">
       <% else %>
-        <img class="u-sizeFull u-marginTl" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
+        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
       <% end %>
-
     </div>
   </div>
 </section>
 
-<hr class="Hr--full">
+<hr class="Hr Hr--full">
 
 
-<form class="Constrained Constrained--xs v-form"
-      id="payment-form"
+<form class="Constrained Constrained--xs u-paddingTl js-walker js-checkout js-validate"
       action="/checkout/<%= @board.slug %>"
       method="POST"
       novalidate
@@ -51,122 +40,173 @@
          type="hidden"
          id="card-currency">
 
+  <!-- Buy options -->
+  <input name="order[type_of_purchase]"
+         value="<%= @buy_option %>"
+         type="hidden">
+  <input name="order[wood_type]"
+         value="<%= @wood_type %>"
+         type="hidden">
 
-  <div class="Grid Grid--wide v2-Grid--2col js-checkoutForm">
-
-    <!-- Buy options -->
-    <input name="order[type_of_purchase]"
-           value="<%= @buy_option %>"
-           type="hidden">
-    <input name="order[wood_type]"
-           value="<%= @wood_type %>"
-           type="hidden">
+  <section class="js-step js-discount" id="discount-codes">
+    <h2 class="u-heading2 u-marginBl">Discount</h2>
+    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
+      <div class="Grid-cell u-textSmaller">
+        <p class="u-marginTs">If you have any discount codes that you wish to use, enter them here. If not, simply press the "next" button.</p>
+        <p>Have you recived a giftcard? <br>You first need to <a href="/giftcard" target="_blank">register it</a> to get the discount.</p>
 
 
-    <div class="Grid-cell u-marginBl">
-      <h2 class="u-heading2 u-marginBl">Shipping information</h2>
 
-      <div class="Grid Grid--narrow">
-        <div class="Grid-cell">
-          <div class="Control">
 
-            <label for="order-name">Name</label>
-            <input class="Control-field v-length"
-                   id="order-name"
-                   name="order[name]"
-                   type="text"
-                   data-dev="Example Name"
-                   required>
-
+        <div class="PriceCalc">
+          <div class="PriceCalc-result">
+            <% if @buy_option == "complete" %>
+              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.complete %></span> <small>SEK</small>
+            <% else %>
+              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.deck %></span> <small>SEK</small>
+            <% end %>
           </div>
-        </div>
-        <div class="Grid-cell">
-          <div class="Control">
-
-            <label for="order-email">Email</label>
-            <input class="Control-field v-email"
-                   id="order-email"
-                   name="order[email]"
-                   type="email"
-                   data-dev="anton@urskog.com"
-                   required>
-
-          </div>
-        </div>
-        <div class="Grid-cell">
-          <div class="Control">
-
-            <label for="order-phone_number">Phone number</label>
-            <input class="Control-field v-length"
-                   id="order-phone_number"
-                   name="order[phone_number]"
-                   type="phone_number"
-                   data-dev="07061234567"
-                   required>
-
-          </div>
-        </div>
-        <div class="Grid-cell u-size1of2">
-          <div class="Control">
-
-            <label for="order-country">Country</label>
-            <input class="Control-field"
-                   id="order-country"
-                   name="order[country]"
-                   type="text"
-                   data-dev="Sweden"
-                   required>
-
-          </div>
-        </div>
-        <div class="Grid-cell u-size1of2">
-          <div class="Control">
-
-            <label for="order-street">Street</label>
-            <input class="Control-field"
-                   id="order-street"
-                   name="order[street]"
-                   type="text"
-                   data-dev="Example 10"
-                   required>
-
-          </div>
-        </div>
-        <div class="Grid-cell u-size1of2">
-          <div class="Control">
-
-            <label for="order-city">City</label>
-            <input class="Control-field"
-                   id="order-city"
-                   name="order[city]"
-                   type="text"
-                   data-dev="Stockholm"
-                   required>
-
-          </div>
-        </div>
-        <div class="Grid-cell u-size1of2">
-          <div class="Control">
-
-            <label for="order-postalCode">Postal code</label>
-            <input class="Control-field"
-                   id="order-postalCode"
-                   name="order[postal_code]"
-                   type="text"
-                   data-dev="12345"
-                   required>
-
+          <div class="PriceCalc-desc">
+            <% if @buy_option == "complete" %>
+              <span class="js-defaultPrice"><%= @board.price.complete %></span>
+            <% else %>
+              <span class="js-defaultPrice"><%= @board.price.deck %></span>
+            <% end %>
+             - <span class="js-discount">0 <small>SEK</small></span> (<span class="js-discountPercentage">0%</span>)</span>
           </div>
         </div>
       </div>
+      <div class="Grid-cell">
+        <div class="Grid Grid--narrow v3-Grid--2col">
+          <% 4.times do |i| %>
+            <div class='Grid-cell <%= "u-isHidden" unless i == 0 %> js-discountControl'>
+              <div class="Control has-addon">
+              <input class="Control-field"
+                     name="discount[string]"
+                     type="text"
+                     maxlength="10"
+                     placeholder="●●●●●●●●●●"
+                     autocomplete="off"
+                     data-dev="0123456789">
+              <button class="Control-addon">Save</button>
+              </div>
+            </div>
+          <% end %>
+          <div class="Grid-cell">
+            <div class="Control">
+              <button class="Control-creator js-showControl">Add another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell u-textCenter u-marginTl">
+        <a href="#" class="Button Button--full js-next"><span>Next</span></a>
+      </div>
     </div>
+  </section>
 
-    <div class="Grid-cell">
-      <h2 class="u-heading2 u-marginBl">Card information</h2>
 
-      <div class="Grid Grid--narrow">
-        <div class="Control Grid-cell">
+  <section class="js-step u-isHidden" id="shipping-information">
+    <h2 class="u-heading2 u-marginBl">Shipping information</h2>
+    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
+      <div class="Grid-cell">
+        <div class="Grid Grid--narrow">
+          <div class="Grid-cell">
+            <div class="Control">
+              <label for="order-name">Name</label>
+              <input class="Control-field v-length"
+                     id="order-name"
+                     name="order[name]"
+                     type="text"
+                     data-dev="Example Name"
+                     required>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="Control">
+              <label for="order-email">Email</label>
+              <input class="Control-field v-email"
+                     id="order-email"
+                     name="order[email]"
+                     type="email"
+                     data-dev="anton@urskog.com"
+                     required>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="Control">
+              <label for="order-phone">Phone number</label>
+              <input class="Control-field"
+                     id="order-phone"
+                     name="order[phone]"
+                     type="text"
+                     data-dev="07061234567"
+                     required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell">
+        <div class="Grid Grid--narrow">
+          <div class="Grid-cell">
+            <div class="Control">
+              <label for="order-country">Country</label>
+              <input class="Control-field"
+                     id="order-country"
+                     name="order[country]"
+                     type="text"
+                     data-dev="Sweden"
+                     required>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="Control">
+              <label for="order-street">Street</label>
+              <input class="Control-field"
+                     id="order-street"
+                     name="order[street]"
+                     type="text"
+                     data-dev="Example 10"
+                     required>
+            </div>
+          </div>
+          <div class="Grid-cell u-size1of2">
+            <div class="Control">
+              <label for="order-city">City</label>
+              <input class="Control-field"
+                     id="order-city"
+                     name="order[city]"
+                     type="text"
+                     data-dev="Stockholm"
+                     required>
+            </div>
+          </div>
+          <div class="Grid-cell u-size1of2">
+            <div class="Control">
+              <label for="order-postalCode">Postal code</label>
+              <input class="Control-field"
+                     id="order-postalCode"
+                     name="order[postal_code]"
+                     type="text"
+                     data-dev="12345"
+                     required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell u-textCenter u-marginTl">
+        <a href="#" class="js-prev u-pullStart" style="margin-top:17px">Back</a>
+        <a href="#" class="Button Button--full js-next u-marginTs u-pullEnd u-size4of5"><span>Next</span></a>
+      </div>
+    </div>
+  </section>
 
+
+  <section class="js-step u-isHidden" id="card-details">
+    <h2 class="u-heading2 u-marginBl">Card details</h2>
+    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
+      <div class="Grid-cell">
+        <div class="Control">
             <label for="card-holdername">Name on card</label>
             <input class="Control-field v-length"
                    id="card-holdername"
@@ -174,23 +214,8 @@
                    type="text"
                    data-dev="Example Name"
                    required>
-
         </div>
-        <div class="Control Grid-cell">
-
-          <label for="card-number">Card number</label>
-          <input class="Control-field v-cardNumber"
-                 id="card-number"
-                 name="card-number"
-                 pattern="\d*"
-                 x-autocompletetype="cc-number"
-                 placeholder="●●●● ●●●● ●●●● ●●●●"
-                 type="text"
-                 data-dev="4111 1111 1111 1111"
-                 required>
-
-        </div>
-        <div class="Control Grid-cell u-size1of2">
+        <div class="Control">
           <label for="card-expiry">Expires</label>
           <input class="Control-field v-expiry"
                  id="card-expiry"
@@ -204,7 +229,22 @@
                  required>
 
         </div>
-        <div class="Control Grid-cell u-size1of2"> <label for="card-cvc">Card code</label>
+      </div>
+      <div class="Grid-cell">
+        <div class="Control">
+          <label for="card-number">Card number</label>
+          <input class="Control-field v-cardNumber"
+                 id="card-number"
+                 name="card-number"
+                 pattern="\d*"
+                 x-autocompletetype="cc-number"
+                 placeholder="●●●● ●●●● ●●●● ●●●●"
+                 type="text"
+                 data-dev="4111 1111 1111 1111"
+                 required>
+        </div>
+        <div class="Control">
+          <label for="card-cvc">Card code</label>
           <input class="Control-field v-cvc"
                  id="card-cvc"
                  name="card-cvc"
@@ -217,27 +257,25 @@
                  data-dev="123"
                  required>
         </div>
-
-        <div class="Grid-cell u-textCenter u-paddingTm">
-          <a href="#" class="Button Button--full js-next"><span>Ok, next</span></a>
-        </div>
+      </div>
+      <div class="Grid-cell u-textCenter u-marginTl">
+        <a href="#" class="js-prev u-pullStart" style="margin-top:17px">Back</a>
+        <a href="#" class="Button Button--full js-next u-marginTs u-pullEnd u-size4of5"><span>Ok, next</span></a>
       </div>
     </div>
-  </div>
+  </section>
 
 
-  <div class="js-checkoutConfirm u-isHidden u-paddingTm">
-    <h3 class="u-heading2 u-marginBl">Confirm information</h3>
-
+  <section class="js-step u-isHidden" id="confirm">
+    <h2 class="u-heading2 u-marginBl">Confirm purchase</h2>
     <div class="Grid Grid--wide v2-Grid--2col">
       <div class="Grid-cell">
         <ul class="List List--divided">
           <li><strong id="confirm-name"></strong>
           <li id="confirm-email">
-          <li id="confirm-phone_number">
-          <li><span id="confirm-city"></span>, <span id="confirm-country"></span>
+          <li id="confirm-phone">
+          <li><span id="confirm-city"></span> (<span id="confirm-postalCode"></span>), <span id="confirm-country"></span>
           <li id="confirm-street">
-          <li id="confirm-postalCode">
         </ul>
         <ul class="List List--divided u-marginTm">
           <li><strong id="confirm-cardType"></strong>
@@ -247,12 +285,12 @@
       <div class="Grid-cell">
         <p>Great work! Pressing the confirm button below will complete your purchase. The board will be shipped with DHL and arrived to you within <strong>three to five days</strong>. A package tracking ID will be sent to you by email.</p>
         <a href="#" class="js-prev u-pullStart" style="margin-top:17px">Back</a>
-        <button class="Button js-buy u-marginTs u-pullEnd u-size4of5" type="submit"><span>Confirm payment</span></button>
+        <button type="submit" class="Button js-buy u-marginTs u-pullEnd u-size4of5"><span>Confirm</span></button>
       </div>
     </div>
-  </div>
-
+  </section>
 </form>
+
 
 <script>var PAYMILL_PUBLIC_KEY = '<%= paymill_public_key %>';</script>
 <script src="https://bridge.paymill.com"></script>

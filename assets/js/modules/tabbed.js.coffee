@@ -15,11 +15,9 @@ app.tabbed =
       that.setNavItemActive(index)
       that.showSection(index)
 
-
   setNavItemActive: (index) ->
     @navItems.removeClass('is-active')
     $(@navItems.get(index)).addClass('is-active')
-
 
   showSection: (index) ->
     @sections.addClass('u-isHidden')
