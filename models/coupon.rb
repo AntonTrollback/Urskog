@@ -12,13 +12,13 @@ class Coupon
   belongs_to :giftcard, :required => false
 
   def self.valid?(coupon)
-    coupon.nil? || coupon.used?
+    !used?(coupon)
   end
 
-  def used?
-    registered
+  def self.used?(coupon)
+    coupon.nil? || coupon.registered != nil
   end
-  
+
   def use
     self.update({registered: Time.now})
   end

@@ -4,7 +4,7 @@ app.discount =
     @el = $element
     return false  unless @el.length
     @controls = @el.find(".js-discountControl")
-    @currentTotal = parseInt(@el.find(".js-priceResult").val())
+    @currentTotal = parseInt(@el.find(".js-priceResult").text())
     @savedCodes = []
     @binds()
 
@@ -66,8 +66,8 @@ app.discount =
 
     $.ajax
       url: "/discount"
-      data: JSON.stringify(data)
-      type: "PUT"
+      data: data
+      type: "POST"
       success: (result) ->
         if result.status
           that.saveDiscount($button, $input, code, result)
