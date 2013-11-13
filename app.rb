@@ -17,7 +17,7 @@ require_relative 'lib/receipt_email'
 require_relative 'lib/giftcard_email'
 
 require_relative 'models/board'
-require_relative 'models/country' 
+require_relative 'models/country'
 require_relative 'models/retailer'
 require_relative 'models/dm_retailer'
 require_relative 'models/coupon'
@@ -102,7 +102,7 @@ class MyApp < Sinatra::Base
     @fb_id = "6009404792745"
     erb :register_giftcard
   end
-  
+
   post '/giftcard' do
     @flash = {}
     # Find giftcard
@@ -110,7 +110,7 @@ class MyApp < Sinatra::Base
     # Check if it's valid (not registered and exists)
     if giftcard.nil? || giftcard.registered?
       # Show error message
-      @flash["error"] = "Your giftcard code is invalid"
+      @flash["error"] = "Invalid or already registered"
       @flash["name"]  = params["giftcard"]["name"]
       @flash["email"] = params["giftcard"]["email"]
       erb :register_giftcard

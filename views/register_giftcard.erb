@@ -5,12 +5,6 @@
       novalidate
       autocomplete="on">
 
-  <% unless @flash["error"].nil? %>
-  <div class="error">
-    ERROR: <%= @flash["error"] %>
-  </div>
-  <% end %>
-
   <h1 class="u-heading2 u-marginBm">Register your gift card</h1>
 
   <div class="Grid Grid--wide v2-Grid--2col">
@@ -30,8 +24,8 @@
         <div class="Grid-cell">
           <div class="Control">
 
-            <label for="giftcard-string">Gift card</label>
-            <input class="Control-field v-giftcard"
+            <label for="giftcard-string">Gift card <% unless @flash["error"].nil? %> &#8211; <small><%= @flash["error"] %></small><% end %></label>
+            <input class="Control-field v-giftcard <%= "is-invalid" unless @flash["error"].nil? %>"
                    id="giftcard-string"
                    name="giftcard[string]"
                    type="text"
@@ -40,7 +34,7 @@
                    data-dev="0123456789"
                    autocomplete="off"
                    required
-                   autofocus>
+                   <%= "autofocus" if @flash["error"].nil? %>>
 
           </div>
           <div class="Control">
