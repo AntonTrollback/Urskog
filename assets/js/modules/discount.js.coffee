@@ -77,7 +77,7 @@ app.discount =
   saveDiscount: ($button, $input, code, data) ->
     @successState($button, $input)
     @currentTotal = data.sum
-    @currentPercentage = @currentPercentage + data.percentage
+    @currentPercentage = @currentPercentage + data.discount
     @usedCodes.push(code)
 
     eventData =
