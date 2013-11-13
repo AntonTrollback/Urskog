@@ -136,10 +136,10 @@ class MyApp < Sinatra::Base
     coupon = Coupon.first(code: params["code"])
 
     if Coupon.valid?(coupon)
-      {status: false, sum: params["amount"]}.to_json
+      {status: false, discount: coupon.discount, sum: params["amount"]}.to_json
     else
       new_sum = calculate_discount(params["amount"], coupon.discount)
-      {status: true, sum: new_sum}.to_json
+      {status: true, discount: coupon.discount, sum: new_sum}.to_json
     end
   end
 
@@ -178,10 +178,14 @@ class MyApp < Sinatra::Base
   post '/checkout/:slug' do
     board = Board.find(params[:slug])
     price = board.price.send(params["order"]["type_of_purchase"])
+    # Kolla om det finns rabbatkoder
+    # Validera och använd(.use) varje rabbatkod
+    # calculate the price after all the coupons have been used
     calculator = AmountCalculator.new(price)
     order = Order.new(params["order"].merge({price: price, board: board.name}))
 
-    begin order.save
+    if order.save
+      # Om det är 4 riktiga koder, hoppa över paymentprocessorn
       if Paymentprocessor.purchase(order, board, calculator)
         OrderEmail.new(order).send
         ReceiptEmail.new(order).send
@@ -190,7 +194,8 @@ class MyApp < Sinatra::Base
       else
         erb :'checkout/payment_error'
       end
-    rescue => e
+      # Annars kör det rabbaterade priset
+    else
       erb :'checkout/error'
     end
   end
