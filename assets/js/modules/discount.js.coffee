@@ -5,7 +5,7 @@ app.discount =
     return false  unless @el.length
     @controls = @el.find(".js-discountControl")
     @currentTotal = parseInt(@el.find(".js-priceResult").val())
-    @usedCodes = []
+    @savedCodes = []
     @binds()
 
   binds: ->
@@ -55,7 +55,7 @@ app.discount =
 
   validateDiscount: (value) ->
     that = this
-    $.inArray(value, @usedCodes) == -1 and (value.length == 10 and /^[A-Za-z0-9]+$/.test(value))
+    $.inArray(value, @savedCodes) == -1 and (value.length == 10 and /^[A-Za-z0-9]+$/.test(value))
 
   getDiscountStatus: ($button, $input, code) ->
     that = this
@@ -78,12 +78,12 @@ app.discount =
     @successState($button, $input)
     @currentTotal = data.sum
     @currentPercentage = @currentPercentage + data.discount
-    @usedCodes.push(code)
+    @savedCodes.push(code)
 
     eventData =
-      code: code
       amount: @currentTotal
       percentage: @currentPercentage
+      codes: @savedCodes
 
     app.eventListener.fire "discount", "added", eventData
 
