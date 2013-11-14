@@ -16,7 +16,7 @@ app.checkout =
 
     app.eventListener.add "discount", "added", (data) ->
       that.setPrice(data)
-      if parseInt(data.amount) <= 0
+      if parseInt(data.price) <= 0
         that.disablePayment(data)
 
     @el.on "click", ".js-buy", (e) ->
@@ -40,8 +40,8 @@ app.checkout =
     $("#confirm-cardType").text(cardNumber)
 
   setPrice: (data) ->
+    $("#card-amountInt").val(data.price * 100)
     $("#order-discount").val(data.codes)
-    $("#card-amountInt").val(data.amount * 100)
 
   disablePayment: (data) ->
     @paymentNeeded = false

@@ -4,10 +4,11 @@ app.discount =
     @el = $element
     return false  unless @el.length
     @controls = @el.find(".js-discountControl")
-    @currentTotal = parseInt(@el.find(".js-priceResult").text())
-    @defaultTotal = @currentTotal
-    @currentPercentage = 0
-    @savedCodes = []
+    @data =
+      initPrice: parseInt(@el.find(".js-priceResult").text())
+      price: parseInt(@el.find(".js-priceResult").text())
+      discount: 0
+      codes: []
     @binds()
 
   binds: ->
@@ -23,7 +24,7 @@ app.discount =
 
       $input = $this.siblings("input")
       state = $input.data("state")
-      that.discountButtonAction($this, $input)
+      that.enterDiscount($this, $input)
 
     # Clear states on input focus
     @controls.on "focus", "input", (e) ->
@@ -46,26 +47,26 @@ app.discount =
     unless @controls.is(".u-isHidden")
       $button.hide()
 
-  discountButtonAction: ($button, $input) ->
+  enterDiscount: ($button, $input) ->
     value = $input.val()
 
     if @validateDiscount(value)
       @loadingState($button, $input)
-      @getDiscountStatus($button, $input, value)
+      @getStatus($button, $input, value)
     else
       @errorState($button, $input, "Invalid")
 
   validateDiscount: (value) ->
     that = this
-    $.inArray(value, @savedCodes) == -1 and (value.length == 10 and /^[A-Za-z0-9]+$/.test(value))
+    $.inArray(value, @data.codes) == -1 and (value.length == 10 and /^[A-Za-z0-9]+$/.test(value))
 
-  getDiscountStatus: ($button, $input, code) ->
+  getStatus: ($button, $input, code) ->
     that = this
 
     data =
       code: code
-      amount: @currentTotal
-      default: @defaultTotal
+      amount: @data.price
+      default: @data.initPrice
 
     $.ajax
       url: "/discount"
@@ -80,17 +81,17 @@ app.discount =
 
   saveDiscount: ($button, $input, code, data) ->
     @successState($button, $input)
-    @currentTotal = data.sum
-    @currentPercentage = @currentPercentage + parseInt(data.discount)
-    @savedCodes.push(code)
-    @updatePriceCalculator(data)
+    @data.price = data.sum
+    @data.discount = @data.discount + parseInt(data.discount)
+    @data.codes.push(code)
+    @displayPrice(data)
 
-    eventData =
-      amount: @currentTotal
-      percentage: @currentPercentage
-      codes: @savedCodes
+    data =
+      price: @data.price
+      discount: @data.discount
+      codes: @data.codes
 
-    app.eventListener.fire "discount", "added", eventData
+    app.eventListener.fire "discount", "added", data
 
   loadingState: ($button, $input) ->
     @clearState($button, $input)
@@ -114,10 +115,10 @@ app.discount =
       .removeClass("is-correct")
       .attr("disabled", false)
 
-  updatePriceCalculator: (data) ->
+  displayPrice: (data) ->
     @el.find(".js-priceCal").addClass("is-reduced")
     @el.find(".js-priceResult").text(data.sum)
-    @el.find(".js-discount").text(@defaultTotal - @currentTotal)
-    @el.find(".js-discountPercentage").text(@currentPercentage)
+    @el.find(".js-discount").text(@data.initPrice - @data.price)
+    @el.find(".js-discountPercentage").text(@data.discount)
 
 
