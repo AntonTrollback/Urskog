@@ -3,6 +3,7 @@
 // =============================================================================
 
 .PriceCalc {
+  height: 76px;
   border: 1px solid $color-hr-hex;
   border: 1px solid $color-hr;
   padding-top: 14px;
@@ -13,6 +14,7 @@
   &.is-reduced {
     .PriceCalc-result {
       color: $color-success;
+      line-height: inherit;
     }
 
     .PriceCalc-desc {
@@ -23,6 +25,7 @@
 
 .PriceCalc-result {
   font-size: 18px;
+  line-height: 44px;
 
   strong {
     display: inline-block;

@@ -5,6 +5,8 @@ app.discount =
     return false  unless @el.length
     @controls = @el.find(".js-discountControl")
     @currentTotal = parseInt(@el.find(".js-priceResult").text())
+    @defaultTotal = @currentTotal
+    @currentPercentage = 0
     @savedCodes = []
     @binds()
 
@@ -70,6 +72,7 @@ app.discount =
       type: "POST"
       success: (result) ->
         result = $.parseJSON(result)
+        console.log result
         if result.status
 
           that.saveDiscount($button, $input, code, result)
@@ -79,8 +82,9 @@ app.discount =
   saveDiscount: ($button, $input, code, data) ->
     @successState($button, $input)
     @currentTotal = data.sum
-    @currentPercentage = @currentPercentage + data.discount
+    @currentPercentage = @currentPercentage + parseInt(data.discount)
     @savedCodes.push(code)
+    @updatePriceCalculator(data)
 
     eventData =
       amount: @currentTotal
@@ -110,3 +114,11 @@ app.discount =
       .removeClass("is-invalid")
       .removeClass("is-correct")
       .attr("disabled", false)
+
+  updatePriceCalculator: (data) ->
+    @el.find(".js-priceCal").addClass("is-reduced")
+    @el.find(".js-priceResult").text(data.sum)
+    @el.find(".js-discount").text(@defaultTotal - @currentTotal)
+    @el.find(".js-discountPercentage").text(@currentPercentage)
+
+

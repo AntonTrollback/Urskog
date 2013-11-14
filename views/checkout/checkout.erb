@@ -59,10 +59,7 @@
         <p class="u-marginTs">If you have any discount codes that you wish to use, enter them here. If not, simply press the "next" button.</p>
         <p>Have you recived a giftcard? <br>You first need to <a href="/giftcard" target="_blank">register it</a> to get the discount.</p>
 
-
-
-
-        <div class="PriceCalc">
+        <div class="PriceCalc js-priceCal">
           <div class="PriceCalc-result">
             <% if @buy_option == "complete" %>
               <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.complete %></span> <small>SEK</small>
@@ -72,14 +69,15 @@
           </div>
           <div class="PriceCalc-desc">
             <% if @buy_option == "complete" %>
-              <span class="js-defaultPrice"><%= @board.price.complete %></span>
+              <%= @board.price.complete %>
             <% else %>
-              <span class="js-defaultPrice"><%= @board.price.deck %></span>
+              <%= @board.price.deck %>
             <% end %>
-             - <span class="js-discount">0 <small>SEK</small></span> (<span class="js-discountPercentage">0%</span>)</span>
+             - <span class="js-discount">0</span> <small>SEK</small> (<span class="js-discountPercentage">0</span>%)</span>
           </div>
         </div>
       </div>
+
       <div class="Grid-cell">
         <div class="Grid Grid--narrow v3-Grid--2col">
           <% 4.times do |i| %>
