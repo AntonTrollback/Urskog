@@ -72,7 +72,6 @@ app.discount =
       type: "POST"
       success: (result) ->
         result = $.parseJSON(result)
-        console.log result
         if result.status
 
           that.saveDiscount($button, $input, code, result)

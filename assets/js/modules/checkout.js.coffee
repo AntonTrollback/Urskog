@@ -3,6 +3,7 @@ app.checkout =
   init: ($element) ->
     @el = $element
     return false  unless @el.length
+    @paymentNeeded = true
     @binds()
 
   binds: ->
@@ -10,26 +11,21 @@ app.checkout =
 
     app.eventListener.add "walker", "walked", (data) ->
       if data.direction = "forward"
-        if data.id == "card-details"
-          that.prefillCardName()
-        else if data.id == "confirm"
+        if data.id == "confirm"
           that.printConfirmData()
 
     app.eventListener.add "discount", "added", (data) ->
-      that.el.find("#order-discount").val(data.codes)
-      that.el.find("#card-amountInt").val(data.amount * 100)
+      that.setPrice(data)
+      if parseInt(data.amount) <= 0
+        that.disablePayment(data)
 
     @el.on "click", ".js-buy", (e) ->
       e.preventDefault()
-      that.createToken()
+      unless @paymentNeeded
+        that.createToken()
       $(this).attr("disabled", "disabled")
         .find("span").text("Loading…").end()
         .siblings("a").addClass("is-disabled")
-
-  prefillCardName: ->
-    $cardName = @el.find("#card-holdername")
-    if $cardName.val().length == 0
-      $cardName.val(@el.find("#order-name.is-valid").val())
 
   printConfirmData: ->
     fields = ["name", "email", "phone", "country", "street", "city", "postalCode"]
@@ -42,6 +38,15 @@ app.checkout =
     cardNumber = cardNumber.charAt(0).toUpperCase() + cardNumber.slice(1)
     $("#confirm-cardNumber").text(firstFour)
     $("#confirm-cardType").text(cardNumber)
+
+  setPrice: (data) ->
+    $("#order-discount").val(data.codes)
+    $("#card-amountInt").val(data.amount * 100)
+
+  disablePayment: (data) ->
+    @paymentNeeded = false
+    $("#card-details input").attr("disabled", true)
+    $("#card-details h2").text("Card details – not needed")
 
   createToken: ->
     # Paymill do not like name attribute
