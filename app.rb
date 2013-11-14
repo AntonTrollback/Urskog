@@ -176,33 +176,59 @@ class MyApp < Sinatra::Base
   end
 
   post '/checkout/:slug' do
+    @fb_id = "6009404791345"
     board = Board.find(params[:slug])
-    price = board.price.send(params["order"]["type_of_purchase"])
-    # Kolla om det finns rabbatkoder
-    # Validera och använd(.use) varje rabbatkod
-    # calculate the price after all the coupons have been used
-    calculator = AmountCalculator.new(price)
-    order = Order.new(params["order"].merge({price: price, board: board.name}))
+    org_price = board.price.send(params["order"]["type_of_purchase"])
+    coupon_codes = params["discount"]["discount"].split(",")
+    
+    new_price = org_price
+    coupons = []
+
+    coupon_codes.each do |coupon_code|
+      c = Coupon.first(code: coupon_code)
+      if Coupon.valid?(c)
+        # Calculate the new price
+        new_price = calculate_discount(org_price, new_price, c.discount)
+        coupons << c
+      end
+    end
+
+
+    calculator = AmountCalculator.new(new_price)
+    order = Order.new(params["order"].merge({price: new_price, board: board.name}))
 
     if order.save
-      # Om det är 4 riktiga koder, hoppa över paymentprocessorn
-      if Paymentprocessor.purchase(order, board, calculator)
-        OrderEmail.new(order).send
-        ReceiptEmail.new(order).send
-        @fb_id = "6009404791345"
-        erb :'checkout/success'
+      p "could the order be saveD?" 
+      if new_price == 0
+        # Om det är 4 riktiga koder, hoppa över paymentprocessorn
+        p "the new price is 0"
+        success(order, coupons)
       else
-        erb :'checkout/payment_error'
+        if Paymentprocessor.purchase(order, board, calculator)
+          p "PAYMENTPROCESSOR"
+          success(order, coupons)
+        else
+          erb :'checkout/payment_error'
+        end
       end
-      # Annars kör det rabbaterade priset
     else
       erb :'checkout/error'
     end
   end
 
+  def success(order, coupons)
+    OrderEmail.new(order).send
+    ReceiptEmail.new(order).send
+    # Mark the coupons as used
+    coupons.map(&:use)
+    erb :'checkout/success'
+  end
+  
   def calculate_discount(base_value, amount, discount)
     discount_amount = (base_value.to_f * (discount.to_f / 100)).round.to_i
     result = (amount.to_i - discount_amount)
+    # FIX THIS ASAP! 
+    # This checks if enough discount has been made so that the board should be free
     if result <= 5
       0
     else
