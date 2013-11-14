@@ -136,7 +136,7 @@ class MyApp < Sinatra::Base
     coupon = Coupon.first(code: params["code"])
 
     if Coupon.valid?(coupon)
-      new_sum = calculate_discount(params["amount"], coupon.discount)
+      new_sum = calculate_discount(params["base_value"], params["amount"], coupon.discount)
       {status: true, discount: coupon.discount, sum: new_sum}.to_json
     else
       {status: false, discount: coupon.discount, sum: params["amount"]}.to_json
@@ -200,8 +200,9 @@ class MyApp < Sinatra::Base
     end
   end
 
-  def calculate_discount(amount, discount)
-    (amount.to_f * ((100 - discount).to_f / 100)).round.to_i
+  def calculate_discount(base_value, amount, discount)
+    discount_amount = (base_value.to_f * (discount.to_f / 100)).round.to_i
+    (amount.to_i - discount_amount)
   end
 
   # Admin login
