@@ -32,12 +32,15 @@ app.checkout =
     for field in fields
       $("#confirm-#{field}").text(@el.find("#order-#{field}").val())
 
-    number = @el.find("#card-number").val()
-    firstFour = number.substr(0, 5)
-    cardNumber = $.payment.cardType(number)
-    cardNumber = cardNumber.charAt(0).toUpperCase() + cardNumber.slice(1)
-    $("#confirm-cardNumber").text(firstFour)
-    $("#confirm-cardType").text(cardNumber)
+    if @paymentNeeded
+      number = @el.find("#card-number").val()
+      firstFour = number.substr(0, 5)
+      cardNumber = $.payment.cardType(number)
+      cardNumber = cardNumber.charAt(0).toUpperCase() + cardNumber.slice(1)
+      $("#confirm-cardNumber").text(firstFour)
+      $("#confirm-cardType").text(cardNumber)
+    else
+      $("#confirm-cardDetails").hide()
 
   setPrice: (data) ->
     $("#card-amountInt").val(data.price * 100)
