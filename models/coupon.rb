@@ -16,7 +16,8 @@ class Coupon
   end
 
   def self.used?(coupon)
-    coupon.nil? || coupon.registered != nil
+    return true if coupon.nil? 
+    return true if coupon.registered != nil
   end
 
   def use
