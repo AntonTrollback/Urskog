@@ -21,7 +21,7 @@
           <td><%= c.discount %>%</td>
           <td><%= c.created_on %></td>
           <td class="<%= "text-success" if c.pretty_registered != "" %>"><%= c.pretty_registered %></td>
-          <td><a href="#"><%= c.information %></a></td>
+          <td><%= c.information %></td>
         </tr>
         <% end %>
       </tbody>
