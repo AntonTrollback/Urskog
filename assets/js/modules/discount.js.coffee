@@ -65,6 +65,7 @@ app.discount =
     data =
       code: code
       amount: @currentTotal
+      default: @defaultTotal
 
     $.ajax
       url: "/discount"
@@ -73,7 +74,6 @@ app.discount =
       success: (result) ->
         result = $.parseJSON(result)
         if result.status
-
           that.saveDiscount($button, $input, code, result)
         else
           that.errorState($button, $input)
