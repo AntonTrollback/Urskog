@@ -202,7 +202,12 @@ class MyApp < Sinatra::Base
 
   def calculate_discount(base_value, amount, discount)
     discount_amount = (base_value.to_f * (discount.to_f / 100)).round.to_i
-    (amount.to_i - discount_amount)
+    result = (amount.to_i - discount_amount)
+    if result <= 5
+      0
+    else
+      result
+    end
   end
 
   # Admin login
