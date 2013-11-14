@@ -16,8 +16,8 @@ app.checkout =
           that.printConfirmData()
 
     app.eventListener.add "discount", "added", (data) ->
-      @el.find("[name=order[discount]]").val(data.codes)
-      @el.find("[name=card-amountInt]").val(data.amount * 100)
+      that.el.find("#order-discount").val(data.codes)
+      that.el.find("#card-amountInt").val(data.amount * 100)
 
     @el.on "click", ".js-buy", (e) ->
       e.preventDefault()
