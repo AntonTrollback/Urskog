@@ -23,4 +23,12 @@ class Giftcard
   def register(name, email)
     self.update({name: name, email: email, registered: Time.now})
   end
+
+  def pretty_registered
+    if registered
+      registered.to_date
+    else
+      ""
+    end
+  end
 end
