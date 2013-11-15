@@ -59,8 +59,8 @@ class MyApp < Sinatra::Base
     end
   end
 
-  def active(item)
-    "is-active" if item == @slug
+  def active(item, klass = "is-active")
+    klass if item == @slug
   end
 
 
@@ -180,7 +180,7 @@ class MyApp < Sinatra::Base
     board = Board.find(params[:slug])
     org_price = board.price.send(params["order"]["type_of_purchase"])
     coupon_codes = params["discount"]["discount"].split(",")
-    
+
     new_price = org_price
     coupons = []
 
@@ -198,7 +198,7 @@ class MyApp < Sinatra::Base
     order = Order.new(params["order"].merge({price: new_price, board: board.name}))
 
     if order.save
-      p "could the order be saveD?" 
+      p "could the order be saveD?"
       if new_price == 0
         # Om det är 4 riktiga koder, hoppa över paymentprocessorn
         p "the new price is 0"
@@ -223,11 +223,11 @@ class MyApp < Sinatra::Base
     coupons.map(&:use)
     erb :'checkout/success'
   end
-  
+
   def calculate_discount(base_value, amount, discount)
     discount_amount = (base_value.to_f * (discount.to_f / 100)).round.to_i
     result = (amount.to_i - discount_amount)
-    # FIX THIS ASAP! 
+    # FIX THIS ASAP!
     # This checks if enough discount has been made so that the board should be free
     if result <= 5
       0
@@ -244,6 +244,7 @@ class MyApp < Sinatra::Base
 
   # Dashboard
   get '/admin' do
+    @slug = "giftcards"
     @retailers = DMRetailer.all
     erb :'admin/dashboard', layout: :admin
   end
@@ -262,6 +263,7 @@ class MyApp < Sinatra::Base
 
   # Giftcards
   get '/admin/retailers/:id/giftcards' do
+    @slug = "giftcards"
     @retailer = DMRetailer.find(params[:id]).first
     @giftcards = @retailer.giftcards.all
     erb :'admin/giftcards', layout: :admin
@@ -289,6 +291,7 @@ class MyApp < Sinatra::Base
 
   # Coupon
   get '/admin/coupons' do
+    @slug = "coupons"
     @coupons = Coupon.all
     erb :'admin/coupons', layout: :admin
   end
