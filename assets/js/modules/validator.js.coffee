@@ -13,7 +13,10 @@ app.validator =
     @el.on "click", ".js-submit", (e) ->
       e.preventDefault()
       if that.validate()
-        $(this).closest("form").trigger("submit")
+        $(this)
+          .attr("disabled", "disabled")
+          .find("span").text("Loading…")
+          .closest("form").trigger("submit")
 
     app.eventListener.add "walker", "wishToWalk", (data) ->
       that.validate()
