@@ -37,6 +37,14 @@ app.discount =
       if e.which == 13
         false
 
+    # Alert if discount field is filled but not saved
+    app.eventListener.add "walker", "walked", (data) ->
+      if data.id == "shipping-information"
+        unsaved = that.controls.not(".u-isHidden").find("input:not(.is-correct)").filter ->
+          $(this).val() isnt ""
+        if unsaved.length isnt 0
+          alert("You have an unsaved discount. Go back and press the save button if you wish to use it for this purchase")
+
   showControl: ($button) ->
     @controls
       .not(":not(.u-isHidden)")
