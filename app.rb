@@ -39,7 +39,7 @@ class MyApp < Sinatra::Base
   # CSS minification
   set :assets_css_compressor, :sass
 
-  set :assets_precompile, %w(urskog.js admin.js urskog.css styles-no-mq.css *.png *.jpg *.svg *.eot *.ttf *.woff)
+  set :assets_precompile, %w(urskog.js admin.js admin.css urskog-static.css urskog.css styles-no-mq.css *.png *.jpg *.svg *.eot *.ttf *.woff)
 
   # JavaScript minification
   set :assets_js_compressor, :uglifier
