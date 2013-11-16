@@ -279,9 +279,15 @@ class MyApp < Sinatra::Base
     redirect "/admin/giftcards"
   end
 
-  put '/admin/giftcards' do
-    p params["giftcard"]
+  put '/admin/giftcards/constructed' do
     @giftcard = Giftcard.first(id: params["giftcard"]["id"])
+    @giftcard.update(constructed: false)
+    @giftcard.update(params["giftcard"])
+  end
+
+  put '/admin/giftcards/shipped' do
+    @giftcard = Giftcard.first(id: params["giftcard"]["id"])
+    @giftcard.update(shipped: false)
     @giftcard.update(params["giftcard"])
   end
 

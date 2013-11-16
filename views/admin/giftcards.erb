@@ -21,7 +21,7 @@
           <td><%= g.code %></td>
           <td><%= g.created_on %></td>
           <td>
-            <form action="/admin/giftcards">
+            <form action="/admin/giftcards/constructed">
               <label class="table-checkbox table-status <%= "active" if g.constructed? %>">
                 <input type="checkbox" name="giftcard[constructed]" <%= "checked" if g.constructed? %> value="1">
                 <span>1</span>
@@ -30,7 +30,7 @@
             </form>
           </td>
           <td>
-            <form action="/admin/giftcards">
+            <form action="/admin/giftcards/shipped">
               <label class="table-checkbox table-status <%= "active" if g.shipped? %>">
                 <input type="checkbox" name="giftcard[shipped]" <%= "checked" if g.shipped? %> value="1">
                 <span>0</span>
