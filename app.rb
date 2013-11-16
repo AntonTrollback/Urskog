@@ -279,6 +279,12 @@ class MyApp < Sinatra::Base
     redirect "/admin/giftcards"
   end
 
+  put '/admin/giftcards' do
+    p params["giftcard"]
+    @giftcard = Giftcard.first(id: params["giftcard"]["id"])
+    @giftcard.update(params["giftcard"])
+  end
+
   # Giftcards
   get '/admin/retailers/:id/giftcards' do
     protected!
@@ -298,13 +304,6 @@ class MyApp < Sinatra::Base
     end
     @retailer.save
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
-  end
-
-  put '/admin/retailers/:id/giftcards' do
-    @retailer = DMRetailer.find(params[:id]).first
-    @giftcard = @retailer.giftcards.get(params["giftcard"]["id"])
-    @giftcard.update(params["giftcard"])
-    @giftcard.save
   end
 
 
