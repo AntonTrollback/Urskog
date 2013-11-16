@@ -307,13 +307,13 @@ class MyApp < Sinatra::Base
   get '/admin/retailers/:id/giftcards' do
     protected!
     @slug = "giftcards"
-    @retailer = DMRetailer.find(params[:id]).first
+    @retailer = DMRetailer.get(params[:id])
     @giftcards = @retailer.giftcards.all
     erb :'admin/giftcards', layout: :admin
   end
 
   post '/admin/retailers/:id/giftcards/add' do
-    @retailer = DMRetailer.find(params[:id]).first
+    @retailer = DMRetailer.get(params[:id])
     # The generator only creates the codez, add them to the retailer later
     giftcards = CodeGenerator.generate(Giftcard.all.map(&:code),
                                        params["amount"])
