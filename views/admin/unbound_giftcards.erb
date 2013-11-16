@@ -38,7 +38,14 @@
             </form>
           </td>
           <td><%= g.pretty_registered %></td>
-          <td>RABBATKOD</td>
+          <td>
+            <form>
+              <label class="table-checkbox table-mark">
+                <input type="checkbox">
+                <span>0</span>
+              </label>
+            </form>
+          </td>
         </tr>
         <% end %>
       </tbody>
@@ -46,12 +53,13 @@
   </div>
 
   <div class="panel-footer clearfix">
-    <form class="pull-right form-inline retailer-mover">
-      <input type="hidden">
+    <form class="pull-right form-inline retailer-mover" action="/admin/giftcards/move" method="post">
+      <input type="hidden" name="giftcards">
       <div class="form-group">
-        <select class="form-control">
-          <option>urskog.com</option>
-          <option>Hollywood</option>
+        <select class="form-control" name="retailer">
+          <% @retailers.each do |r| %>
+            <option value="<%= r.id %>"><%= r.name %></option>
+          <% end %>
         </select>
       </div>
 

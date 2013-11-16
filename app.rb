@@ -267,6 +267,7 @@ class MyApp < Sinatra::Base
     protected!
     @slug = "giftcards"
     @giftcards = Giftcard.unbound
+    @retailers = DMRetailer.all
     erb :'admin/unbound_giftcards', layout: :admin
   end
 
@@ -289,6 +290,17 @@ class MyApp < Sinatra::Base
     @giftcard = Giftcard.first(id: params["giftcard"]["id"])
     @giftcard.update(shipped: false)
     @giftcard.update(params["giftcard"])
+  end
+
+  post '/admin/giftcards/move' do
+    retailer = DMRetailer.first(id: params["retailer"])
+    ids = params["giftcards"].split(",")
+    @giftcards = Giftcard.all(id: ids)
+    @giftcards.each do |g|
+      g.dm_retailer_id = retailer.id
+      g.save
+    end
+    redirect '/admin/giftcards'
   end
 
   # Giftcards
