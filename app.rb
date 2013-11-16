@@ -266,7 +266,7 @@ class MyApp < Sinatra::Base
   get '/admin/giftcards' do
     protected!
     @slug = "giftcards"
-    @giftcards = Giftcard.all(dm_retailer_id: nil)
+    @giftcards = Giftcard.unbound
     erb :'admin/unbound_giftcards', layout: :admin
   end
 

@@ -20,6 +20,10 @@ class Giftcard
   alias_method :registered?, :registered
   alias_method :shipped?, :shipped
 
+  def self.unbound
+    self.all(dm_retailer_id: nil)
+  end
+
   def register(name, email)
     self.update({name: name, email: email, registered: Time.now})
   end
