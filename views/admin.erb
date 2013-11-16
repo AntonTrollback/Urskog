@@ -1,58 +1,44 @@
-<!doctype html>
-<!--[if lte IE 8]> <html lang="en" class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><%= title %></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="<%= stylesheet_path 'styles' %>">
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="<%= stylesheet_path 'styles-no-mq' %>">
-    <script>var staticWidth = 1000</script>
-    <script src="<%= javascript_path 'html5shiv' %>"></script>
-  <![endif]-->
-  <script src="<%= javascript_path 'app' %>"></script>
-</head>
-<body class="Page Page--<%= @slug %>">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Urskog &middot; Admin</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="<%= stylesheet_path 'admin' %>">
+    <script src="<%= javascript_path 'admin' %>"></script>
+  </head>
+  <body>
+    <div class="container">
 
+      <% unless @slug == "login" %>
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/admin">Urskog &middot; Admin</a>
+          </div>
 
-  <header class="Page-header">
-    <strong><a class="Logo" href="/">Urskog Longboard</a></strong>
-  </header>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="<%= active("giftcards", "active") %>"><a href="/admin">Presentkort</a></li>
+              <li class="<%= active("coupons", "active") %>"><a href="/admin/coupons">Rabattkoder</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Logga ut</a></li>
+            </ul>
+          </div>
+        </nav>
+      <% end %>
 
+      <main id="primary-content">
+        <%= yield %>
+      </main>
 
-  <div class="Page-main">
-    <%= yield %>
-  </div>
-
-
-  <footer class="Page-footer Footer">
-    <h2 class="u-isHiddenVisually">Company information</h2>
-    <ul>
-      <li>Urskog Longboard
-      <li><a href="mailto:info@urskog.com" title="Send a mail to info@urskog.com">info@urskog.com</a>
-      <li>Tegelviksgatan 18
-      <li>116 41 Stockholm
-      <li class="Footer-divider"><a href="/information">Information</a>
-    </ul>
-
-    <a href="https://www.facebook.com/urskog.longboard" class="Icon Icon--facebook u-marginRl">Facebook</a>
-    <a href="http://instagram.com/urskog" class="Icon Icon--instagram">Instagram</a>
-  </footer>
-
-<script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-16673339-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-</body>
+    </div>
+  </body>
 </html>

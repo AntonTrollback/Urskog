@@ -1,0 +1,74 @@
+<form class="Constrained Constrained--xs js-validate"
+      id="register-giftcard-form"
+      action="/giftcard"
+      method="POST"
+      novalidate
+      autocomplete="on">
+
+  <h1 class="u-heading2 u-marginBm">Register your gift card</h1>
+
+  <div class="Grid Grid--wide v2-Grid--2col">
+
+    <div class="Grid-cell u-textSmaller">
+      <p>Have you received a gift card? Awesome! <br>Each gift card you register equals a <strong>25%</strong> discount on any purchase on urskog.com</p>
+      <ul class="List List--spacing u-textSmaller u-paddingLl">
+        <li>Fill out the fields on this page to get your <strong>discount code</strong></li>
+        <li>You will also receive a copy of the discount to your email, for safekeeping</li>
+        <li>If you have more than one gift card, simply visit this page as many times needed</li>
+        <li>Enter your discount code(s) when making a purchase on urskog.com</li>
+      </ul>
+    </div>
+
+    <div class="Grid-cell">
+      <div class="Grid Grid--narrow">
+        <div class="Grid-cell">
+          <div class="Control">
+
+            <label for="giftcard-string">Gift card <% unless @flash["error"].nil? %> &#8211; <small><%= @flash["error"] %></small><% end %></label>
+            <input class="Control-field v-giftcard <%= "is-invalid" unless @flash["error"].nil? %>"
+                   id="giftcard-string"
+                   name="giftcard[string]"
+                   type="text"
+                   maxlength="10"
+                   placeholder="●●●●●●●●●●"
+                   data-dev="0123456789"
+                   autocomplete="off"
+                   required
+                   <%= "autofocus" if @flash["error"].nil? %>>
+
+          </div>
+          <div class="Control">
+
+            <label for="giftcard-name">Name</label>
+            <input class="Control-field v-length"
+                   id="giftcard-name"
+                   name="giftcard[name]"
+                   type="text"
+                   data-dev="Example Name"
+                   value="<%= @flash["name"] %>"
+                   required>
+
+          </div>
+        </div>
+        <div class="Grid-cell">
+          <div class="Control">
+
+            <label for="giftcard-email">Email</label>
+            <input class="Control-field v-email"
+                   id="giftcard-email"
+                   name="giftcard[email]"
+                   type="email"
+                   data-dev="anton@urskog.com"
+                   value="<%= @flash["email"] %>"
+                   required>
+
+          </div>
+        </div>
+        <div class="Grid-cell">
+          <button type="submit" class="Button Button--full u-marginTs js-submit"><span>Get your discount</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

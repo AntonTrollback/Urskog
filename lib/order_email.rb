@@ -30,7 +30,7 @@ Email address: #{order.email}
 Shipping information:
 Country: #{order.country}
 City: #{order.city}
-Phone number: #{order.phone_number}
+Phone number: #{order.phone}
 Street: #{order.street}
 Postal code: #{order.postal_code}
 

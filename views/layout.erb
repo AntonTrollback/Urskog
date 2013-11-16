@@ -8,20 +8,21 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, maximum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="<%= stylesheet_path 'styles' %>">
+  <link rel="stylesheet" href="<%= stylesheet_path 'urskog' %>">
   <!--[if lte IE 8]>
-    <link rel="stylesheet" href="<%= stylesheet_path 'styles-no-mq' %>">
+    <link rel="stylesheet" href="<%= stylesheet_path 'urskog-static' %>">
     <script>var staticWidth = 1000</script>
     <script src="<%= javascript_path 'html5shiv' %>"></script>
   <![endif]-->
-  <script src="<%= javascript_path 'app' %>"></script>
+  <script>window.app = {}</script>
+  <script src="<%= javascript_path 'urskog' %>"></script>
 </head>
 <body class="Page Page--<%= @slug %>">
 
 
   <header class="Page-header">
     <strong><a class="Logo" href="/">Urskog Longboard</a></strong>
-    <%= erb :'parts/navigation', :layout => false %>
+    <%= erb :navigation %>
   </header>
 
 
@@ -34,14 +35,14 @@
     <h2 class="u-isHiddenVisually">Company information</h2>
     <ul>
       <li>Urskog Longboard
-      <li><a href="mailto:info@urskog.com" title="Send a mail to info@urskog.com">info@urskog.com</a>
+      <li><a href="mailto:info@urskog.com">info@urskog.com</a>
       <li>Tegelviksgatan 18
       <li>116 41 Stockholm
       <li class="Footer-divider"><a href="/information">Information</a>
     </ul>
 
-    <a href="https://www.facebook.com/urskog.longboard" class="Icon Icon--facebook u-marginRl">Facebook</a>
-    <a href="http://instagram.com/urskog" class="Icon Icon--instagram">Instagram</a>
+    <a href="https://www.facebook.com/urskog.longboard" class="Icon Icon--facebook u-marginHm">Facebook</a>
+    <a href="http://instagram.com/urskog" class="Icon Icon--instagram u-marginHm">Instagram</a>
   </footer>
 
 <script>
@@ -55,5 +56,23 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+
+<% if @fb_id %>
+<script>
+  var fb_param = {};
+  fb_param.pixel_id = '<%= @fb_id %>';
+  fb_param.value = '0.00';
+  fb_param.currency = 'SEK';
+  (function(){
+    var fpw = document.createElement('script');
+    fpw.async = true;
+    fpw.src = '//connect.facebook.net/en_US/fp.js';
+    var ref = document.getElementsByTagName('script')[0];
+    ref.parentNode.insertBefore(fpw, ref);
+  })();
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=<%= @fb_id %>&amp;value=0&amp;currency=SEK"></noscript>
+<% end %>
+
 </body>
 </html>

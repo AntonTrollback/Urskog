@@ -1,1 +1,42 @@
-Dashboard
+<div class="row">
+  <div class="col-sm-7 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Återförsäljare</h3>
+      </div>
+      <div class="list-group">
+        <a href="/admin/giftcards" class="list-group-item">
+          <span class="text-danger">Obundna</span>
+          <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
+        </a>
+        <% @retailers.each do |retailer| %>
+          <a href="/admin/retailers/<%= retailer.id %>/giftcards" class="list-group-item">
+          <%= retailer.name %>
+          <span class="glyphicon glyphicon-chevron-right pull-right text-muted"></span>
+        </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-5 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Lägg till ny</h3>
+      </div>
+
+      <form role="form" method="post" action="/admin/retailers/add">
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="name">Namn</label>
+            <input type="text" class="form-control" id="name" name="retailer[name]" required>
+          </div>
+        </div>
+
+        <div class="panel-footer">
+          <button type="submit" class="btn btn-primary">Lägg till</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

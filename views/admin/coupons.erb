@@ -1,0 +1,66 @@
+<div class="panel panel-default giftcard-list">
+  <div class="panel-heading">
+    <h3 class="panel-title">Rabattkoder</h3>
+  </div>
+
+  <div class="panel-table">
+    <table class="table table-sort">
+      <thead>
+        <tr>
+          <th>Kod</th>
+          <th>Procent <span class="glyphicon glyphicon-play"></span></th>
+          <th>Skapad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Förbrukad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Information <span class="glyphicon glyphicon-play"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @coupons.each do |c| %>
+        <tr id="<%= c.id %>">
+          <td><%= c.code %></td>
+          <td><%= c.discount %>%</td>
+          <td><%= c.created_on %></td>
+          <td class="<%= "text-success" if c.pretty_registered != "" %>"><%= c.pretty_registered %></td>
+          <td><%= c.information %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Generera nya</h3>
+  </div>
+
+  <form role="form" method="post" action="/admin/coupons/add">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="amount">Antal</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+          </div>
+          <div class="col-sm-4">
+            <label for="info">Information</label>
+            <input type="text" class="form-control" id="info" placeholder="Bara något ord" name="coupon[information]" required>
+          </div>
+          <div class="col-sm-4">
+            <label for="discount">Rabatt</label>
+            <div class="input-group">
+              <input type="number" class="form-control" id="discount" placeholder="25" name="coupon[discount]" required>
+              <span class="input-group-addon">%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary">Generera</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,156 @@
+@import "bourbon";
+@import "lib/bootstrap";
+
+/**
+ * Navigation
+ *
+ * Tweak margins and make full width on narrow viewports
+ */
+
+@media (max-width: 768px) {
+  .navbar {
+    margin-right: -15px;
+    margin-left: -15px;
+    border-right: 0;
+    border-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px !important;
+  }
+}
+
+/**
+ * Login window
+ */
+
+.login {
+  margin-top: 50px;
+}
+
+/**
+ * Extend panels with scrollable tables
+ */
+
+.panel-table {
+  .table {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    overflow: auto;
+
+    .table {
+      min-width: 735px;
+    }
+  }
+}
+
+/**
+ * Extend table head with asc/desc sorting
+ */
+
+.table thead .glyphicon {
+  display: none;
+}
+
+.table-head {
+  cursor: pointer;
+  position: relative;
+}
+
+thead .table-asc {
+  background: #f5f5f5;
+
+  .glyphicon {
+    display: block;
+    position: absolute;
+    font-size: 11px;
+    color: #bdbdbd;
+    top: 12px;
+    right: 8px;
+    @include transform(rotate(90deg));
+  }
+}
+
+thead .table-desc {
+  @extend .table-asc;
+
+  .glyphicon {
+    right: 10px;
+    @include transform(rotate(-90deg));
+  }
+}
+
+/**
+ * Add some styles for table cells
+ */
+
+.table td {
+  position: relative; /* Needed below */
+
+  &.text-success {
+    background-color: #dff0d8;
+  }
+}
+
+/**
+ * Extend tables with checkbox table cells
+ */
+
+.table-checkbox {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 7px 8px;
+  margin: 0;
+  font: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  @include user-select(none);
+
+  input {
+    cursor: inherit;
+  }
+
+  span {
+    display: none;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.table-status {
+  &.active {
+    color: #468847;
+    background-color: #dff0d8;
+  }
+}
+
+.table-mark {
+  &.active {
+    color: #3a87ad;
+    background-color: #d9edf7;
+  }
+}
+
+/**
+ * Add highlighting for table rows
+ */
+
+.highlighted-row {
+  color: #c09853;
+  background-color: #fcf8e3;
+}

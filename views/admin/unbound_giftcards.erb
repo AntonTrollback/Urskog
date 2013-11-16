@@ -1,0 +1,92 @@
+<div class="panel panel-default giftcard-list">
+  <div class="panel-heading">
+    <h3 class="panel-title text-danger">Obundna presentkort</h3>
+  </div>
+
+  <div class="panel-table">
+    <table class="table table-sort">
+      <thead>
+        <tr>
+          <th>Kod</th>
+          <th>Skapad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Tillverkad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Skickad <span class="glyphicon glyphicon-play"></span></th>
+          <th>Återförsäljare <span class="glyphicon glyphicon-play"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @giftcards.each do |g| %>
+        <tr id="<%= g.id %>">
+          <td><%= g.code %></td>
+          <td><%= g.created_on %></td>
+          <td>
+            <form action="/admin/giftcards/constructed">
+              <label class="table-checkbox table-status <%= "active" if g.constructed? %>">
+                <input type="checkbox" name="giftcard[constructed]" <%= "checked" if g.constructed? %> value="1">
+                <span>1</span>
+              </label>
+              <input name="giftcard[id]" type="hidden" value="<%= g.id %>" />
+            </form>
+          </td>
+          <td>
+            <form action="/admin/giftcards/shipped">
+              <label class="table-checkbox table-status <%= "active" if g.shipped? %>">
+                <input type="checkbox" name="giftcard[shipped]" <%= "checked" if g.shipped? %> value="1">
+                <span>0</span>
+              </label>
+              <input name="giftcard[id]" type="hidden" value="<%= g.id %>" />
+            </form>
+          </td>
+          <td><%= g.pretty_registered %></td>
+          <td>
+            <form>
+              <label class="table-checkbox table-mark">
+                <input type="checkbox">
+                <span>0</span>
+              </label>
+            </form>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel-footer clearfix">
+    <form class="pull-right form-inline retailer-mover" action="/admin/giftcards/move" method="post">
+      <input type="hidden" name="giftcards">
+      <div class="form-group">
+        <select class="form-control" name="retailer">
+          <% @retailers.each do |r| %>
+            <option value="<%= r.id %>"><%= r.name %></option>
+          <% end %>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success" disabled>Flytta <span>(0)</span></button>
+    </form>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Generera nya</h3>
+  </div>
+
+  <form role="form" method="post" action="/admin/giftcards">
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="amount">Antal</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary">Generera</button>
+    </div>
+  </form>
+</div>

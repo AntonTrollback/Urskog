@@ -1,0 +1,36 @@
+<form class="Shop js-shop" action="/checkout/<%= @board.slug %>">
+  <% if @board.deck_only? %>
+
+    <label class="Control u-marginRl is-disabled" for="complete">
+      <input type="radio" id="complete" name="buy_option" value="complete" disabled> <span>Complete</span> <span class="Control-sub">Not available</span>
+    </label>
+    <label class="Control u-marginRm <%= "is-disabled" if @board.out_of_stock %>" for="deckOnly">
+      <input type="radio" id="deckOnly" name="buy_option" value="deck" checked <%= "disabled" if @board.out_of_stock %>> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
+    </label>
+
+  <% else %>
+
+    <label class="Control u-marginRl <%= "is-disabled" if @board.out_of_stock %>" for="complete">
+      <input class="js-shopControl" type="radio" id="complete" name="buy_option" value="complete" checked <%= "disabled" if @board.out_of_stock %>> <span>Complete</span> <span class="Control-sub"><%= @board.price.complete %> <small>SEK</small></span>
+    </label>
+    <label class="Control u-marginRm <%= "is-disabled" if @board.out_of_stock %>" for="deckOnly">
+      <input class="js-shopControl" type="radio" id="deckOnly" name="buy_option" value="deck" <%= "disabled" if @board.out_of_stock %>> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
+    </label>
+
+  <% end %>
+
+  <div class="Shop-section">
+
+    <div class="Control">
+      <label class="u-marginRs" for="wood_type">Wood:</label>
+      <select class="Control-menu" name="wood_type" id="wood_type" <%= "disabled" if @board.out_of_stock %>>
+        <% @board.woods.each do |wood| %>
+          <option value="<%= wood %>"><%= wood.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+
+  <%= erb :buy_button %>
+
+</form>

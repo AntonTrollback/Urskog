@@ -67,12 +67,110 @@ migration 6, :add_receipt_went_wrong_err_msg_to_orders do
   end
 end
 
-migration 6, :phone_number_to_orders do
+migration 7, :phone_to_orders do
   up do
     modify_table :orders do
-      add_column :phone_number, String, :limit => 255
+      add_column :phone, String, :limit => 255
     end
   end
 end
 
+migration 8, :create_retailers do
+  up do
+    create_table :dm_retailers do
+      column :id,   Integer, :serial => true
+      column :name, String, :size => 255
+    end
+  end
+
+  down do
+    drop_table :dm_retailers
+  end
+end
+
+migration 9, :create_giftcards do
+  up do
+    create_table :giftcards do
+      column :id,   Integer, :serial => true
+      column :code, String, :size => 50
+      column :dm_retailer_id, Integer
+    end
+  end
+
+  down do
+    drop_table :giftcards
+  end
+end
+
+migration 10, :add_metadata_to_giftcards do
+  up do
+    modify_table :giftcards do
+      add_column :constructed, "BOOLEAN"
+      add_column :shipped, "BOOLEAN"
+      add_column :registered, DateTime
+      add_column :created_at, DateTime
+      add_column :created_on, Date
+    end
+  end
+
+  down do
+    modify_table :giftcards do
+      remove_column :constructed
+      remove_column :shipped
+      remove_column :registered
+      remove_column :created_at
+      remove_column :created_on
+    end
+  end
+end
+
+migration 11, :create_coupons do
+  up do
+    create_table :coupons do
+      column :id,   Integer, :serial => true
+      column :code, String, :size => 50
+      column :information, String, :size => 100
+      column :discount, Float
+      column :created_at, DateTime
+      column :created_on, Date
+      column :giftcard_id, Integer
+    end
+  end
+
+  down do
+    drop_table :coupons
+  end
+end
+
+migration 12, :add_name_and_email_to_giftcards do
+  up do
+    modify_table :giftcards do
+      add_column :name, String, :size => 255
+      add_column :email, String, :size => 255
+    end
+  end
+
+  down do
+    modify_table :giftcards do
+      remove_column :name
+      remove_column :email
+    end
+  end
+end
+
+migration 13, :add_registered do
+  up do
+    modify_table :coupons do
+      add_column :registered, DateTime
+    end
+  end
+
+  down do
+    modify_table :coupons do
+      remove_column :registered
+    end
+  end
+end
+
+#migrate_down!
 migrate_up!

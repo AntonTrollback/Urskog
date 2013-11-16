@@ -11,6 +11,12 @@
     font-size: 14px;
     margin-bottom: 4px;
     color: #555;
+
+    small {
+      font-size: 14px;
+      font-weight: 300;
+      color: $color-danger;
+    }
   }
 }
 
@@ -34,10 +40,39 @@
   &:placeholder { color: #bbb; }
 
   &:focus {
-    outline: none;
+    outline: 0;
     border-color: $color-link;
     background: lighten($color-link, 58%);
   }
+
+  &[readonly] {
+    background: #f2f2f2;
+    text-align: center;
+    font-size: 30px;
+    color: #585858;
+
+    &:focus {
+      background: #f2f2f2;
+    }
+  }
+
+  &[disabled] {
+    background: #f2f2f2;
+    color: #585858;
+    cursor: default;
+  }
+
+  &.is-correct {
+    background: #E9FFE2;
+    color: $color-success;
+  }
+}
+
+// validation states
+// -----------------------------------------------------------------------------
+
+input.is-invalid {
+  border-color: $color-danger;
 }
 
 // menus
@@ -83,9 +118,113 @@ label.Control {
   }
 }
 
-// validation states
+// Control addon button
 // -----------------------------------------------------------------------------
 
-input.is-invalid {
-  border-color: #f06060;
+.Control-addon {
+  display: block;
+  color: #777;
+  border: 1px solid #bbb;
+  padding: 3px 5px 3px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 0 0 3px 3px;
+  background: white;
+  text-align: center;
+  margin: -1px 0 0;
+  width: 100%;
+  background: white;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    background: #f8f8f8;
+  }
+
+  &:active {
+    outline: 0;
+    box-shadow: inset 0 1px 0px rgba(black, .08);
+  }
+}
+
+.Control.has-addon {
+  .Control-field {
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+.Control-field.is-invalid {
+  + .Control-addon {
+    border-top-color: $color-danger;
+    color: $color-danger;
+  }
+}
+
+.Control-field.is-correct + .Control-addon,
+.Control-addon:disabled {
+  color: #A0A0A0;
+  background: #f8f8f8;
+  text-shadow: 0 1px white;
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.Control-field:focus {
+  + .Control-addon {
+    border-top-color: $color-link;
+  }
+}
+
+// Control creator button
+// -----------------------------------------------------------------------------
+
+.Control-creator {
+  color: #979797;
+  border: 1px solid white;
+  padding: 7px 10px 7px 33px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 300;
+  border-radius: 3px;
+  background: white;
+  position: relative;
+  width: 100%;
+  text-align: left;
+
+  &:before,
+  &:after {
+    content: "";
+    background: #a2a2a2;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &:before {
+    width: 12px;
+    height: 2px;
+    top: 15px;
+    left: 14px;
+  }
+
+  &:after {
+    width: 2px;
+    height: 12px;
+    top: 10px;
+    left: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #D1D1D1;
+    outline: 0;
+  }
+
+  &:active {
+    outline: 0;
+    box-shadow: inset 0 1px 0px rgba(black, .08);
+    background: #f8f8f8;
+  }
 }

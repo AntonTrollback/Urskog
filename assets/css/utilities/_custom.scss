@@ -19,6 +19,16 @@
 }
 
 /**
+ * Alter display property at specifc viewport sizes
+ */
+
+.u-blockForExtraNarrow {
+  @include max-width(470px) {
+    display: block;
+  }
+}
+
+/**
  * Control text styles
  */
 
@@ -36,4 +46,9 @@
   font-size: 16px;
   line-height: 1.45;
   text-align: center;
+}
+
+.u-textMuted {
+  color: $color-muted;
+  font-weight: normal;
 }
