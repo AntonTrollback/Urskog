@@ -244,6 +244,7 @@ class MyApp < Sinatra::Base
 
   # Dashboard
   get '/admin' do
+    protected!
     @slug = "giftcards"
     @retailers = DMRetailer.all
     erb :'admin/dashboard', layout: :admin
@@ -263,6 +264,7 @@ class MyApp < Sinatra::Base
 
   # Giftcards
   get '/admin/retailers/:id/giftcards' do
+    protected!
     @slug = "giftcards"
     @retailer = DMRetailer.find(params[:id]).first
     @giftcards = @retailer.giftcards.all
@@ -273,7 +275,7 @@ class MyApp < Sinatra::Base
     @retailer = DMRetailer.find(params[:id]).first
     # The generator only creates the codez, add them to the retailer later
     giftcards = CodeGenerator.generate(Giftcard.all.map(&:code),
-                                            params["amount"])
+                                       params["amount"])
     giftcards.each do |g|
       @retailer.giftcards << Giftcard.new({code: g})
     end
@@ -291,6 +293,7 @@ class MyApp < Sinatra::Base
 
   # Coupon
   get '/admin/coupons' do
+    protected!
     @slug = "coupons"
     @coupons = Coupon.all
     erb :'admin/coupons', layout: :admin
@@ -298,7 +301,7 @@ class MyApp < Sinatra::Base
 
   post '/admin/coupons/add' do
     codes = CodeGenerator.generate(Coupon.all.map(&:code),
-                                            params["amount"])
+                                   params["amount"])
     codes.each do |c|
       Coupon.create(params["coupon"].merge({code: c}))
     end
@@ -313,6 +316,17 @@ class MyApp < Sinatra::Base
       else
         '19628440790b126911007115a22ab887'
       end
+    end
+
+    def protected!
+      return if authorized?
+      headers['WWW-Authenticate'] = 'Basic realm="Restricted Area"'
+      halt 401, "Not authorized\n"
+    end
+
+    def authorized?
+      @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+      @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['admin', 'lolare']
     end
   end
 
