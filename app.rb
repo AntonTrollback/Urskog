@@ -262,6 +262,23 @@ class MyApp < Sinatra::Base
     end
   end
 
+  # unbound giftcards
+  get '/admin/giftcards' do
+    protected!
+    @slug = "giftcards"
+    @giftcards = Giftcard.all(dm_retailer_id: nil)
+    erb :'admin/unbound_giftcards', layout: :admin
+  end
+
+  post '/admin/giftcards' do
+    giftcards = CodeGenerator.generate(Giftcard.all.map(&:code),
+                                       params["amount"])
+    giftcards.each do |g|
+      Giftcard.create({code: g})
+    end
+    redirect "/admin/giftcards"
+  end
+
   # Giftcards
   get '/admin/retailers/:id/giftcards' do
     protected!

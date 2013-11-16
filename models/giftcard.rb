@@ -13,7 +13,7 @@ class Giftcard
   property :created_at, DateTime
   property :created_on, Date
 
-  belongs_to :d_m_retailer, :child_key => [:dm_retailer_id]
+  belongs_to :d_m_retailer, :child_key => [:dm_retailer_id], :required => false
   has n, :coupons
 
   alias_method :constructed?, :constructed
