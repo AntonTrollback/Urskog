@@ -209,7 +209,6 @@
           :nice_url: full-marks.com
           :url: http://full-marks.com/
 
-
   France:
     - Fancy:
       - - :name: Easy Risers
@@ -220,6 +219,16 @@
           :online: true
           :meatworld: true
 
+      Versailles:
+      - - :name: Numero 4 Skateshop
+          :country: France
+          :city: Versailles
+          :nice_url: numero4skateshop.com
+          :url: http://www.numero4skateshop.com
+          :email: contact@numero4skateshop.com
+          :online: true
+          :address: 4 Rue Richaud
+          :meatworld: true
 
   Spain:
     - Madrid:
