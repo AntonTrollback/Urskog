@@ -1,9 +1,9 @@
 require 'pony'
 
 if ENV['RACK_ENV'] == "production"
-  ADMIN_EMAILS = 'order@urskog.com, anton@urskog.com'
+  ADMIN_EMAILS = 'order@urskog.com, anton@trollback.se'
 else
-  ADMIN_EMAILS = 'anton@urskog.com, christopher.schmolzer@gmail.com'
+  ADMIN_EMAILS = 'anton@trollback.se, christopher.schmolzer@gmail.com'
 end
 
 Pony.options = {
