@@ -12,7 +12,7 @@ class PaymentErrorEmail
   def send
     Pony.mail({
       :to => ADMIN_EMAILS,
-      :subject => "ERROR: Purchase: #{order.board} #{order.type_of_purchase}",
+      :subject => "ERROR Purchase: #{order.board} #{order.type_of_purchase}",
       :body => "Order information:
 Date: #{order.date_time}
 ID: #{order.id}
