@@ -64,55 +64,57 @@
          id="order-discount">
 
 
-  <section class="js-step js-discount" id="discount-codes">
-    <h2 class="u-heading2 u-marginBl">Discount</h2>
-    <div class="Grid Grid--wide Grid--center v2-Grid--2col">
-      <div class="Grid-cell u-textSmaller">
-        <p class="u-marginTs">If you have any discount codes that you wish to use, enter them here. If not, simply press the "next" button.</p>
-        <p>Have you recived a gift card? <br>You first need to <a href="/giftcard" target="_blank">register it</a> to get the discount.</p>
+  <% unless @board.not_a_board %>
+    <section class="js-step js-discount" id="discount-codes">
+      <h2 class="u-heading2 u-marginBl">Discount</h2>
+      <div class="Grid Grid--wide Grid--center v2-Grid--2col">
+        <div class="Grid-cell u-textSmaller">
+          <p class="u-marginTs">If you have any discount codes that you wish to use, enter them here. If not, simply press the "next" button.</p>
+          <p>Have you recived a gift card? <br>You first need to <a href="/giftcard" target="_blank">register it</a> to get the discount.</p>
 
-        <div class="PriceCalc js-priceCal">
-          <div class="PriceCalc-result">
-            <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.send(@buy_option) %></span> <small>SEK</small>
-          </div>
-          <div class="PriceCalc-desc">
-            <%= @board.price.send(@buy_option) %>
-             - <span class="js-discount">0</span> <small>SEK</small> (<span class="js-discountPercentage">0</span>%)</span>
+          <div class="PriceCalc js-priceCal">
+            <div class="PriceCalc-result">
+              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.send(@buy_option) %></span> <small>SEK</small>
+            </div>
+            <div class="PriceCalc-desc">
+              <%= @board.price.send(@buy_option) %>
+               - <span class="js-discount">0</span> <small>SEK</small> (<span class="js-discountPercentage">0</span>%)</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="Grid-cell">
-        <div class="Grid Grid--narrow v3-Grid--2col">
-          <% 4.times do |i| %>
-            <div class='Grid-cell <%= "u-isHidden" unless i == 0 %> js-discountControl'>
-              <div class="Control has-addon">
-              <input class="Control-field"
-                     name="discount[string]"
-                     type="text"
-                     maxlength="10"
-                     placeholder="●●●●●●●●●●"
-                     autocomplete="off"
-                     data-dev="">
-              <button class="Control-addon">Save</button>
+        <div class="Grid-cell">
+          <div class="Grid Grid--narrow v3-Grid--2col">
+            <% 4.times do |i| %>
+              <div class='Grid-cell <%= "u-isHidden" unless i == 0 %> js-discountControl'>
+                <div class="Control has-addon">
+                <input class="Control-field"
+                       name="discount[string]"
+                       type="text"
+                       maxlength="10"
+                       placeholder="●●●●●●●●●●"
+                       autocomplete="off"
+                       data-dev="">
+                <button class="Control-addon">Save</button>
+                </div>
+              </div>
+            <% end %>
+            <div class="Grid-cell">
+              <div class="Control">
+                <button class="Control-creator js-showControl">Add another</button>
               </div>
             </div>
-          <% end %>
-          <div class="Grid-cell">
-            <div class="Control">
-              <button class="Control-creator js-showControl">Add another</button>
-            </div>
           </div>
         </div>
+        <div class="Grid-cell u-textCenter u-marginTl">
+          <a href="#" class="Button Button--full js-next"><span>Next</span></a>
+        </div>
       </div>
-      <div class="Grid-cell u-textCenter u-marginTl">
-        <a href="#" class="Button Button--full js-next"><span>Next</span></a>
-      </div>
-    </div>
-  </section>
+    </section>
+  <% end %>
 
 
-  <section class="js-step u-isHidden" id="shipping-information">
+  <section class="js-step <%= "u-isHidden" unless @board.not_a_board %>" id="shipping-information">
     <h2 class="u-heading2 u-marginBl">Shipping information</h2>
     <div class="Grid Grid--wide Grid--center v2-Grid--2col">
       <div class="Grid-cell">
