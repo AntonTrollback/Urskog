@@ -9,6 +9,13 @@ class ReceiptEmail
   end
 
   def send
+
+    if order.type_of_purchase == "static"
+      @model = "Type: #{order.board}"
+    else
+      @model = "Model: #{order.board} #{order.type_of_purchase} in #{order.wood_type}"
+    end
+
     begin
       Pony.mail({
         :to => order.email,
@@ -29,7 +36,7 @@ Retailer: Urskog AB
 VAT number: SE556797382001
 
 Product information:
-Model: #{order.board} #{order.type_of_purchase} in #{order.wood_type}
+#{@model}
 Amount: #{order.price} sek (including VAT)
 
 Shipping information:
