@@ -198,7 +198,7 @@ class MyApp < Sinatra::Base
     order = Order.new(params["order"].merge({price: new_price, board: board.name}))
 
     if order.save
-      p "could the order be saveD?"
+      p "could the order be saved?"
       if new_price == 0
         # Om det är 4 riktiga koder, hoppa över paymentprocessorn
         p "the new price is 0"
