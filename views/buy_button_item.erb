@@ -1,8 +1,32 @@
-<div class="Shop-option">
+<div class="Shop-option js-shopOption" id="quantity1Content">
   <% if @board.out_of_stock %>
     <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
   <% else %>
     <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.static %> <small>SEK</small></strong></span></button>
   <% end %>
-    <p>Free shipping worldwide</p>
+  <p>Free shipping worldwide</p>
+</div>
+<div class="Shop-option js-shopOption u-isHidden" id="quantity2Content">
+  <% if @board.out_of_stock %>
+    <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+  <% else %>
+    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.static * 2 %> <small>SEK</small></strong></span></button>
+  <% end %>
+  <p>Free shipping worldwide</p>
+</div>
+<div class="Shop-option js-shopOption u-isHidden" id="quantity3Content">
+  <% if @board.out_of_stock %>
+    <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+  <% else %>
+    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.static * 3 %> <small>SEK</small></strong></span></button>
+  <% end %>
+  <p>Free shipping worldwide</p>
+</div>
+<div class="Shop-option js-shopOption u-isHidden" id="quantity4Content">
+  <% if @board.out_of_stock %>
+    <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+  <% else %>
+    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.static * 4 %> <small>SEK</small></strong></span></button>
+  <% end %>
+  <p>Free shipping worldwide</p>
 </div>

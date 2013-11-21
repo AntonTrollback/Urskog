@@ -3,6 +3,7 @@
   :slug: kvist
   :out_of_stock: false
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2645
     :deck: 1535
@@ -38,6 +39,7 @@
   :slug: kil
   :out_of_stock: true
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 3199
     :deck: 1899
@@ -65,6 +67,7 @@
   :slug: lov
   :out_of_stock: true
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -97,6 +100,7 @@
   :slug: pinne
   :out_of_stock: false
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2645
     :deck: 1535
@@ -128,6 +132,7 @@
   :slug: sticka
   :out_of_stock: false
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2545
     :deck: 1449
@@ -159,6 +164,7 @@
   :slug: stubbe
   :out_of_stock: false
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -190,6 +196,7 @@
   :slug: vidja
   :out_of_stock: false
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -225,6 +232,7 @@
   :slug: vidja-dropthrough
   :out_of_stock: false
   :not_a_board: false
+  :unlisted: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -259,6 +267,7 @@
   :slug: fro
   :out_of_stock: true
   :not_a_board: false
+  :unlisted: false
   :price:
     :deck: 995
   :woods:
@@ -280,8 +289,54 @@
   :slug: giftcard
   :out_of_stock: false
   :not_a_board: true
+  :unlisted: false
   :price:
     :static: 650
+  :woods: false
+  :promoted_wood: false
+  :info: |
+    <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
+  :length: false
+  :width: false
+  :wheelbase: false
+
+- :name: Gift card x 2
+  :slug: giftcard-2
+  :out_of_stock: false
+  :not_a_board: true
+  :unlisted: true
+  :price:
+    :static: 1300
+  :woods: false
+  :promoted_wood: false
+  :info: |
+    <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
+  :length: false
+  :width: false
+  :wheelbase: false
+
+- :name: Gift card x 3
+  :slug: giftcard-3
+  :out_of_stock: false
+  :not_a_board: true
+  :unlisted: true
+  :price:
+    :static: 1950
+  :woods: false
+  :promoted_wood: false
+  :info: |
+    <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
+  :length: false
+  :width: false
+  :wheelbase: false
+
+- :name: Gift card x 4
+  :slug: giftcard-4
+  :out_of_stock: false
+  :not_a_board: true
+  :unlisted: true
+  :price:
+    :static: 2600
   :woods: false
   :promoted_wood: false
   :info: |

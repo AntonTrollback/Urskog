@@ -27,6 +27,7 @@ class Board
               :out_of_stock,
               :price_hash,
               :not_a_board,
+              :unlisted,
               :woods,
               :promoted_wood,
               :setup,
@@ -41,6 +42,7 @@ class Board
     @out_of_stock   = attributes[:out_of_stock]
     @price_hash     = attributes[:price]
     @not_a_board    = attributes[:not_a_board]
+    @unlisted       = attributes[:unlisted]
     @woods          = attributes[:woods]
     @promoted_wood  = attributes[:promoted_wood]
     @setup          = attributes[:setup]

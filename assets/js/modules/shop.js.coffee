@@ -8,15 +8,28 @@ app.shop =
     that = this
 
     # Radio buttons are used to determine shop content
+    @el.on 'change', '.js-updateAction', (e) ->
+      that.setAction($(this).find('option:selected').val())
+
+    # Radio buttons are used to determine shop content
     @el.on 'change', '.js-shopControl', (e) ->
-      that.changeShopContent($(this).attr('id'))
+      that.setShopContent()
 
-    # Change shop content now, onload, because radio button state can be
-    # preserved when moving in browser history
-    @changeShopContent(@el.find('.js-shopControl:checked').attr('id'))
+    # Run onload because radio button states might
+    # be preserved when moving in browser history
+    @setShopContent()
 
-  changeShopContent: (optionName) ->
-    @el.find('.js-shopOption').addClass('u-isHidden')
-    @el.find("##{optionName}Content").removeClass('u-isHidden')
+  setAction: (action) ->
+    @el.attr('action', action)
 
+  setShopContent: ->
+    $input = @el.find('.js-shopControl:checked')
+    $select = @el.find('.js-shopControl option:selected')
 
+    if $input.length
+      id = $input.attr('id')
+    else
+      id = $select.attr('id')
+
+    @el.find(".js-shopOption:not(##{id}Content)").addClass('u-isHidden')
+    @el.find("##{id}Content").removeClass('u-isHidden')

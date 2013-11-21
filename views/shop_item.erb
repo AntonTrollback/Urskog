@@ -1,4 +1,15 @@
 <form class="Shop js-shop" action="/checkout/<%= @board.slug %>">
   <input type="hidden" name="buy_option" value="static">
+
+  <div class="Control u-paddingBm">
+    <label class="u-marginRs" for="quantity">Quantity:</label>
+    <select class="Control-menu js-updateAction js-shopControl" id="quantity" <%= "disabled" if @board.out_of_stock %>>
+      <option id="quantity1" value="/checkout/<%= @board.slug %>">One – 25% board</option>
+      <option id="quantity2" value="/checkout/<%= @board.slug %>-2">Two – 50% board</option>
+      <option id="quantity3" value="/checkout/<%= @board.slug %>-3">Three – 75% board</option>
+      <option id="quantity4" value="/checkout/<%= @board.slug %>-4">Four – 100% board</option>
+    </select>
+  </div>
+
   <%= erb :buy_button_item %>
 </form>

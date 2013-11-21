@@ -3,16 +3,18 @@
 
   <ul class="ProductList ProductList--divided">
     <% @boards.each do |board| %>
-      <li>
-        <a class="ProductList-item" href="/products/<%= board.slug %>">
-          <h2 class="ProductList-itemHeading"><%= board.name %></h2>
-          <% if board.not_a_board %>
-            <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= board.slug %>.jpg" alt="<%= board.name %>">
-          <% else %>
-            <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= board.slug %>-<%= board.promoted_wood %>.jpg" alt="<%= board.name %>, deck only in <%= board.promoted_wood %>">
-          <% end %>
-        </a>
-      </li>
+      <% unless board.unlisted %>
+        <li>
+          <a class="ProductList-item" href="/products/<%= board.slug %>">
+            <h2 class="ProductList-itemHeading"><%= board.name %></h2>
+            <% if board.not_a_board %>
+              <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= board.slug %>.jpg" alt="<%= board.name %>">
+            <% else %>
+              <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= board.slug %>-<%= board.promoted_wood %>.jpg" alt="<%= board.name %>, deck only in <%= board.promoted_wood %>">
+            <% end %>
+          </a>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </div>
