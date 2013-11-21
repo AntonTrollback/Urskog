@@ -281,11 +281,11 @@
   :out_of_stock: false
   :not_a_board: true
   :price:
-    :static: 995
+    :static: 650
   :woods: false
   :promoted_wood: false
   :info: |
-    <p>.</p>
+    <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
   :length: false
   :width: false
   :wheelbase: false
