@@ -2,6 +2,7 @@
 - :name: Kvist
   :slug: kvist
   :out_of_stock: false
+  :not_a_board: false
   :price:
     :complete: 2645
     :deck: 1535
@@ -36,6 +37,7 @@
 - :name: Kil
   :slug: kil
   :out_of_stock: true
+  :not_a_board: false
   :price:
     :complete: 3199
     :deck: 1899
@@ -62,6 +64,7 @@
 - :name: Löv
   :slug: lov
   :out_of_stock: true
+  :not_a_board: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -93,6 +96,7 @@
 - :name: Pinne
   :slug: pinne
   :out_of_stock: false
+  :not_a_board: false
   :price:
     :complete: 2645
     :deck: 1535
@@ -123,6 +127,7 @@
 - :name: Sticka
   :slug: sticka
   :out_of_stock: false
+  :not_a_board: false
   :price:
     :complete: 2545
     :deck: 1449
@@ -153,6 +158,7 @@
 - :name: Stubbe
   :slug: stubbe
   :out_of_stock: false
+  :not_a_board: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -183,6 +189,7 @@
 - :name: Vidja
   :slug: vidja
   :out_of_stock: false
+  :not_a_board: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -217,6 +224,7 @@
 - :name: Vidja drop through
   :slug: vidja-dropthrough
   :out_of_stock: false
+  :not_a_board: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -250,6 +258,7 @@
 - :name: Frö
   :slug: fro
   :out_of_stock: true
+  :not_a_board: false
   :price:
     :deck: 995
   :woods:
@@ -266,3 +275,17 @@
   :wheelbase:
     :mm: 300
     :inch: 11.8
+
+- :name: Gift card
+  :slug: giftcard
+  :out_of_stock: false
+  :not_a_board: true
+  :price:
+    :static: 995
+  :woods: false
+  :promoted_wood: false
+  :info: |
+    <p>.</p>
+  :length: false
+  :width: false
+  :wheelbase: false

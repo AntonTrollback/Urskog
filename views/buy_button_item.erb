@@ -1,0 +1,8 @@
+<div class="Shop-option">
+  <% if @board.out_of_stock %>
+    <button class="Button Shop-buyButton" disabled><span>Out of stock</span></button>
+  <% else %>
+    <button class="Button Shop-buyButton"><span>Buy<strong class="Button-sub"><%= @board.price.static %> <small>SEK</small></strong></span></button>
+  <% end %>
+    <p>Free shipping worldwide</p>
+</div>

@@ -1,23 +1,35 @@
 <section class="Constrained Constrained--xs">
   <div class="Grid Grid--wide v2-Grid--2col">
-    <div class="Grid-cell">
-      <h1><%= @board.name %></h1>
-      <div class="u-textSmaller">
-        <% if @buy_option == "complete" %>
-          <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> <%= @board.setup %></p>
-        <% else %>
-          <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> the deck and some stickers.</p>
-        <% end %>
-        <p class="u-marginTn u-marginBm"><strong class="u-marginRs">Type of wood:</strong> <%= @wood_type %></p>
+    <% if @board.not_a_board %>
+      <div class="Grid-cell">
+        <h1><%= @board.name %></h1>
+        <div class="u-textSmaller">
+          <p class="u-marginTn u-marginBm"><%= @board.info %></p>
+        </div>
       </div>
-    </div>
-    <div class="Grid-cell u-marginTl u-paddingTm">
-      <% if @buy_option == "complete" %>
-        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg">
-      <% else %>
-        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
-      <% end %>
-    </div>
+      <div class="Grid-cell u-marginTl u-paddingTm">
+        <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>.jpg">
+      </div>
+    <% else %>
+      <div class="Grid-cell">
+        <h1><%= @board.name %></h1>
+        <div class="u-textSmaller">
+          <% if @buy_option == "complete" %>
+            <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> <%= @board.setup %></p>
+          <% else %>
+            <p class="u-marginBn"><strong class="u-marginRs">Setup:</strong> the deck and some stickers.</p>
+          <% end %>
+          <p class="u-marginTn u-marginBm"><strong class="u-marginRs">Type of wood:</strong> <%= @wood_type %></p>
+        </div>
+      </div>
+      <div class="Grid-cell u-marginTl u-paddingTm">
+        <% if @buy_option == "complete" %>
+          <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg">
+        <% else %>
+          <img class="u-sizeFull u-marginTm" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= @wood_type %>.jpg">
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </section>
 
@@ -61,18 +73,10 @@
 
         <div class="PriceCalc js-priceCal">
           <div class="PriceCalc-result">
-            <% if @buy_option == "complete" %>
-              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.complete %></span> <small>SEK</small>
-            <% else %>
-              <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.deck %></span> <small>SEK</small>
-            <% end %>
+            <strong>Amount to pay:</strong> <span class="js-priceResult"><%= @board.price.send(@buy_option) %></span> <small>SEK</small>
           </div>
           <div class="PriceCalc-desc">
-            <% if @buy_option == "complete" %>
-              <%= @board.price.complete %>
-            <% else %>
-              <%= @board.price.deck %>
-            <% end %>
+            <%= @board.price.send(@buy_option) %>
              - <span class="js-discount">0</span> <small>SEK</small> (<span class="js-discountPercentage">0</span>%)</span>
           </div>
         </div>
@@ -89,7 +93,7 @@
                      maxlength="10"
                      placeholder="●●●●●●●●●●"
                      autocomplete="off"
-                     data-dev="80B8DA6C4E">
+                     data-dev="">
               <button class="Control-addon">Save</button>
               </div>
             </div>

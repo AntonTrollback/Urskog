@@ -26,6 +26,7 @@ class Board
               :slug,
               :out_of_stock,
               :price_hash,
+              :not_a_board,
               :woods,
               :promoted_wood,
               :setup,
@@ -39,6 +40,7 @@ class Board
     @slug           = attributes[:slug]
     @out_of_stock   = attributes[:out_of_stock]
     @price_hash     = attributes[:price]
+    @not_a_board    = attributes[:not_a_board]
     @woods          = attributes[:woods]
     @promoted_wood  = attributes[:promoted_wood]
     @setup          = attributes[:setup]
@@ -84,11 +86,12 @@ class NullBoard
 end
 
 class Price
-  attr_reader :complete, :deck
+  attr_reader :complete, :deck, :static
 
   def initialize(price_hash)
     @complete = price_hash[:complete]
     @deck = price_hash[:deck]
+    @static = price_hash[:static]
   end
 end
 

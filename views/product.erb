@@ -8,53 +8,57 @@
       </div>
     </div>
 
-    <div class="u-hideForNarrow" id="articleArea2">
-      <table class="Table Table--fixed u-textSmaller u-size9of10 js-moveTo" data-targetNarrow="#specsTab" data-targetWide="#articleArea2">
-        <tr>
-          <td class="u-size3of8"><strong>Wood:</strong>
-          <td class="u-size5of8"><%= @board.wood_list %>
-        </tr>
-        <tr>
-          <td class="u-size3of8"><strong>Length:</strong>
-          <td class="u-size3of8"><%= @board.length.mm %>mm
-          <td class="u-size1of4"><%= @board.length.inch %>”
-        </tr>
-        <tr>
-          <td class="u-size3of8"><strong>Width:</strong>
-          <td class="u-size3of8"><%= @board.width.mm %>mm
-          <td class="u-size1of4"><%= @board.width.inch %>”
-        </tr>
-        <tr>
-          <td class="u-size3of8"><strong>Wheelbase:</strong>
-          <td class="u-size3of8"><%= @board.wheelbase.mm %>mm
-          <td class="u-size1of4"><%= @board.wheelbase.inch %>”
-        </tr>
-      </table>
-    </div>
+    <% unless @board.not_a_board %>
+      <div class="u-hideForNarrow" id="articleArea2">
+        <table class="Table Table--fixed u-textSmaller u-size9of10 js-moveTo" data-targetNarrow="#specsTab" data-targetWide="#articleArea2">
+          <tr>
+            <td class="u-size3of8"><strong>Wood:</strong>
+            <td class="u-size5of8"><%= @board.wood_list %>
+          </tr>
+          <tr>
+            <td class="u-size3of8"><strong>Length:</strong>
+            <td class="u-size3of8"><%= @board.length.mm %>mm
+            <td class="u-size1of4"><%= @board.length.inch %>”
+          </tr>
+          <tr>
+            <td class="u-size3of8"><strong>Width:</strong>
+            <td class="u-size3of8"><%= @board.width.mm %>mm
+            <td class="u-size1of4"><%= @board.width.inch %>”
+          </tr>
+          <tr>
+            <td class="u-size3of8"><strong>Wheelbase:</strong>
+            <td class="u-size3of8"><%= @board.wheelbase.mm %>mm
+            <td class="u-size1of4"><%= @board.wheelbase.inch %>”
+          </tr>
+        </table>
+      </div>
+    <% end %>
   </article>
 
   <aside class="u-marginTm u-pullEnd u-hideForNarrow" id="shopAside">
     <div class="js-moveTo" data-targetNarrow="#shopTab" data-targetWide="#shopAside">
-      <%= erb :shop %>
+      <% if @board.not_a_board %>
+        <%= erb :shop_item %>
+      <% else %>
+        <%= erb :shop_board %>
+      <% end %>
     </div>
   </aside>
 
   <div class="Tabbed u-hideForWide js-tabbed">
     <ul class="Tabbed-nav">
       <li><a href="#" class="Tabbed-navItem js-tabbedNavItem is-active">Info</a>
-      <li><a href="#" class="Tabbed-navItem js-tabbedNavItem">Facts</a>
+      <% unless @board.not_a_board %>
+        <li><a href="#" class="Tabbed-navItem js-tabbedNavItem">Facts</a>
+      <% end %>
       <li><a href="#" class="Tabbed-navItem js-tabbedNavItem">Shop</a>
     </ul>
 
-    <div class="Tabbed-section js-tabbedSection Tabbed-section--tighter" id="infoTab">
-
-    </div>
-    <div class="Tabbed-section js-tabbedSection u-isHidden" id="specsTab">
-
-    </div>
-    <div class="Tabbed-section js-tabbedSection u-isHidden" id="shopTab">
-
-    </div>
+    <div class="Tabbed-section js-tabbedSection Tabbed-section--tighter" id="infoTab"></div>
+    <% unless @board.not_a_board %>
+      <div class="Tabbed-section js-tabbedSection u-isHidden" id="specsTab"></div>
+    <% end %>
+    <div class="Tabbed-section js-tabbedSection u-isHidden" id="shopTab"></div>
   </div>
 </div>
 
@@ -65,18 +69,26 @@
       <img class="js-rotate" data-extension="jpg" data-url="https://s3-eu-west-1.amazonaws.com/urskog/rotate/lov/" src="https://s3-eu-west-1.amazonaws.com/urskog/rotate/lov/001.jpg" width="690" height="230">
     </div>
   </li>-->
-  <li>
-    <div class="ProductList-item">
-      <h4 class="ProductList-itemHeading">Complete</h4>
-      <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg" alt="<%= @board.name %> complete">
-    </div>
-  </li>
-  <% @board.woods.each do |wood| %>
+  <% if @board.not_a_board %>
     <li>
       <div class="ProductList-item">
-        <h4 class="ProductList-itemHeading"><%= wood.capitalize %></h4>
-        <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+        <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>.jpg" alt="<%= @board.name %>">
       </div>
     </li>
+  <% else %>
+    <li>
+      <div class="ProductList-item">
+        <h4 class="ProductList-itemHeading">Complete</h4>
+        <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-complete.jpg" alt="<%= @board.name %> complete">
+      </div>
+    </li>
+    <% @board.woods.each do |wood| %>
+      <li>
+        <div class="ProductList-item">
+          <h4 class="ProductList-itemHeading"><%= wood.capitalize %></h4>
+          <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+        </div>
+      </li>
+    <% end %>
   <% end %>
 </ul>
