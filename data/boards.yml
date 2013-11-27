@@ -289,6 +289,7 @@
   :slug: giftcard
   :out_of_stock: false
   :not_a_board: true
+  :fb_id: 6009404790945
   :unlisted: false
   :price:
     :static: 650
@@ -304,6 +305,7 @@
   :slug: giftcard-2
   :out_of_stock: false
   :not_a_board: true
+  :fb_id: 6009404790945
   :unlisted: true
   :price:
     :static: 1300
@@ -319,6 +321,7 @@
   :slug: giftcard-3
   :out_of_stock: false
   :not_a_board: true
+  :fb_id: 6009404790945
   :unlisted: true
   :price:
     :static: 1950
@@ -334,6 +337,7 @@
   :slug: giftcard-4
   :out_of_stock: false
   :not_a_board: true
+  :fb_id: 6009404790945
   :unlisted: true
   :price:
     :static: 2600

@@ -153,6 +153,9 @@ class MyApp < Sinatra::Base
 
   get '/products/:slug' do
     @board = Board.find(params[:slug])
+    if @board.fb_id
+      @fb_id = @board.fb_id
+    end
     if @board.name == ""
       redirect "/products"
       return

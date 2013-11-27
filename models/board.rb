@@ -28,6 +28,7 @@ class Board
               :price_hash,
               :not_a_board,
               :unlisted,
+              :fb_id,
               :woods,
               :promoted_wood,
               :setup,
@@ -43,6 +44,7 @@ class Board
     @price_hash     = attributes[:price]
     @not_a_board    = attributes[:not_a_board]
     @unlisted       = attributes[:unlisted]
+    @fb_id          = attributes[:fb_id]
     @woods          = attributes[:woods]
     @promoted_wood  = attributes[:promoted_wood]
     @setup          = attributes[:setup]
