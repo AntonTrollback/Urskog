@@ -189,6 +189,13 @@
           :nice_url: mdcn.de
           :url: http://mdcn.de/
           :distribution: true
+    Königs Wusterhausen:
+      - - :name: Boarders Paradise
+          :country: Germany
+          :city: Hamburg
+          :nice_url: boardersparadise.eu
+          :url: http://www.boardersparadise.eu/
+          :email: info@boardersparadise.eu
 
 
   Nederlands:
