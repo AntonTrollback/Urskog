@@ -218,11 +218,11 @@
 
   France:
     - Fancy:
-      - - :name: Easy Risers
+      - - :name: Easyriser
           :country: France
           :city: Fancy
-          :nice_url: easyrisers.fr
-          :url: http://easyrisers.fr/
+          :nice_url: easyriser.fr
+          :url: http://www.easyriser.fr/
           :online: true
           :meatworld: true
 
