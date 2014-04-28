@@ -180,6 +180,31 @@
           :online: true
           :meatworld: true
 
+  United Kingdom:
+    - London:
+      - - :name: Slick Willies Skate Shop
+          :country: United Kingdom
+          :city: London
+          :nice_url: slickwillies.co.uk
+          :url: http://www.slickwillies.co.uk
+          :email: info@slickwillies.co.uk
+          :online: true
+          :address: 12 Gloucester Road
+          :meatworld: true
+      - - :name: Three Amigos
+          :country: United Kingdom
+          :city: London
+          :address: 118 Camden Rd
+          :meatworld: true
+      - - :name: Club Blue Room            
+          :country: United Kingdom
+          :nice_url: clubblueroom.com
+          :url: http://www.clubblueroom.com
+          :email: info@clubblueroom.com
+          :city: London
+          :address: 12-14 Edgware Road     
+          :meatworld: true
+
 
   Germany:
     - Hamburg:

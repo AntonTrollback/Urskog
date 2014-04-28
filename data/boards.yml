@@ -67,7 +67,7 @@
   :slug: lov
   :out_of_stock: true
   :not_a_board: false
-  :unlisted: false
+  :unlisted: true
   :price:
     :complete: 2845
     :deck: 1609
