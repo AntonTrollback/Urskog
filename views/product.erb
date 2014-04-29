@@ -72,7 +72,7 @@
   <% if @board.not_a_board %>
     <li>
       <div class="ProductList-item">
-        <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>.jpg" alt="<%= @board.name %>">
+        <img class="ProductList-itemImage" src="https://dl.dropboxusercontent.com/u/4776036/newsitepics/boards/<%= @board.slug %>.jpg" alt="<%= @board.name %>">
       </div>
     </li>
   <% else %>
@@ -86,7 +86,7 @@
       <li>
         <div class="ProductList-item">
           <h4 class="ProductList-itemHeading"><%= wood.capitalize %></h4>
-          <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= @board.slug %>-<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+          <img class="ProductList-itemImage" src="https://dl.dropboxusercontent.com/u/4776036/newsitepics/boards/<%= @board.slug %>-<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
         </div>
       </li>
     <% end %>
