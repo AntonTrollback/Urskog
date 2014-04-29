@@ -1,7 +1,7 @@
 ---
 - Sweden:
   - Falkenberg:
-    - - :name: Blue
+    - - :name: Blue dfsdfsdfsdf
         :country: Sweden
         :city: Falkenberg
         :nice_url: blue-online.se
@@ -204,7 +204,15 @@
           :city: London
           :address: 12-14 Edgware Road     
           :meatworld: true
-
+      Devon:
+      - - :name: Kitemare
+          :country: United Kingdom
+          :nice_url: kitemare.co.uk
+          :url: http://www.kitemare.co.uk
+          :email: info@kitemare.co.uk
+          :city: Westward Ho!
+          :address: Unit 3, Latitude 51
+          :meatworld: true
 
   Germany:
     - Hamburg:
