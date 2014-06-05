@@ -274,7 +274,8 @@
   :not_a_board: false
   :unlisted: false
   :price:
-    :deck: 995
+    :complete: 1599
+    :deck: 699
   :woods:
   - walnut
   - light grey smooth
