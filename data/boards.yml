@@ -274,25 +274,24 @@
   :not_a_board: false
   :unlisted: false
   :price:
-    :complete: 1599
+    :complete: 1499
     :deck: 699
   :woods:
-  - walnut
-  - light grey smooth
-  - grey large grain
-  - rosewood
-  - jakaranda
+  - aska
   - ebon
-  - dark grey smooth
-  - grey stripe
-  - b/w/g stripe
-  - b+b stripe
-  - b+y stripe
-  - red stripe
-  - tiger
-  - albino
-  - rainbow
-  - red
+  - grafit
+  - jakaranda
+  - källa
+  - lingon
+  - låga
+  - moln
+  - myr
+  - polka
+  - regnbåge
+  - rosewood
+  - valnöt
+  - vass
+  - zebrano
   :promoted_wood: walnut
   :info: |
     <p>For all those who don’t like to walk but like to take a cup of coffee and want to move between the cafés without effort, the Urskog pavement cruiser Frö is the model of choice, shoe sized with a small kick tail.</p>
