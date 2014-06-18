@@ -38,7 +38,7 @@
 
 - :name: Krona
   :slug: krona
-  :out_of_stock: true
+  :out_of_stock: false
   :not_a_board: false
   :unlisted: false
   :price:
