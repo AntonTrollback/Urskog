@@ -243,6 +243,15 @@
           :city: Cornwall
           :address: The Moor Falmouth
           :meatworld: true
+      - - :name: Roots
+          :country: United Kingdom
+          :nice_url: rootsonline.co.uk
+          :url: http://www.rootsonline.co.uk
+          :email: info@rootsonline.co.uk
+          :online: true
+          :city: Cornwall
+          :address: 72 Trelowarren Street Camborne
+          :meatworld: true
       Brighton:
       - - :name: The Brighton Beach Store 
           :country: United Kingdom

@@ -6,7 +6,7 @@
   :unlisted: false
   :price:
     :complete: 2645
-    :deck: 1535
+    :deck: 1535w
   :woods:
   - jacaranda
   - walnut
@@ -45,8 +45,8 @@
     :complete: 3199
     :deck: 1899
   :woods:
-  - jacaranda
-  :promoted_wood: jacaranda
+  - ebon
+  :promoted_wood: ebon
   :setup: "Paris 180mm trucks, Orangatang 4 presidents 70mm 80a, High Quality Abec 5 Bearings, heat resistant x-core grip"
   :info: |
     <p>Kil is a wide, tall and stiff board with great stability. It’s an ordinary concave in the front while it has a W concave in the back.</p>
@@ -247,8 +247,7 @@
   - ebon
   :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
-  :info: |
-    <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
+  :info: <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
   :length:
     :mm: 1020
     :inch: 40.2
