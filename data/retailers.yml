@@ -213,7 +213,56 @@
           :city: Westward Ho!
           :address: Unit 3, Latitude 51
           :meatworld: true
-
+      Oxford:
+      - - :name: Get inline Skate Shop
+          :country: United Kingdom
+          :nice_url: get-inline.co.uk
+          :url: http://www.get-inline.co.uk
+          :email: info@get-inline.co.uk
+          :online: true
+          :city: Oxford
+          :address: Westgate Shopping Centre
+          :meatworld: true
+      Bristol:
+      - - :name: Get inline Skate Shop
+          :country: United Kingdom
+          :nice_url: get-inline.co.uk
+          :url: http://www.get-inline.co.uk
+          :email: info@get-inline.co.uk
+          :online: true
+          :city: Bristol
+          :address: The Galleries Shopping Centre
+          :meatworld: true
+      Cornwall:
+      - - :name: Freeriders
+          :country: United Kingdom
+          :nice_url: freeridersonline.co.uk
+          :url: http://www.freeridersonline.co.uk
+          :email: team@freeridersonline.co.uk
+          :online: true
+          :city: Cornwall
+          :address: The Moor Falmouth
+          :meatworld: true
+      Brighton:
+      - - :name: The Brighton Beach Store 
+          :country: United Kingdom
+          :nice_url: brightonbeachstore.co.uk
+          :url: http://brightonbeachstore.co.uk
+          :email: info@brightonbeachstore.co.uk
+          :online: true
+          :city: Brighton
+          :address: 125 Kings Road Arches
+          :meatworld: true
+      Wales:
+      - - :name: Unsunghero Surf Shop 
+          :country: United Kingdom
+          :nice_url: unsungherosurf.co.uk
+          :url: http://unsungherosurf.co.uk
+          :email: grant@unsungherosurf.co.uk
+          :online: true
+          :city: Wales
+          :address: 28a High Street St. Davids Pembrokeshire
+          :meatworld: true
   Germany:
     - Hamburg:
       - - :name: MDCN
