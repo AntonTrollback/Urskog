@@ -292,18 +292,18 @@
   - valnöt
   - vass
   - zebrano
-  :promoted_wood: walnut
+  :promoted_wood: aska
   :info: |
     <p>For all those who don’t like to walk but like to take a cup of coffee and want to move between the cafés without effort, the Urskog pavement cruiser Frö is the model of choice, shoe sized with a small kick tail.</p>
   :length:
-    :mm: 450
-    :inch: 17.7
+    :mm: 493
+    :inch: 19.4
   :width:
-    :mm: 180
-    :inch: 7.1
+    :mm: 185
+    :inch: 7.3
   :wheelbase:
-    :mm: 300
-    :inch: 11.8
+    :mm: 285
+    :inch: 11.2
 
 - :name: Gift card
   :slug: giftcard
