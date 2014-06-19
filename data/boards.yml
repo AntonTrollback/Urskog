@@ -42,8 +42,8 @@
   :not_a_board: false
   :unlisted: false
   :price:
-    :complete: 1699
-    :deck: 2999
+    :complete: 2999
+    :deck: 1699
   :woods:
   - ebon
   - jacaranda
