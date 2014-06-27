@@ -306,6 +306,24 @@
           :city: Wales
           :address: 28a High Street St. Davids Pembrokeshire
           :meatworld: true
+      - - :name: Freestyle Cwmbran
+          :country: United Kingdom
+          :nice_url: freestyleskatestore.com
+          :url: http://freestyleskatestore.com/
+          :email: info@freestyleskatestore.com
+          :online: true
+          :city: Wales
+          :address: Unit 1, The Arcade, Cwmbran
+          :meatworld: true
+      - - :name: Freestyle Newport
+          :country: United Kingdom
+          :nice_url: freestyleskatestore.com
+          :url: http://freestyleskatestore.com/
+          :email: info@freestyleskatestore.com
+          :online: true
+          :city: Wales
+          :address: 8 Newport Arcade, Newport
+          :meatworld: true
   Germany:
     - Hamburg:
       - - :name: MDCN
@@ -342,10 +360,10 @@
           :url: http://full-marks.com/
 
   France:
-    - Fancy:
+    - Nancy:
       - - :name: Easyriser
           :country: France
-          :city: Fancy
+          :city: Nancy
           :nice_url: easyriser.fr
           :url: http://www.easyriser.fr/
           :online: true
