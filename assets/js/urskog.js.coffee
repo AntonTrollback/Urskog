@@ -13,7 +13,7 @@
 #= require modules/discount.js
 #  require modules/rotate.js
 
-if typeof staticWidth is "undefined"
+if typeof window.staticWidth is "undefined"
   MBP.scaleFix()
   MBP.preventZoom()
   MBP.enableActive()

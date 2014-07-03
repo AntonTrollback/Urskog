@@ -5,7 +5,7 @@
 (function(document) {
 
     /* Quick hack to prevent this form running in IE8 */
-    if (typeof staticWidth !== 'undefined') {
+    if (typeof window.staticWidth !== 'undefined') {
         return false;
     }
 
