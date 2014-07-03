@@ -9,7 +9,7 @@
     :deck: 1535
   :woods:
   - jacaranda
-  - walnut
+  #- walnut
   - zebrano
   - ebon
   :promoted_wood: walnut
@@ -176,7 +176,7 @@
     :complete: 2845
     :deck: 1609
   :woods:
-  - jacaranda
+  #- jacaranda
   - walnut
   - zebrano
   :promoted_wood: walnut
