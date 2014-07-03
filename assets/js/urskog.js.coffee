@@ -13,9 +13,10 @@
 #= require modules/discount.js
 #  require modules/rotate.js
 
-MBP.scaleFix()
-MBP.preventZoom()
-MBP.enableActive()
+if typeof staticWidth is "undefined"
+  MBP.scaleFix()
+  MBP.preventZoom()
+  MBP.enableActive()
 
 jQuery ->
 

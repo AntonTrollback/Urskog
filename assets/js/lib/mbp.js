@@ -4,6 +4,11 @@
 
 (function(document) {
 
+    /* Quick hack to prevent this form running in IE8 */
+    if (typeof staticWidth !== 'undefined') {
+        return false;
+    }
+
     window.MBP = window.MBP || {};
 
     /**
