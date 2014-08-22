@@ -11,8 +11,8 @@
   - jacaranda
   #- walnut
   - zebrano
-  - ebon
-  :promoted_wood: walnut
+  #- ebon
+  :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>The lovechild of Pinne and Kil became Kvist.</p>
@@ -110,11 +110,11 @@
     :complete: 2645
     :deck: 1535
   :woods:
-  - jacaranda
+  #- jacaranda
   - walnut
-  - zebrano
+  #- zebrano
   #- ebon
-  :promoted_wood: zebrano
+  :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill.</p>
@@ -177,9 +177,10 @@
     :deck: 1609
   :woods:
   #- jacaranda
-  - walnut
+  #- walnut
   - zebrano
-  :promoted_wood: walnut
+  - ebon
+  :promoted_wood: ebon
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
   :info: |
     <p>Urskog’s model Stubbe is a drop through board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability. Stubbe has a core of 7 layers of Swedish Birch and gives a semi-hard flex.</p>
