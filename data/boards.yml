@@ -103,17 +103,17 @@
 
 - :name: Pinne
   :slug: pinne
-  :out_of_stock: false
+  :out_of_stock: true
   :not_a_board: false
   :unlisted: false
   :price:
     :complete: 2645
     :deck: 1535
   :woods:
-  #- jacaranda
+  - jacaranda
   - walnut
-  #- zebrano
-  #- ebon
+  - zebrano
+  - ebon
   :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
@@ -178,7 +178,7 @@
   :woods:
   #- jacaranda
   #- walnut
-  - zebrano
+  #- zebrano
   - ebon
   :promoted_wood: ebon
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
@@ -284,7 +284,7 @@
   - aska
   - ebon
   - grafit
-  - jakaranda
+  #- jakaranda
   - källa
   - lingon
   - låga
