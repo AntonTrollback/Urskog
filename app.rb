@@ -90,6 +90,12 @@ class MyApp < Sinatra::Base
     erb :contact
   end
 
+  get '/store/?' do
+    @slug = "store"
+    @title = "store"
+    erb :store
+  end
+
   get '/information/?' do
     @slug = "information"
     @title = "Information"
