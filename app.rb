@@ -96,6 +96,12 @@ class MyApp < Sinatra::Base
     erb :store
   end
 
+  get '/gof/?' do
+    @slug = "gof"
+    @title = "Game of Frö"
+    erb :gof
+  end
+
   get '/information/?' do
     @slug = "information"
     @title = "Information"
