@@ -102,6 +102,12 @@ class MyApp < Sinatra::Base
     erb :gof
   end
 
+    get '/letlive/?' do
+    @slug = "letlive"
+    @title = "Letlive"
+    erb :letlive
+  end
+
   get '/information/?' do
     @slug = "information"
     @title = "Information"
