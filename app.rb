@@ -345,7 +345,6 @@ class MyApp < Sinatra::Base
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
   end
 
-
   # Coupon
   get '/admin/coupons' do
     protected!
