@@ -108,6 +108,30 @@ class MyApp < Sinatra::Base
     erb :letlive
   end
 
+  get '/burytomorrow/?' do
+    @slug = "burytomorrow"
+    @title = "burytomorrow"
+    erb :burytomorrow
+  end
+
+  get '/roblynch/?' do
+    @slug = "roblynch"
+    @title = "roblynch"
+    erb :roblynch
+  end
+
+  get '/crowntheempire/?' do
+    @slug = "crowntheempire"
+    @title = "Crowntheempire"
+    erb :crowntheempire
+  end
+
+  get '/marmozets/?' do
+    @slug = "marmozets"
+    @title = "marmozets"
+    erb :marmozets
+  end
+
   get '/information/?' do
     @slug = "information"
     @title = "Information"
