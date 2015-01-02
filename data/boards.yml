@@ -282,19 +282,19 @@
     :complete: 1499
     :deck: 699
   :woods:
-  - aska
+  #- aska
   - ebon
   - grafit
   #- jakaranda
   - källa
-  - lingon
+  #- lingon
   - låga
   - moln
   - myr
   - polka
   - regnbåge
   - rosewood
-  - valnöt
+  #- valnöt
   - vass
   - zebrano
   :promoted_wood: aska
