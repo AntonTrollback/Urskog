@@ -1,7 +1,7 @@
 ---
 - Sweden:
   - Falkenberg:
-    - - :name: Blue dfsdfsdfsdf
+    - - :name: Blue
         :country: Sweden
         :city: Falkenberg
         :nice_url: blue-online.se
@@ -204,7 +204,24 @@
           :city: London
           :address: 12-14 Edgware Road     
           :meatworld: true
-      Westward Ho! Devon:
+      - - :name: Finches Emporium          
+          :country: United Kingdom
+          :nice_url: finchesemporium.com
+          :url: https://www.finchesemporium.com
+          :email: finches@btinternet.com
+          :city: London
+          :address: 25-27 Perry Vale, Forest Hill
+          :meatworld: true
+      Hampshire:
+      - - :name: The Skateboard Shop
+          :country: United Kingdom
+          :nice_url: theskateboardshop.co.uk
+          :url: http://www.theskateboardshop.co.uk
+          :email: info@theskateboardshop.co.uk
+          :city: Hampshire
+          :address: 26-28 Reading Road South, Fleet
+          :meatworld: true
+      Devon:
       - - :name: Kitemare
           :country: United Kingdom
           :nice_url: kitemare.co.uk
@@ -213,7 +230,100 @@
           :city: Westward Ho!
           :address: Unit 3, Latitude 51
           :meatworld: true
-
+      - - :name: Surf Skate Snow
+          :country: United Kingdom
+          :nice_url: surfskatesnow.co.uk
+          :url: http://www.surfskatesnow.co.uk
+          :email: sales@surfskatesnow.co.uk
+          :city: Devon
+          :address: 9a Camperdown Terrace, Exmouth
+          :meatworld: true
+      Oxford:
+      - - :name: Get inline Skate Shop
+          :country: United Kingdom
+          :nice_url: get-inline.co.uk
+          :url: http://www.get-inline.co.uk
+          :email: info@get-inline.co.uk
+          :online: true
+          :city: Oxford
+          :address: Westgate Shopping Centre
+          :meatworld: true
+      Bristol:
+      - - :name: Get inline Skate Shop
+          :country: United Kingdom
+          :nice_url: get-inline.co.uk
+          :url: http://www.get-inline.co.uk
+          :email: info@get-inline.co.uk
+          :online: true
+          :city: Bristol
+          :address: The Galleries Shopping Centre
+          :meatworld: true
+      Cornwall:
+      - - :name: Freeriders
+          :country: United Kingdom
+          :nice_url: freeridersonline.co.uk
+          :url: http://www.freeridersonline.co.uk
+          :email: team@freeridersonline.co.uk
+          :online: true
+          :city: Cornwall
+          :address: The Moor Falmouth
+          :meatworld: true
+      - - :name: Roots
+          :country: United Kingdom
+          :nice_url: rootsonline.co.uk
+          :url: http://www.rootsonline.co.uk
+          :email: info@rootsonline.co.uk
+          :online: true
+          :city: Cornwall
+          :address: 72 Trelowarren Street Camborne
+          :meatworld: true
+      - - :name: The Unit Skatepark
+          :country: United Kingdom
+          :nice_url: skatetheunit.com
+          :url: http://www.skatetheunit.com
+          :email: shop@skatetheunit.com
+          :online: true
+          :city: Cornwall
+          :address: Unit 1C Pennygillam Industrial Est, Launceston
+          :meatworld: true
+      Brighton:
+      - - :name: The Brighton Beach Store 
+          :country: United Kingdom
+          :nice_url: brightonbeachstore.co.uk
+          :url: http://brightonbeachstore.co.uk
+          :email: info@brightonbeachstore.co.uk
+          :online: true
+          :city: Brighton
+          :address: 125 Kings Road Arches
+          :meatworld: true
+      Wales:
+      - - :name: Unsunghero Surf Shop 
+          :country: United Kingdom
+          :nice_url: unsungherosurf.co.uk
+          :url: http://unsungherosurf.co.uk
+          :email: grant@unsungherosurf.co.uk
+          :online: true
+          :city: Wales
+          :address: 28a High Street St. Davids Pembrokeshire
+          :meatworld: true
+      - - :name: Freestyle Cwmbran
+          :country: United Kingdom
+          :nice_url: freestyleskatestore.com
+          :url: http://freestyleskatestore.com/
+          :email: info@freestyleskatestore.com
+          :online: true
+          :city: Wales
+          :address: Unit 1, The Arcade, Cwmbran
+          :meatworld: true
+      - - :name: Freestyle Newport
+          :country: United Kingdom
+          :nice_url: freestyleskatestore.com
+          :url: http://freestyleskatestore.com/
+          :email: info@freestyleskatestore.com
+          :online: true
+          :city: Wales
+          :address: 8 Newport Arcade, Newport
+          :meatworld: true
   Germany:
     - Hamburg:
       - - :name: MDCN
@@ -250,10 +360,10 @@
           :url: http://full-marks.com/
 
   France:
-    - Fancy:
+    - Nancy:
       - - :name: Easyriser
           :country: France
-          :city: Fancy
+          :city: Nancy
           :nice_url: easyriser.fr
           :url: http://www.easyriser.fr/
           :online: true

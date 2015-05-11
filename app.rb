@@ -90,6 +90,54 @@ class MyApp < Sinatra::Base
     erb :contact
   end
 
+  get '/store/?' do
+    @slug = "store"
+    @title = "store"
+    erb :store
+  end
+
+    get '/benbrown/?' do
+    @slug = "benbrown"
+    @title = "benbrown"
+    erb :benbrown
+  end
+
+  get '/gof/?' do
+    @slug = "gof"
+    @title = "Game of Frö"
+    erb :gof
+  end
+
+    get '/letlive/?' do
+    @slug = "letlive"
+    @title = "Letlive"
+    erb :letlive
+  end
+
+  get '/burytomorrow/?' do
+    @slug = "burytomorrow"
+    @title = "burytomorrow"
+    erb :burytomorrow
+  end
+
+  get '/roblynch/?' do
+    @slug = "roblynch"
+    @title = "roblynch"
+    erb :roblynch
+  end
+
+  get '/crowntheempire/?' do
+    @slug = "crowntheempire"
+    @title = "Crowntheempire"
+    erb :crowntheempire
+  end
+
+  get '/marmozets/?' do
+    @slug = "marmozets"
+    @title = "marmozets"
+    erb :marmozets
+  end
+
   get '/information/?' do
     @slug = "information"
     @title = "Information"
@@ -326,7 +374,6 @@ class MyApp < Sinatra::Base
     @retailer.save
     redirect "/admin/retailers/#{@retailer.id}/giftcards"
   end
-
 
   # Coupon
   get '/admin/coupons' do

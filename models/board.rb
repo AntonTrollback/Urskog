@@ -90,12 +90,15 @@ class NullBoard
 end
 
 class Price
-  attr_reader :complete, :deck, :static
+  attr_reader :complete, :deck, :static, :completeusd, :deckusd
 
   def initialize(price_hash)
     @complete = price_hash[:complete]
     @deck = price_hash[:deck]
     @static = price_hash[:static]
+    @completeusd = price_hash[:completeusd]
+    @deckusd = price_hash[:deckusd]
+
   end
 end
 

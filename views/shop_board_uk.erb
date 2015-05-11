@@ -5,7 +5,7 @@
       <input type="radio" id="complete" name="buy_option" value="complete" disabled> <span>Complete</span> <span class="Control-sub">Not available</span>
     </label>
     <label class="Control u-marginRm <%= "is-disabled" if @board.out_of_stock %>" for="deckOnly">
-      <input type="radio" id="deckOnly" name="buy_option" value="deck" checked <%= "disabled" if @board.out_of_stock %>> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span><span class="Control-sub"><%= @board.price.deckuk %> <small>SEK</small></span>
+      <input type="radio" id="deckOnly" name="buy_option" value="deck" checked <%= "disabled" if @board.out_of_stock %>> <span>Deck only</span> <span class="Control-sub"><%= @board.price.deck %> <small>SEK</small></span>
     </label>
 
   <% else %>
@@ -17,6 +17,7 @@
     </label>
 
   <% end %>
+
   <div class="Shop-section">
     <div class="Control">
       <label class="u-marginRs" for="wood_type">Wood:</label>
@@ -29,4 +30,5 @@
   </div>
 
   <%= erb :buy_button_board %>
+
 </form>

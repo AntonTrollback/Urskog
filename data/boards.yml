@@ -7,12 +7,13 @@
   :price:
     :complete: 2645
     :deck: 1535
+    :completeusd: 377 
   :woods:
   - jacaranda
-  - walnut
+  #- walnut
   - zebrano
-  - ebon
-  :promoted_wood: walnut
+  #- ebon
+  :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>The lovechild of Pinne and Kil became Kvist.</p>
@@ -36,33 +37,37 @@
     :mm: 12
     :inch: 0.48
 
-- :name: Kil
-  :slug: kil
-  :out_of_stock: true
+- :name: Krona
+  :slug: krona
+  :out_of_stock: false
   :not_a_board: false
   :unlisted: false
   :price:
-    :complete: 3199
-    :deck: 1899
+    :complete: 2999
+    :deck: 1699
   :woods:
+  - ebon
   - jacaranda
   :promoted_wood: jacaranda
-  :setup: "Paris 180mm trucks, Orangatang 4 presidents 70mm 80a, High Quality Abec 5 Bearings, heat resistant x-core grip"
+  :setup: "Paris 180mm trucks, Tunnel Kondor 75mm wheels, High Quality Abec 5 Bearings, heat resistant x-core grip"
   :info: |
-    <p>Kil is a wide, tall and stiff board with great stability. It’s an ordinary concave in the front while it has a W concave in the back.</p>
-    <p>Top mounted trucks, the hardness of the board and the W concave makes a matchless combination of stability and control. The W concave gives maximal grip and feel when doing toe side turns and slides. In other words, the perfect board for the dowhill control freak.</p>
+    <p>Krona Downhill / Freeride board in 9 layers of Swedish Birch, Rocker, wheel wells, flush mounted, rear kicktail.</p>
+    <p>Short and quick downhill board for those of you who want to do more than just bomb the hills! </p>
   :length:
-    :mm: 970
-    :inch: 38.2
+    :mm: 980
+    :inch: 38.6
   :width:
-    :mm: 850
-    :inch: 33.5
+    :mm: 254
+    :inch: 10
   :wheelbase:
-    :mm: 850
-    :inch: 33.5
+    :mm: 703
+    :inch: 27.7
   :concave:
-    :mm: 14
-    :inch: 0.55
+    :mm: 12
+    :inch: 0.47
+  :camber:
+    :mm: 11
+    :inch: 0.43
 
 - :name: Löv
   :slug: lov
@@ -99,7 +104,7 @@
 
 - :name: Pinne
   :slug: pinne
-  :out_of_stock: false
+  :out_of_stock: true
   :not_a_board: false
   :unlisted: false
   :price:
@@ -110,7 +115,7 @@
   - walnut
   - zebrano
   - ebon
-  :promoted_wood: zebrano
+  :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
     <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill.</p>
@@ -172,10 +177,11 @@
     :complete: 2845
     :deck: 1609
   :woods:
-  - jacaranda
-  - walnut
-  - zebrano
-  :promoted_wood: walnut
+  #- jacaranda
+  #- walnut
+  #- zebrano
+  - ebon
+  :promoted_wood: ebon
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
   :info: |
     <p>Urskog’s model Stubbe is a drop through board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability. Stubbe has a core of 7 layers of Swedish Birch and gives a semi-hard flex.</p>
@@ -247,8 +253,7 @@
   - ebon
   :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
-  :info: |
-    <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
+  :info: <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
   :length:
     :mm: 1020
     :inch: 40.2
@@ -274,37 +279,36 @@
   :not_a_board: false
   :unlisted: false
   :price:
-    :complete: 1599
+    :complete: 1499
     :deck: 699
   :woods:
-  - walnut
-  - light grey smooth
-  - grey large grain
-  - rosewood
-  - jakaranda
+  #- aska
   - ebon
-  - dark grey smooth
-  - grey stripe
-  - b/w/g stripe
-  - b+b stripe
-  - b+y stripe
-  - red stripe
-  - tiger
-  - albino
-  - rainbow
-  - red
-  :promoted_wood: walnut
+  - grafit
+  #- jakaranda
+  - källa
+  #- lingon
+  - låga
+  - moln
+  - myr
+  - polka
+  - regnbåge
+  - rosewood
+  #- valnöt
+  - vass
+  - zebrano
+  :promoted_wood: aska
   :info: |
     <p>For all those who don’t like to walk but like to take a cup of coffee and want to move between the cafés without effort, the Urskog pavement cruiser Frö is the model of choice, shoe sized with a small kick tail.</p>
   :length:
-    :mm: 450
-    :inch: 17.7
+    :mm: 493
+    :inch: 19.4
   :width:
-    :mm: 180
-    :inch: 7.1
+    :mm: 185
+    :inch: 7.3
   :wheelbase:
-    :mm: 300
-    :inch: 11.8
+    :mm: 285
+    :inch: 11.2
 
 - :name: Gift card
   :slug: giftcard
