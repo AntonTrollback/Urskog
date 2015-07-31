@@ -1,390 +1,170 @@
 ---
 - Sweden:
-  - Falkenberg:
-    - - :name: Blue
-        :country: Sweden
-        :city: Falkenberg
-        :nice_url: blue-online.se
-        :url: http://blue-online.se/
-        :email: info@blue-online.se
-        :address: Stortorget 1
-        :meatworld: true
+		Göteborg:
+			- - :name: Hollywood
+					:country: Sweden
+					:city: Göteborg
+					:nice_url: Hollywood.se
+					:url: http://Hollywood.se/
+					:email: 031.ostrahamn@hollywood.se
+					:address: Östrahamngatan 15
+					:meatworld: true
+			- - :name: Hollywood
+					:country: Sweden
+					:city: Göteborg
+					:nice_url: Hollywood.se
+					:url: http://Hollywood.se/
+					:email: 031.sodralarm@hollywood.se
+					:address: Södralarmgatan 11
+					:meatworld: true
 
-    Göteborg:
-      - - :name: Hollywood
-          :country: Sweden
-          :city: Göteborg
-          :nice_url: Hollywood.se
-          :url: http://Hollywood.se/
-          :email: 031.ostrahamn@hollywood.se
-          :address: Östrahamngatan 15
-          :meatworld: true
-      - - :name: Hollywood
-          :country: Sweden
-          :city: Göteborg
-          :nice_url: Hollywood.se
-          :url: http://Hollywood.se/
-          :email: 031.sodralarm@hollywood.se
-          :address: Södralarmgatan 11
-          :meatworld: true
+		Malmö:
+			- - :name: Top12
+					:country: Sweden
+					:city: Malmö
+					:nice_url: top12.se
+					:url: http://top12.se/
+					:email: top12@top12.se
+					:address: Kornettvägen 2
+					:online: true
+					:meatworld: true
 
-    Malmö:
-      - - :name: Top12
-          :country: Sweden
-          :city: Malmö
-          :nice_url: top12.se
-          :url: http://top12.se/
-          :email: top12@top12.se
-          :address: Kornettvägen 2
-          :online: true
-          :meatworld: true
+		Stockholm:
+			- - :name: Hollywood
+					:country: Sweden
+					:city: Stockholm
+					:nice_url: Hollywood.se
+					:url: http://Hollywood.se/
+					:email: 08@hollywood.se
+					:address: Norrlandsgatan 14
+					:meatworld: true
+			- - :name: Brädkultur
+					:country: Sweden
+					:nice_url: Bradkultur.se
+					:url: http://bradkultur.se/
+					:email: info@bradkultur.se
+					:city: Stockholm
+					:address: Norrlandsgatan 21
+					:meatworld: true
 
-    Stockholm:
-      - - :name: Hollywood
-          :country: Sweden
-          :city: Stockholm
-          :nice_url: Hollywood.se
-          :url: http://Hollywood.se/
-          :email: 08@hollywood.se
-          :address: Norrlandsgatan 14
-          :meatworld: true
-      - - :name: Brädkultur
-          :country: Sweden
-          :city: Stockholm
-          :address: Norrlandsgatan 21
-          :meatworld: true
-      - - :name: Addnature
-          :country: Sweden
-          :city: Stockholm
-          :nice_url: addnature.com
-          :url: http://addnature.com/
-          :email: info@addnature.com
-          :address: Birger Jarlsgatan 65-67
-          :online: true
-          :meatworld: true
-      - - :name: Addnature
-          :country: Sweden
-          :city: Stockholm
-          :nice_url: addnature.com
-          :url: http://addnature.com/
-          :email: info@addnature.com
-          :address: Högbersgatan 30A
-          :online: true
-          :meatworld: true
-      - - :name: Sublime
-          :country: Sweden
-          :city: Stockholm
-          :nice_url: sublimeboards.com
-          :url: http://sublimeboards.com/
-          :email: info@sublimeboards.se
-          :online: true
+		Trollhättan:
+			- - :name: Junkyard
+					:country: Sweden
+					:city: Trollhättan
+					:nice_url: junkyard.eu
+					:url: http://junkyard.eu/
+					:email: info@junkyard.eu
+					:address: Ladugårdsvägen 101
+					:online: true
+					:meatworld: true
 
-    Sundsvall:
-      - - :name: Moyo
-          :country: Sweden
-          :city: Sundsvall
-          :nice_url: moyo.se
-          :url: http://moyo.se/
-          :email: info@moyo.se
-          :meatworld: true
-          :address: Up2 Shopping
+		Varberg:
+			- - :name: Surfers Paradise
+					:country: Sweden
+					:city: Varberg
+					:nice_url: surfers.se
+					:url: http://surfers.se/
+					:email: info@surfers.se
+					:address: Södergatan22
+					:online: true
+					:meatworld: true
 
-    Trollhättan:
-      - - :name: Junkyard
-          :country: Sweden
-          :city: Trollhättan
-          :nice_url: junkyard.eu
-          :url: http://junkyard.eu/
-          :email: info@junkyard.eu
-          :address: Ladugårdsvägen 101
-          :online: true
-          :meatworld: true
+		Västerås:
+			- - :name: Hollywood
+					:country: Sweden
+					:city: Västerås
+					:nice_url: Hollywood.se
+					:url: http://Hollywood.se/
+					:email: 021@hollywood.se
+					:address: Östra kyrkogatan 2
+					:meatworld: true
 
-    Umeå:
-      - - :name: Moyo
-          :country: Sweden
-          :city: Umeå
-          :nice_url: moyo.se
-          :url: http://moyo.se/
-          :email: info@moyo.se
-          :address: Kyrkogatan 21
-          :meatworld: true
+		Östersund:
+			- - :name: MrBoard
+					:country: Sweden
+					:city: Östersund
+					:nice_url: mrboard.se
+					:url: http://mrboard.se/
+					:email: info@mrboards.se
+					:address: Färjemansgatan 13
+					:online: true
+					:meatworld: true
 
-    Vara:
-      - - :name: Life on a Board
-          :country: Sweden
-          :city: Vara
-          :nice_url: lifeonaboard.se
-          :url: http://lifeonaboard.se/
-          :email: info@lifeonaboard.se
-          :online: true
+		Jönköping:
+			- - :name: Boardlife
+					:country: Sweden
+					:city: Jönköping
+					:nice_url: boardlife.se
+					:url: http://boardlife.se/
+					:email: info@boardlife.se
+					:online: true
 
-    Varberg:
-      - - :name: Surfers Paradise
-          :country: Sweden
-          :city: Varberg
-          :nice_url: surfers.se
-          :url: http://surfers.se/
-          :email: info@surfers.se
-          :address: Södergatan22
-          :online: true
-          :meatworld: true
+	United Kingdom:
+		London:
+			- - :name: Slick Willies Skate Shop
+					:country: United Kingdom
+					:city: London
+					:nice_url: slickwillies.co.uk
+					:url: http://www.slickwillies.co.uk
+					:email: info@slickwillies.co.uk
+					:online: true
+					:address: 12 Gloucester Road
+					:meatworld: true
 
-    Varberg:
-      - - :name: Blue
-          :country: Sweden
-          :city: Varberg
-          :nice_url: blue-online.se
-          :url: http://blue-online.se/
-          :email: info@blue-online.se
-          :meatworld: true
-
-    Västerås:
-      - - :name: Hollywood
-          :country: Sweden
-          :city: Västerås
-          :nice_url: Hollywood.se
-          :url: http://Hollywood.se/
-          :email: 021@hollywood.se
-          :address: Östra kyrkogatan 2
-          :meatworld: true
-
-    Östersund:
-      - - :name: MrBoard
-          :country: Sweden
-          :city: Östersund
-          :nice_url: mrboard.se
-          :url: http://mrboard.se/
-          :email: info@mrboards.se
-          :address: Färjemansgatan 13
-          :online: true
-          :meatworld: true
-
-    Jönköping:
-      - - :name: Boardlife
-          :country: Sweden
-          :city: Jönköping
-          :nice_url: boardlife.se
-          :url: http://boardlife.se/
-          :email: info@boardlife.se
-          :online: true
-
-    Borlänge:
-      - - :name: Brädgårn
-          :country: Sweden
-          :city: Borlänge
-          :nice_url: bradgarn.se
-          :url: http://bradgarn.se/
-          :email: info@bradgarn.se
-          :address: Sveagatan 5
-          :online: true
-          :meatworld: true
-
-  United Kingdom:
-    - London:
-      - - :name: Slick Willies Skate Shop
-          :country: United Kingdom
-          :city: London
-          :nice_url: slickwillies.co.uk
-          :url: http://www.slickwillies.co.uk
-          :email: info@slickwillies.co.uk
-          :online: true
-          :address: 12 Gloucester Road
-          :meatworld: true
-      - - :name: Three Amigos
-          :country: United Kingdom
-          :city: London
-          :address: 118 Camden Rd
-          :meatworld: true
-      - - :name: Club Blue Room            
-          :country: United Kingdom
-          :nice_url: clubblueroom.com
-          :url: http://www.clubblueroom.com
-          :email: info@clubblueroom.com
-          :city: London
-          :address: 12-14 Edgware Road     
-          :meatworld: true
-      - - :name: Finches Emporium          
-          :country: United Kingdom
-          :nice_url: finchesemporium.com
-          :url: https://www.finchesemporium.com
-          :email: finches@btinternet.com
-          :city: London
-          :address: 25-27 Perry Vale, Forest Hill
-          :meatworld: true
-      Hampshire:
-      - - :name: The Skateboard Shop
-          :country: United Kingdom
-          :nice_url: theskateboardshop.co.uk
-          :url: http://www.theskateboardshop.co.uk
-          :email: info@theskateboardshop.co.uk
-          :city: Hampshire
-          :address: 26-28 Reading Road South, Fleet
-          :meatworld: true
-      Devon:
-      - - :name: Kitemare
-          :country: United Kingdom
-          :nice_url: kitemare.co.uk
-          :url: http://www.kitemare.co.uk
-          :email: info@kitemare.co.uk
-          :city: Westward Ho!
-          :address: Unit 3, Latitude 51
-          :meatworld: true
-      - - :name: Surf Skate Snow
-          :country: United Kingdom
-          :nice_url: surfskatesnow.co.uk
-          :url: http://www.surfskatesnow.co.uk
-          :email: sales@surfskatesnow.co.uk
-          :city: Devon
-          :address: 9a Camperdown Terrace, Exmouth
-          :meatworld: true
-      Oxford:
-      - - :name: Get inline Skate Shop
-          :country: United Kingdom
-          :nice_url: get-inline.co.uk
-          :url: http://www.get-inline.co.uk
-          :email: info@get-inline.co.uk
-          :online: true
-          :city: Oxford
-          :address: Westgate Shopping Centre
-          :meatworld: true
-      Bristol:
-      - - :name: Get inline Skate Shop
-          :country: United Kingdom
-          :nice_url: get-inline.co.uk
-          :url: http://www.get-inline.co.uk
-          :email: info@get-inline.co.uk
-          :online: true
-          :city: Bristol
-          :address: The Galleries Shopping Centre
-          :meatworld: true
-      Cornwall:
-      - - :name: Freeriders
-          :country: United Kingdom
-          :nice_url: freeridersonline.co.uk
-          :url: http://www.freeridersonline.co.uk
-          :email: team@freeridersonline.co.uk
-          :online: true
-          :city: Cornwall
-          :address: The Moor Falmouth
-          :meatworld: true
-      - - :name: Roots
-          :country: United Kingdom
-          :nice_url: rootsonline.co.uk
-          :url: http://www.rootsonline.co.uk
-          :email: info@rootsonline.co.uk
-          :online: true
-          :city: Cornwall
-          :address: 72 Trelowarren Street Camborne
-          :meatworld: true
-      - - :name: The Unit Skatepark
-          :country: United Kingdom
-          :nice_url: skatetheunit.com
-          :url: http://www.skatetheunit.com
-          :email: shop@skatetheunit.com
-          :online: true
-          :city: Cornwall
-          :address: Unit 1C Pennygillam Industrial Est, Launceston
-          :meatworld: true
-      Brighton:
-      - - :name: The Brighton Beach Store 
-          :country: United Kingdom
-          :nice_url: brightonbeachstore.co.uk
-          :url: http://brightonbeachstore.co.uk
-          :email: info@brightonbeachstore.co.uk
-          :online: true
-          :city: Brighton
-          :address: 125 Kings Road Arches
-          :meatworld: true
-      Wales:
-      - - :name: Unsunghero Surf Shop 
-          :country: United Kingdom
-          :nice_url: unsungherosurf.co.uk
-          :url: http://unsungherosurf.co.uk
-          :email: grant@unsungherosurf.co.uk
-          :online: true
-          :city: Wales
-          :address: 28a High Street St. Davids Pembrokeshire
-          :meatworld: true
-      - - :name: Freestyle Cwmbran
-          :country: United Kingdom
-          :nice_url: freestyleskatestore.com
-          :url: http://freestyleskatestore.com/
-          :email: info@freestyleskatestore.com
-          :online: true
-          :city: Wales
-          :address: Unit 1, The Arcade, Cwmbran
-          :meatworld: true
-      - - :name: Freestyle Newport
-          :country: United Kingdom
-          :nice_url: freestyleskatestore.com
-          :url: http://freestyleskatestore.com/
-          :email: info@freestyleskatestore.com
-          :online: true
-          :city: Wales
-          :address: 8 Newport Arcade, Newport
-          :meatworld: true
-  Germany:
-    - Hamburg:
-      - - :name: MDCN
-          :country: Germany
-          :city: Hamburg
-          :nice_url: mdcn.de
-          :url: http://mdcn.de/
-          :distribution: true
-      Königs Wusterhausen:
-      - - :name: Boarders Paradise
-          :country: Germany
-          :city: Hamburg
-          :nice_url: boardersparadise.eu
-          :url: http://www.boardersparadise.eu/
-          :email: info@boardersparadise.eu
+	Germany:
+		Hamburg:
+			- - :name: MDCN
+					:country: Germany
+					:city: Hamburg
+					:nice_url: mdcn.de
+					:url: http://mdcn.de/
+					:distribution: true
+		Königs Wusterhausen:
+			- - :name: Boarders Paradise
+					:country: Germany
+					:city: Hamburg
+					:nice_url: boardersparadise.eu
+					:url: http://www.boardersparadise.eu/
+					:email: info@boardersparadise.eu
 
 
-  Nederlands:
-    - Den haag:
-      - - :name: Sickboards
-          :country: Nederlands
-          :city: Den haag
-          :nice_url: sickboards.nl
-          :url: http://sickboards.nl/
-          :distribution: true
+	Nederlands:
+		Den haag:
+			- - :name: Sickboards
+					:country: Nederlands
+					:city: Den haag
+					:nice_url: sickboards.nl
+					:url: http://sickboards.nl/
+					:distribution: true
 
 
-  Japan:
-    - Kyoto:
-      - - :name: Fullmarks
-          :country: Japan
-          :city: Kyoto
-          :nice_url: full-marks.com
-          :url: http://full-marks.com/
+	France:
+		Nancy:
+			- - :name: Easyriser
+					:country: France
+					:city: Nancy
+					:nice_url: easyriser.fr
+					:url: http://www.easyriser.fr/
+					:online: true
+					:meatworld: true
 
-  France:
-    - Nancy:
-      - - :name: Easyriser
-          :country: France
-          :city: Nancy
-          :nice_url: easyriser.fr
-          :url: http://www.easyriser.fr/
-          :online: true
-          :meatworld: true
+		Versailles:
+			- - :name: Numero 4 Skateshop
+					:country: France
+					:city: Versailles
+					:nice_url: numero4skateshop.com
+					:url: http://www.numero4skateshop.com
+					:email: contact@numero4skateshop.com
+					:online: true
+					:address: 4 Rue Richaud
+					:meatworld: true
 
-      Versailles:
-      - - :name: Numero 4 Skateshop
-          :country: France
-          :city: Versailles
-          :nice_url: numero4skateshop.com
-          :url: http://www.numero4skateshop.com
-          :email: contact@numero4skateshop.com
-          :online: true
-          :address: 4 Rue Richaud
-          :meatworld: true
-
-  Spain:
-    - Madrid:
-      - - :name: Ufo Longboards
-          :country: Spain
-          :city: Madrid
-          :nice_url: ufolongboards.com
-          :url: http://ufolongboards.com/
-          :meatworld: true
+	USA:
+		Venice,CA:
+			- - :name: Huset
+					:country: USA
+					:city: Venice, CA
+					:nice_url: Huset-shop.com
+					:url: http://huset-shop.com/
+					:email: info@huset-shop.com
+					:meatworld: true
