@@ -1,4 +1,38 @@
 ---
+- :name: Sticka
+  :slug: sticka
+  :out_of_stock: false
+  :not_a_board: false
+  :unlisted: false
+  :price:
+    :complete: 149.95F4
+    :deck: 1449
+  :woods:
+  - jacaranda
+  - walnut
+  - walnut burl
+  - elm
+  - rosewood
+  :promoted_wood: jacaranda
+  :setup: "Raw Street trucks, North Best Co wheels. Black Abec 7, Black Flat/Allen"
+  :info: |
+    <p>Like a splinter of the Pinne board. The same easygoing retro styling but in a more practical format for those who want to carry the board with them everywhere they go. This quick and agile board will turn every obstacle into splinters. The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
+  :length:
+    :mm: 805
+    :inch: 31.7
+  :width:
+    :mm: 200
+    :inch: 7.9
+  :wheelbase:
+    :mm: 613
+    :inch: 24.1
+  :concave:
+    :mm: 11
+    :inch: 0.43
+  :camber:
+    :mm: 12
+    :inch: 0.48
+
 - :name: Kvist
   :slug: kvist
   :out_of_stock: false
@@ -7,7 +41,7 @@
   :price:
     :complete: 2645
     :deck: 1535
-    :completeusd: 377 
+    :completeusd: 377
   :woods:
   - jacaranda
   #- walnut
@@ -16,8 +50,7 @@
   :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
-    <p>The lovechild of Pinne and Kil became Kvist.</p>
-    <p>With the competitive qualities from Kil, such as cut outs to avoid wheel bites when riding hard and deep concaves, it inherited its good retro looks from Pinne.</p>
+    <p>The lovechild of Pinne and Krona became Kvist. With the competitive qualities from Krona, such as cut outs to avoid wheel bites when riding hard and deep concaves, it inherited its good retro looks from Pinne.</p>
   :length:
     :mm: 805
     :inch: 31.7
@@ -30,71 +63,6 @@
   :second_wheelbase:
     :mm: 720
     :inch: 28.4
-  :concave:
-    :mm: 11
-    :inch: 0.43
-  :camber:
-    :mm: 12
-    :inch: 0.48
-
-- :name: Krona
-  :slug: krona
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
-  :price:
-    :complete: 2999
-    :deck: 1699
-  :woods:
-  - ebon
-  - jacaranda
-  :promoted_wood: jacaranda
-  :setup: "Paris 180mm trucks, Tunnel Kondor 75mm wheels, High Quality Abec 5 Bearings, heat resistant x-core grip"
-  :info: |
-    <p>Krona Downhill / Freeride board in 9 layers of Swedish Birch, Rocker, wheel wells, flush mounted, rear kicktail.</p>
-    <p>Short and quick downhill board for those of you who want to do more than just bomb the hills! </p>
-  :length:
-    :mm: 980
-    :inch: 38.6
-  :width:
-    :mm: 254
-    :inch: 10
-  :wheelbase:
-    :mm: 703
-    :inch: 27.7
-  :concave:
-    :mm: 12
-    :inch: 0.47
-  :camber:
-    :mm: 11
-    :inch: 0.43
-
-- :name: Löv
-  :slug: lov
-  :out_of_stock: true
-  :not_a_board: false
-  :unlisted: true
-  :price:
-    :complete: 2845
-    :deck: 1609
-  :woods:
-  - jacaranda
-  - walnut
-  - zebrano
-  :promoted_wood: walnut
-  :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
-  :info: |
-    <p>Löv is a cruiseboard that lets you glide.</p>
-    <p>The board is long and thin with a big tail kick that reacts rapidly allowing both more technical riding and laidback cruising. The board has plenty of space for cross steps and dancing.</p>
-  :length:
-    :mm: 880
-    :inch: 34.6
-  :width:
-    :mm: 220
-    :inch: 8.7
-  :wheelbase:
-    :mm: 726
-    :inch: 28.6
   :concave:
     :mm: 11
     :inch: 0.43
@@ -118,7 +86,7 @@
   :promoted_wood: walnut
   :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
   :info: |
-    <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill.</p>
+    <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill. Urskog's Pinne has a core of The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
   :length:
     :mm: 955
     :inch: 37.6
@@ -128,39 +96,6 @@
   :wheelbase:
     :mm: 705
     :inch: 22.8
-  :concave:
-    :mm: 11
-    :inch: 0.43
-  :camber:
-    :mm: 12
-    :inch: 0.48
-
-- :name: Sticka
-  :slug: sticka
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
-  :price:
-    :complete: 2545
-    :deck: 1449
-  :woods:
-  - jacaranda
-  - walnut
-  - zebrano
-  - ebon
-  :promoted_wood: jacaranda
-  :setup: "Paris 150mm trucks, Orangatang Fat free 65mm 80a, High Quality Abec 5 Bearings"
-  :info: |
-    <p>Like a splinter of the Pinne board. The same easygoing retro styling but in a more practical format for those who want to carry the board with them everywhere they go. This quick and agile board will turn every obstacle into splinters.</p>
-  :length:
-    :mm: 805
-    :inch: 31.7
-  :width:
-    :mm: 200
-    :inch: 7.9
-  :wheelbase:
-    :mm: 613
-    :inch: 24.1
   :concave:
     :mm: 11
     :inch: 0.43
@@ -237,41 +172,37 @@
     :mm: 17.3
     :inch: 0.68
 
-
-- :name: Vidja drop through
-  :slug: vidja-dropthrough
+- :name: Krona
+  :slug: krona
   :out_of_stock: false
   :not_a_board: false
   :unlisted: false
   :price:
-    :complete: 2845
-    :deck: 1609
+    :complete: 2999
+    :deck: 1699
   :woods:
-  - jacaranda
-  - walnut
-  - zebrano
   - ebon
+  - jacaranda
   :promoted_wood: jacaranda
-  :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
-  :info: <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
+  :setup: "Paris 180mm trucks, Tunnel Kondor 75mm wheels, High Quality Abec 5 Bearings, heat resistant x-core grip"
+  :info: |
+    <p>Krona Downhill / Freeride board in 9 layers of Swedish Birch, Rocker, wheel wells, flush mounted, rear kicktail.</p>
+    <p>Short and quick downhill board for those of you who want to do more than just bomb the hills! </p>
   :length:
-    :mm: 1020
-    :inch: 40.2
+    :mm: 980
+    :inch: 38.6
   :width:
-    :mm: 240
-    :inch: 9.45
+    :mm: 254
+    :inch: 10
   :wheelbase:
-    :mm: 735
-    :inch: 28.9
+    :mm: 703
+    :inch: 27.7
   :concave:
     :mm: 12
     :inch: 0.47
-  :rocker:
-    :mm: 10
-    :inch: 0.39
-  :rocker_kicks:
-    :mm: 17.3
-    :inch: 0.68
+  :camber:
+    :mm: 11
+    :inch: 0.43
 
 - :name: Frö
   :slug: fro
