@@ -7,7 +7,8 @@
     color: inherit;
     cursor: default;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }

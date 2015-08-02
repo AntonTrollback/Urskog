@@ -11,7 +11,8 @@
   opacity: .55;
   @include transition(opacity .1s ease);
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     opacity: .7;
   }

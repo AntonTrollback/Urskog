@@ -48,7 +48,8 @@
     color: #555;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #222;
     text-decoration: none;
   }
@@ -65,7 +66,8 @@
     cursor: default;
   }
 
-  &.is-active:hover {
+  &.is-active:hover,
+  &.is-active:focus {
     box-shadow: none;
     cursor: default;
   }

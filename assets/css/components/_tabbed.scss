@@ -50,7 +50,8 @@
     color: #555;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #222;
   }
 
@@ -63,7 +64,8 @@
     background: white;
     cursor: default;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #555;
     }
   }

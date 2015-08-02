@@ -117,7 +117,8 @@ a {
   color: $color-link;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-link;
     text-decoration: underline;
   }
@@ -128,7 +129,7 @@ a {
   }
 
   &:focus {
-    outline: 1px solid dotted;
+    outline: 0;
   }
 
   &.is-disabled {
