@@ -14,7 +14,7 @@
   - elm
   - rosewood
   :promoted_wood: jacaranda
-  :setup: "Raw Street trucks, North Best Co wheels. Black Abec 7, Black Flat/Allen"
+  :setup: "Paris 129mm Street trucks, Northbest Co. Small Cruising wheels 59mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>Like a splinter of the Pinne board. The same easygoing retro styling but in a more practical format for those who want to carry the board with them everywhere they go. This quick and agile board will turn every obstacle into splinters. The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
   :length:
@@ -44,19 +44,20 @@
     :completeusd: 377
   :woods:
   - jacaranda
-  #- walnut
-  - zebrano
-  #- ebon
+  - walnut
+  - walnut burl
+  - elm
+  - rosewood
   :promoted_wood: jacaranda
-  :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
+  :setup: "Paris 180mm trucks, Northbest Co. Cruising wheels 70mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>The lovechild of Pinne and Krona became Kvist. With the competitive qualities from Krona, such as cut outs to avoid wheel bites when riding hard and deep concaves, it inherited its good retro looks from Pinne.</p>
   :length:
-    :mm: 805
-    :inch: 31.7
+    :mm: 880
+    :inch: 34.6
   :width:
-    :mm: 200
-    :inch: 7.9
+    :mm: 220
+    :inch: 8.7
   :wheelbase:
     :mm: 690
     :inch: 27.2
@@ -81,10 +82,11 @@
   :woods:
   - jacaranda
   - walnut
-  - zebrano
-  - ebon
-  :promoted_wood: walnut
-  :setup: "Paris 180mm trucks, Orangatang Stimulus 70mm 80a, High Quality Abec 5 Bearings"
+  - walnut burl
+  - elm
+  - rosewood
+  :promoted_wood: jacaranda
+  :setup: "Paris 180mm trucks, Northbest Co. Cruising wheels 70mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill. Urskog's Pinne has a core of The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
   :length:
@@ -112,14 +114,15 @@
     :complete: 2845
     :deck: 1609
   :woods:
-  #- jacaranda
-  #- walnut
-  #- zebrano
-  - ebon
-  :promoted_wood: ebon
-  :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
+  - jacaranda
+  - walnut
+  - walnut burl
+  - elm
+  - rosewood
+  :promoted_wood: jacaranda
+  :setup: "Paris 180mm trucks, Northbest Co.Sliding wheels 70mm 78a, High Quality Abec 5 Grease Bearings."
   :info: |
-    <p>Urskog’s model Stubbe is a drop through board perfect for freeriding. We made it slightly shorter than the average dropthrough model which gives a great turn ratio without comprimising on its stability. Stubbe has a core of 7 layers of Swedish Birch and gives a semi-hard flex.</p>
+    <p>Urskog’s Stubbe is a dropthrough board perfect for freeriding. We made it slightly shorter than the other drop-through model in our collection the Stubbe gives a great turn ratio without comprimising on its stability. The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
   :length:
     :mm: 950
     :inch: 37.4
@@ -147,12 +150,12 @@
   :woods:
   - jacaranda
   - walnut
-  - zebrano
-  - ebon
-  :promoted_wood: zebrano
-  :setup: "Paris 180mm trucks, Orangatang Moranga 72,5mm 83a, High Quality Abec 5 Bearings"
+  - walnut burl
+  - rosewood
+  :promoted_wood: jacaranda
+  :setup: "Paris 180mm trucks, Northbest Co.Sliding wheels 70mm 78a, High Quality Abec 5 Grease Bearings."
   :info: |
-    <p>Urskog’s model Vidja is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. The 7 ply core of Swedish Birch gives a semi-hard flex.</p>
+    <p>Urskog’s Vidja model is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. Vidja is available in both dropthrough and topmount models. The 8 ply core of Swedish Birch gives a Semi-hard flex.</p>
   :length:
     :mm: 1020
     :inch: 40.2
@@ -181,13 +184,13 @@
     :complete: 2999
     :deck: 1699
   :woods:
-  - ebon
   - jacaranda
+  - ebon
   :promoted_wood: jacaranda
   :setup: "Paris 180mm trucks, Tunnel Kondor 75mm wheels, High Quality Abec 5 Bearings, heat resistant x-core grip"
   :info: |
-    <p>Krona Downhill / Freeride board in 9 layers of Swedish Birch, Rocker, wheel wells, flush mounted, rear kicktail.</p>
-    <p>Short and quick downhill board for those of you who want to do more than just bomb the hills! </p>
+    <p>This board is designed for the downhill/ Freeride rider. construction in combination with, wheel wells, flush top mount , and rear kicktail. It also with its stiff constructions gives you a really locked in feeling for tucking and stand ups. The rocker makes the board low and stable while also providing a slight wedge to make it nimble and responsive.</p>
+    <p>The 9 ply core of Swedish Birch gives a hard flex.</p>
   :length:
     :mm: 980
     :inch: 38.6
@@ -213,24 +216,17 @@
     :complete: 1499
     :deck: 699
   :woods:
-  #- aska
-  - ebon
-  - grafit
-  #- jakaranda
-  - källa
-  #- lingon
-  - låga
-  - moln
-  - myr
-  - polka
-  - regnbåge
+  - jacaranda
+  - walnut
+  - walnut burl
   - rosewood
-  #- valnöt
-  - vass
-  - zebrano
-  :promoted_wood: aska
+  - aska
+  - polka
+  - lingon
+  :promoted_wood: jacaranda
+  :setup: "Paris Skate trucks 129mm, Northbest Co. Small Cruising wheels 59mm 78a, High Quality Abec 7 Bearings."
   :info: |
-    <p>For all those who don’t like to walk but like to take a cup of coffee and want to move between the cafés without effort, the Urskog pavement cruiser Frö is the model of choice, shoe sized with a small kick tail.</p>
+    <p>The Frö is our mini cruiser in the board range. Whether you are a skater, or just someone who fancies a smoother ride to the shop or cafe. This little 7-ply board mini constuction of the high end specifications is one tough little cookie while taking on stunts with all the style. The Frö is a great choice for everyone wanting alot out of a mini cruiser.</p>
   :length:
     :mm: 493
     :inch: 19.4
