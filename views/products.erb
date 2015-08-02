@@ -1,4 +1,4 @@
-<div class="Constrained Constrained--l">
+<div class="Constrained Constrained--xl">
   <h1 class="u-isHiddenVisually">Products: All of Urskog longboards</h1>
   <p class="u-marginTl u-marginBs u-textQuote">Our boards are hand made in Sweden and personally signed and numbered when quality assured.</p>
   <p class="u-marginTn u-marginBl u-textQuote u-paddingBl">We strive to create the perfect board for the occasion longboards for cruising, freestyle and down-hill.</p>
@@ -10,9 +10,9 @@
           <a class="ProductList-item" href="/products/<%= board.slug %>">
             <h2 class="ProductList-itemHeading"><%= board.name %></h2>
             <% if board.not_a_board %>
-              <img class="ProductList-itemImage" src="https://s3-eu-west-1.amazonaws.com/urskog/boards/<%= board.slug %>.jpg" alt="<%= board.name %>">
+              <img class="ProductList-itemImage" src="https://s3.eu-central-1.amazonaws.com/urskog-boards/<%= board.slug %>.jpg" alt="<%= board.name %>">
             <% else %>
-              <img class="ProductList-itemImage" src="https://dl.dropboxusercontent.com/u/4776036/newsitepics/boards/<%= board.slug %>-<%= board.promoted_wood %>.jpg" alt="<%= board.name %>, deck only in <%= board.promoted_wood %>">
+              <img class="ProductList-itemImage" src="https://s3.eu-central-1.amazonaws.com/urskog-boards/<%= board.slug %>-<%= board.promoted_wood %>.jpg" alt="<%= board.name %>, deck only in <%= board.promoted_wood %>">
             <% end %>
           </a>
         </li>
