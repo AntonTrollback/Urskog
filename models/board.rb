@@ -31,6 +31,7 @@ class Board
               :fb_id,
               :woods,
               :promoted_wood,
+              :out_of_stock_wood,
               :setup,
               :info,
               :length_hash,
@@ -47,6 +48,7 @@ class Board
     @fb_id          = attributes[:fb_id]
     @woods          = attributes[:woods]
     @promoted_wood  = attributes[:promoted_wood]
+    @out_of_stock_wood = attributes[:out_of_stock_wood]
     @setup          = attributes[:setup]
     @info           = attributes[:info]
     @length_hash    = attributes[:length]

@@ -1,9 +1,6 @@
 ---
 - :name: Sticka
   :slug: sticka
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 2545
     :deck: 1449
@@ -35,9 +32,6 @@
 
 - :name: Kvist
   :slug: kvist
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 2645
     :deck: 1535
@@ -73,9 +67,6 @@
 
 - :name: Pinne
   :slug: pinne
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 2645
     :deck: 1535
@@ -86,6 +77,8 @@
   - elm
   - rosewood
   :promoted_wood: jacaranda
+  :out_of_stock_wood:
+  - jacaranda
   :setup: "Paris 180mm trucks, Northbest Co. Cruising wheels 70mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>A classic pintail. A middle sized board with deep concave and chamber. Quite rigid for extra control. Great for cruising the city as well as riding downhill. Urskog's Pinne has a core of The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
@@ -107,9 +100,6 @@
 
 - :name: Stubbe
   :slug: stubbe
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -120,6 +110,8 @@
   - elm
   - rosewood
   :promoted_wood: rosewood
+  :out_of_stock_wood:
+  - jacaranda
   :setup: "Paris 180mm trucks, Northbest Co.Sliding wheels 70mm 78a, High Quality Abec 5 Grease Bearings."
   :info: |
     <p>Urskog’s Stubbe is a dropthrough board perfect for freeriding. We made it slightly shorter than the other drop-through model in our collection the Stubbe gives a great turn ratio without comprimising on its stability. The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
@@ -141,9 +133,6 @@
 
 - :name: Vidja
   :slug: vidja
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 2845
     :deck: 1609
@@ -177,9 +166,6 @@
 
 - :name: Krona
   :slug: krona
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 2999
     :deck: 1699
@@ -209,9 +195,6 @@
 
 - :name: Frö
   :slug: fro
-  :out_of_stock: false
-  :not_a_board: false
-  :unlisted: false
   :price:
     :complete: 1499
     :deck: 699
@@ -224,6 +207,8 @@
   - polka
   - lingon
   :promoted_wood: walnut
+  :out_of_stock_wood:
+  - jacaranda
   :setup: "Paris Skate trucks 129mm, Northbest Co. Small Cruising wheels 59mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>The Frö is our mini cruiser in the board range. Whether you are a skater, or just someone who fancies a smoother ride to the shop or cafe. This little 7-ply board mini constuction of the high end specifications is one tough little cookie while taking on stunts with all the style. The Frö is a great choice for everyone wanting alot out of a mini cruiser.</p>
@@ -239,64 +224,39 @@
 
 - :name: Gift card
   :slug: giftcard
-  :out_of_stock: false
   :not_a_board: true
   :fb_id: 6009404790945
-  :unlisted: false
   :price:
     :static: 650
-  :woods: false
-  :promoted_wood: false
   :info: |
     <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
-  :length: false
-  :width: false
-  :wheelbase: false
 
 - :name: Gift card x 2
   :slug: giftcard-2
-  :out_of_stock: false
   :not_a_board: true
-  :fb_id: 6009404790945
   :unlisted: true
+  :fb_id: 6009404790945
   :price:
     :static: 1300
-  :woods: false
-  :promoted_wood: false
   :info: |
     <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
-  :length: false
-  :width: false
-  :wheelbase: false
 
 - :name: Gift card x 3
   :slug: giftcard-3
-  :out_of_stock: false
   :not_a_board: true
   :fb_id: 6009404790945
   :unlisted: true
   :price:
     :static: 1950
-  :woods: false
-  :promoted_wood: false
   :info: |
     <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
-  :length: false
-  :width: false
-  :wheelbase: false
 
 - :name: Gift card x 4
   :slug: giftcard-4
-  :out_of_stock: false
   :not_a_board: true
   :fb_id: 6009404790945
   :unlisted: true
   :price:
     :static: 2600
-  :woods: false
-  :promoted_wood: false
   :info: |
     <p>Our gift cards are designed to make it easier to buy a portion of a longboard as a present for someone you love. <strong>Each gift card is worth ¼ of a Urskog Longboard</strong>. They are worth more than 650 sek each because they equal one-quarter of any Urskog longboard regardless of price.</p>
-  :length: false
-  :width: false
-  :wheelbase: false
