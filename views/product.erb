@@ -97,7 +97,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
       <li>
         <div class="ProductList-item">
           <h4 class="ProductList-itemHeading"><%= wood.capitalize %> <% if @board.out_of_stock_woods.include? wood %>(out of stock)<% end %></h4>
-          <img class="ProductList-itemImage" src="https://s3.eu-central-1.amazonaws.com/urskog-boards/<%= @board.slug %>-<%= wood.tr!( "äåö", "aao" ) %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+          <img class="ProductList-itemImage" src="https://s3.eu-central-1.amazonaws.com/urskog-boards/<%= @board.slug %>-<%= wood.gsub("å","a").gsub("ä","a").gsub("ö","o") %>.jpg" alt="<%= @board.name %> in <%= wood %>">
         </div>
       </li>
     <% end %>

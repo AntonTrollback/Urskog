@@ -22,7 +22,7 @@
       <label class="u-marginRs" for="wood_type">Wood:</label>
       <select class="Control-menu" name="wood_type" id="wood_type" <%= "disabled" if @board.out_of_stock %>>
         <% @board.woods.each do |wood| %>
-          <option value="<%= wood.tr!( "äåö", "aao" ) %>" <% if @board.out_of_stock_woods.include? wood %>disabled="disabled"<% end %>><%= wood.capitalize %></option>
+          <option value="<%= wood.gsub("å","a").gsub("ä","a").gsub("ö","o") %>" <% if @board.out_of_stock_woods.include? wood %>disabled="disabled"<% end %>><%= wood.capitalize %></option>
         <% end %>
       </select>
     </div>
