@@ -11,7 +11,7 @@
   - elm
   - rosewood
   :promoted_wood: elm
-  :out_of_stock_wood: []
+  :out_of_stock_woods: []
   :setup: "Paris 129mm Street trucks, Northbest Co. Small Cruising wheels 59mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>Like a splinter of the Pinne board. The same easygoing retro styling but in a more practical format for those who want to carry the board with them everywhere they go. This quick and agile board will turn every obstacle into splinters. The 8 ply core of Swedish Birch gives a semi-hard flex.</p>
@@ -44,7 +44,7 @@
   - elm
   - rosewood
   :promoted_wood: walnut
-  :out_of_stock_wood: []
+  :out_of_stock_woods: []
   :setup: "Paris 180mm trucks, Northbest Co. Cruising wheels 70mm 78a, High Quality Abec 7 Bearings."
   :info: |
     <p>The lovechild of Pinne and Krona became Kvist. With the competitive qualities from Krona, such as cut outs to avoid wheel bites when riding hard and deep concaves, it inherited its good retro looks from Pinne.</p>
@@ -79,7 +79,7 @@
   - elm
   - rosewood
   :promoted_wood: jacaranda
-  :out_of_stock_wood:
+  :out_of_stock_woods:
   - jacaranda
   :setup: "Paris 180mm trucks, Northbest Co. Cruising wheels 70mm 78a, High Quality Abec 7 Bearings."
   :info: |
@@ -112,7 +112,7 @@
   - elm
   - rosewood
   :promoted_wood: rosewood
-  :out_of_stock_wood:
+  :out_of_stock_woods:
   - jacaranda
   :setup: "Paris 180mm trucks, Northbest Co.Sliding wheels 70mm 78a, High Quality Abec 5 Grease Bearings."
   :info: |
@@ -144,7 +144,7 @@
   - burl
   - rosewood
   :promoted_wood: burl
-  :out_of_stock_wood: []
+  :out_of_stock_woods: []
   :setup: "Paris 180mm trucks, Northbest Co.Sliding wheels 70mm 78a, High Quality Abec 5 Grease Bearings."
   :info: |
     <p>Urskog’s Vidja model is designed for freeride and freestyling. A shorter freestyle model to enable a great turn ratio at the same time as it gives as solid experience. Vidja has Rocker and flat kick´s on both tail and nose to featherbed tricks more easily. Vidja is available in both dropthrough and topmount models. The 8 ply core of Swedish Birch gives a Semi-hard flex.</p>
@@ -176,7 +176,7 @@
   - jacaranda
   - ebon
   :promoted_wood: jacaranda
-  :out_of_stock_wood: []
+  :out_of_stock_woods: []
   :setup: "Paris 180mm trucks, Tunnel Kondor 75mm wheels, High Quality Abec 5 Bearings, heat resistant x-core grip"
   :info: |
     <p>This board is designed for the downhill/ Freeride rider. construction in combination with, wheel wells, flush top mount , and rear kicktail. It also with its stiff constructions gives you a really locked in feeling for tucking and stand ups. The rocker makes the board low and stable while also providing a slight wedge to make it nimble and responsive.</p>
@@ -217,7 +217,7 @@
   - grafit
   - bläck
   :promoted_wood: walnut
-  :out_of_stock_wood:
+  :out_of_stock_woods:
   - jacaranda
   - rosewood
   - walnut
