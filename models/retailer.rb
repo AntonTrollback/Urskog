@@ -28,7 +28,7 @@ class Retailer
     @url          = attributes[:url]
     @email        = attributes[:email]
     @address      = attributes[:address]
-    @meatworld    = attributes[:meatworl]
+    @meatworld    = attributes[:meatworld]
     @distribution = attributes[:distribution]
   end
 
