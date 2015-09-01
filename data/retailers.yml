@@ -1,11 +1,21 @@
 ---
 - Sweden:
-  - Göteborg:
+  - Helsingborg:
+    - - :name: Royale Skateshop
+        :country: Sweden
+        :city: Helsingborg
+        :nice_url: royaleskateshop.se
+        :url: http://royaleskateshop.se/
+        :email: daniel@royaleskateshop.se
+        :address: Södra Storgatan 33
+        :online: true
+        :meatworld: true
+    Göteborg:
     - - :name: Hollywood
         :country: Sweden
         :city: Göteborg
         :nice_url: hollywood.se
-        :url: http://hollywood.se/
+        :url: http://Hollywood.se/
         :email: 031.ostrahamn@hollywood.se
         :address: Östrahamngatan 15
         :meatworld: true
@@ -13,7 +23,7 @@
         :country: Sweden
         :city: Göteborg
         :nice_url: hollywood.se
-        :url: http://hollywood.se/
+        :url: http://Hollywood.se/
         :email: 031.sodralarm@hollywood.se
         :address: Södralarmgatan 11
         :meatworld: true
@@ -32,7 +42,7 @@
         :country: Sweden
         :city: Stockholm
         :nice_url: hollywood.se
-        :url: http://hollywood.se/
+        :url: http://Hollywood.se/
         :email: 08@hollywood.se
         :address: Norrlandsgatan 14
         :meatworld: true
@@ -69,7 +79,7 @@
         :country: Sweden
         :city: Västerås
         :nice_url: hollywood.se
-        :url: http://hollywood.se/
+        :url: http://Hollywood.se/
         :email: 021@hollywood.se
         :address: Östra kyrkogatan 2
         :meatworld: true
@@ -91,6 +101,7 @@
         :url: http://boardlife.se/
         :email: info@boardlife.se
         :online: true
+
   United Kingdom:
   - London:
     - - :name: Slick Willies Skate Shop
@@ -102,6 +113,7 @@
         :online: true
         :address: 12 Gloucester Road
         :meatworld: true
+
   Germany:
   - Hamburg:
     - - :name: MDCN
@@ -117,6 +129,7 @@
         :nice_url: boardersparadise.eu
         :url: http://www.boardersparadise.eu/
         :email: info@boardersparadise.eu
+
   Nederlands:
   - Den haag:
     - - :name: Sickboards
@@ -125,6 +138,7 @@
         :nice_url: sickboards.nl
         :url: http://sickboards.nl/
         :distribution: true
+
   France:
   - Nancy:
     - - :name: Easyriser
@@ -134,6 +148,7 @@
         :url: http://www.easyriser.fr/
         :online: true
         :meatworld: true
+
     Versailles:
     - - :name: Numero 4 Skateshop
         :country: France
@@ -144,6 +159,7 @@
         :online: true
         :address: 4 Rue Richaud
         :meatworld: true
+
   USA:
   - Venice,CA:
     - - :name: Huset

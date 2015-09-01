@@ -39,21 +39,21 @@ class Board
               :wheelbase_hash
 
   def initialize(attributes={})
-    @name           = attributes[:name]
-    @slug           = attributes[:slug]
-    @out_of_stock   = attributes[:out_of_stock]
-    @price_hash     = attributes[:price]
-    @not_a_board    = attributes[:not_a_board]
-    @unlisted       = attributes[:unlisted]
-    @fb_id          = attributes[:fb_id]
-    @woods          = attributes[:woods]
-    @promoted_wood  = attributes[:promoted_wood]
+    @name              = attributes[:name]
+    @slug              = attributes[:slug]
+    @out_of_stock      = attributes[:out_of_stock]
+    @price_hash        = attributes[:price]
+    @not_a_board       = attributes[:not_a_board]
+    @unlisted          = attributes[:unlisted]
+    @fb_id             = attributes[:fb_id]
+    @woods             = attributes[:woods]
+    @promoted_wood     = attributes[:promoted_wood]
     @out_of_stock_wood = attributes[:out_of_stock_wood]
-    @setup          = attributes[:setup]
-    @info           = attributes[:info]
-    @length_hash    = attributes[:length]
-    @width_hash     = attributes[:width]
-    @wheelbase_hash = attributes[:wheelbase]
+    @setup             = attributes[:setup]
+    @info              = attributes[:info]
+    @length_hash       = attributes[:length]
+    @width_hash        = attributes[:width]
+    @wheelbase_hash    = attributes[:wheelbase]
   end
 
   def wood_list

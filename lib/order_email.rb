@@ -12,36 +12,23 @@ class OrderEmail
     Pony.mail({
       :to => ADMIN_EMAILS,
       :subject => "Ping! Purchase: #{order.board} #{order.type_of_purchase}",
-      :body => "Order information:
-Date: #{order.date_time}
+      :body => "Date: #{order.date_time}
 ID: #{order.id}
 Token: #{order.token}
 
-Product information:
-Model: #{order.board}
-Containing: #{order.type_of_purchase}
-Wood: #{order.wood_type}
-Amount: #{order.price} sek (including VAT)
+Product: #{order.board} #{order.type_of_purchase} in #{order.wood_type}
+Price: #{order.price} sek (including VAT)
 
-Customer information:
 Name: #{order.name}
-Email address: #{order.email}
+Email: #{order.email}
+Phone: #{order.phone}
 
-Shipping information:
-Country: #{order.country}
-City: #{order.city}
-Phone number: #{order.phone}
-Street: #{order.street}
-Postal code: #{order.postal_code}
+#{order.street}
+#{order.postal_code} #{order.city}, #{order.country}
 
 
 Have fun packaging!
-
-Dr. Website
 "
     })
   end
 end
-
-
-

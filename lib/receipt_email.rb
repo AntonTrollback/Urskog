@@ -22,28 +22,23 @@ class ReceiptEmail
         :subject => 'Urskog Receipt',
         :body => "Dear #{order.name},
 
-Thank you for your purchase
+Thank you for your purchase.
 
 This email serves as your receipt. If you have any questions, please contact us at
 support@urskog.com.
 
-
-Email address: #{order.email}
 Date: #{order.date}
 Order ID: #{order.id}
-
 Retailer: Urskog AB
 VAT number: SE556797382001
 
 Product information:
 #{@model}
-Amount: #{order.price} sek (including VAT)
+Price: #{order.price} sek (including VAT)
 
 Shipping information:
-Country: #{order.country}
-City: #{order.city}
-Street: #{order.street}
-Postal code: #{order.postal_code}
+#{order.street}
+#{order.postal_code} #{order.city}, #{order.country}
 
 
 We hope you enjoy your Urskog product!

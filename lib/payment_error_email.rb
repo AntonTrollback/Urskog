@@ -37,12 +37,7 @@ Postal code: #{order.postal_code}
 Error: #{error}
 
 Have fun debugging!
-
-Dr. Website
       "
     })
   end
 end
-
-
-

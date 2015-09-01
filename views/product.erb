@@ -96,8 +96,8 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
     <% @board.woods.each do |wood| %>
       <li>
         <div class="ProductList-item">
-          <h4 class="ProductList-itemHeading"><%= wood.capitalize %> <% if @board.out_of_stock_wood.include? wood %>(out of stock)<% end %></h4>
-          <img class="ProductList-itemImage" src="https://s3.eu-central-1.amazonaws.com/urskog-boards/<%= @board.slug %>-<%= wood %>.jpg" alt="<%= @board.name %> in <%= wood %>">
+          <h4 class="ProductList-itemHeading"><%= wood.capitalize %> <% if @board include? out_of_stock_wood && @board.out_of_stock_wood.include? wood %>(out of stock)<% end %></h4>
+          <img class="ProductList-itemImage" src="https://s3.eu-central-1.amazonaws.com/urskog-boards/<%= @board.slug %>-<%= wood.tr!( "äåö", "aao" ) %>.jpg" alt="<%= @board.name %> in <%= wood %>">
         </div>
       </li>
     <% end %>
